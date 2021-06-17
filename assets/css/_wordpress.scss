@@ -1,0 +1,12 @@
+.wp-caption{
+  width:auto!important;
+  img{
+    margin-bottom:0;
+  }
+  p.wp-caption-text{
+    background:$white;
+    text-align: center;
+    padding:.8em;
+    @include text-tiny;
+  }
+}

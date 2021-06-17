@@ -1,0 +1,94 @@
+// Project specific mixins and variables
+
+// paths
+$path-images: "../../assets/images";
+
+
+// Main sizes ==========================================
+
+$sidegap:20px;
+$thesitewidth:1200px;
+$sitewidth:calc(#{$thesitewidth} + #{$sidegap});
+$sitewidth--nosidegaps:$thesitewidth;
+
+// colors ==============================================
+
+$black:#000000;
+$white: #ffffff;
+$off-white: #F6F6F6;
+$off-black: #1f1f1f;
+$color-dark-gray:#333333;
+$darken-overlay:rgba(black, .1);
+$white-darken:darken($white, 5);
+$black-lighten:lighten($black, 20);
+
+$color-primary:#3F00F0;
+$color-primary-feint:lighten($color-primary, 40);
+$color-secondary:#D21A1A;
+$color-secondary-feint:lighten($color-secondary, 30);
+$color-accent:#D21A1A;
+
+$color-bg-beige:#fffbf4;
+$color-bg-grey:#EFEFEF;
+
+$color-feint:#f2f2f2;
+$color-feint-1:#f2f2f2;
+$color-feint-2:#EBEBEB;
+$color-feint-3:#E3E3E3;
+$color-feint-4:#D4D4D4;
+
+// backgrounds
+$color-header-bg:$white;
+$color-bg:$white;
+
+// link color
+$color-text:$off-black;
+$color-link:$color-secondary;
+$color-hover:$color-primary;
+
+// button colour
+$color-button:$color-primary;
+
+// misc
+$color-tagline:$black;
+$color-selection:$color-accent;
+
+// Some variables and mixins ======================
+
+// margins
+$gap:3rem;
+$gap--tight:1.5rem;
+$gap--deep:6rem;
+$gap--responsive--tight:clamp(#{$gap/4}, 1.5vw, #{$gap/2});
+$gap--responsive:clamp(#{$gap/4}, 3vw, #{$gap});
+$gap--responsive--thick:clamp(#{$gap/2}, 6vw, #{$gap*2});
+$margin-std:1.5rem;
+
+
+// header ========================================
+
+$header-height:180px;
+$header-height-mobile:80px;
+$header-height-scroll:80px;
+
+// misc styles =========================================
+
+// box and lines border lines
+$line: 4px solid $black;
+$line-feint:1px solid #DBDBDB;
+
+// text shadow
+$text-shadow: 0 2px 3px rgba($black, .3);
+$text-shadow-feint: 0 1px 2px rgba($black, .3);
+
+// raised item shadow
+$box-shadow:0px 1px 3px rgb(0 0 0 / 10%);
+$box-shadow--black-bg:0px 1px 3px rgb(0 0 0 / 50%);
+
+// borders
+$border-feint: rgba($black, 0.2) solid 1px;
+$border-accent: $color-secondary solid 2px;
+$border-accent-feint: rgba($color-secondary, 0.2) solid 1px;
+
+// border radius
+$border-radius: 2px;
