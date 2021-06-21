@@ -78,22 +78,4 @@ if (class_exists('Timber')) {
 
     include 'functions/register/options-pages.php';
 
-    /**
-     * @desc Yoast breadcrumb settings
-     */
-
-    include 'functions/breadcrumbs.php';
-
-    /**
-     * @desc Gravity forms settings
-     */
-
-    include 'functions/gravity-forms-settings.php';
-
-    /**
-     * @desc Donate settings
-     */
-
-    include 'functions/donate-functions.php';
-
 }
