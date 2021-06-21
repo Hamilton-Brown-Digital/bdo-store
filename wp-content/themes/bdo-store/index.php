@@ -10,10 +10,6 @@ if ( ! class_exists( 'acf' ) ) {
 	return;
 }
 
-$post = new TimberPost();
-
-$context = Timber::get_context();
-$context['post'] = $post;
-
-$templates = array( 'index.twig' );
-Timber::render( $templates, $context );
+$context = Timber::context();
+$context['post'] = new Timber\Post();
+Timber::render( 'index.twig', $context );
