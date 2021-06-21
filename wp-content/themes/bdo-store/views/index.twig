@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+  	{% set page_builder = post.get_field('page_modules') %}
+
+	{# {% include 'partials/hero.twig' %} #}
+
+	{% set page_builder = post.get_field('page_modules') %}
+
+	{% for acf in page_builder %}
+		{% include 'partials/' ~ acf.acf_fc_layout ~ '.twig' %}
+	{% endfor %}
+
+{% endblock %}

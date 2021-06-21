@@ -1,0 +1,28 @@
+$font-primary: 'Rubrik Edge New', sans-serif;
+$font-secondary: 'Geogrotesque', sans-serif;
+
+$font-size-base: 62.5%;
+
+$reg: normal;
+$bold: 500;
+
+$break-mobile: 22.438em; // 359px
+$break-mobile-land: 32em; // 512px
+$break-tablet: 40.063em; // 641px
+$break-desktop: 50em; // 800px
+$break-desktop-mini: 55em; // 880px
+$break-desktop-med: 64.063em; // 1025px
+$break-mobile-nav: 68.125em; // 1090px
+$break-desktop-wide: 75em; // 1200px
+$break-desktop-wider: 83.75em; // 1340px
+$break-desktop-xl: 88em; // 1408px
+
+$white: #fff;
+$black: #000;
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': 0.25,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);

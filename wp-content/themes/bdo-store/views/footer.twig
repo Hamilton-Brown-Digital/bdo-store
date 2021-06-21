@@ -1,0 +1,39 @@
+<footer id="footer" class="c-footer">
+
+    <div class="o-row o-row--no-margin">
+    
+        <div class="o-grid-container c-footer-container flex">
+
+            <div class="c-footer__links">
+            
+                <div class="c-footer__navigation-container">
+
+                    {% if navigation_footer.get_items %}
+                    <nav class="c-footer__navigation">
+                        <ul class="c-footer__navigation__list">
+                            {% for item in navigation_footer_left.get_items %}
+                            <li class="{{ item.classes | join(' ') }} c-footer__navigation__item">
+                                {% if item.link %}
+                                <a class="c-footer__navigation__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                                {% else %}
+                                <span>{{ item.title }}</span>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            <div class="c-footer__copyright">
+                &copy; Copyright {{ now|date('Y') }}
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

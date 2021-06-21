@@ -1,0 +1,263 @@
+@font-face {
+  font-family: "Rubrik Edge New";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/wp-content/themes/islamic-relief/assets/src/fonts/RubrikEdgeNew-Medium.woff2") format("woff2"),
+    url("/wp-content/themes/islamic-relief/assets/src/fonts/RubrikEdgeNew-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubrik Edge New";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/wp-content/themes/islamic-relief/assets/src/fonts/RubrikEdgeNew-Regular.woff2") format("woff2"),
+    url("/wp-content/themes/islamic-relief/assets/src/fonts/RubrikEdgeNew-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubrik Edge New";
+  font-style: italic;
+  font-weight: 500;
+  src: url("/wp-content/themes/islamic-relief/assets/src/fonts/RubrikEdgeNew-MediumItalic.woff2") format("woff2"),
+    url("/wp-content/themes/islamic-relief/assets/src/fonts/RubrikEdgeNew-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubrik Edge New";
+  font-style: italic;
+  font-weight: normal;
+  src: url("/wp-content/themes/islamic-relief/assets/src/fonts/RubrikEdgeNew-RegularItalic.woff2") format("woff2"),
+    url("/wp-content/themes/islamic-relief/assets/src/fonts/RubrikEdgeNew-RegularItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Geogrotesque";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/wp-content/themes/islamic-relief/assets/src/fonts/Geogrotesque-SmBd.woff2") format("woff2"),
+    url("/wp-content/themes/islamic-relief/assets/src/fonts/Geogrotesque-SmBd.woff") format("woff");
+}
+
+body {
+  padding: 30px 0;
+  font-family: "Rubrik Edge New", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Geogrotesque", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+}
+@media (min-width: 50em) {
+  h1,
+  .h1 {
+    font-size: 4rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+}
+@media (min-width: 50em) {
+  h2,
+  .h2 {
+    font-size: 3rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+@media (min-width: 50em) {
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem;
+}
+@media (min-width: 50em) {
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 1.125rem;
+}
+@media (min-width: 50em) {
+  h5,
+  .h5 {
+    font-size: 1.375rem;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+@media (min-width: 50em) {
+  h6,
+  .h6 {
+    font-size: 1.125rem;
+  }
+}
+
+a,
+a:active {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  transition: all 100ms ease-out;
+}
+
+p {
+  margin: 0 0 40px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: normal;
+  line-height: inherit;
+  font-size: 1rem;
+  font-family: "Rubrik Edge New", sans-serif;
+
+  color: #17202b;
+}
+@media (min-width: 50em) {
+  p {
+    font-size: 1.1875rem;
+  }
+}
+p.p--small {
+  font-size: 0.875rem;
+}
+@media (min-width: 50em) {
+  p.p--small {
+    font-size: 1rem;
+  }
+}
+p.p--large {
+  font-size: 1.25rem;
+}
+@media (min-width: 50em) {
+  p.p--large {
+    font-size: 1.5rem;
+  }
+}
+
+/* Extra stlye
+for just the WYSIWYG */
+/* Extra stlye
+for just the WYSIWYG */
+/* Extra stlye
+for just the WYSIWYG */
+
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 24px;
+}
+
+a {
+  border-bottom: 2px dashed #0079ad;
+  color: #0079ad;
+}
+
+hr {
+  margin-bottom: 30px;
+  border-top-color: #17202b;
+}
+
+ol,
+ul {
+  list-style-position: inside;
+  margin-bottom: 30px;
+}
+
+li {
+  font-family: "Rubrik Edge New", sans-serif;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media (min-width: 50em) {
+  li {
+    font-size: 1.1875rem;
+    margin-bottom: 10px;
+    line-height: 28px;
+  }
+}
+
+ul li {
+  font-size: 1.125rem;
+  position: relative;
+  padding-left: 20px;
+  list-style: none;
+  line-height: 1.4;
+}
+ul li:before {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #009fe3;
+  border-radius: 10px;
+  content: "";
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+ol li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+ol li:before {
+  display: inline-block;
+  width: 1.2em;
+  margin-right: 10px;
+  border-radius: 100%;
+  color: #009fe3;
+  font-weight: bold;
+  text-align: center;
+  content: counter(item) ". ";
+}
+
+.c-text__h2-bulletpoint li {
+  padding-left: 28px;
+}
+.c-text__h2-bulletpoint li:before {
+  top: 22px;
+  width: 14px;
+  height: 14px;
+}
+
+.c-text__h3-bulletpoint li {
+  padding-left: 24px;
+}
+.c-text__h3-bulletpoint li:before {
+  top: 12px;
+  width: 12px;
+  height: 12px;
+}

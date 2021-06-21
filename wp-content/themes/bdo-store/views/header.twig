@@ -1,0 +1,28 @@
+<div class="c-header-wrapper">
+
+	<header class="c-header">
+
+		<div class="o-row o-row--no-margin">
+
+			<div class="o-grid-container c-header-container flex">
+
+				<a href="/" class="c-header__logo">
+					<div class="c-header__logo-svg">
+						<img src="{{ theme.link }}/assets/src/img/svgs/logo.svg" alt="BDO Store"/>
+					</div>
+				</a>
+
+				{% include "menu.twig" with {'menu': navigation_primary.get_items} %}
+
+				<button class="e-hamburger js-hamburger" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
+					<span class="e-hamburger__box"></span>
+					<span class="e-hamburger__text">Menu</span>
+				</button>
+
+			</div>
+
+		</div>
+
+	</header>
+
+</div>
