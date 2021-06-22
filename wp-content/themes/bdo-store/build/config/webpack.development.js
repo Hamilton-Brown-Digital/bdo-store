@@ -63,7 +63,7 @@ module.exports = {
         injectChanges: true,
         // browser-sync-webpack-plugin specific option
         injectCss: true,
-        proxy: `https://${siteName}.local`,
+        proxy: `https://bdo-store.local`,
         reloadDelay: 0,
         files: [
           // Point to exact files to stop sourcemaps refreshing browser

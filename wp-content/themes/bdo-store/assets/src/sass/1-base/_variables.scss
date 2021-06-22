@@ -1,5 +1,6 @@
-$font-primary: 'Rubrik Edge New', sans-serif;
-$font-secondary: 'Geogrotesque', sans-serif;
+$font-primary: 'Proxima Nova Regular', sans-serif;
+$font-display: 'Proxima Nova Bold', sans-serif;
+$font-secondary: sans-serif;
 
 $font-size-base: 62.5%;
 
@@ -17,8 +18,32 @@ $break-desktop-wide: 75em; // 1200px
 $break-desktop-wider: 83.75em; // 1340px
 $break-desktop-xl: 88em; // 1408px
 
+
 $white: #fff;
 $black: #000;
+
+// Text colors
+$color-text:#333333;
+$color-text-reverse: #ffffff;
+
+// Background colors
+$color-bg-1:#505050;
+$color-bg-2:#E7E7E7;
+$color-bg-3:#F2F2F2;
+$color-bg-4:#ffffff;
+
+// BDO brand colors
+$brand-red: #ed1a3b;
+$brand-ocean: #218f8b;
+$brand-charcoal: #333333;
+$brand-pale-charcoal: #e7e7e7;
+$brand-gold: #df8639;
+$brand-slate: #657c91;
+$brand-burgundy: #98002e;
+
+// BDO background colors
+
+
 
 $susy: (
   'columns': susy-repeat(12),
