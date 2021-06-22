@@ -4,23 +4,55 @@
     
         <div class="o-grid-container c-footer-container flex">
 
+            <div class="c-footer__socials">
+
+                {% if options.socials %}
+
+                    {% for social in options.socials %}
+
+                        <a href="{{ social.link }}" target="_blank" title="{{ social.name }}">
+                            <img src="{{ social.icon['url'] }}" alt="{{ social.icon['alt'] }}" title="{{ social.icon['title'] }}" />
+                        </a>
+
+                    {% endfor %}
+
+                {% endif %}
+
+            </div>
+
             <div class="c-footer__links">
             
                 <div class="c-footer__navigation-container">
 
-                    {% if navigation_footer.get_items %}
+                    {% if navigation_utility.get_items %}
                     <nav class="c-footer__navigation">
+
                         <ul class="c-footer__navigation__list">
-                            {% for item in navigation_footer_left.get_items %}
+
+                            {% for item in navigation_utility.get_items %}
                             <li class="{{ item.classes | join(' ') }} c-footer__navigation__item">
-                                {% if item.link %}
                                 <a class="c-footer__navigation__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-                                {% else %}
-                                <span>{{ item.title }}</span>
-                                {% endif %}
                             </li>
                             {% endfor %}
+
                         </ul>
+
+                    </nav>
+                    {% endif %}
+
+                    {% if navigation_legal.get_items %}
+                    <nav class="c-footer__navigation">
+
+                        <ul class="c-footer__navigation__list">
+
+                            {% for item in navigation_legal.get_items %}
+                            <li class="{{ item.classes | join(' ') }} c-footer__navigation__item">
+                                <a class="c-footer__navigation__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+
                     </nav>
                     {% endif %}
 
@@ -29,7 +61,7 @@
             </div>
 
             <div class="c-footer__copyright">
-                &copy; Copyright {{ now|date('Y') }}
+                &copy; Copyright {{ now|date('Y') }} {{ options.copyright }}
             </div>
 
         </div>
