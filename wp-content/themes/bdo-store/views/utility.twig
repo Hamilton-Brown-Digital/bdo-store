@@ -1,0 +1,17 @@
+{% if utility %}
+<nav class="c-utility">
+
+  <ul class="c-utility__list">
+
+    {% for item in utility %}
+    <li class="{{ item.classes | join(' ') }} c-utility__item">
+
+      <a class="c-utility__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}<span class="icon"></span></a>
+
+    </li>
+    {% endfor %}
+
+  </ul>
+
+</nav>
+{% endif %}

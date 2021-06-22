@@ -4,7 +4,25 @@
 
         <div class="o-grid-container">
 
-            <h2>{{ acf.hero_header }}</h2>
+            <h2>{{ post.hero_header }}</h2>
+
+            {% if post.hero_content %}
+                {{ post.hero_content }}
+            {% endif %}
+
+            {% if post.hero_link %}
+                {% include "./elements/button.twig"
+                    with  {
+                        title : post.hero_link['title'],
+                        url: post.hero_link['url'],
+                        target: post.hero_link['target']
+                    }
+                %}
+            {% endif %}
+
+            {% if post.hero_image %}
+                <img src="{{ TimberImage(post.hero_image).src }}" srcset="{{ TimberImage(post.hero_image).srcset()}}" />
+            {% endif %}
 
         </div>
 
