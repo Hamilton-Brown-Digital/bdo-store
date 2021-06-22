@@ -1,6 +1,5 @@
-<a class="e-cta-button  e-cta-button--{{color}} {{altClass}}" href="{{url}}" target="{{target}}">
+<a class="e-cta-button{% if color %} e-cta-button--{{color}}{% endif %}{% if altclass %} {{altClass}}{% endif %}" href="{{url}}" target="{{target}}">
 	<span>
 		{{title}}
 	</span>
-	{{ source(directory  ~ '/assets/src/img/svgs/arrow-small.svg') }}
 </a>
