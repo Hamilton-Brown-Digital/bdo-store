@@ -2,29 +2,42 @@
 
 	<header class="c-header">
 
-		<div class="o-row o-row--no-margin">
+		<div class="o-row o-row--no-margin c-header-utility">
 
-			<div class="o-grid-container c-header-container flex">
+			<div class="o-grid-container c-header-utility__container">
 
-				{% include "utility.twig" with {'utility': navigation_utility.get_items} %}
+				<div class="c-header-utility__breadcrumb">bdo.co.uk > BDO Store</div>
+
+				<div class="c-header-utility__menu">
+					{% include "utility.twig" with {'utility': navigation_utility.get_items} %}
+				</div>
+
+				<form action="/" method="get" class="c-header-utility__search">
+					<input type="text" name="s" placeholder="Search">
+				</form>
 
 			</div>
 
 		</div>
 
-		<div class="o-row o-row--no-margin">
+		<div class="o-row o-row--no-margin c-header-main">
 
-			<div class="o-grid-container c-header-container flex">
+			<div class="o-grid-container c-header-main__container">
 
-				<a href="/" class="c-header__logo">
-					<div class="c-header__logo-svg">
-						<img src="{{ theme.link }}/assets/src/img/logo.svg" alt="BDO Store"/>
-					</div>
+				<a href="/" class="c-header-main__logo">
+					<img class="c-header-main__logo__image" src="{{ theme.link }}/assets/src/img/logo.svg" alt="BDO logo"/>
 				</a>
 
-				{% include "menu.twig" with {'menu': navigation_primary.get_items} %}
+				<div class="c-header-main__menu">
+					{% include "menu.twig" with {'menu': navigation_primary.get_items} %}
+				</div>
 
-				<button class="e-hamburger js-hamburger" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
+				<a href="/" class="c-header-main__basket">
+					<span class="c-header-main__basket__icon"></span>
+					<span class="c-header-main__basket__label">Basket</span>
+				</a>
+			
+				<button class="c-header-main__hamburger e-hamburger js-hamburger" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
 					<span class="e-hamburger__box"></span>
 				</button>
 

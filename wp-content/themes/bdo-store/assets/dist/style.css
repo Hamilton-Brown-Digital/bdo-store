@@ -360,6 +360,7 @@ body {
   width: 100%;
   min-height: 100vh;
   margin: 0;
+  color: #333333;
   font-family: "Proxima Nova Regular", sans-serif;
   font-weight: normal;
   text-align: left;
@@ -405,6 +406,9 @@ textarea {
   @media (min-width: 64.063em) {
     .main {
       padding-bottom: 110px; } }
+
+ul li {
+  list-style: none; }
 
 h1,
 h2,
@@ -498,14 +502,22 @@ ul {
 li {
   font-family: inherit; }
 
-.flex {
-  display: flex; }
+.flex, .c-header-main__container, .c-header-main__menu ul, .c-header-main__menu ul li a, .c-header-main__basket {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
 
 .flex-wrap {
   flex-wrap: wrap; }
 
 .align-start {
   align-items: flex-start; }
+
+.dark, .c-header-utility {
+  background-color: #333333;
+  color: #fff; }
+  .dark p, .c-header-utility p, .dark li, .c-header-utility li, .dark a, .c-header-utility a {
+    color: #fff; }
 
 .o-row {
   width: 100%;
@@ -540,9 +552,116 @@ li {
     padding-right: 0px; }
 
 .o-grid-container {
-  max-width: 1120px;
+  max-width: 1560px;
   margin-right: auto;
   margin-left: auto; }
+
+.c-header-wrapper {
+  background-color: #ffffff; }
+
+.c-header-utility {
+  background-color: #000; }
+  .c-header-utility__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px; }
+  .c-header-utility__breadcrumb {
+    flex-grow: 1; }
+  .c-header-utility__search input {
+    display: block;
+    padding: 0.3em;
+    background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/mag-glass.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.3em center;
+    background-size: 15px 15px;
+    border: 2px solid #fff; }
+    .c-header-utility__search input::-webkit-input-placeholder {
+      color: #fff; }
+    .c-header-utility__search input::-moz-placeholder {
+      color: #fff; }
+    .c-header-utility__search input:-ms-input-placeholder {
+      color: #fff; }
+    .c-header-utility__search input::placeholder {
+      color: #fff; }
+    .c-header-utility__search input:focus {
+      background-image: none; }
+      .c-header-utility__search input:focus::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.2); }
+      .c-header-utility__search input:focus::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.2); }
+      .c-header-utility__search input:focus:-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.2); }
+      .c-header-utility__search input:focus::placeholder {
+        color: rgba(255, 255, 255, 0.2); }
+  .c-header-utility__menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4em;
+    margin-right: 4em; }
+    .c-header-utility__menu ul li {
+      display: block; }
+
+.c-header-main {
+  border-bottom: 1px solid #F2F2F2; }
+  .c-header-main__container {
+    justify-content: space-between;
+    width: 100%;
+    height: 82px; }
+  .c-header-main__logo {
+    flex-grow: 1;
+    flex-shrink: 0; }
+    .c-header-main__logo__image {
+      width: 100%;
+      max-width: 175px; }
+  .c-header-main__menu {
+    display: none;
+    flex-grow: 1; }
+    @media (min-width: 75em) {
+      .c-header-main__menu {
+        display: flex; } }
+    .c-header-main__menu ul {
+      align-self: stretch;
+      justify-content: flex-start; }
+      .c-header-main__menu ul li {
+        display: block;
+        height: 82px;
+        border-right: 1px solid #F2F2F2; }
+        .c-header-main__menu ul li:last-of-type {
+          border-right: none; }
+        .c-header-main__menu ul li a {
+          height: 82px;
+          padding: 0 3rem;
+          font-family: "Proxima Nova Bold", sans-serif;
+          white-space: nowrap; }
+  .c-header-main__basket {
+    align-self: stretch;
+    padding: 1.5rem;
+    color: #fff; }
+    @media (min-width: 75em) {
+      .c-header-main__basket {
+        background-color: #ed1a3b; } }
+    .c-header-main__basket__icon {
+      width: 20px;
+      height: 20px;
+      background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/basket.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px 20px; }
+      @media (min-width: 75em) {
+        .c-header-main__basket__icon {
+          background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/basket-white.svg"); } }
+    .c-header-main__basket__label {
+      display: none; }
+      @media (min-width: 75em) {
+        .c-header-main__basket__label {
+          display: block;
+          padding-left: 1em; } }
+  @media (min-width: 75em) {
+    .c-header-main__hamburger {
+      display: none; } }
 
 .e-cta-button {
   display: flex;
@@ -573,6 +692,16 @@ li {
   @media (min-width: 40.063em) {
     .e-cta-button {
       min-width: 272px; } }
+
+.e-hamburger__box {
+  display: block;
+  width: 21px;
+  height: 15px;
+  padding: 12px;
+  background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 21px 15px; }
 
 
 /*# sourceMappingURL=style.css.map*/

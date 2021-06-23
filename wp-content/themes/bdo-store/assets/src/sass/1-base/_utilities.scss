@@ -1,5 +1,7 @@
 .flex {
   display: flex;
+  align-items: center;
+  justify-content:flex-start;
 }
 
 .flex-wrap {
@@ -8,4 +10,12 @@
 
 .align-start {
   align-items: flex-start;
+}
+
+.dark{
+  background-color: #333333;
+  color:$white;
+  p, li, a{
+    color:$white;
+  }
 }
