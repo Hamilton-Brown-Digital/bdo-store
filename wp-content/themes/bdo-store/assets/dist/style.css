@@ -560,7 +560,11 @@ li {
   background-color: #ffffff; }
 
 .c-header-utility {
+  display: none;
   background-color: #000; }
+  @media (min-width: 75em) {
+    .c-header-utility {
+      display: block; } }
   .c-header-utility__container {
     display: flex;
     align-items: center;

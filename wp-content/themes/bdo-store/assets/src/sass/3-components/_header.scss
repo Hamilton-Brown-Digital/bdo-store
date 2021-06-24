@@ -5,6 +5,10 @@
 
 
 .c-header-utility{
+  display: none;
+  @include breakpoint($break-desktop-wide) {
+    display: block;
+  }
   @extend .dark;
   background-color: $black;
   &__container{
