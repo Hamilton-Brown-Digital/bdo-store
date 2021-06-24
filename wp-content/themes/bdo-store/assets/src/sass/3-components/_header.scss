@@ -1,0 +1,134 @@
+.c-header-wrapper{
+  background-color:$color-bg-4;
+}
+
+
+
+.c-header-utility{
+  display: none;
+  @include breakpoint($break-desktop-wide) {
+    display: block;
+  }
+  @extend .dark;
+  background-color: $black;
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+  }
+  &__breadcrumb{
+    flex-grow: 1;
+  }
+  &__search{
+    input{
+      display: block;
+      padding: 0.3em;
+      background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/mag-glass.svg');
+      background-repeat: no-repeat;
+      background-position: right 0.3em center;
+      background-size: 15px 15px;
+      border: 2px solid $white;
+      &::placeholder{
+        color:$white;
+      }
+      &:focus{
+        background-image: none;
+        &::placeholder{
+          color: rgba($white, 0.2);
+        }
+      }
+    }
+  }
+  &__menu{
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 4em;
+      margin-right:4em;
+      li{
+        display: block;
+      }
+    }
+  }
+}
+
+.c-header-main{
+  $elemheight:82px;
+  border-bottom: 1px solid $color-line;
+  &__container{
+    @extend .flex;
+    justify-content: space-between;
+    width: 100%;
+    height: $elemheight;
+  }
+  &__logo{
+    flex-grow: 1;
+    flex-shrink: 0;
+    &__image{
+      width: 100%;
+      max-width: 175px;
+    }
+  }
+  &__menu{
+    display: none;
+    @include breakpoint($break-desktop-wide) {
+      display: flex;
+    }
+    flex-grow: 1;
+    ul{
+      align-self: stretch;
+      justify-content: flex-start;
+      @extend .flex;
+      li{
+        display: block;
+        height: $elemheight;
+        border-right: 1px solid $color-line;
+        &:last-of-type{
+          border-right: none;
+        }
+        a{
+          height: $elemheight;
+          padding: 0 3rem;
+          font-family:$font-bold;
+          white-space: nowrap;
+          @extend .flex;
+        }
+      }
+    }
+  }
+  &__basket{
+    align-self: stretch;
+    padding: 1.5rem;
+    color: $white;
+    @extend .flex;
+    @include breakpoint($break-desktop-wide) {
+      background-color: $brand-red;
+    }
+    &__icon{
+      width: 20px;
+      height: 20px;
+      background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/basket.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px 20px;
+      @include breakpoint($break-desktop-wide) {
+        background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/basket-white.svg');
+      }
+    }
+    &__label{
+      display: none;
+      @include breakpoint($break-desktop-wide) {
+        display:block;
+        padding-left: 1em;
+      }
+    }
+  }
+  &__hamburger{
+    @include breakpoint($break-desktop-wide) {
+      display: none;
+    }
+  }
+}

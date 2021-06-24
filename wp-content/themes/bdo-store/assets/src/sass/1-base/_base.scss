@@ -16,6 +16,7 @@ body {
   width: 100%;
   min-height: 100vh;
   margin: 0;
+  color:$color-text;
   font-family: $font-primary;
   font-weight: $reg;
   text-align: left;
@@ -72,4 +73,8 @@ textarea {
   @media (min-width: $break-desktop-med) {
     padding-bottom: 110px;
   }
+}
+
+ul li{
+  list-style: none;
 }
