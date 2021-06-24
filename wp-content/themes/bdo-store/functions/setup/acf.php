@@ -39,3 +39,29 @@ function tiny_mce_remove_unused_formats($init) {
     $init['block_formats'] = 'Paragraph=p; Heading 3=h3; Heading 4=h4; Heading 5=h5;';
     return $init;
 }
+
+function acf_set_product_categories($field) {
+    $field['choices'] = array();
+
+    $args = array(
+        'taxonomy'   => "product_cat"
+    );
+    $product_categories = get_terms($args);
+
+    if ( !empty($product_categories) ) {
+
+        foreach( $product_categories as $tax ) {
+
+            $value = $tax->term_id;
+            $label = $tax->name;
+            
+            $field['choices'][$value] = $label;
+
+        }
+
+    } 
+
+    return $field;
+}
+
+add_filter('acf/load_field/name=product_category', 'acf_set_product_categories');
