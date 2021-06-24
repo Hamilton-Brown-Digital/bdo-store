@@ -55,6 +55,12 @@ if (class_exists('Timber')) {
     include 'functions/setup/admin_experience.php';
 
     /**
+     * @desc Adding post support
+     */
+
+    include 'functions/setup/post_support.php';
+
+    /**
      * @desc Adding registering of custom post types
      */
 
@@ -77,5 +83,11 @@ if (class_exists('Timber')) {
      */
 
     include 'functions/register/options-pages.php';
+
+    /**
+     * @desc Adding woocommerce options
+     */
+
+    include 'functions/register/woocommerce.php';
 
 }
