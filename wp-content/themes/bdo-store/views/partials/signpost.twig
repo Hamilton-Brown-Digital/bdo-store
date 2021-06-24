@@ -1,0 +1,36 @@
+{% set media = acf.signpost_media %}
+{% set content = acf.signpost_content %}
+
+<div class="c-signpost">
+
+    <div class="o-row">
+
+        <div class="o-grid-container">
+
+            {% if media.type == 'video' %}
+                {% include "./elements/video.twig" %}
+            {% else %}
+                <img src="{{ TimberImage(media.image).src }}" srcset="{{ TimberImage(media.image).srcset()}}" />
+            {% endif %}
+
+            {{ content.subhead }}
+
+            {{ content.heading }}
+
+            {{ content.content }}
+
+            {% if content.link %}
+                {% include "./elements/button.twig"
+                    with  {
+                        title : content.link['title'],
+                        url: content.link['url'],
+                        target: content.link['target']
+                    }
+                %}
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
