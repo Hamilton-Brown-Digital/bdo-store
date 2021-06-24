@@ -12,23 +12,30 @@ function my_acf_json_load_point($paths)
 
 }
 
-add_filter('mce_buttons_2', 'myplugin_tinymce_buttons');
+add_filter('mce_buttons', 'tinymce_buttons');
+function tinymce_buttons($buttons) {
+    unset($buttons[5]);
+    unset($buttons[6]);
+    unset($buttons[7]);
+    unset($buttons[8]);
+    unset($buttons[10]);
+    unset($buttons[11]);
+    unset($buttons[12]);
+    unset($buttons[13]);
 
-function myplugin_tinymce_buttons($buttons)
-{
-    //Add style selector to the beginning of the toolbar
-    array_unshift($buttons, 'styleselect');
-
+    print_r( $buttons );
     return $buttons;
 }
 
-/// WYSIWYG - TinyMCe
-add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats');
+add_filter('mce_buttons_2', 'tinymce_2_buttons');
+function tinymce_2_buttons($buttons) {
+    $buttons = [];
+    return $buttons;
+}
 
-function tiny_mce_remove_unused_formats($init)
-{
-    // Add block format elements you want to show in dropdown
-    $init['block_formats'] = 'Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4 =h4; Heading 5=h5;';
-    // $init['block_formats'] = 'Lead Paragraph=p';
+
+add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats');
+function tiny_mce_remove_unused_formats($init) {
+    $init['block_formats'] = 'Paragraph=p; Heading 3=h3; Heading 4=h4; Heading 5=h5;';
     return $init;
 }
