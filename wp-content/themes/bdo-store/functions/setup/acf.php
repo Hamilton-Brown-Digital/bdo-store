@@ -23,7 +23,6 @@ function tinymce_buttons($buttons) {
     unset($buttons[12]);
     unset($buttons[13]);
 
-    print_r( $buttons );
     return $buttons;
 }
 
