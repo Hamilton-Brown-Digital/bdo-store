@@ -1,0 +1,40 @@
+
+{% set posts = Post(acf.listing_cards) %}
+
+<div class="c-listing">
+
+    {{ acf.listing_subhead }}
+
+    {{ acf.listing_heading }}
+
+    {% for card in posts %}
+
+        {% set type = card.post_type %}
+
+        {% set cardItems = {
+            type: type,
+            title: card.title,
+            url: card.link,
+            excerpt: card.preview.read_more('')
+        } %}
+
+        {% if type == 'page' %}
+            {% if card.product_category %}
+                {% set cardItems = cardItems|merge({
+                    productCount: TimberTerm(card.product_category).posts()|length
+                })%}
+            {% endif %}
+        {% endif %}
+
+        {% if type == 'product' %}
+            {% set cardItems = cardItems|merge({
+                price: card._price,
+                terms: card.terms( {query:{taxonomy:'product_cat'}} )|join(', ')
+            })%}
+        {% endif %}
+
+        {% include "./elements/card.twig" with cardItems %}
+
+    {% endfor %}
+
+</div>

@@ -108,6 +108,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60d42d9fdb5f1": {
+                    "key": "layout_60d42d9fdb5f1",
+                    "name": "quote",
+                    "label": "Quote",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60d42da5db5f2",
+                            "label": "Quote",
+                            "name": "acf_clone_quote",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60d42d408b383"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Module",
