@@ -1,0 +1,37 @@
+{% set buttonText = 'Find out more' %}
+{% if productCount %}
+    {% set buttonText = 'Browse products' %}
+{% endif %}
+
+<div class="e-card{% if type %} e-card--{{ type }}{% endif %}">
+
+    {% if terms %}
+        {{ terms }}
+    {% endif %}
+
+    {{ title }}
+
+    {% if excerpt %}
+        {{ excerpt }}
+    {% endif %}
+
+    {% if productCount %}
+        {{ productCount }} product{% if productCount|length > 1 %}s{% endif %}
+    {% endif %}
+
+    {% if price %}
+        From £{{ price|number_format(0, '.', ',') }}
+    {% endif %}
+
+    {% if url %}
+        <div class="e-card__button">
+        {% include "./elements/button.twig"
+            with  {
+                title: buttonText,
+                url: url
+            }
+        %}
+        </div>
+    {% endif %}
+
+</div>
