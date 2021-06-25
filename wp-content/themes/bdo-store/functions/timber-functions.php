@@ -34,9 +34,31 @@ class CustomTimber extends TimberSite
 
     return $context;
   }
-
   function add_to_twig($twig) {
     $twig->addExtension(new Twig_Extension_StringLoader());
+
+    $twig->addFunction( new Timber\Twig_Function( 'get_accordion', function ( $id ) {
+      $page = get_posts(array(
+        'numberposts'	=> 1,
+        'post_type'		=> 'page',
+        'meta_key'		=> 'product_category',
+        'meta_value'	=> $id
+      ));
+
+      if ( $page ) {
+        $result['accordionColour'] = get_field('colour', 'product_cat_'.$id);
+
+        $results = get_field('page_modules', $page[0]);
+        foreach ($results as $key => $val) {
+          if ($val['acf_fc_layout'] === 'accordion') {
+            $result['accordionContent'] = $results[$key]['accordion_lists'];
+          }
+        }
+
+        return $result;
+      }
+    } ) );
+
     return $twig;
   }
 }
