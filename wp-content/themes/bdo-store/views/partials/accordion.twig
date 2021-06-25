@@ -1,0 +1,58 @@
+{% set details = acf.accordion_details %}
+{% set lists = acf.accordion_lists %}
+
+<div class="c-accordion">
+
+    <div class="c-accordion__details">
+    
+    {% if details.type == 'menu' %}
+        
+        <h2>{{ details.heading }}</h2>
+
+        {% if details.menu %}
+        <ul class="c-accordion__menu">
+            {% for menuItem in details.menu %}
+                <li>
+                    <a href="#">{{ menuItem.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+    {% else %}
+        
+        {{ details.subhead }}
+
+        <h2>{{ details.heading }}</h2>
+
+    {% endif %}
+
+    </div>
+
+    <div class="c-accordion__lists">
+
+    {% if lists.list %}
+
+        {% for list in lists.list %}
+        <div class="c-accordion__list">
+
+            <h2>{{ list.title }}</h2>
+
+            {% for item in list.items %}
+            <div class="c-accordion__item">
+
+                <h3>{{ item.heading }}</h3>
+
+                {{ item.content }}
+
+            </div>
+            {% endfor %}
+
+        </div>
+        {% endfor %}
+
+    {% endif %}
+
+    </div>
+
+</div>
