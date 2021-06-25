@@ -170,37 +170,6 @@
                     ],
                     "min": "",
                     "max": ""
-                },
-                "layout_60d5fc4c572dc": {
-                    "key": "layout_60d5fc4c572dc",
-                    "name": "text",
-                    "label": "Text",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_60d5fc50572dd",
-                            "label": "Text",
-                            "name": "acf_clone_text",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_60d5fc1feb8c4"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
                 }
             },
             "button_label": "Add Module",
@@ -232,5 +201,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1624636523
+    "modified": 1624643167
 }
