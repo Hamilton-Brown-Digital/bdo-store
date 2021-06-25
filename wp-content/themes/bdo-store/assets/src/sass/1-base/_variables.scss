@@ -25,6 +25,7 @@ $break-desktop-xl: 88em; // 1408px
 
 $white: #fff;
 $black: #000;
+$gold: rgb(242, 208, 14);
 
 // Text colors
 $color-text:#333333;
@@ -38,6 +39,9 @@ $color-bg-4:#ffffff;
 
 // line color
 $color-line:#F2F2F2;
+$color-line-dark:#707070;
+$line: 1px solid $color-line;
+$line-dark: 1px solid $color-line-dark;
 
 // BDO brand colors
 $brand-red: #ed1a3b;

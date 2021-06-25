@@ -1,0 +1,77 @@
+.c-header-main{
+  $elemheight:82px;
+  border-bottom: 1px solid $color-line;
+  &__container{
+    @include flex;
+    justify-content: space-between;
+    width: 100%;
+    height: $elemheight;
+  }
+  &__logo{
+    flex-grow: 1;
+    flex-shrink: 0;
+    &__image{
+      width: 100%;
+      max-width: 175px;
+    }
+  }
+  &__menu{
+    display: none;
+    @include breakpoint($break-desktop-wide) {
+      display: flex;
+    }
+    flex-grow: 1;
+    ul{
+      align-self: stretch;
+      justify-content: flex-start;
+      @include flex;
+      li{
+        display: block;
+        height: $elemheight;
+        border-right: 1px solid $color-line;
+        &:last-of-type{
+          border-right: none;
+        }
+        a{
+          height: $elemheight;
+          padding: 0 3rem;
+          font-family:$font-bold;
+          white-space: nowrap;
+          @include flex;
+        }
+      }
+    }
+  }
+  &__basket{
+    align-self: stretch;
+    padding: 1.5rem;
+    color: $white;
+    @include flex;
+    @include breakpoint($break-desktop-wide) {
+      background-color: $brand-red;
+    }
+    &__icon{
+      width: 20px;
+      height: 20px;
+      background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/basket.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px 20px;
+      @include breakpoint($break-desktop-wide) {
+        background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/basket-white.svg');
+      }
+    }
+    &__label{
+      display: none;
+      @include breakpoint($break-desktop-wide) {
+        display:block;
+        padding-left: 1em;
+      }
+    }
+  }
+  &__hamburger{
+    @include breakpoint($break-desktop-wide) {
+      display: none;
+    }
+  }
+}
