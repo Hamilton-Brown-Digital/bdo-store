@@ -266,3 +266,35 @@
     }
   }
 }
+
+// Flex
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+@mixin flex-top{
+  display: flex;
+  align-items: flex-start;
+  justify-content:flex-start;
+}
+@mixin flex-bottom{
+  display: flex;
+  align-items: flex-end;
+  justify-content:flex-start;
+}
+@mixin flex-stretch{
+  display: flex;
+  align-items: stretch;
+  justify-content:flex-start;
+}
+@mixin flex-center{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+@mixin font-bold{
+  font-family:$font-bold, $font-secondary;
+}

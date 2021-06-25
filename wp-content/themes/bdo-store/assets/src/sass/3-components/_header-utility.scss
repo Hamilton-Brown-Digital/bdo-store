@@ -1,0 +1,50 @@
+.c-header-utility{
+  display: none;
+  @include breakpoint($break-desktop-wide) {
+    display: block;
+  }
+  @extend .dark;
+  background-color: $black;
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+  }
+  &__breadcrumb{
+    flex-grow: 1;
+  }
+  &__search{
+    input{
+      display: block;
+      padding: 0.3em;
+      background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/mag-glass.svg');
+      background-repeat: no-repeat;
+      background-position: right 0.3em center;
+      background-size: 15px 15px;
+      border: 2px solid $white;
+      &::placeholder{
+        color:$white;
+      }
+      &:focus{
+        background-image: none;
+        &::placeholder{
+          color: rgba($white, 0.2);
+        }
+      }
+    }
+  }
+  &__menu{
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 4em;
+      margin-right:4em;
+      li{
+        display: block;
+      }
+    }
+  }
+}

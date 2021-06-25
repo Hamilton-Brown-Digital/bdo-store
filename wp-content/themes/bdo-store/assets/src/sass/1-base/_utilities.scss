@@ -1,7 +1,11 @@
 .flex {
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
+  @include flex;
+}
+.flex-stretch{
+  @include flex-stretch;
+}
+.flex-center{
+  @include flex-center;
 }
 
 .flex-wrap {
@@ -18,4 +22,12 @@
   p, li, a{
     color:$white;
   }
+}
+
+.vertical-bar{
+  display: inline-block;
+  width: 1px;
+  height: 1.6em;
+  margin: 0 0.5em;
+  background-color:$color-line-dark;
 }
