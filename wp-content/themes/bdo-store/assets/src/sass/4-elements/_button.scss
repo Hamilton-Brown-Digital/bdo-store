@@ -1,18 +1,13 @@
 .e-cta-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  height: 59px;
-  margin-bottom: 16px;
-  padding: 0px 16px;
+  height: 57px;
+  padding: 0px 2.5em;
   border-radius: 2px;
   color: $white;
   font-weight: $bold;
   transition: color 0.3s background-color 0.3s;
-
-  @include breakpoint($break-desktop) {
-    height: 63px;
-  }
 
   svg {
     path {
@@ -27,13 +22,35 @@
   }
 
   span {
-    margin-right: 15px;
-    line-height: 1;
-    line-height: 31px;
-    @include font-size(18);
+    @include font-bold;
   }
 
-  @media (min-width: $break-tablet) {
-    min-width: 272px;
+
+  &--red{
+    background-color: $brand-red;
   }
+  &--emerald{
+    background-color: $brand-emerald;
+  }
+  &--ocean{
+    background-color: $brand-ocean;
+  }
+  &--charcoal{
+    background-color: $brand-charcoal;
+  }
+  &--pale-charcoal{
+    background-color: $brand-pale-charcoal;
+  }
+  &--gold{
+    background-color: $brand-gold;
+    color: $color-text;
+  }
+  &--slate{
+    background-color: $brand-slate;
+  }
+  &--burgundy{
+    background-color: $brand-burgundy;
+    color: $color-text;
+  }
+
 }

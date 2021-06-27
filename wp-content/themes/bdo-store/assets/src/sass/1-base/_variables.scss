@@ -1,3 +1,8 @@
+$asset-path:'/wp-content/themes/bdo-store/assets/src';
+
+$header-height:147px;
+$header-height-mobile:82px;
+
 $font-primary: 'Proxima Nova Regular', sans-serif;
 $font-bold: 'Proxima Nova Bold', sans-serif;
 $font-display: 'Proxima Nova Bold', sans-serif;
@@ -9,6 +14,7 @@ $reg: normal;
 $bold: 500;
 
 $site-width:1560px;
+$site-width-margins:calc(1560px + 30px);
 
 $break-mobile: 22.438em; // 359px
 $break-mobile-land: 32em; // 512px
@@ -20,7 +26,8 @@ $break-mobile-nav: 68.125em; // 1090px
 $break-desktop-wide: 75em; // 1200px
 $break-desktop-wider: 83.75em; // 1340px
 $break-desktop-xl: 88em; // 1408px
-
+$break-site-width:$site-width;
+$break-site-width-margins:$site-width-margins;
 
 
 $white: #fff;
@@ -30,12 +37,6 @@ $gold: rgb(242, 208, 14);
 // Text colors
 $color-text:#333333;
 $color-text-reverse: #ffffff;
-
-// Background colors
-$color-bg-1:#505050;
-$color-bg-2:#E7E7E7;
-$color-bg-3:#F2F2F2;
-$color-bg-4:#ffffff;
 
 // line color
 $color-line:#F2F2F2;
@@ -53,8 +54,12 @@ $brand-gold: #df8639;
 $brand-slate: #657c91;
 $brand-burgundy: #98002e;
 
-// BDO background colors
-
+// Background colors
+$color-bg:$brand-charcoal;
+$color-bg-1:#505050;
+$color-bg-2:#E7E7E7;
+$color-bg-3:#F2F2F2;
+$color-bg-4:#ffffff;
 
 
 $susy: (
