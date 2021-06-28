@@ -4,14 +4,14 @@
     "fields": [
         {
             "key": "field_60d07ee7e5c46",
-            "label": "Header",
+            "label": "Heading",
             "name": "hero_header",
             "type": "text",
-            "instructions": "",
+            "instructions": "Main heading text",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -22,11 +22,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_60d1e92665e0d",
-            "label": "Content",
-            "name": "hero_content",
-            "type": "textarea",
-            "instructions": "",
+            "key": "field_60d5cd56ee94e",
+            "label": "Intro",
+            "name": "hero_intro",
+            "type": "text",
+            "instructions": "Short intro text under the title",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -36,9 +36,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": 2,
-            "new_lines": "wpautop"
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_60d1e95165e0e",
@@ -130,6 +130,33 @@
             "message": "This Hero has no image",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_60d1e92665e0d",
+            "label": "Content",
+            "name": "hero_content",
+            "type": "textarea",
+            "instructions": "Text content to show in hero in place of image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d1e98865e10",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "wpautop"
         }
     ],
     "location": [
@@ -156,5 +183,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1624369637
+    "modified": 1624643739
 }

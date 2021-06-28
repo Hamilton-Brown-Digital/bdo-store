@@ -276,25 +276,36 @@
 }
 @mixin flex-top{
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   justify-content:flex-start;
 }
 @mixin flex-bottom{
   display: flex;
+  flex-direction: row;
   align-items: flex-end;
   justify-content:flex-start;
 }
 @mixin flex-stretch{
   display: flex;
+  flex-direction: row;
   align-items: stretch;
   justify-content:flex-start;
 }
 @mixin flex-center{
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content:center;
 }
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
 
 @mixin font-bold{
+  font-family:$font-bold, $font-secondary;
+}
+@mixin font-display{
   font-family:$font-bold, $font-secondary;
 }

@@ -1,0 +1,89 @@
+.c-hero{
+  background-color: $brand-charcoal;
+  @extend .dark;
+  border-bottom: $brand-red solid 25px;
+  &__container{
+    @include flex-column;
+    gap:1.5rem;
+    position: relative;
+    height: auto;
+    min-height: calc(100vh - #{$header-height-mobile});
+    @include breakpoint($break-tablet){
+      height: auto;
+      min-height: 400px;
+    }
+    @include breakpoint($break-desktop){
+      min-height: 700px;
+      margin-top: 0;
+      @include flex-stretch;
+    }
+  }
+  &__heading{
+    @include font-display;
+    margin-bottom: 0.5rem;
+  }
+  &__intro{
+    margin-bottom: 1.5rem;
+  }
+  &__text{
+    display: block;
+    margin-bottom: 1.5rem;
+    @include breakpoint($break-desktop){
+      display: none;
+    }
+  }
+  &__main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content:center;
+    width: 100%;
+    @include breakpoint($break-desktop){
+      flex-grow: unset;
+      width: 50%;
+    }
+    @include breakpoint($break-site-width-margins){
+      padding-left: 0;
+    }
+    &:before{
+      display:block;
+      flex-grow: 1;
+      width: 21px;
+      height: auto;
+      background-color: $white;
+      background-image: url(#{$asset-path}/img/ribbon-end.svg);
+      background-position: bottom -45px left -10px;
+      content: '';
+    }
+    &:after{
+      display:block;
+      flex-grow: 1;
+      width: 21px;
+      height: auto;
+      background-color: $white;
+      background-image: url(#{$asset-path}/img/ribbon-end.svg);
+      background-position: top -45px left -35px;
+      content: '';
+    }
+    &__inner{
+      padding: 3rem 0;
+    }
+  }
+  &__image-text{
+    display: none;
+    @include breakpoint($break-desktop){
+      display: block;
+      width: 50%;
+      @include flex-center;
+    }
+    &__image{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__text{
+      @include flex-center;
+    }
+  }
+}
