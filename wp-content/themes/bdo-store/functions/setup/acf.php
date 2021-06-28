@@ -43,11 +43,14 @@ function acf_set_product_categories($field) {
     $field['choices'] = array();
 
     $args = array(
-        'taxonomy'   => "product_cat"
+        'taxonomy'   => "product_cat",
+        'hide_empty' => false
     );
     $product_categories = get_terms($args);
 
     if ( !empty($product_categories) ) {
+
+        $field['choices']['none'] = 'None';
 
         foreach( $product_categories as $tax ) {
 

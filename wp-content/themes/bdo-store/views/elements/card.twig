@@ -3,7 +3,7 @@
     {% set buttonText = 'Browse products' %}
 {% endif %}
 
-<div class="e-card{% if type %} e-card--{{ type }}{% endif %}">
+<div class="e-card{% if type %} e-card--{{ type }}{% endif %}{% if color %} e-card--{{ color }}{% endif %}">
 
     {% if terms %}
         {{ terms }}

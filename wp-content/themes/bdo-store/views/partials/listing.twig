@@ -21,7 +21,8 @@
         {% if type == 'page' %}
             {% if card.product_category %}
                 {% set cardItems = cardItems|merge({
-                    productCount: TimberTerm(card.product_category).posts()|length
+                    productCount: TimberTerm(card.product_category).posts()|length,
+                    color: TimberTerm(card.product_category).colour
                 })%}
             {% endif %}
         {% endif %}
@@ -29,7 +30,8 @@
         {% if type == 'product' %}
             {% set cardItems = cardItems|merge({
                 price: card._price,
-                terms: card.terms( {query:{taxonomy:'product_cat'}} )|join(', ')
+                terms: card.terms( {query:{taxonomy:'product_cat'}} )|join(', '),
+                color: card.terms( {query:{taxonomy:'product_cat'}} )[0].colour
             })%}
         {% endif %}
 

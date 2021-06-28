@@ -34,21 +34,49 @@
     {% if lists.list %}
 
         {% for list in lists.list %}
-        <div class="c-accordion__list">
 
-            <h2>{{ list.title }}</h2>
+            {% set pulledAccordions = get_accordion( list.product_category ).accordionContent.list[0] %}
 
-            {% for item in list.items %}
-            <div class="c-accordion__item">
+            {% if pulledAccordions %}
 
-                <h3>{{ item.heading }}</h3>
+                {% set accordionColour = get_accordion( list.product_category ).accordionColour %}
 
-                {{ item.content }}
+                <div class="c-accordion__list{% if accordionColour %} c-accordion--{{ accordionColour }}{% endif %}">
+
+                    <h2>{{ list.title }}</h2>
+
+                    {% for item in pulledAccordions.items %}
+                    <div class="c-accordion__item">
+
+                        <h3>{{ item.heading }}</h3>
+
+                        {{ item.content }}
+
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+            {% else %}
+
+            <div class="c-accordion__list{% if list.product_category %} c-accordion--{{ TimberTerm(list.product_category).colour }}{% endif %}">
+
+                <h2>{{ list.title }}</h2>
+
+                {% for item in list.items %}
+                <div class="c-accordion__item">
+
+                    <h3>{{ item.heading }}</h3>
+
+                    {{ item.content }}
+
+                </div>
+                {% endfor %}
 
             </div>
-            {% endfor %}
 
-        </div>
+            {% endif %}
+
         {% endfor %}
 
     {% endif %}

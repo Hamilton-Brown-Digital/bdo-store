@@ -2,7 +2,9 @@
 	{% include 'html-header.twig' %}
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig" itemscope itemtype="http://schema.org/WebPage">
+	{% set prodCat = TimberTerm(post.product_category) %}
+
+	<body class="{{body_class}}{% if prodCat %} theme-color theme-color--{{ prodCat.colour }}{% endif %}" data-template="base.twig" itemscope itemtype="http://schema.org/WebPage">
 
 		{% block header %}
       		{% include 'header.twig' %}

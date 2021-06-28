@@ -189,13 +189,57 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_60d5c2dad9ba4",
+                            "label": "Product Category",
+                            "name": "product_category",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_60d589617070b",
+                                        "operator": "==",
+                                        "value": "menu"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "none": "None",
+                                "18": "Uncategorized",
+                                "20": "Compliance, Risk and Governance",
+                                "21": "Online Learning",
+                                "19": "Software &amp; Diagnostics"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_60d58ab270713",
                             "label": "Items",
                             "name": "items",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_60d5c2dad9ba4",
+                                        "operator": "==",
+                                        "value": "none"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -269,5 +313,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1624607641
+    "modified": 1624639493
 }
