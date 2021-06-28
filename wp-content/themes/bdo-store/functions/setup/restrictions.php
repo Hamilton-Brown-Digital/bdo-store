@@ -46,7 +46,7 @@ add_filter('the_generator', '__return_false');
 function vc_remove_wp_ver_css_js($src)
 {
 
-    if (strpos($src, 'ver=') && !strpos($src, 'style.css') && !strpos($src, 'scripts.min.js') && !strpos($src, 'vendor.min.js')) {
+    if (strpos($src, 'ver=') && !strpos($src, 'style.css') && !strpos($src, 'scripts.min.js') && !strpos($src, 'admin.min.js')) {
         $src = remove_query_arg('ver', $src);
     }
 
