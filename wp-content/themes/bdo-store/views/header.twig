@@ -12,9 +12,9 @@
 					{% include "utility.twig" with {'utility': navigation_utility.get_items} %}
 				</div>
 
-				<form action="/" method="get" class="c-header-utility__search">
-					<input type="text" name="s" placeholder="Search">
-				</form>
+				{% include 'elements/search.twig' with {
+					class: 'c-header-utility__search'
+				} %}
 
 			</div>
 

@@ -1,5 +1,9 @@
 
-{% set posts = Post(acf.listing_cards) %}
+{% if type == 'search' %}
+    {% set posts = posts %}
+{% else %}
+    {% set posts = Post(acf.listing_cards) %}
+{% endif %}
 
 <div class="c-listing">
 
