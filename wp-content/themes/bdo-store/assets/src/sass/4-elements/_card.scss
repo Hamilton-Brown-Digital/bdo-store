@@ -1,0 +1,59 @@
+.e-card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $white;
+  border-top: 8px solid $brand-red;
+  &__image{
+    flex-shrink: none;
+  }
+  &__main{
+    flex-grow: 1;
+    padding:1.5rem 2rem;
+  }
+  &__footer{
+    display: block;
+    padding:1.5rem 2rem;
+    padding-top: 0;
+    white-space: nowrap;
+    @include breakpoint($break-desktop-wide) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__title{
+    @include font-bold;
+    @include font-size(24);
+    margin-bottom: 1em;
+    line-height: 1.2;
+  }
+  &__excerpt{
+    @include font-size(15);
+    line-height: 1.4;
+  }
+  &__price{
+    text-transform: uppercase;
+  }
+  &__count{
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+    @include breakpoint($break-desktop-wide) {
+      padding-bottom: 0;
+    }
+  }
+  &__button{
+    a{
+      padding: 0.5em 1em;
+    }
+  }
+  &--blue{
+    border-top: 8px solid $brand-ocean;
+  }
+  &--orange{
+    border-top: 8px solid $brand-gold;
+  }
+  &--green{
+    border-top: 8px solid $brand-emerald;
+  }
+}
