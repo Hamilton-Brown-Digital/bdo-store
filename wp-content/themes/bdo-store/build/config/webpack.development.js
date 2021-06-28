@@ -69,7 +69,7 @@ module.exports = {
           // Point to exact files to stop sourcemaps refreshing browser
           `${theme}/assets/dist/style.css`,
           `${theme}/assets/dist/scripts.min.js`,
-          `${theme}/assets/dist/vendor.min.js`,
+          `${theme}/assets/dist/admin.min.js`,
           {
             // Trigger a refresh on any php/img/font file update
             match: [

@@ -9,7 +9,10 @@ const formatterPretty = require("eslint-formatter-pretty");
 
 module.exports = {
   // Entry point for the app JS and Styles
-  entry: [path.resolve(__dirname, "../../assets/src/app.js")],
+  entry: {
+    scripts: path.resolve(__dirname, "../../assets/src/app.js"),
+    admin: path.resolve(__dirname, "../../assets/src/admin.js")
+  },
   // Output
   output: {
     // Destination folder
@@ -19,9 +22,7 @@ module.exports = {
     // destination which is why it ends with a slash
     publicPath: path.resolve(__dirname, "../../assets/dist/"),
     // Compiled JS
-    filename: "scripts.min.js",
-    // Compiled external libraries
-    chunkFilename: "vendor.min.js"
+    filename: "[name].min.js"
   },
   // Type of application, could be node etc
   target: "web",
