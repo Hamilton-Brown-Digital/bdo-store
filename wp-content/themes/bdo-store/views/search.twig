@@ -1,0 +1,41 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+    <div class="c-search">
+
+	    <div class="o-row">
+
+		    <div class="o-grid-container c-search__container">
+
+                <h1>Results for `{{ title }}`</h1>
+
+                {% if posts %}
+
+                <div class="c-search__results">
+
+                    <div class="c-search__results-meta">
+
+                        <div class="c-search__count">{{ count }}</div>
+
+                    </div>
+
+                    <div class="c-search__results-wrap">
+
+                        {% include 'partials/listing.twig' with {
+                            type: 'search'
+                        } %}
+
+                    </div>
+
+                </div>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
