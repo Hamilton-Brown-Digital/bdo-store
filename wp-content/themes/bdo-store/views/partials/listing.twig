@@ -3,40 +3,61 @@
 
 <div class="c-listing">
 
-    {{ acf.listing_subhead }}
+<div class="o-row">
+        <div class="o-grid-container">
 
-    {{ acf.listing_heading }}
+        <div class="c-listing__subhead">
+            {{ acf.listing_subhead }}
+        </div>
 
-    {% for card in posts %}
+        <div class="c-listing__heading">
+            {{ acf.listing_heading }}
+        </div>
 
-        {% set type = card.post_type %}
+        <div class="c-listing__grid--{{ acf.listing_columns }}">
 
-        {% set cardItems = {
-            type: type,
-            title: card.title,
-            url: card.link,
-            excerpt: card.preview.read_more('')
-        } %}
 
-        {% if type == 'page' %}
-            {% if card.product_category %}
+
+
+        {% for card in posts %}
+
+        <div class="c-listing__card">
+
+            {% set type = card.post_type %}
+
+            {% set cardItems = {
+                type: type,
+                title: card.title,
+                url: card.link,
+                excerpt: card.preview.read_more('')
+            } %}
+
+            {% if type == 'page' %}
+                {% if card.product_category %}
+                    {% set cardItems = cardItems|merge({
+                        productCount: TimberTerm(card.product_category).posts()|length,
+                        color: TimberTerm(card.product_category).colour
+                    })%}
+                {% endif %}
+            {% endif %}
+
+            {% if type == 'product' %}
                 {% set cardItems = cardItems|merge({
-                    productCount: TimberTerm(card.product_category).posts()|length,
-                    color: TimberTerm(card.product_category).colour
+                    price: card._price,
+                    terms: card.terms( {query:{taxonomy:'product_cat'}} )|join(', '),
+                    color: card.terms( {query:{taxonomy:'product_cat'}} )[0].colour
                 })%}
             {% endif %}
-        {% endif %}
 
-        {% if type == 'product' %}
-            {% set cardItems = cardItems|merge({
-                price: card._price,
-                terms: card.terms( {query:{taxonomy:'product_cat'}} )|join(', '),
-                color: card.terms( {query:{taxonomy:'product_cat'}} )[0].colour
-            })%}
-        {% endif %}
+            {% include "./elements/card.twig" with cardItems %}
 
-        {% include "./elements/card.twig" with cardItems %}
+            </div>
 
-    {% endfor %}
+        {% endfor %}
+
+        </div>
+
+        </div>
+</div>
 
 </div>
