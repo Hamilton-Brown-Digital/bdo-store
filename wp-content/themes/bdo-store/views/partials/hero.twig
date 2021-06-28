@@ -1,43 +1,67 @@
-<div class="c-hero">
+{% set header = post.hero_header %}
+{% set intro = post.hero_intro %}
+{% set content = post.hero_content %}
+{% set link = post.hero_link %}
+{% set image = post.hero_image %}
+{% set moreContent = post.hero_more_content %}
+{% set type = post.hero_type %}
+{% set pageType = post.hero_page_type %}
+
+<div class="c-hero {%if pageType == 'category' %}c-hero--{{ pageType }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}">
 
     <div class="o-row o-row--no-margin">
+
         <div class="o-grid-container c-hero__container">
 
-        <div class="c-hero__main">
-            <div class="c-hero__main__inner">
-                <h1 class="c-hero__heading">{{ post.hero_header }}</h1>
-                {% if post.hero_intro %}
-                <p class="c-hero__intro">{{ post.hero_intro }}</p>
+            <div class="c-hero__main">
+
+                <div class="c-hero__main__inner">
+
+                    <h1 class="c-hero__heading">
+                    {% if header %}
+                        {{ header }}
+                    {% else %}
+                        {{ post.title }}
+                    {% endif %}
+                    </h1>
+
+                    {% if pageType == 'category' and intro %}
+                    <p class="c-hero__intro">{{ intro }}</p>
+                    {% endif %}
+
+                    {% if pageType == 'category' and content %}
+                        <p class="c-hero__text">{{ content }}</p>
+                    {% endif %}
+
+                    {% if pageType == 'category' and link %}
+                        {% include "./elements/button.twig"
+                            with  {
+                                title : link['title'],
+                                url: link['url'],
+                                target: link['target'],
+                                color: 'red'
+                            }
+                        %}
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            {% if moreContent != 'none'%}
+            <div class="c-hero__image-text">
+                {% if moreContent == 'image' and image %}
+                    <img class="c-hero__image-text__image" src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
                 {% endif %}
-                {% if post.has_image == false and post.hero_content %}
-                    <p class="c-hero__text">{{ post.hero_content }}</p>
-                {% endif %}
-                {% if post.hero_link %}
-                    {% include "./elements/button.twig"
-                        with  {
-                            title : post.hero_link['title'],
-                            url: post.hero_link['url'],
-                            target: post.hero_link['target'],
-                            color: 'red'
-                        }
-                    %}
+
+                {% if moreContent == 'text' and pageType == 'category' and content %}
+                    <p class="c-hero__image-text__text">{{ content }}</p>
                 {% endif %}
             </div>
-        </div>
-
-        <div class="c-hero__image-text">
-            {% if post.has_image %}
-                {% if post.hero_image %}
-                    <img class="c-hero__image-text__image" src="{{ TimberImage(post.hero_image).src }}" srcset="{{ TimberImage(post.hero_image).srcset()}}" />
-                {% endif %}
-            {% else %}
-                {% if post.hero_content %}
-                    <p class="c-hero__image-text__text">{{ post.hero_content }}</p>
-                {% endif %}
             {% endif %}
-        </div>
 
         </div>
+
     </div>
 
 </div>
