@@ -7,7 +7,9 @@
 
     {% if image %}
     <div class="e-card__image">
+        <a href="{{url}}">
         <img src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
+        </a>
     </div>
     {% endif %}
 
@@ -21,7 +23,7 @@
 
         {% if title %}
         <h3 class="e-card__title">
-            {{ title }}
+        <a href="{{url}}">{{ title }}</a>
         </h3>
         {% endif %}
 
@@ -41,7 +43,7 @@
         </div>
         {% elseif price %}
         <div class="e-card__price">
-            From £{{ price|number_format(0, '.', ',') }}
+            From <span class="e-card__price__price">£{{ price|number_format(0, '.', ',') }}</span>
         </div>
         {% endif %}
 

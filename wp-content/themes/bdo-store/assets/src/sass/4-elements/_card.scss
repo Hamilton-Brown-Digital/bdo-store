@@ -3,44 +3,73 @@
   flex-direction: column;
   height: 100%;
   background-color: $white;
-  border-top: 8px solid $brand-red;
   &__image{
+    position: relative;
+    display: block;
     flex-shrink: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 45.49%;
+    background: $gold;
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
   &__main{
     flex-grow: 1;
-    padding:1.5rem 2rem;
+    padding:2rem;
+    @include breakpoint($break-desktop-wide) {
+      padding-bottom: 6rem;
+    }
+    border-top: 8px solid $brand-red;
   }
   &__footer{
-    display: block;
-    padding:1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    padding:2rem;
     padding-top: 0;
     white-space: nowrap;
+    gap:1.5rem;
     @include breakpoint($break-desktop-wide) {
-      display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
     }
   }
+  &__tagline{
+    margin-bottom: 1.5rem;
+    color: $brand-red;
+  }
   &__title{
     @include font-bold;
     @include font-size(24);
-    margin-bottom: 1em;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
   }
   &__excerpt{
     @include font-size(15);
     line-height: 1.4;
+    .c-listing__grid--4cols &{
+      display: none;
+    }
   }
   &__price{
-    text-transform: uppercase;
+    &__price{
+      @include font-bold;
+      color: $brand-red;
+      @include font-size(18);
+    }
   }
   &__count{
-    padding-bottom: 1.5rem;
     text-transform: uppercase;
-    @include breakpoint($break-desktop-wide) {
-      padding-bottom: 0;
-    }
+    @include font-bold;
+    @include font-size(15);
   }
   &__button{
     a{
@@ -48,12 +77,28 @@
     }
   }
   &--blue{
-    border-top: 8px solid $brand-ocean;
+    .e-card__main{
+      border-top-color:$brand-ocean;
+    }
+    .e-card__tagline{
+      color: $brand-ocean;
+    }
+
   }
   &--orange{
-    border-top: 8px solid $brand-gold;
+    .e-card__main{
+      border-top-color:$brand-gold;
+    }
+    .e-card__tagline{
+      color: $brand-gold;
+    }
   }
   &--green{
-    border-top: 8px solid $brand-emerald;
+    .e-card__main{
+      border-top-color:$brand-emerald;
+    }
+    .e-card__tagline{
+      color: $brand-emerald;
+    }
   }
 }

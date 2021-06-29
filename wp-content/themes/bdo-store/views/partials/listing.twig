@@ -5,6 +5,8 @@
     {% set posts = Post(acf.listing_cards) %}
 {% endif %}
 
+{% set itemnum = posts|length %}
+
 <div class="c-listing">
 
 <div class="o-row">
@@ -18,7 +20,7 @@
             {{ acf.listing_heading }}
         </div>
 
-        <div class="c-listing__grid--{{ acf.listing_columns }}">
+        <div class="c-listing__grid--{{ acf.listing_columns }} items-{{ itemnum }}">
 
 
 
@@ -38,7 +40,7 @@
 
             {% if type == 'page' %}
                 {% if card.product_category %}
-                    {% if card.hero_more_content == 'image' %}
+                    {% if card.hero_more_content != 'none' %}
                         {% set cardItems = cardItems|merge({
                             image: TimberImage( card.hero_image )
                         })%}

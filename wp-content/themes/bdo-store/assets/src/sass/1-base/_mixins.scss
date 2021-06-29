@@ -226,10 +226,10 @@
     @include font-size(30);
   }
   @include breakpoint($break-tablet){
-    @include font-size(60);
+    @include font-size(40);
   }
   @include breakpoint($break-desktop){
-    @include font-size(80);
+    @include font-size(60);
   }
 }
 
