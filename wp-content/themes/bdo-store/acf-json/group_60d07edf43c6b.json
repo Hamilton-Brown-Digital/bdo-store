@@ -106,7 +106,7 @@
             "label": "More Content",
             "name": "hero_more_content",
             "type": "button_group",
-            "instructions": "",
+            "instructions": "Show image or text block in hero.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -137,14 +137,14 @@
             "label": "Image",
             "name": "hero_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Even if you choose to show text block in hero, choose an image here to show the image for this page on index modules elsewhere on the site.",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_60d1e98865e10",
-                        "operator": "==",
-                        "value": "image"
+                        "operator": "!=",
+                        "value": "none"
                     },
                     {
                         "field": "field_60d9abd368fb7",
@@ -191,7 +191,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
@@ -286,5 +286,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1624960616
+    "modified": 1624964721
 }

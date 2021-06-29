@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: space-between;
   height: 57px;
-  padding: 0px 2.5em;
+  padding: 0 2.5em;
   border-radius: 2px;
   color: $white;
   font-weight: $bold;
+  text-align: center;
   transition: color 0.3s background-color 0.3s;
-
   svg {
     path {
       transition: all 300ms;
@@ -25,6 +25,10 @@
     @include font-bold;
   }
 
+  &--small{
+    height: 45px;
+    padding:0 1em;
+  }
 
   &--red{
     background-color: $brand-red;

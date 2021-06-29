@@ -206,6 +206,48 @@
   }
 }
 
+
+
+
+// Typography mixins
+
+@mixin font-bold{
+  font-family:$font-bold, $font-secondary;
+}
+@mixin font-display{
+  font-family:$font-bold, $font-secondary;
+}
+
+// Huge section headings
+@mixin header-section{
+  @include font-bold;
+  @include font-size(20);
+  @include breakpoint($break-mobile){
+    @include font-size(30);
+  }
+  @include breakpoint($break-tablet){
+    @include font-size(40);
+  }
+  @include breakpoint($break-desktop){
+    @include font-size(60);
+  }
+}
+
+// tagline above headings
+@mixin header-subhead{
+  color: $brand-red;
+  text-transform: uppercase;
+  @include font-size(14);
+  @include breakpoint($break-tablet){
+    @include font-size(18);
+  }
+}
+
+
+
+
+
+
 @mixin image-with-focus {
   img {
     width: 100%;
@@ -301,11 +343,4 @@
 @mixin flex-column{
   display: flex;
   flex-direction: column;
-}
-
-@mixin font-bold{
-  font-family:$font-bold, $font-secondary;
-}
-@mixin font-display{
-  font-family:$font-bold, $font-secondary;
 }

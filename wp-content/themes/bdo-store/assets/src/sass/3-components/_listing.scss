@@ -1,0 +1,57 @@
+.c-listing{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  &__subhead{
+    @include header-subhead;
+  }
+  &__heading{
+    @include header-section;
+    margin-top: 0.3em;
+    margin-bottom: 0.8em;
+  }
+  @mixin griddefaults{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: clamp(0.5rem, 3vw, 3rem);
+  }
+  &__grid{
+    @include griddefaults;
+    @include breakpoint($break-desktop){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    /* stylelint-disable */
+    &--2cols{
+      @include griddefaults;
+      @include breakpoint($break-tablet){
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &--3cols{
+      @include griddefaults;
+      @include breakpoint($break-tablet){
+        grid-template-columns: 1fr 1fr;
+      }
+      @include breakpoint($break-desktop-mini){
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      &.items-3{
+        div:nth-of-type(3){
+          @include breakpoint($break-tablet $break-desktop-mini){
+            grid-column-end: span 2;
+          }
+        }
+      }
+    }
+    &--4cols{
+      @include griddefaults;
+      @include breakpoint($break-tablet){
+        grid-template-columns: 1fr 1fr;
+      }
+      @include breakpoint($break-desktop-xl){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+    /* stylelint-enable */
+  }
+}
