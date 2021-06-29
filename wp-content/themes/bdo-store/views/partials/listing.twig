@@ -38,6 +38,12 @@
 
             {% if type == 'page' %}
                 {% if card.product_category %}
+                    {% if card.hero_more_content == 'image' %}
+                        {% set cardItems = cardItems|merge({
+                            image: TimberImage( card.hero_image )
+                        })%}
+                    {% endif %}
+
                     {% set cardItems = cardItems|merge({
                         productCount: TimberTerm(card.product_category).posts()|length,
                         color: TimberTerm(card.product_category).colour

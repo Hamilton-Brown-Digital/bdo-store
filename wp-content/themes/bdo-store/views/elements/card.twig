@@ -5,9 +5,11 @@
 
 <div class="e-card{% if type %} e-card--{{ type }}{% endif %}{% if color %} e-card--{{ color }}{% endif %}">
 
+    {% if image %}
     <div class="e-card__image">
-        
+        <img src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
     </div>
+    {% endif %}
 
     <div class="e-card__main">
 
