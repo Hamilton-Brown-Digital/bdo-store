@@ -29,6 +29,9 @@ $break-desktop-xl: 88em; // 1408px
 $break-site-width:$site-width;
 $break-site-width-margins:$site-width-margins;
 
+$break-tablet-under: 0 $break-tablet;
+$break-desktop-under: 0 $break-desktop;
+
 
 $white: #fff;
 $black: #000;
@@ -47,7 +50,7 @@ $line-dark: 1px solid $color-line-dark;
 // BDO brand colors
 $brand-red: #ed1a3b;
 $brand-emerald: #218f8b;
-$brand-ocean: #218f8b;
+$brand-ocean: #02A5E2;
 $brand-charcoal: #333333;
 $brand-pale-charcoal: #e7e7e7;
 $brand-gold: #df8639;
