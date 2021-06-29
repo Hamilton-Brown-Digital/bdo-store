@@ -59,6 +59,19 @@ class CustomTimber extends TimberSite
       }
     } ) );
 
+    $twig->addFunction( new Timber\Twig_Function( 'get_prod_cat_pages', function ( $id ) {
+      $page = get_posts(array(
+        'numberposts'	=> 1,
+        'post_type'		=> 'page',
+        'meta_key'		=> 'product_category',
+        'meta_value'	=> $id
+      ));
+
+      if ( $page ) {
+        return $page[0];
+      }
+    } ) );
+
     return $twig;
   }
 }

@@ -1,0 +1,58 @@
+{% set items = post.meta('hero_carousel_items') %}
+
+<div class="c-hero-carousel">
+
+    {% if items %}
+
+        <div class="swiper-container c-hero-carousel__swiper">
+
+            <div class="swiper-wrapper">
+
+            {% for item in items %}
+
+                {% set type = item.type %}
+
+                {% if type == 'standard' %}
+                    {% set hero = item.hero %}
+                {% else %}
+                    {% set hero = TimberPost( get_prod_cat_pages( item.hero_carousel_page ) ) %}
+                {% endif %}
+
+                {% set heroItems = {
+                    header: hero.hero_header,
+                    intro: hero.hero_intro,
+                    content: hero.hero_content,
+                    image: TimberImage(hero.hero_image),
+                    moreContent: hero.hero_more_content,
+                    type: hero.hero_type,
+                    pageType: hero.hero_page_type,
+                    carousel: true
+                } %}
+
+                {% if type == 'page' %}
+                    {% set linkArr = [{
+                        'title': 'Browse products',
+                        'url': hero.link,
+                        'target': ''
+                    }] %}
+
+                    {% set heroItems = heroItems|merge({
+                        link: linkArr[0]
+                    })%}
+                {% endif %}
+
+                <div class="swiper-slide">
+                    {% include "./partials/hero.twig" with heroItems %}
+                </div>
+
+            {% endfor %}
+
+            </div>
+
+            <div class="swiper-pagination c-hero-carousel__pagination"></div>
+
+        </div>
+
+    {% endif %}
+
+</div>
