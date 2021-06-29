@@ -238,6 +238,13 @@
                                         "operator": "==",
                                         "value": "none"
                                     }
+                                ],
+                                [
+                                    {
+                                        "field": "field_60d589617070b",
+                                        "operator": "==",
+                                        "value": "title"
+                                    }
                                 ]
                             ],
                             "wrapper": {
@@ -313,5 +320,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1624639493
+    "modified": 1624981661
 }
