@@ -67,3 +67,4 @@ function acf_set_product_categories($field) {
 }
 
 add_filter('acf/load_field/name=product_category', 'acf_set_product_categories');
+add_filter('acf/load_field/name=hero_carousel_page', 'acf_set_product_categories');

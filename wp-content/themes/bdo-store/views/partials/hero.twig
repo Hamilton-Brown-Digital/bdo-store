@@ -1,11 +1,13 @@
-{% set header = post.hero_header %}
-{% set intro = post.hero_intro %}
-{% set content = post.hero_content %}
-{% set link = post.hero_link %}
-{% set image = post.hero_image %}
-{% set moreContent = post.hero_more_content %}
-{% set type = post.hero_type %}
-{% set pageType = post.hero_page_type %}
+{% if not carousel %}
+    {% set header = post.hero_header %}
+    {% set intro = post.hero_intro %}
+    {% set content = post.hero_content %}
+    {% set link = post.hero_link %}
+    {% set image = post.hero_image %}
+    {% set moreContent = post.hero_more_content %}
+    {% set type = post.hero_type %}
+    {% set pageType = post.hero_page_type %}
+{% endif %}
 
 <div class="c-hero {%if pageType == 'category' %}c-hero--{{ pageType }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}">
 

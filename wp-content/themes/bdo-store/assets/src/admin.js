@@ -2,7 +2,7 @@
 
 acf.addAction('ready_field/name=product_category', function ( ev ) {
     const elem = ev
-    let heroType = acf.getField('field_60d9abd368fb7');
+    let heroType = acf.getField('field_60d9abd368fb7')
 
     heroType.hide()
 
@@ -14,6 +14,12 @@ acf.addAction('ready_field/name=product_category', function ( ev ) {
         }
     })
 
-}); 
+})
+
+acf.addAction('ready_field/name=hero_carousel_items', function ( ev ) {
+    let heroType = acf.getField('field_60d9abd368fb7')
+    heroType.hide()
+    heroType.val('category')
+})
 
 /* eslint-enable */

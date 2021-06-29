@@ -16,6 +16,10 @@
                 "id": ""
             },
             "choices": {
+                "none": "None",
+                "18": "Uncategorized",
+                "20": "Compliance, Risk and Governance",
+                "21": "Online Learning",
                 "19": "Software &amp; Diagnostics"
             },
             "default_value": false,
@@ -33,6 +37,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "160"
             }
         ]
     ],
@@ -44,5 +53,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1624459384
+    "modified": 1624959843
 }
