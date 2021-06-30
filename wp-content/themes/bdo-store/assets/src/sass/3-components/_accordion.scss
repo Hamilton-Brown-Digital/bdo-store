@@ -1,3 +1,18 @@
 .c-accordion{
-  background-color: $gold;
+  &__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: clamp(0.5rem, 3vw, 3rem);
+    @include breakpoint($break-tablet){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  &__details{
+    background: $gold;
+  }
+  &__lists{
+    background: $yellow;
+    grid-column-end: span 2;
+  }
 }
