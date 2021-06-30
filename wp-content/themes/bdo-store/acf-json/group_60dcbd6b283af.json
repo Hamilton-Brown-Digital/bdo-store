@@ -1,0 +1,70 @@
+{
+    "key": "group_60dcbd6b283af",
+    "title": "Module options",
+    "fields": [
+        {
+            "key": "field_60dcbd7c3e63d",
+            "label": "Module spacing",
+            "name": "module_padding",
+            "type": "button_group",
+            "instructions": "Remove spacing from the top and bottom of module.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "padding": "Keep spacing",
+                "nopaddingtop": "Remove top spacing",
+                "nopaddingbottom": "Remove bottom spacing",
+                "nopadding": "Remove both"
+            },
+            "allow_null": 0,
+            "default_value": "padding : Keep spacing",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_60dcbeab3e63e",
+            "label": "Module background",
+            "name": "module_background",
+            "type": "button_group",
+            "instructions": "Select background colour",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "gray": "Grey",
+                "white": "White"
+            },
+            "allow_null": 0,
+            "default_value": "gray : Grey",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1625082190
+}

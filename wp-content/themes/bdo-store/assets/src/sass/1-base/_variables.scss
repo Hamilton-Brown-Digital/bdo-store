@@ -61,11 +61,12 @@ $brand-slate: #657c91;
 $brand-burgundy: #98002e;
 
 // Background colors
-$color-bg:$brand-charcoal;
 $color-bg-1:#505050;
 $color-bg-2:#E7E7E7;
 $color-bg-3:#F2F2F2;
 $color-bg-4:#ffffff;
+$color-bg-solid:$brand-charcoal;
+$color-bg-feint:$color-bg-3;
 
 
 $susy: (

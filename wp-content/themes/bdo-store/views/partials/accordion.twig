@@ -1,7 +1,9 @@
 {% set details = acf.accordion_details %}
 {% set lists = acf.accordion_lists %}
 
-<div class="c-accordion">
+<div class="c-accordion padding--{{acf.module_padding}} background--{{acf.module_background}}">
+
+<div class="o-row">
 
 <div class="o-row">
     <div class="o-grid-container c-accordion__container">
@@ -24,12 +26,9 @@
 
         {% else %}
             
-            
-            <div class="c-accordion__subhead">
-                {{ details.subhead }}
-            </div>
+            {{ details.subhead }}
 
-            <h2 class="c-accordion__main-heading">{{ details.heading }}</h2>
+            <h2>{{ details.heading }}</h2>
 
         {% endif %}
 
@@ -65,21 +64,21 @@
 
                 {% else %}
 
-                <div class="c-accordion__list{% if list.product_category %} c-accordion--{{ TimberTerm(list.product_category).colour }}{% endif %}">
+                    <div class="c-accordion__list{% if list.product_category %} c-accordion--{{ TimberTerm(list.product_category).colour }}{% endif %}">
 
-                    <h2>{{ list.title }}</h2>
+                        <h2>{{ list.title }}</h2>
 
-                    {% for item in list.items %}
-                    <div class="c-accordion__item">
+                        {% for item in list.items %}
+                            <div class="c-accordion__item">
 
-                        <h3>{{ item.heading }}</h3>
+                            <h3>{{ item.heading }}</h3>
 
-                        {{ item.content }}
+                            {{ item.content }}
+
+                            </div>
+                        {% endfor %}
 
                     </div>
-                    {% endfor %}
-
-                </div>
 
                 {% endif %}
 
@@ -89,7 +88,5 @@
 
     </div>
 
-
-
-    </div>
+</div>
 </div>
