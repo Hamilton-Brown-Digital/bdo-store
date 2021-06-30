@@ -6,6 +6,9 @@
   .background--white &{
     background-color: $color-bg-feint;
   }
+  .background--gray &{
+    background-color: $white;
+  }
   &__image{
     position: relative;
     display: block;

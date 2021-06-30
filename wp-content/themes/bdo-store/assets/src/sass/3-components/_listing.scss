@@ -7,6 +7,9 @@
     margin-top: 0.3em;
     margin-bottom: 0.8em;
   }
+  &__container{
+    padding-bottom: clamp(0.5rem, 3vw, 3rem);
+  }
   @mixin griddefaults{
     display: grid;
     grid-template-columns: 1fr;
