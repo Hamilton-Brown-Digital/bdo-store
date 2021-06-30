@@ -24,9 +24,12 @@
 
         {% else %}
             
-            {{ details.subhead }}
+            
+            <div class="c-accordion__subhead">
+                {{ details.subhead }}
+            </div>
 
-            <h2>{{ details.heading }}</h2>
+            <h2 class="c-accordion__main-heading">{{ details.heading }}</h2>
 
         {% endif %}
 

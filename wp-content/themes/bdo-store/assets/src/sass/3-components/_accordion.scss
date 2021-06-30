@@ -9,10 +9,15 @@
     }
   }
   &__details{
-    background: $gold;
   }
   &__lists{
-    background: $yellow;
     grid-column-end: span 2;
+  }
+  &__main-heading{
+    @include header-regular;
+  }
+  &__subhead{
+    @include header-subhead;
+    margin-bottom: 1.5rem;
   }
 }
