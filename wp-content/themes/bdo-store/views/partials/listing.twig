@@ -6,8 +6,9 @@
 {% endif %}
 
 {% set itemnum = posts|length %}
+{% set modulePadding = acf.module_padding %}
 
-<div class="c-listing">
+<div class="c-listing padding--{{modulePadding}}">
 
 <div class="o-row">
         <div class="o-grid-container">
