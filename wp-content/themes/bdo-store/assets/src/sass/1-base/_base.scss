@@ -69,15 +69,13 @@ textarea {
 
 .main {
   position: relative;
-  padding-bottom: 80px;
-
-  @media (min-width: $break-desktop-med) {
-    padding-bottom: 110px;
-  }
 }
 
 .page-content{
   background-color: $white;
+  &>div:last-of-type{
+    padding-bottom:12rem;
+  }
 }
 
 ul li{

@@ -222,6 +222,7 @@
 @mixin header-section{
   @include font-bold;
   @include font-size(20);
+  margin-top: 0;
   @include breakpoint($break-mobile){
     @include font-size(30);
   }
