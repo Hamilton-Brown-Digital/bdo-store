@@ -1,7 +1,7 @@
 {
-  "name": "manifesto-wordpress-webpack",
+  "name": "almanac-digital-wordpress-webpack",
   "version": "1.0.0",
-  "description": "WebPack config for Manifesto WordPress builds",
+  "description": "WebPack config for Almanac Digital WordPress builds",
   "scripts": {
     "start": "npm run dev",
     "dev": "NODE_ENV=development webpack --config ./webpack-config.js --mode development",
@@ -15,9 +15,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/manifestodigital/wordpress-webpack/src/master/"
+    "url": "https://bitbucket.org/almanacdigital/wordpress-webpack/src/master/"
   },
-  "author": "Manifesto",
+  "author": "Almanac Digital",
   "license": "ISC",
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "7.8.3",
