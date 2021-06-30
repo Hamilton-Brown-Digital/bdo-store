@@ -4,6 +4,7 @@
 ./bower_components/
 ../assets/src/sass/0-lib
 ../assets/src/js/classes/Init.js
+../assets/src/js/classes/HeroCarousel.js
 ../assets/src/img/
 ../assets/src/css/
 ../assets/src/fonts/

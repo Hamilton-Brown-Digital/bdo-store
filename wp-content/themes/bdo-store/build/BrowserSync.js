@@ -18,7 +18,7 @@ const BrowserSync = function(options) {
   this.sync.init(null, {
     logFileChanges: false,
     reloadOnRestart: true,
-    logPrefix: "Manifesto Browser Sync",
+    logPrefix: "Almanac Digital Browser Sync",
     logLevel: "info",
     files: [`${theme}/assets/style.css`, `${theme}/assets/scripts.min.js`],
     proxy: {
