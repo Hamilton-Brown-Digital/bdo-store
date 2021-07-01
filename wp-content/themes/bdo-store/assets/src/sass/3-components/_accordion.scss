@@ -1,23 +1,95 @@
 .c-accordion{
+  &__subhead{
+    margin-bottom:1.5rem;
+    @include header-subhead;
+  }
+  &__main-heading{
+    @include header-regular;
+    margin-bottom:1.5rem;
+  }
   &__container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: clamp(0.5rem, 3vw, 3rem);
-    @include breakpoint($break-tablet){
+    @include breakpoint($break-desktop-med){
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
   &__details{
   }
-  &__lists{
+  &__menu{
+    &__item{
+      display: block;
+      padding:0.75rem;
+      a{
+        @include font-bold;
+        &:active{
+          color:$brand-red;
+        }
+      }
+    }
+  }
+  &__blocks{
     grid-column-end: span 2;
   }
-  &__main-heading{
-    @include header-regular;
+  &__block{
+    &__title{
+      @include header-small;
+      margin: 1em 0;
+    }
+    &:first-of-type{
+      @include breakpoint($break-desktop-med){
+        .c-accordion__block__title{
+          margin-top:0;
+        }
+      }
+    }
   }
-  &__subhead{
-    @include header-subhead;
-    margin-bottom: 1.5rem;
+  &__item{
+    margin-bottom: 0.8rem;
+    background-color: $color-bg-feint;
+    border-top: 4px solid $brand-red;
+    .theme-color--orange &{
+      border-color: $brand-gold;
+    }
+    .theme-color--blue &{
+      border-color: $brand-ocean;
+    }
+    .theme-color--green &{
+      border-color: $brand-emerald;
+    }
+    .background--gray &{
+      background-color: $white;
+    }
+    .background--white &{
+      background-color: $color-bg-feint;
+    }
+    &__title{
+      display: block;
+      padding: 2rem;
+      background-image: url(#{$asset-path}/img/dash.svg);
+      background-position: center right 2rem;
+      cursor: pointer;
+      &__title{
+        @include header-small;
+      }
+    }
+    &__content{
+      height: 0;
+      visibility: hidden;
+    }
+    &--active{
+      border-top: 8px solid $brand-red;
+      .c-accordion__item__title{
+        background-image: url(#{$asset-path}/img/cross.svg);
+      }
+      .c-accordion__item__content{
+        height: auto;
+        padding: 2rem;
+        padding-top:0;
+        visibility: visible;
+      }
+    }
   }
 }

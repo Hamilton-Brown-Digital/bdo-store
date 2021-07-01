@@ -9,13 +9,21 @@
     <div class="c-accordion__details">
     
         {% if details.type == 'menu' %}
+
+            {% if details.subhead %}
+            <div class="c-accordion__subhead">
+                {{ details.subhead }}
+            </div>
+            {% endif %}
             
-            <h2>{{ details.heading }}</h2>
+            <h2 class="c-accordion__main-heading">{{ details.heading }}</h2>
+
+            <hr class="e-seperator">
 
             {% if details.menu %}
             <ul class="c-accordion__menu">
                 {% for menuItem in details.menu %}
-                    <li>
+                    <li class="c-accordion__menu__item">
                         <a href="#">{{ menuItem.name }}</a>
                     </li>
                 {% endfor %}
@@ -24,15 +32,19 @@
 
         {% else %}
             
-            {{ details.subhead }}
+            {% if details.subhead %}
+            <div class="c-accordion__subhead">
+                {{ details.subhead }}
+            </div>
+            {% endif %}
 
-            <h2>{{ details.heading }}</h2>
+            <h2 class="c-accordion__main-heading">{{ details.heading }}</h2>
 
         {% endif %}
 
     </div>
 
-    <div class="c-accordion__lists">
+    <div class="c-accordion__blocks">
 
         {% if lists.list %}
 
@@ -44,35 +56,37 @@
 
                     {% set accordionColour = get_accordion( list.product_category ).accordionColour %}
 
-                    <div class="c-accordion__list{% if accordionColour %} c-accordion--{{ accordionColour }}{% endif %}">
+                    <div class="c-accordion__block{% if accordionColour %} c-accordion--{{ accordionColour }}{% endif %}">
 
-                        <h2>{{ list.title }}</h2>
+                        <h2 class="c-accordion__block__title">{{ list.title }}</h2>
 
                         {% for item in pulledAccordions.items %}
                         <div class="c-accordion__item">
-
-                            <h3>{{ item.heading }}</h3>
-
-                            {{ item.content }}
-
-                        </div>
+                                <a href="/" class="c-accordion__item__title">
+                                    <h2 class="c-accordion__item__title__title">{{ item.heading }}</h2>
+                                </a>
+                                <div class="c-accordion__item__content">
+                                    {{ item.content }}
+                                </div>
+                            </div>
                         {% endfor %}
 
                     </div>
 
                 {% else %}
 
-                    <div class="c-accordion__list{% if list.product_category %} c-accordion--{{ TimberTerm(list.product_category).colour }}{% endif %}">
+                    <div class="c-accordion__block{% if list.product_category %} c-accordion--{{ TimberTerm(list.product_category).colour }}{% endif %}">
 
-                        <h2>{{ list.title }}</h2>
+                        <h2 class="c-accordion__block__title">{{ list.title }}</h2>
 
                         {% for item in list.items %}
-                            <div class="c-accordion__item">
-
-                            <h3>{{ item.heading }}</h3>
-
-                            {{ item.content }}
-
+                            <div class="c-accordion__item c-accordion__item--active">
+                                <a href="/" class="c-accordion__item__title">
+                                    <h2 class="c-accordion__item__title__title">{{ item.heading }}</h2>
+                                </a>
+                                <div class="c-accordion__item__content">
+                                    {{ item.content }}
+                                </div>
                             </div>
                         {% endfor %}
 

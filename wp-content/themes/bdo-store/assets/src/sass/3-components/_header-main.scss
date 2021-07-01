@@ -53,12 +53,12 @@
     &__icon{
       width: 20px;
       height: 20px;
-      background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/basket.svg');
+      background-image: url('#{$asset-path}/img/icons/basket.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 20px 20px;
       @include breakpoint($break-desktop-wide) {
-        background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/basket-white.svg');
+        background-image: url('#{$asset-path}/img/icons/basket-white.svg');
       }
     }
     &__label{

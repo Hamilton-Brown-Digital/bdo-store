@@ -248,6 +248,18 @@
   }
 }
 
+// Small headings
+@mixin header-small{
+  @include font-bold;
+  @include font-size(20);
+  @include breakpoint($break-tablet){
+    @include font-size(20);
+  }
+  @include breakpoint($break-desktop-wide){
+    @include font-size(24);
+  }
+}
+
 // tagline above headings
 @mixin header-subhead{
   color: $brand-red;
