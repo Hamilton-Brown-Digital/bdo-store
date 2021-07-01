@@ -43,7 +43,7 @@
         </div>
         {% elseif price %}
         <div class="e-card__price">
-            From <span class="e-card__price__price">£{{ price|number_format(0, '.', ',') }}</span>
+            From <span class="e-card__price__price">£{{ price|number_format(2, '.', ',') }}</span>
         </div>
         {% endif %}
 

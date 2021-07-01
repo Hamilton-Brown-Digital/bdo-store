@@ -4,8 +4,9 @@
  * @desc Remove the default post/page editor
  */
 function remove_editor() {
-  remove_post_type_support('page', 'editor');
-  remove_post_type_support('post', 'editor');
+	remove_post_type_support('page', 'editor');
+	remove_post_type_support('post', 'editor');
+	remove_post_type_support('product', 'editor');
 }
 add_action('admin_init', 'remove_editor');
 
