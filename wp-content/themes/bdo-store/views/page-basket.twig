@@ -1,0 +1,11 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+    {% include 'partials/hero.twig' %}
+
+    {% filter shortcodes %}
+        [woocommerce_cart]
+    {% endfilter %}
+
+{% endblock %}
