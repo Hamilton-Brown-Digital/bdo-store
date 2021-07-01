@@ -3,6 +3,27 @@
     "title": "Module - Signpost",
     "fields": [
         {
+            "key": "field_60dcc3f3fed44",
+            "label": "Signpost options",
+            "name": "signpost_options",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60dcbd6b283af"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_60d4214217261",
             "label": "Media",
             "name": "signpost_media",
@@ -204,5 +225,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1624515181
+    "modified": 1625080947
 }

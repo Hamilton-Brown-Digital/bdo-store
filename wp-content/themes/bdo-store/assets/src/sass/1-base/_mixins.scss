@@ -222,6 +222,7 @@
 @mixin header-section{
   @include font-bold;
   @include font-size(20);
+  margin-top: 0;
   @include breakpoint($break-mobile){
     @include font-size(30);
   }
@@ -230,6 +231,32 @@
   }
   @include breakpoint($break-desktop){
     @include font-size(60);
+  }
+}
+// Regular headings
+@mixin header-regular{
+  @include font-bold;
+  @include font-size(20);
+  @include breakpoint($break-mobile){
+    @include font-size(20);
+  }
+  @include breakpoint($break-tablet){
+    @include font-size(30);
+  }
+  @include breakpoint($break-desktop){
+    @include font-size(40);
+  }
+}
+
+// Small headings
+@mixin header-small{
+  @include font-bold;
+  @include font-size(20);
+  @include breakpoint($break-tablet){
+    @include font-size(20);
+  }
+  @include breakpoint($break-desktop-wide){
+    @include font-size(24);
   }
 }
 

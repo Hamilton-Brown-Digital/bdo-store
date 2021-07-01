@@ -7,70 +7,70 @@
 
 {% set itemnum = posts|length %}
 
-<div class="c-listing">
-
-<div class="o-row">
-        <div class="o-grid-container">
-
-        <div class="c-listing__subhead">
-            {{ acf.listing_subhead }}
-        </div>
-
-        <div class="c-listing__heading">
-            {{ acf.listing_heading }}
-        </div>
-
-        <div class="c-listing__grid--{{ acf.listing_columns }} items-{{ itemnum }}">
-
-
-
-
-        {% for card in posts %}
-
-        <div class="c-listing__card">
-
-            {% set type = card.post_type %}
-
-            {% set cardItems = {
-                type: type,
-                title: card.title,
-                url: card.link,
-                excerpt: card.preview.read_more(''),
-            } %}
-
-            {% if type == 'page' %}
-                {% if card.product_category %}
-                    {% if card.hero_more_content != 'none' %}
-                        {% set cardItems = cardItems|merge({
-                            image: TimberImage( card.hero_image )
-                        })%}
-                    {% endif %}
-
-                    {% set cardItems = cardItems|merge({
-                        productCount: TimberTerm(card.product_category).posts()|length,
-                        color: TimberTerm(card.product_category).colour
-                    })%}
-                {% endif %}
-            {% endif %}
-
-            {% if type == 'product' %}
-                {% set cardItems = cardItems|merge({
-                    price: card._price,
-                    terms: card.terms( {query:{taxonomy:'product_cat'}} )|join(', '),
-                    color: card.terms( {query:{taxonomy:'product_cat'}} )[0].colour
-                })%}
-            {% endif %}
+<div class="c-listing padding--{{acf.module_padding}} background--{{acf.module_background}}">
+    <div class="o-row o-row--no-margin">
+        <div class="o-grid-container c-listing__container">
             
+            {% if acf.listing_subhead %}
+            <div class="c-listing__subhead">
+                {{ acf.listing_subhead }}
+            </div>
+            {% endif %}
 
-            {% include "./elements/card.twig" with cardItems %}
+            {% if acf.listing_heading %}
+            <div class="c-listing__heading">
+                {{ acf.listing_heading }}
+            </div>
+            {% endif %}
+
+            <div class="c-listing__grid--{{ acf.listing_columns }} items-{{ itemnum }}">
+
+
+                {% for card in posts %}
+
+                    <div class="c-listing__card">
+
+                        {% set type = card.post_type %}
+
+                        {% set cardItems = {
+                            type: type,
+                            title: card.title,
+                            url: card.link,
+                            excerpt: card.preview.read_more(''),
+                        } %}
+
+                        {% if type == 'page' %}
+                            {% if card.product_category %}
+                                {% if card.hero_more_content != 'none' %}
+                                    {% set cardItems = cardItems|merge({
+                                        image: TimberImage( card.hero_image )
+                                    })%}
+                                {% endif %}
+
+                                {% set cardItems = cardItems|merge({
+                                    productCount: TimberTerm(card.product_category).posts()|length,
+                                    color: TimberTerm(card.product_category).colour
+                                })%}
+                            {% endif %}
+                        {% endif %}
+
+                        {% if type == 'product' %}
+                            {% set cardItems = cardItems|merge({
+                                price: card._price,
+                                terms: card.terms( {query:{taxonomy:'product_cat'}} )|join(', '),
+                                color: card.terms( {query:{taxonomy:'product_cat'}} )[0].colour
+                            })%}
+                        {% endif %}
+                    
+                        {% include "./elements/card.twig" with cardItems %}
+
+                    </div>
+
+                {% endfor %}
 
             </div>
 
-        {% endfor %}
-
         </div>
 
-        </div>
-</div>
-
+    </div>
 </div>

@@ -33,11 +33,38 @@
           border-right: none;
         }
         a{
+          position: relative;
           height: $elemheight;
           padding: 0 3rem;
           font-family:$font-bold;
           white-space: nowrap;
           @include flex;
+          /* stylelint-disable */
+          &:after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display:block;
+            width: 100%;
+            height: 8px;
+            content: '';
+          }
+          &:hover{
+            &:after{
+              background-color: $brand-red;
+              .theme-color--orange &{
+                background-color: $brand-gold;
+              }
+              .theme-color--blue &{
+                background-color: $brand-ocean;
+              }
+              .theme-color--green &{
+                background-color: $brand-emerald;
+              }
+            }
+          }
+          /* stylelint-enable */
+
         }
       }
     }
@@ -53,12 +80,12 @@
     &__icon{
       width: 20px;
       height: 20px;
-      background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/basket.svg');
+      background-image: url('#{$asset-path}/img/icons/basket.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 20px 20px;
       @include breakpoint($break-desktop-wide) {
-        background-image: url('/wp-content/themes/bdo-store/assets/src/img/icons/basket-white.svg');
+        background-image: url('#{$asset-path}/img/icons/basket-white.svg');
       }
     }
     &__label{

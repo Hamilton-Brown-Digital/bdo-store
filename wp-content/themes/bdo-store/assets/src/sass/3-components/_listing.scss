@@ -1,11 +1,10 @@
 .c-listing{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
   &__subhead{
+    margin-bottom:1.5rem;
     @include header-subhead;
   }
   &__heading{
-    @include header-section;
+    @include header-regular;
     margin-top: 0.3em;
     margin-bottom: 0.8em;
   }

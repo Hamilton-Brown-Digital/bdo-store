@@ -1,6 +1,6 @@
 {
     "key": "group_60d1bdc6108a4",
-    "title": "module-FAQ",
+    "title": "Module - FAQ",
     "fields": [
         {
             "key": "field_60d1bdcc93187",
@@ -60,6 +60,27 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_60dcc48c3ac5c",
+            "label": "FAQ options",
+            "name": "faq_options",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60dcbd6b283af"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -79,5 +100,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1624359808
+    "modified": 1625081053
 }
