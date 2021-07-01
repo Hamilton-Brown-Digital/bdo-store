@@ -33,11 +33,38 @@
           border-right: none;
         }
         a{
+          position: relative;
           height: $elemheight;
           padding: 0 3rem;
           font-family:$font-bold;
           white-space: nowrap;
           @include flex;
+          /* stylelint-disable */
+          &:after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display:block;
+            width: 100%;
+            height: 8px;
+            content: '';
+          }
+          &:hover{
+            &:after{
+              background-color: $brand-red;
+              .theme-color--orange &{
+                background-color: $brand-gold;
+              }
+              .theme-color--blue &{
+                background-color: $brand-ocean;
+              }
+              .theme-color--green &{
+                background-color: $brand-emerald;
+              }
+            }
+          }
+          /* stylelint-enable */
+
         }
       }
     }
