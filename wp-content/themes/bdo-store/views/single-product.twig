@@ -1,0 +1,45 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+    {% set page_builder = post.meta('page_modules') %}
+    {% set product_builder = post.meta('product_modules') %}
+
+    {% do action('woocommerce_before_single_product') %}
+
+    {% set linkArr = [{
+        'title': 'Product details',
+        'url': '#product-details',
+        'target': ''
+    }] %}
+
+	{% include 'partials/hero.twig' with {
+        product: true,
+        category: post.terms('product_cat')[0],
+        pageType: 'category',
+        header: post.title,
+        intro: post.meta('product_hero_intro'),
+        link: linkArr[0]
+    } %}
+
+    <div id="product-details" class="product-details">
+
+        {% for acf in product_builder %}
+            {% include 'partials/' ~ acf.acf_fc_layout ~ '.twig' %}
+        {% endfor %}
+
+    </div>
+
+    {% include 'elements/product-box.twig' %}
+
+    {% do action('woocommerce_after_single_product') %}
+
+    <div class="product-full-width">
+
+        {% for acf in page_builder %}
+            {% include 'partials/' ~ acf.acf_fc_layout ~ '.twig' %}
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

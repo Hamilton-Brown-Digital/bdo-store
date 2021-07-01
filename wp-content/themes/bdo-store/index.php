@@ -10,6 +10,36 @@ if ( ! class_exists( 'acf' ) ) {
 	return;
 }
 
-$context = Timber::context();
-$context['post'] = new Timber\Post();
-Timber::render( 'index.twig', $context );
+if( is_cart() ) {
+
+    $context = Timber::context();
+	$context['post'] = new Timber\Post();
+    Timber::render('views/page-basket.twig', $context);
+
+    wp_reset_postdata();
+
+} else if( is_checkout() ) {
+
+	$context = Timber::context();
+	$context['post'] = new Timber\Post();
+	Timber::render('views/page-checkout.twig', $context);
+
+	wp_reset_postdata();
+
+} else if( is_account_page() ) {
+
+	$context = Timber::context();
+	$context['post'] = new Timber\Post();
+	Timber::render('views/page-account.twig', $context);
+	
+	wp_reset_postdata();
+
+} else {
+
+	$context = Timber::context();
+	$context['post'] = new Timber\Post();
+	Timber::render( 'index.twig', $context );
+
+	wp_reset_postdata();
+
+}
