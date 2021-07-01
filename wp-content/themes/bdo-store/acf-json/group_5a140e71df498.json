@@ -170,6 +170,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60de3d17f60b1": {
+                    "key": "layout_60de3d17f60b1",
+                    "name": "price_comparison",
+                    "label": "Price comparison",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60de3d5ef60b2",
+                            "label": "Price comparison",
+                            "name": "acf_clone_price_comparison",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60de0977bf3ec"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Module",
@@ -194,12 +225,12 @@
             {
                 "param": "page",
                 "operator": "!=",
-                "value": "42"
+                "value": "22"
             },
             {
                 "param": "page",
                 "operator": "!=",
-                "value": "43"
+                "value": "22"
             }
         ],
         [
@@ -218,5 +249,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625047516
+    "modified": 1625177620
 }
