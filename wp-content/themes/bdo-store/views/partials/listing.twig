@@ -1,11 +1,13 @@
 
 {% if type == 'search' %}
     {% set posts = posts %}
+    {% set itemnum = items %}
+    {% set columns = items ~ 'cols' %}
 {% else %}
     {% set posts = Post(acf.listing_cards) %}
+    {% set itemnum = posts|length %}
+    {% set columns = acf.listing_columns %}
 {% endif %}
-
-{% set itemnum = posts|length %}
 
 <div class="c-listing padding{% if acf.module_padding != 'padding' %} padding--{{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
     <div class="o-row o-row--no-margin">
@@ -23,7 +25,7 @@
             </div>
             {% endif %}
 
-            <div class="c-listing__grid--{{ acf.listing_columns }} items-{{ itemnum }}">
+            <div class="c-listing__grid--{{ columns }} items-{{ itemnum }}">
 
 
                 {% for card in posts %}
