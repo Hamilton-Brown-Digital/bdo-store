@@ -1,0 +1,38 @@
+{% set table = acf.price_comparison_table %}
+
+<div class="c-price-comparison padding--{{acf.module_padding}} background--{{acf.module_background}}">
+    <div class="o-row o-row--no-margin">
+        <div class="o-grid-container c-price-comparison__container">
+
+            <div class="price-comparison__table">
+
+                {% for package in table %}
+
+                    {% set title = package.package_title %}
+                    {% set priceprefix = package.package_price_prefix %}
+                    {% set pricesuffix = package.package_price_suffix %}
+                    {% set price = package.title %}
+                    {% set link = package.package_link %}
+                    {% set listtitle = package.package_list_title %}
+                    {% set featurelist = package.package_feature_list %}
+
+                    <div class="price-comparison__table__column">
+                        {{ title }}<br>
+                        {{ priceprefix }}<br>
+                        {{ price }}<br>
+                        {{ pricesuffix }}<br>
+                        {{ link }}<br>
+                        {{ listtitle }}<br>
+                        {% for featurelistitem in featurelist %}
+                            {{featurelistitem.feature_title}}
+                            {{featurelistitem.feature_inclusion}}<br>
+                        {% endfor %}
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+</div>

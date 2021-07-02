@@ -3,6 +3,27 @@
     "title": "Module - Price comparison",
     "fields": [
         {
+            "key": "field_60deca5b335c3",
+            "label": "Price comparison options",
+            "name": "price_comparison_options",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60dcbd6b283af"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_60de09a555586",
             "label": "Price comparison table",
             "name": "price_comparison_table",
@@ -213,5 +234,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625180951
+    "modified": 1625213636
 }
