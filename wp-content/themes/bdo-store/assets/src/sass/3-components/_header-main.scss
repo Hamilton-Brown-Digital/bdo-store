@@ -52,15 +52,7 @@
           &:hover{
             &:after{
               background-color: $brand-red;
-              .theme-color--orange &{
-                background-color: $brand-gold;
-              }
-              .theme-color--blue &{
-                background-color: $brand-ocean;
-              }
-              .theme-color--green &{
-                background-color: $brand-emerald;
-              }
+              @include page-color('background-color');
             }
           }
           /* stylelint-enable */

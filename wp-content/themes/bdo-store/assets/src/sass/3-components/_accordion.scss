@@ -50,21 +50,7 @@
     margin-bottom: 0.8rem;
     background-color: $color-bg-feint;
     border-top: 4px solid $brand-red;
-    .theme-color--orange &{
-      border-color: $brand-gold;
-    }
-    .theme-color--blue &{
-      border-color: $brand-ocean;
-    }
-    .theme-color--green &{
-      border-color: $brand-emerald;
-    }
-    .background--gray &{
-      background-color: $white;
-    }
-    .background--white &{
-      background-color: $color-bg-feint;
-    }
+    @include page-color('border-color');
     &__title{
       display: block;
       padding: 2rem;
@@ -80,7 +66,7 @@
       visibility: hidden;
     }
     &--active{
-      border-top: 8px solid $brand-red;
+      border-top-width: 8px;
       .c-accordion__item__title{
         background-image: url(#{$asset-path}/img/cross.svg);
       }

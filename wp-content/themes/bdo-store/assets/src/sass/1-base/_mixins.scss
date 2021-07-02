@@ -371,3 +371,19 @@
   display: flex;
   flex-direction: column;
 }
+
+
+
+// set colors
+
+@mixin page-color($rule){
+  .theme-color--orange &{
+    #{$rule}: $brand-gold;
+  }
+  .theme-color--blue &{
+    #{$rule}: $brand-ocean;
+  }
+  .theme-color--green &{
+    #{$rule}: $brand-emerald;
+  }
+}

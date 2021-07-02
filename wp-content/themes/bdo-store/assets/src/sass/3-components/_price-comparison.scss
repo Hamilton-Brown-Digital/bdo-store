@@ -1,0 +1,39 @@
+.c-price-comparison{
+  &__table{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:3rem;
+  }
+  &__col{
+    padding:2rem;
+    border-top:13px solid $brand-red;
+    text-align:center;
+    @include page-color('border-top-color');
+
+    .background--white &{
+      background-color: $color-bg-feint;
+    }
+    .background--gray &{
+      background-color: $white;
+    }
+    &__title{
+      @include header-small;
+      @include page-color('color');
+    }
+    &__price{
+      &__price{
+
+      }
+      &__prefix{
+
+      }
+      &__suffix{
+
+      }
+    }
+    &__button{
+
+    }
+  }
+}

@@ -4,29 +4,48 @@
     <div class="o-row o-row--no-margin">
         <div class="o-grid-container c-price-comparison__container">
 
-            <div class="price-comparison__table">
+            <div class="c-price-comparison__table">
 
                 {% for package in table %}
 
                     {% set title = package.package_title %}
                     {% set priceprefix = package.package_price_prefix %}
                     {% set pricesuffix = package.package_price_suffix %}
-                    {% set price = package.title %}
+                    {% set price = package.package_price %}
                     {% set link = package.package_link %}
+                    {% set linktext = link.title %}
+                    {% set linkurl = link.url %}
                     {% set listtitle = package.package_list_title %}
                     {% set featurelist = package.package_feature_list %}
 
-                    <div class="price-comparison__table__column">
-                        {{ title }}<br>
-                        {{ priceprefix }}<br>
-                        {{ price }}<br>
-                        {{ pricesuffix }}<br>
-                        {{ link }}<br>
-                        {{ listtitle }}<br>
-                        {% for featurelistitem in featurelist %}
-                            {{featurelistitem.feature_title}}
-                            {{featurelistitem.feature_inclusion}}<br>
-                        {% endfor %}
+                    <div class="c-price-comparison__col">
+                        <h2 class="c-price-comparison__col__title">
+                            {{ title }}
+                        </h2>
+                        <div class="c-price-comparison__col__price">
+                            <span class="c-price-comparison__col__price__prefix">
+                                {{ priceprefix }}
+                            </span>
+                            <span class="c-price-comparison__col__price__price">
+                                {{ price }}
+                            </span>
+                            <span class="c-price-comparison__col__price__suffix">
+                                {{ pricesuffix }}
+                            </span>
+                        </div>
+                        <a class="c-price-comparison__col__cta button" href="{{linkurl}}" class="button">{{linktext}}</a>
+
+                        <div class="featurelist">
+                            <h3 class="featurelist__title">{{ listtitle }}</h3>
+                            <ul class="featurelist__list">
+                                {% for featurelistitem in featurelist %}
+                                <li class="featurelist__list__item featurelist__list__item--{{ featurelistitem.feature_inclusion is same as('yes') ? 'yes' : 'no' }}">
+                                    <span>{{featurelistitem.feature_title}}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
                     </div>
 
                 {% endfor %}
