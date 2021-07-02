@@ -3,6 +3,27 @@
     "title": "Module - Quote",
     "fields": [
         {
+            "key": "field_60deecd83c9d4",
+            "label": "Quote Options",
+            "name": "content_options",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60dcbd6b283af"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_60d42d5c8bf3f",
             "label": "Quote",
             "name": "quote_quote",
@@ -77,5 +98,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1624518037
+    "modified": 1625226798
 }
