@@ -1,16 +1,17 @@
 .c-price-comparison{
   &__table{
-    display: grid;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap:3rem;
+    gap: 3rem;
   }
   &__col{
-    padding:2rem;
+    width:100%;
+    max-width: 350px;
+    padding:3rem;
     border-top:13px solid $brand-red;
     text-align:center;
     @include page-color('border-top-color');
-
     .background--white &{
       background-color: $color-bg-feint;
     }
@@ -20,20 +21,31 @@
     &__title{
       @include header-small;
       @include page-color('color');
+      margin-bottom: 2rem;
     }
     &__price{
+      margin-bottom: 2rem;
+      line-height: 1.2;
       &__price{
-
+        @include font-bold;
+        @include font-size(24);
+        white-space: nowrap;
       }
       &__prefix{
-
+        @include font-size(18);
+        white-space: nowrap;
       }
       &__suffix{
-
+        white-space: nowrap;
       }
     }
-    &__button{
-
+    &__cta{
+      width: 100%;
+      margin-bottom: 2rem;
+      .e-cta-button{
+        width: 100%;
+        max-width: 260px;
+      }
     }
   }
 }

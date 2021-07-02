@@ -33,13 +33,23 @@
                                 {{ pricesuffix }}
                             </span>
                         </div>
-                        <a class="c-price-comparison__col__cta button" href="{{linkurl}}" class="button">{{linktext}}</a>
 
-                        <div class="featurelist">
-                            <h3 class="featurelist__title">{{ listtitle }}</h3>
-                            <ul class="featurelist__list">
+                        <div class="c-price-comparison__col__cta">
+                            {% if linktext and linkurl %}
+                            {% include "./elements/button.twig"
+                                with  {
+                                    title: linktext,
+                                    url: linkurl
+                                }
+                            %}
+                            {% endif %}
+                        </div>
+
+                        <div class="c-featurelist">
+                            <h3 class="c-featurelist__title">{{ listtitle }}</h3>
+                            <ul class="c-featurelist__list">
                                 {% for featurelistitem in featurelist %}
-                                <li class="featurelist__list__item featurelist__list__item--{{ featurelistitem.feature_inclusion is same as('yes') ? 'yes' : 'no' }}">
+                                <li class="c-featurelist__list__item featurelist__list__item--{{ featurelistitem.feature_inclusion is same as('yes') ? 'yes' : 'no' }}">
                                     <span>{{featurelistitem.feature_title}}</span>
                                 </li>
                                 {% endfor %}
