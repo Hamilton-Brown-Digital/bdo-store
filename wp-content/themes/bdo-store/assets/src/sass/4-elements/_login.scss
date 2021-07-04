@@ -1,0 +1,9 @@
+.customer-login__tab {
+  &--active {
+    color: $brand-red;
+  }
+}
+
+.customer-login__content {
+  background: $white;
+}
