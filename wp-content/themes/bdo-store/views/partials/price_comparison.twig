@@ -1,10 +1,11 @@
 {% set table = acf.price_comparison_table %}
+{% set itemnum = table|length %}
 
 <div class="c-price-comparison padding--{{acf.module_padding}} background--{{acf.module_background}}">
     <div class="o-row o-row--no-margin">
         <div class="o-grid-container c-price-comparison__container">
 
-            <div class="c-price-comparison__table">
+            <div class="c-price-comparison__table--items-{{ itemnum }}">
 
                 {% for package in table %}
 
@@ -45,11 +46,11 @@
                             {% endif %}
                         </div>
 
-                        <div class="c-featurelist">
+                        <div class="c-price-comparison__col__featurelist c-featurelist">
                             <h3 class="c-featurelist__title">{{ listtitle }}</h3>
                             <ul class="c-featurelist__list">
                                 {% for featurelistitem in featurelist %}
-                                <li class="c-featurelist__list__item featurelist__list__item--{{ featurelistitem.feature_inclusion is same as('yes') ? 'yes' : 'no' }}">
+                                <li class="c-featurelist__list__item c-featurelist__list__item--{{ featurelistitem.feature_inclusion is same as('yes') ? 'yes' : 'no' }}">
                                     <span>{{featurelistitem.feature_title}}</span>
                                 </li>
                                 {% endfor %}
