@@ -1,4 +1,5 @@
 $asset-path:'/wp-content/themes/bdo-store/assets/src';
+$image-path:'/wp-content/themes/bdo-store/assets/src/img';
 
 $header-height:147px;
 $header-height-mobile:82px;
@@ -13,8 +14,8 @@ $font-size-base: 62.5%;
 $reg: normal;
 $bold: 500;
 
-$site-width:1560px;
-$site-width-margins:calc(1560px + 30px);
+$site-width:97.5em; // 1560
+$site-width-margins:calc(#{$site-width} + 30px);
 
 $break-mobile: 22.438em; // 359px
 $break-mobile-land: 32em; // 512px

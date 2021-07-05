@@ -1,0 +1,104 @@
+.c-price-comparison{
+  &__table{
+    /* stylelint-disable */
+    @mixin tabledefaults{
+      display: grid;
+      grid-gap: clamp(0.5rem, 3vw, 3rem);
+      grid-template-columns: 1fr;
+    }
+    &--items-2{
+      @include tabledefaults;
+      max-width:calculateRem(1150);
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+      @include breakpoint($break-tablet) {
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &--items-3{
+      @include tabledefaults;
+      max-width:calculateRem(1150);
+      margin: 0 auto;
+      @include breakpoint($break-tablet $break-desktop-med){
+        grid-template-columns: 1fr 1fr;
+        >div:nth-of-type(3){
+          grid-column-end: span 2;
+          .c-featurelist__list{
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+      }
+      @include breakpoint($break-desktop-med) {
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    &--items-4{
+      @include tabledefaults;
+      @include breakpoint($break-tablet) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include breakpoint($break-desktop-wider) {
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
+  &__col{
+    width:100%;
+    padding:3rem;
+    border-top:13px solid $brand-red;
+    text-align:center;
+    @include page-color('border-top-color');
+    .background--white &{
+      background-color: $color-bg-feint;
+    }
+    .background--gray &{
+      background-color: $white;
+    }
+    &__title{
+      @include header-small;
+      @include page-color('color');
+      margin-bottom: 2rem;
+    }
+    &__price{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      line-height: 1;
+      grid-gap:0.2em;
+      @include breakpoint($break-site-width) {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: center;
+      }
+      &__price{
+        @include font-bold;
+        @include font-size(24);
+        display: block;
+        white-space: nowrap;
+      }
+      &__prefix{
+        display: block;
+        height: 1em;
+        white-space: nowrap;
+        @include font-size(18);
+      }
+      &__suffix{
+        display: block;
+        height: 1em;
+        white-space: nowrap;
+      }
+    }
+    &__cta{
+      width: 100%;
+      margin-bottom: 2rem;
+      .e-cta-button{
+        width: 100%;
+        max-width: 260px;
+      }
+    }
+  }
+  /* stylelint-enable */
+}

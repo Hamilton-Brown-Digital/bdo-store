@@ -2,15 +2,7 @@
   background-color: $brand-charcoal;
   @extend .dark;
   border-bottom: $brand-red solid 25px;
-  .theme-color--orange &{
-    border-color: $brand-gold;
-  }
-  .theme-color--blue &{
-    border-color: $brand-ocean;
-  }
-  .theme-color--green &{
-    border-color: $brand-emerald;
-  }
+  @include page-color('border-color');
   &__container{
     @include flex-column;
     gap:1.5rem;
