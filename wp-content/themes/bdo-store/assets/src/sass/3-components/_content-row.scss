@@ -30,9 +30,10 @@
       }
     }
     &--single{
-      .c-content-row__content{
-        max-width: 900px;
-      }
     }
+  }
+  &__content{
+    width: 100%;
+    max-width:850px;
   }
 }
