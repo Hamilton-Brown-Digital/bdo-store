@@ -3,6 +3,27 @@
     "title": "Module - Accordion",
     "fields": [
         {
+            "key": "field_60e3240f6b231",
+            "label": "Accordion options",
+            "name": "accordion_options",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60dcbd6b283af"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_60dee5f161ee8",
             "label": "Type",
             "name": "accordion_type",
@@ -214,10 +235,10 @@
                             },
                             "choices": {
                                 "none": "None",
-                                "18": "Uncategorized",
-                                "20": "Compliance, Risk and Governance",
-                                "21": "Online Learning",
-                                "19": "Software &amp; Diagnostics"
+                                "16": "Uncategorized",
+                                "19": "Compliance, Risk and Governance",
+                                "20": "Online Learning",
+                                "21": "Software and Diagnostics"
                             },
                             "default_value": false,
                             "allow_null": 0,
@@ -323,5 +344,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625220779
+    "modified": 1625498853
 }
