@@ -1,20 +1,15 @@
+{% set type = acf.accordion_type %}
 {% set details = acf.accordion_details %}
 {% set lists = acf.accordion_lists %}
 
-<div class="c-accordion padding--{{acf.module_padding}} background--{{acf.module_background}}">
+<div class="c-accordion padding{% if acf.module_padding != 'padding' %} padding--{{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
 
 <div class="o-row o-row--no-margin">
     <div class="o-grid-container c-accordion__container">
 
     <div class="c-accordion__details">
     
-        {% if details.type == 'menu' %}
-
-            {% if details.subhead %}
-            <div class="c-accordion__subhead">
-                {{ details.subhead }}
-            </div>
-            {% endif %}
+        {% if type == 'menu' %}
             
             <h2 class="c-accordion__main-heading">{{ details.heading }}</h2>
 
@@ -80,7 +75,7 @@
                         <h2 class="c-accordion__block__title">{{ list.title }}</h2>
 
                         {% for item in list.items %}
-                            <div class="c-accordion__item c-accordion__item--active">
+                            <div class="c-accordion__item">
                                 <a href="/" class="c-accordion__item__title">
                                     <h2 class="c-accordion__item__title__title">{{ item.heading }}</h2>
                                 </a>

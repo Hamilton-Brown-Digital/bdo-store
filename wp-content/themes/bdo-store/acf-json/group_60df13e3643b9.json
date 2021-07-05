@@ -1,11 +1,11 @@
 {
-    "key": "group_60d42d408b383",
-    "title": "Module - Quote",
+    "key": "group_60df13e3643b9",
+    "title": "Module - Form",
     "fields": [
         {
-            "key": "field_60deecd83c9d4",
-            "label": "Quote Options",
-            "name": "content_options",
+            "key": "field_60df15d780acc",
+            "label": "Form options",
+            "name": "form_options",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -24,9 +24,28 @@
             "prefix_name": 0
         },
         {
-            "key": "field_60d42d5c8bf3f",
-            "label": "Quote",
-            "name": "quote_quote",
+            "key": "field_60df13ebbf216",
+            "label": "Header",
+            "name": "header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60df13f1bf217",
+            "label": "Intro",
+            "name": "intro",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -39,14 +58,14 @@
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
-            "rows": 4,
+            "rows": 2,
             "new_lines": "wpautop"
         },
         {
-            "key": "field_60d42d728bf40",
-            "label": "Who",
-            "name": "quote_who",
-            "type": "text",
+            "key": "field_60df13ffbf218",
+            "label": "Form",
+            "name": "form",
+            "type": "forms",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -55,30 +74,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_60d42d838bf41",
-            "label": "Role",
-            "name": "quote_role",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "post_object",
+            "allow_null": 0,
+            "multiple": 0
         }
     ],
     "location": [
@@ -98,5 +96,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625226798
+    "modified": 1625232890
 }

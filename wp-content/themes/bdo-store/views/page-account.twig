@@ -2,10 +2,25 @@
 
 {% block content %}
 
-    {% include 'partials/hero.twig' %}
+    {% if fn('is_user_logged_in') %}
+        {% include 'partials/hero.twig' with {
+            product: true,
+            type: 'shallow'
+        } %}
+    {% endif %}
 
-    {% filter shortcodes %}
-        [woocommerce_my_account]
-    {% endfilter %}
+    {% if fn('is_page', 'register') %}
+
+        {% filter shortcodes %}
+            [wc_reg_form]
+        {% endfilter %}
+
+    {% else %}
+
+        {% filter shortcodes %}
+            [woocommerce_my_account]
+        {% endfilter %}
+
+    {% endif %}
 
 {% endblock %}

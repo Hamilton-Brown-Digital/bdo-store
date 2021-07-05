@@ -1,5 +1,6 @@
 // import Header from './classes/Header.js';
 import HeroCarousel from './classes/HeroCarousel.js';
+import Accordion from './classes/Accordion.js';
 import Init from './classes/Init';
 
 const siteFunctions = {
@@ -14,6 +15,11 @@ const siteFunctions = {
   heroCarousel__ready() {
     const heroCarousel = new HeroCarousel();
     heroCarousel.init();
+  },
+
+  accordion__ready() {
+    const accordion = new Accordion();
+    accordion.init();
   },
 };
 

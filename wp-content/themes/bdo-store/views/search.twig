@@ -10,31 +10,28 @@
 
                 <h1>Results for `{{ title }}`</h1>
 
-                {% if posts %}
+                <div class="c-search__results-meta">
 
-                <div class="c-search__results">
-
-                    <div class="c-search__results-meta">
-
-                        <div class="c-search__count">{{ count }}</div>
-
-                    </div>
-
-                    <div class="c-search__results-wrap">
-
-                        {% include 'partials/listing.twig' with {
-                            type: 'search'
-                        } %}
-
-                    </div>
+                    <div class="c-search__count">{{ count }}</div>
 
                 </div>
-
-                {% endif %}
 
             </div>
 
         </div>
+
+        {% if posts %}
+
+        <div class="c-search__results">
+
+            {% include 'partials/listing.twig' with {
+                type: 'search',
+                items: 3
+            } %}
+
+        </div>
+
+        {% endif %}
 
     </div>
 

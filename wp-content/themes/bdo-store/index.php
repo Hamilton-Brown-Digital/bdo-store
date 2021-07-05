@@ -30,6 +30,7 @@ if( is_cart() ) {
 
 	$context = Timber::context();
 	$context['post'] = new Timber\Post();
+	$context['user'] = new Timber\User();
 	Timber::render('views/page-account.twig', $context);
 	
 	wp_reset_postdata();
