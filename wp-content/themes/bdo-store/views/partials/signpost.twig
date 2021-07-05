@@ -1,7 +1,7 @@
 {% set media = acf.signpost_media %}
 {% set content = acf.signpost_content %}
 
-<div class="c-signpost padding{% if acf.module_padding != 'padding' %} padding--{{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
+<div class="c-signpost padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
 
     <div class="o-row o-row--no-margin">
 

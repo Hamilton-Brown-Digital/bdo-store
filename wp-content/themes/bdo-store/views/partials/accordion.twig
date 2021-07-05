@@ -2,7 +2,7 @@
 {% set details = acf.accordion_details %}
 {% set lists = acf.accordion_lists %}
 
-<div class="c-accordion padding{% if acf.module_padding != 'padding' %} padding--{{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
+<div class="c-accordion padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
 
 <div class="o-row o-row--no-margin">
     <div class="o-grid-container c-accordion__container">

@@ -37,15 +37,16 @@
 .padding{
   padding-top:4rem;
   padding-bottom: 4rem;
-  &--nopaddingtop{
+}
+.nopaddingtop{
     padding-top:0;
     padding-bottom: 4rem;
   }
-  &--nopaddingbottom{
+.nopaddingbottom{
     padding-top:4rem;
     padding-bottom: 0;
   }
-  &--nopadding{
+.nopadding{
     padding-top:0;
     padding-bottom: 0;
   }
