@@ -45,7 +45,7 @@ class CustomTimber extends TimberSite
         'meta_value'	=> $id
       ));
 
-      if ( $page ) {
+      if ( $page && get_field('colour', 'product_cat_'.$id) ) {
         $result['accordionColour'] = get_field('colour', 'product_cat_'.$id);
 
         $results = get_field('page_modules', $page[0]);
