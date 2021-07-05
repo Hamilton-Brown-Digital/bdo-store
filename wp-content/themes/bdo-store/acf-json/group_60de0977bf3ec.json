@@ -192,7 +192,7 @@
                         },
                         {
                             "key": "field_60de0e405558e",
-                            "label": "Is this feature included in the table?",
+                            "label": "Is this feature included in this package?",
                             "name": "feature_inclusion",
                             "type": "button_group",
                             "instructions": "",
@@ -234,5 +234,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625222041
+    "modified": 1625526557
 }

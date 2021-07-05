@@ -232,6 +232,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60e38fbf58897": {
+                    "key": "layout_60e38fbf58897",
+                    "name": "price_comparison",
+                    "label": "Price comparison",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60e38fe358898",
+                            "label": "Price comparison table",
+                            "name": "acf_price_comparison_table",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60de0977bf3ec"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Module",
@@ -280,5 +311,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625489172
+    "modified": 1625526354
 }
