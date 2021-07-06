@@ -17,10 +17,10 @@
             },
             "choices": {
                 "none": "None",
-                "18": "Uncategorized",
-                "20": "Compliance, Risk and Governance",
-                "21": "Online Learning",
-                "19": "Software &amp; Diagnostics"
+                "16": "Uncategorized",
+                "19": "Compliance, Risk and Governance",
+                "20": "Online Learning",
+                "21": "Software and Diagnostics"
             },
             "default_value": false,
             "allow_null": 0,
@@ -41,22 +41,7 @@
             {
                 "param": "page",
                 "operator": "!=",
-                "value": "160"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "44"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "42"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "43"
+                "value": "97"
             }
         ]
     ],
@@ -68,5 +53,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625048700
+    "modified": 1625613885
 }
