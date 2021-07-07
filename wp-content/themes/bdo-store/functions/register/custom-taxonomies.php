@@ -9,15 +9,14 @@
 
 // function create_prop_taxonomies() {
 
-
 // 	register_taxonomy(
-// 		'Menus', //  Your taxonomy title  //
-// 		'menus',   //  The Custom Post Type it will belong to  //
+// 		'product-group', //  Your taxonomy title  //
+// 		'product',   //  The Custom Post Type it will belong to  //
 // 		array(
 // 			'hierarchical' => true,
-// 			'label'        => 'All Menus',
+// 			'label'        => 'Product Group',
 // 			'query_var'    => true,
-// 			'rewrite'      => array( 'slug' => 'all-menus' )
+// 			'rewrite'      => array( 'slug' => 'product-group' )
 // 		)
 // 	);
 

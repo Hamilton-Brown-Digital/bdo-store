@@ -3,7 +3,7 @@
 {% block content %}
 
     {% if fn('is_user_logged_in') %}
-        {% include 'partials/hero.twig' with {
+        {% include './partials/hero.twig' with {
             product: true,
             type: 'shallow'
         } %}

@@ -1,0 +1,46 @@
+{
+    "key": "group_60e46ec57eafd",
+    "title": "Gated Page",
+    "fields": [
+        {
+            "key": "field_60e46ed40443c",
+            "label": "Gated Page",
+            "name": "gated_page",
+            "type": "post_object",
+            "instructions": "Select the gated page this purchase will take the customer after purchase.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "gated"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1625586290
+}

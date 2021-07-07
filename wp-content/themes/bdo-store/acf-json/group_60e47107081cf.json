@@ -1,0 +1,43 @@
+{
+    "key": "group_60e47107081cf",
+    "title": "Gated Meta",
+    "fields": [
+        {
+            "key": "field_60e4710c1737f",
+            "label": "Button Overwrite",
+            "name": "gated_button_overwrite",
+            "type": "text",
+            "instructions": "If you want to change the button text on the \"My Products\" enter it here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "gated"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1625583982
+}
