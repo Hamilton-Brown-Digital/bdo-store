@@ -1,0 +1,26 @@
+<div class="c-content-row padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
+    
+    <div class="o-row o-row--no-margin">
+
+        <div class="o-grid-container c-content-row__container--{{acf.contentrow_layout}}">
+
+        
+        <div class="c-content-row__column">
+            <div class="e-content c-content-row__content">
+            {{ acf.contentrow_content.first_column }}
+            </div>
+        </div>
+
+        {% if acf.contentrow_layout != 'single' %}
+        <div class="c-content-row__column">
+            <div class="e-content c-content-row__content">
+            {{ acf.contentrow_content.second_column }}
+            </div>
+        </div>
+        {% endif %}
+
+        </div>
+
+    </div>
+
+</div>

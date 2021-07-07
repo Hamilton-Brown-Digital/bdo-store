@@ -218,8 +218,25 @@
   font-family:$font-bold, $font-secondary;
 }
 
+// Underline under headings
+
+@mixin underline{
+  display: block;
+  width: 72px;
+  height: 6px;
+  margin-top:1em;
+  margin-bottom:1em;
+  padding:0;
+  background-color:$brand-red;
+  border:none;
+  @include breakpoint($break-desktop){
+    width: 220px;
+    height: 8px;
+  }
+}
+
 // Huge section headings
-@mixin header-section{
+@mixin header-section($underline: false){
   @include font-bold;
   @include font-size(20);
   margin-top: 0;
@@ -232,9 +249,15 @@
   @include breakpoint($break-desktop){
     @include font-size(60);
   }
+  @if $underline {
+    &:after{
+      content: '';
+      @include underline;
+    }
+  }
 }
 // Regular headings
-@mixin header-regular{
+@mixin header-regular($underline: false){
   @include font-bold;
   @include font-size(20);
   @include breakpoint($break-mobile){
@@ -246,10 +269,16 @@
   @include breakpoint($break-desktop){
     @include font-size(40);
   }
+  @if $underline {
+    &:after{
+      content: '';
+      @include underline;
+    }
+  }
 }
 
 // Small headings
-@mixin header-small{
+@mixin header-small($underline: false){
   @include font-bold;
   @include font-size(20);
   @include breakpoint($break-tablet){
@@ -257,6 +286,12 @@
   }
   @include breakpoint($break-desktop-wide){
     @include font-size(24);
+  }
+  @if $underline {
+    &:after{
+      content: '';
+      @include underline;
+    }
   }
 }
 
@@ -269,9 +304,6 @@
     @include font-size(18);
   }
 }
-
-
-
 
 
 
