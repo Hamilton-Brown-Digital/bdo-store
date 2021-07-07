@@ -69,6 +69,11 @@ textarea {
 
 .main {
   position: relative;
+  padding-top: 82px;
+
+  @include breakpoint($break-desktop-wide) {
+    padding-top: 0;
+  }
 }
 
 .page-content{

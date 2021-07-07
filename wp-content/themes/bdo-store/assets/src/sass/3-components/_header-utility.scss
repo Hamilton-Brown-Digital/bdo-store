@@ -1,50 +1,105 @@
 .c-header-utility{
-  display: none;
-  @include breakpoint($break-desktop-wide) {
-    display: block;
-  }
   @extend .dark;
   background-color: $black;
-  &__container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  @include breakpoint($break-desktop-wide) {
+    display: block;
+    order: 1;
+  }
+
+  &__container {
     width: 100%;
-    height: 64px;
-  }
-  &__breadcrumb{
-    flex-grow: 1;
-  }
-  &__search{
-    input{
-      display: block;
-      padding: 0.3em;
-      background-image: url('#{$asset-path}/img/icons/mag-glass.svg');
-      background-repeat: no-repeat;
-      background-position: right 0.3em center;
-      background-size: 15px 15px;
-      border: 2px solid $white;
-      &::placeholder{
-        color:$white;
-      }
-      &:focus{
-        background-image: none;
-        &::placeholder{
-          color: rgba($white, 0.2);
-        }
-      }
-    }
-  }
-  &__menu{
-    ul{
+
+    @include breakpoint($break-desktop-wide) {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      gap: 4em;
-      margin-right:4em;
-      li{
+      justify-content: space-between;
+      height: 64px;
+    }
+  }
+
+  &__breadcrumb {
+    display: none;
+
+    @include breakpoint($break-desktop-wide) {
+      display: inline;
+      flex-grow: 1;
+      line-height: 17px;
+      @include font-size(14);
+    }
+  }
+
+  &__search {
+    padding: 0 36px 40px;
+
+    @include breakpoint($break-desktop-wide) {
+      padding: 0;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      height: 50px;
+      padding: 0.3em;
+      padding: 0 10px;
+      background-image: url('#{$asset-path}/img/icons/mag-glass.svg');
+      background-repeat: no-repeat;
+      background-position: calc(100% - 15px) center;
+      background-size: 15px 15px;
+      border: 2px solid $white;
+
+      @include breakpoint($break-desktop-wide) {
+        width: 220px;
+        height: 34px;
+      }
+
+      &::placeholder {
+        color:$white;
+      }
+
+      &:focus {
+        background-image: none;
+
+        &::placeholder {
+          color: rgba($white, 0.2);
+        }
+
+      }
+
+    }
+  }
+
+  &__menu{
+
+    ul {
+      padding: 20px 0;
+
+      @include breakpoint($break-desktop-wide) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4em;
+        margin-right:4em;
+        padding: 0;
+      }
+
+      li {
         display: block;
       }
+
+      a {
+        display: block;
+        padding: 20px 36px;
+        line-height: 24px;
+        @include font-size(18);
+
+        @include breakpoint($break-desktop-wide) {
+          padding: 0;
+          line-height: 17px;
+          @include font-size(14);
+        }
+      }
+
     }
   }
 }
