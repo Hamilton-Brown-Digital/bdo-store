@@ -13,7 +13,7 @@
         'target': ''
     }] %}
 
-	{% include 'partials/hero.twig' with {
+	{% include './partials/hero.twig' with {
         product: true,
         category: post.terms('product_cat')[0],
         pageType: 'category',
@@ -25,19 +25,19 @@
     <div id="product-details" class="product-details">
 
         {% for acf in product_builder %}
-            {% include 'partials/' ~ acf.acf_fc_layout ~ '.twig' %}
+            {% include './partials/' ~ acf.acf_fc_layout ~ '.twig' %}
         {% endfor %}
 
     </div>
 
-    {% include 'elements/product-box.twig' %}
+    {% include './elements/product-box.twig' %}
 
     {% do action('woocommerce_after_single_product') %}
 
     <div class="product-full-width">
 
         {% for acf in page_builder %}
-            {% include 'partials/' ~ acf.acf_fc_layout ~ '.twig' %}
+            {% include './partials/' ~ acf.acf_fc_layout ~ '.twig' %}
         {% endfor %}
 
     </div>

@@ -16,7 +16,7 @@ if ( is_singular('product') ) {
 	$context['post'] = new Timber\Post();
     $context['product'] = wc_get_product($context['post']->ID);
 
-    Timber::render('views/single-product.twig', $context);
+    Timber::render('views/woo/single-product.twig', $context);
 
     wp_reset_postdata();
 }
