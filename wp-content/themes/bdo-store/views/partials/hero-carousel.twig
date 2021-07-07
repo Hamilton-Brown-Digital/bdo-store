@@ -18,16 +18,22 @@
                     {% set hero = TimberPost( get_prod_cat_pages( item.hero_carousel_page ) ) %}
                 {% endif %}
 
+                {% set heroType = hero.hero_type %}
+
                 {% set heroItems = {
+                    carousel: true,
                     header: hero.hero_header,
-                    intro: hero.hero_intro,
-                    content: hero.hero_content,
-                    image: TimberImage(hero.hero_image),
-                    moreContent: hero.hero_more_content,
-                    type: hero.hero_type,
-                    pageType: hero.hero_page_type,
-                    carousel: true
+                    type: heroType
                 } %}
+
+                {% if heroType == 'full' %}
+                    {% set heroItems = heroItems|merge({
+                        intro: hero.hero_intro,
+                        content: hero.hero_content,
+                        image: TimberImage(hero.hero_image),
+                        moreContent: hero.hero_more_content
+                    })%}
+                {% endif %}
 
                 {% if type == 'page' %}
                     {% set linkArr = [{

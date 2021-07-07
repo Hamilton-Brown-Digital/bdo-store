@@ -26,7 +26,7 @@
                     "label": "Type",
                     "name": "type",
                     "type": "button_group",
-                    "instructions": "",
+                    "instructions": "Custom means you type out your own. From Page means the information gets pulled in.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -35,7 +35,7 @@
                         "id": ""
                     },
                     "choices": {
-                        "standard": "Standard",
+                        "standard": "Custom",
                         "page": "From Page"
                     },
                     "allow_null": 0,
@@ -128,5 +128,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625475380
+    "modified": 1625656357
 }

@@ -16,7 +16,7 @@
 	{% include './partials/hero.twig' with {
         product: true,
         category: post.terms('product_cat')[0],
-        pageType: 'category',
+        type: 'full',
         header: post.title,
         intro: post.meta('product_hero_intro'),
         link: linkArr[0]

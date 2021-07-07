@@ -3,6 +3,29 @@
     "title": "Hero",
     "fields": [
         {
+            "key": "field_60d9d5ab614e8",
+            "label": "Type",
+            "name": "hero_type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "full": "Full",
+                "shallow": "Shallow"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
             "key": "field_60d07ee7e5c46",
             "label": "Header",
             "name": "hero_header",
@@ -22,36 +45,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_60d9d5ab614e8",
-            "label": "Type",
-            "name": "hero_type",
-            "type": "button_group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_60d9abd368fb7",
-                        "operator": "==",
-                        "value": "standard"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "default": "Default",
-                "shallow": "Shallow"
-            },
-            "allow_null": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
-        {
             "key": "field_60d9d7eca925e",
             "label": "Intro",
             "name": "hero_intro",
@@ -61,9 +54,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_60d9abd368fb7",
+                        "field": "field_60d9d5ab614e8",
                         "operator": "==",
-                        "value": "category"
+                        "value": "full"
                     }
                 ]
             ],
@@ -88,9 +81,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_60d9abd368fb7",
+                        "field": "field_60d9d5ab614e8",
                         "operator": "==",
-                        "value": "category"
+                        "value": "full"
                     }
                 ]
             ],
@@ -111,9 +104,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_60d9abd368fb7",
+                        "field": "field_60d9d5ab614e8",
                         "operator": "==",
-                        "value": "category"
+                        "value": "full"
                     }
                 ]
             ],
@@ -147,9 +140,9 @@
                         "value": "image"
                     },
                     {
-                        "field": "field_60d9abd368fb7",
+                        "field": "field_60d9d5ab614e8",
                         "operator": "==",
-                        "value": "category"
+                        "value": "full"
                     }
                 ]
             ],
@@ -179,9 +172,21 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_60d9abd368fb7",
+                        "field": "field_60d9d5ab614e8",
                         "operator": "==",
-                        "value": "category"
+                        "value": "full"
+                    },
+                    {
+                        "field": "field_60d1e98865e10",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_60d9d5ab614e8",
+                        "operator": "==",
+                        "value": "full"
                     },
                     {
                         "field": "field_60d1e98865e10",
@@ -216,9 +221,9 @@
                         "value": "none"
                     },
                     {
-                        "field": "field_60d9abd368fb7",
+                        "field": "field_60d9d5ab614e8",
                         "operator": "==",
-                        "value": "category"
+                        "value": "full"
                     }
                 ]
             ],
@@ -230,31 +235,6 @@
             "message": "This Hero has no image",
             "new_lines": "wpautop",
             "esc_html": 0
-        },
-        {
-            "key": "field_60d9abd368fb7",
-            "label": "Page Type",
-            "name": "hero_page_type",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "standard": "Standard",
-                "category": "Category"
-            },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -286,5 +266,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625584783
+    "modified": 1625655569
 }

@@ -1,4 +1,4 @@
-{% if not (carousel or product) %}
+{% if not (carousel or product or account) %}
     {% set header = post.hero_header %}
     {% set intro = post.hero_intro %}
     {% set content = post.hero_content %}
@@ -6,10 +6,9 @@
     {% set image = post.hero_image %}
     {% set moreContent = post.hero_more_content %}
     {% set type = post.hero_type %}
-    {% set pageType = post.hero_page_type %}
 {% endif %}
 
-<div class="c-hero {%if pageType == 'category' %}c-hero--{{ pageType }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
+<div class="c-hero{%if type == 'full' %} c-hero--{{ type }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
 
     <div class="o-row o-row--no-margin o-row--no-padding">
 
@@ -31,15 +30,15 @@
                     {% endif %}
                     </h1>
 
-                    {% if pageType == 'category' and intro %}
+                    {% if type == 'full' and intro %}
                     <p class="c-hero__intro">{{ intro }}</p>
                     {% endif %}
 
-                    {% if pageType == 'category' and content %}
+                    {% if type == 'full' and content %}
                         <p class="c-hero__text">{{ content }}</p>
                     {% endif %}
 
-                    {% if pageType == 'category' and link %}
+                    {% if type == 'full' and link %}
                         {% include "./elements/button.twig"
                             with  {
                                 title : link['title'],
@@ -54,7 +53,7 @@
 
             </div>
 
-            {% if moreContent != 'none'%}
+            {% if moreContent != 'none' %}
             <div class="c-hero__image-text">
                 {% if moreContent == 'image' and image %}
                     <img class="c-hero__image-text__image" src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
