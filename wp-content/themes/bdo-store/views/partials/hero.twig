@@ -2,11 +2,11 @@
     {% set header = post.hero_header %}
     {% set intro = post.hero_intro %}
     {% set content = post.hero_content %}
-    {% set link = post.hero_link %}
     {% set image = post.hero_image %}
     {% set moreContent = post.hero_more_content %}
     {% set type = post.hero_type %}
 {% endif %}
+
 
 <div class="c-hero{%if type == 'full' %} c-hero--{{ type }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
 
@@ -31,15 +31,29 @@
                         {% if type == 'full' and intro %}
                             <p class="c-hero__intro">{{ intro }}</p>
                         {% endif %}
-                        {% if type == 'full' and link %}
-                            {% include "./elements/button.twig"
-                                with  {
-                                    title : link['title'],
-                                    url: link['url'],
-                                    target: link['target'],
-                                    color: 'red'
-                                }
-                            %}
+                        {% set linktype = post.hero_button_hero_link_config %}
+                        {% if type == 'full' and linktype != 'none' %}
+
+                            {% if linktype == 'customlink' %}
+                                {% set link = post.hero_button_hero_link %}
+                                {% include "./elements/button.twig"
+                                    with  {
+                                        title : link['title'],
+                                        url: link['url'],
+                                        target: link['target'],
+                                        color: 'red'
+                                    }
+                                %}
+                            {% elseif linktype == 'skiplink' %}
+                                {% include "./elements/button.twig"
+                                    with  {
+                                        title : post.hero_button_link_text,
+                                        url: '#details',
+                                        color: 'red'
+                                    }
+                                %}
+                            {% endif %}
+                            
                         {% endif %}
                     </div>
                     {% if type == 'full' and content %}
