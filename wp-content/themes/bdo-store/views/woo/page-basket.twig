@@ -2,7 +2,10 @@
 
 {% block content %}
 
-    {% include 'partials/hero.twig' %}
+    {% include './partials/hero.twig' with {
+        account: true,
+        type: 'shallow'
+    } %}
 
     {% filter shortcodes %}
         [woocommerce_cart]

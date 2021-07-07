@@ -4,7 +4,7 @@
 
     {% if fn('is_user_logged_in') %}
         {% include './partials/hero.twig' with {
-            product: true,
+            account: true,
             type: 'shallow'
         } %}
     {% endif %}
