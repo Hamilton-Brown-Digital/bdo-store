@@ -179,18 +179,6 @@
                     {
                         "field": "field_60d1e98865e10",
                         "operator": "==",
-                        "value": "image"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_60d9d5ab614e8",
-                        "operator": "==",
-                        "value": "full"
-                    },
-                    {
-                        "field": "field_60d1e98865e10",
-                        "operator": "==",
                         "value": "text"
                     }
                 ]
@@ -266,5 +254,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625655569
+    "modified": 1625661370
 }
