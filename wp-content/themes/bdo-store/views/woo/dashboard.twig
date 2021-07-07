@@ -1,0 +1,28 @@
+{% do action('woocommerce_account_dashboard') %}
+
+{% if gated %}
+
+{% for gate in gated %}
+
+    {% set status = gate['status'] %}
+    {% set gate = TimberPost(gate['gate']) %}
+
+    {% set btnText = 'Access' %}
+    {% if gate.gated_button_overwrite %}
+        {% set btnText = gate.gated_button_overwrite %}
+    {% endif %}
+
+    {% include "./elements/gated-box.twig" with {
+        title: gate.title,
+        button_text: btnText,
+        button_url: gate.link,
+        status: status
+    } %}
+
+{% endfor %}
+
+{% endif %}
+
+<p>If your products haven’t appeared here, its likely your order is currently being processed.</p>
+
+{{ options.store_need_help }}
