@@ -5,8 +5,10 @@
     {% set image = post.hero_image %}
     {% set moreContent = post.hero_more_content %}
     {% set type = post.hero_type %}
+    {% set linktype = post.hero_button_hero_link_config %}
+    {% set link = post.hero_button_hero_link %}
+    {% set skiplinktext = post.hero_button_link_text %}
 {% endif %}
-
 
 <div class="c-hero{%if type == 'full' %} c-hero--{{ type }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
 
@@ -25,17 +27,19 @@
                             {% if header %}
                                 {{ header }}
                             {% else %}
-                                {{ post.title }}
+                                {% if carousel %}
+                                    {{ hero.post_title }}
+                                {% else %}
+                                    {{ post.title }}
+                                {% endif %}
                             {% endif %}
                         </h1>
                         {% if type == 'full' and intro %}
                             <p class="c-hero__intro">{{ intro }}</p>
                         {% endif %}
-                        {% set linktype = post.hero_button_hero_link_config %}
+                        
                         {% if type == 'full' and linktype != 'none' %}
-
                             {% if linktype == 'customlink' %}
-                                {% set link = post.hero_button_hero_link %}
                                 {% include "./elements/button.twig"
                                     with  {
                                         title : link['title'],
@@ -47,17 +51,17 @@
                             {% elseif linktype == 'skiplink' %}
                                 {% include "./elements/button.twig"
                                     with  {
-                                        title : post.hero_button_link_text,
-                                        url: '#details',
+                                        title : skiplinktext,
+                                        url: post.link ~ "#details",
                                         color: 'red'
                                     }
                                 %}
                             {% endif %}
-                            
                         {% endif %}
                     </div>
+                    
                     {% if type == 'full' and content %}
-                        <p class="c-hero__main__inner__text">{{ content }}</p>
+                        <div class="c-hero__main__inner__text">{{ content }}</div>
                     {% endif %}
 
                 </div>
@@ -81,3 +85,6 @@
     </div>
 
 </div>
+
+
+<div id="#details"></div>

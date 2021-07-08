@@ -30,7 +30,7 @@
             "label": "Header",
             "name": "hero_header",
             "type": "text",
-            "instructions": "If left blank, page title will be used.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -76,7 +76,7 @@
             "label": "More Content",
             "name": "hero_more_content",
             "type": "button_group",
-            "instructions": "Content on the right column of the hero. Choose image, text or none.",
+            "instructions": "Content on the right column of the hero. Choose image, text or none. If homepage, only shows image.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -252,5 +252,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625678179
+    "modified": 1625701722
 }
