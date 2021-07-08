@@ -1,8 +1,37 @@
-<div class="c-header-wrapper">
+<header class="c-header">
 
-	<header class="c-header">
+	<div class="o-row o-row--no-margin c-header-main">
 
-		<div class="o-row o-row--no-margin c-header-utility">
+		<div class="o-grid-container c-header-main__container">
+
+			<a href="/" class="c-header-main__logo">
+				<img class="c-header-main__logo__image" src="{{ theme.link }}/assets/src/img/logo.svg" alt="BDO logo"/>
+			</a>
+
+			<a href="/" class="c-header-main__basket">
+				<span class="c-header-main__basket__icon"></span>
+				<span class="c-header-main__basket__label">Basket</span>
+			</a>
+		
+			<button class="c-header-main__hamburger e-hamburger js-hamburger" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
+				<span class="e-hamburger__box"></span>
+			</button>
+
+		</div>
+
+	</div>
+
+	<div class="c-header__menu-wrap js-primary-nav">
+
+		<div class="o-row o-row--no-margin o-row--no-padding c-header-main__menu-wrap">
+			<div class="o-grid-container">
+				<div class="c-header-main__menu">
+					{% include "menu.twig" with {'menu': navigation_primary.get_items} %}
+				</div>
+			</div>
+		</div>
+
+		<div class="o-row o-row--no-margin o-row--no-padding c-header-utility">
 
 			<div class="o-grid-container c-header-utility__container">
 
@@ -20,31 +49,6 @@
 
 		</div>
 
-		<div class="o-row o-row--no-margin c-header-main">
+	</div>
 
-			<div class="o-grid-container c-header-main__container">
-
-				<a href="/" class="c-header-main__logo">
-					<img class="c-header-main__logo__image" src="{{ theme.link }}/assets/src/img/logo.svg" alt="BDO logo"/>
-				</a>
-
-				<div class="c-header-main__menu">
-					{% include "menu.twig" with {'menu': navigation_primary.get_items} %}
-				</div>
-
-				<a href="/" class="c-header-main__basket">
-					<span class="c-header-main__basket__icon"></span>
-					<span class="c-header-main__basket__label">Basket</span>
-				</a>
-			
-				<button class="c-header-main__hamburger e-hamburger js-hamburger" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
-					<span class="e-hamburger__box"></span>
-				</button>
-
-			</div>
-
-		</div>
-
-	</header>
-
-</div>
+</header>

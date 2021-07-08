@@ -1,66 +1,125 @@
+.c-header-main__menu-wrap {
+  @include breakpoint($break-desktop-wide) {
+    order: 2;
+  }
+}
+
 .c-header-main{
   $elemheight:82px;
   border-bottom: 1px solid $color-line;
+
+  @include breakpoint($break-desktop-wide) {
+    order: 2;
+  }
+
   &__container{
     @include flex;
     justify-content: space-between;
     width: 100%;
     height: $elemheight;
+    padding: 0 26px;
+
+    @include breakpoint($break-desktop-wide) {
+      padding: 0;
+    }
   }
+
   &__logo{
     flex-grow: 1;
     flex-shrink: 0;
+
     &__image{
       width: 100%;
-      max-width: 175px;
+      max-width: 132px;
+      margin-top: 2px;
+
+      @include breakpoint($break-desktop-wide) {
+        max-width: 175px;
+      }
     }
+
   }
   &__menu{
-    display: none;
+    background-color: $color-line;
+
     @include breakpoint($break-desktop-wide) {
       display: flex;
+      flex-grow: 1;
+      order: 2;
+      margin-bottom: -82px;
+      padding-left: 235px;
+      background-color: $white;
     }
-    flex-grow: 1;
-    ul{
-      align-self: stretch;
-      justify-content: flex-start;
-      @include flex;
-      li{
+
+    nav {
+      @include breakpoint($break-desktop-wide) {
+        width: calc(100% - 172px);
+      }
+    }
+
+    ul {
+      padding: 10px 0;
+      @include breakpoint($break-desktop-wide) {
+        align-self: stretch;
+        justify-content: flex-start;
+        padding: 0;
+        @include flex;
+      }
+    }
+
+    li {
+      @include breakpoint($break-desktop-wide) {
         display: block;
         height: $elemheight;
         border-right: 1px solid $color-line;
-        &:last-of-type{
+      }
+
+      &:last-of-type {
+        @include breakpoint($break-desktop-wide) {
           border-right: none;
         }
-        a{
-          position: relative;
-          height: $elemheight;
-          padding: 0 3rem;
-          font-family:$font-bold;
-          white-space: nowrap;
-          @include flex;
-          /* stylelint-disable */
-          &:after{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display:block;
-            width: 100%;
-            height: 8px;
-            content: '';
-          }
-          &:hover{
-            &:after{
-              background-color: $brand-red;
-              @include page-color('background-color');
-            }
-          }
-          /* stylelint-enable */
+      }
 
+      a {
+        display: block;
+        padding: 20px 36px;
+        font-family: $font-bold;
+        line-height: 24px;
+        @include font-size(18);
+
+        @include breakpoint($break-desktop-wide) {
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: $elemheight;
+          padding: 0 48px;
+          text-align: center;
         }
       }
+
+      a:after {
+        @include breakpoint($break-desktop-wide) {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display:block;
+          width: 100%;
+          height: 8px;
+          content: '';
+        }
+      }
+
+      a:hover:after {
+        @include breakpoint($break-desktop-wide) {
+          background-color: $brand-red;
+          @include page-color('background-color');
+        }
+      }
+
     }
+
   }
+
   &__basket{
     align-self: stretch;
     padding: 1.5rem;
