@@ -5,8 +5,8 @@
   &__row{
     position: relative;
     width: 100%;
-    padding-right:9px;
-    padding-left:9px;
+    padding-right:30px;
+    padding-left:30px;
     box-sizing: border-box;
     @include breakpoint($break-tablet) {
       padding-right: 30px;
@@ -22,11 +22,14 @@
     position: relative;
     height: auto;
     height: calc(100vh - #{$header-height-mobile});
-    max-height: 800px;
+    max-height: 600px;
     @include breakpoint($break-desktop-med){
-      min-height: 700px;
+      max-height: 800px;
       margin-top: 0;
       @include flex-stretch;
+    }
+    .c-hero--shallow &{
+      height: auto;
     }
   }
   &__container{
@@ -77,6 +80,9 @@
       }
       background-position: bottom left;
       content: '';
+      .c-hero--shallow &{
+        display:none;
+      }
     }
     &:after{
       display:block;
@@ -88,6 +94,9 @@
       }
       background-position: top left;
       content: '';
+      .c-hero--shallow &{
+        display:none;
+      }
     }
     &__inner{
       padding: 6rem 0;
