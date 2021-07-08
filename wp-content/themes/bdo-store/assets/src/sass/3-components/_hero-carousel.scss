@@ -3,17 +3,35 @@
   background:$color-bg-solid;
   .swiper-pagination{
     position: absolute;
-    bottom: -3rem;
-    left:0;
+    bottom: -4rem;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    transform: translateX(-50%);
+    gap:8px;
   }
   .swiper-pagination-bullet{
-    display: inline-block;
-    width: 74px;
-    height: 8px;
-    background:rgba($black, 0.5);
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 37px;
+    max-width: 74px;
+    height: 60px;
+    background-color: unset;
     border-radius: unset;
+    &:after{
+      display: block;
+      width: 100%;
+      height: 8px;
+      background:rgba($black, 0.5);
+      content: '';
+    }
     &-active{
-      background:$black;
+      &:after{
+        background:$black;
+      }
     }
   }
   .swiper-container{

@@ -14,6 +14,7 @@ class HeroCarousel {
     this.swiper = new Swiper( this.hero, {
         pagination: {
             el: '.c-hero-carousel__pagination',
+            clickable: true
         }
     } );
   }
