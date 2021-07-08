@@ -1,0 +1,33 @@
+.c-sitemap {
+  @include font-size(16);
+  font-family: $font-bold;
+  line-height: 22px;
+
+  @include breakpoint($break-desktop-wide) {
+    @include font-size(18);
+    line-height: 24px;
+  }
+}
+
+.c-sitemap__list {
+  @include breakpoint($break-desktop-wide) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.c-sitemap__item {
+  width: 100%;
+  margin-bottom: 20px;
+
+  .c-sitemap__item {
+    margin-bottom: 0;
+    font-family: $font-primary;
+  }
+}
+
+.menu-item-has-children {
+  @include breakpoint($break-desktop-wide) {
+    width: 33.33%
+  }
+}

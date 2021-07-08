@@ -1,0 +1,32 @@
+<div class="c-sitemap padding background--white">
+
+    <div class="o-row o-row--no-margin">
+
+        <div class="o-grid-container">
+
+            <ul class="c-sitemap__list">
+
+                {% for item in sitemap.get_items %}
+                <li class="{{ item.classes | join(' ') }} c-sitemap__item">
+                    <a class="c-sitemap__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}<span class="icon"></span></a>
+
+                    {% if item.get_children %}
+                    <ul class="c-sitemap__list c-sitemap__children">
+                        {% for child in item.get_children %}
+                        <li class="{{ child.classes | join(' ') }} c-sitemap__item">
+                            <a class="c-sitemap__link c-sitemap__link--child" target="{{ child.target }}" href="{{ child.link }}">{{ child.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                </li>
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>

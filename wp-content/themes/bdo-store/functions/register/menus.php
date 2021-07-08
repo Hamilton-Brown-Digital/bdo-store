@@ -14,7 +14,8 @@ function register_prop_menus()
         array(
             'navigation_primary' => __('Primary Navigation'),
             'navigation_utility' => __('Utility Navigation'),
-            'navigation_legal' => __('Legal Navigation')
+            'navigation_legal' => __('Legal Navigation'),
+            'sitemap' => __('Sitemap')
         )
 
     );

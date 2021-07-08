@@ -28,6 +28,10 @@ class CustomTimber extends TimberSite
       $context['navigation_legal'] = new TimberMenu('navigation_legal');
     }
 
+    if (has_nav_menu('sitemap')) {
+      $context['sitemap'] = new TimberMenu('sitemap');
+    }
+
     $context['site'] = $this;
 
     $context['options'] = get_fields('options');
