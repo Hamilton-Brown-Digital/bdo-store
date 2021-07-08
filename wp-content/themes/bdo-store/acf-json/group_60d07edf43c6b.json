@@ -7,7 +7,7 @@
             "label": "Type",
             "name": "hero_type",
             "type": "button_group",
-            "instructions": "",
+            "instructions": "Hero format.\r\nIf this is a product category page, use full.\r\nAny other page, use basic or shallow.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,12 +16,12 @@
                 "id": ""
             },
             "choices": {
-                "default": "Default",
-                "full": "Full",
-                "shallow": "Shallow"
+                "default": "Basic",
+                "shallow": "Shallow",
+                "full": "Full"
             },
             "allow_null": 0,
-            "default_value": "",
+            "default_value": "default : Basic",
             "layout": "horizontal",
             "return_format": "value"
         },
@@ -30,11 +30,11 @@
             "label": "Header",
             "name": "hero_header",
             "type": "text",
-            "instructions": "If left blank, page title will be used.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -49,7 +49,7 @@
             "label": "Intro",
             "name": "hero_intro",
             "type": "text",
-            "instructions": "",
+            "instructions": "Short sentence just underneath heading.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -69,37 +69,14 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_60d1e95165e0e",
-            "label": "Link",
-            "name": "hero_link",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_60d9d5ab614e8",
-                        "operator": "==",
-                        "value": "full"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
+            "maxlength": 200
         },
         {
             "key": "field_60d1e98865e10",
             "label": "More Content",
             "name": "hero_more_content",
             "type": "button_group",
-            "instructions": "",
+            "instructions": "Content on the right column of the hero. Choose image, text or none. If homepage, only shows image.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -179,18 +156,6 @@
                     {
                         "field": "field_60d1e98865e10",
                         "operator": "==",
-                        "value": "image"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_60d9d5ab614e8",
-                        "operator": "==",
-                        "value": "full"
-                    },
-                    {
-                        "field": "field_60d1e98865e10",
-                        "operator": "==",
                         "value": "text"
                     }
                 ]
@@ -208,7 +173,7 @@
         },
         {
             "key": "field_60d1e9ae65e11",
-            "label": "No Image",
+            "label": "",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -232,9 +197,30 @@
                 "class": "",
                 "id": ""
             },
-            "message": "This Hero has no image",
+            "message": "This Hero has no image or text.",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_60e5e0de8449b",
+            "label": "Button",
+            "name": "hero_button",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60e5e082774c4"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -266,5 +252,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625655569
+    "modified": 1625701722
 }

@@ -1,0 +1,21 @@
+.c-hero-carousel{
+  position: relative;
+  .swiper-pagination{
+    position: absolute;
+    bottom: -3rem;
+    left:0;
+  }
+  .swiper-pagination-bullet{
+    display: inline-block;
+    width: 74px;
+    height: 8px;
+    background:rgba($black, 0.5);
+    border-radius: unset;
+    &-active{
+      background:$black;
+    }
+  }
+  .swiper-container{
+    overflow:visible;
+  }
+}

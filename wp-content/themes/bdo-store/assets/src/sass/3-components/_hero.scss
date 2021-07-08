@@ -2,39 +2,56 @@
   background-color: $brand-charcoal;
   @extend .dark;
   border-bottom: $brand-red solid 25px;
+  &__row{
+    position: relative;
+    width: 100%;
+    padding-right:9px;
+    padding-left:9px;
+    box-sizing: border-box;
+    @include breakpoint($break-tablet) {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
   .c-hero-carousel &{
     border-bottom: none;
   }
   @include page-color('border-color');
-  &__container{
+  @mixin container-defaults{
     @include flex-column;
-    gap:1.5rem;
     position: relative;
     height: auto;
-    min-height: calc(100vh - #{$header-height-mobile});
-    @include breakpoint($break-tablet){
-      height: auto;
-      min-height: 400px;
-    }
-    @include breakpoint($break-desktop){
+    height: calc(100vh - #{$header-height-mobile});
+    max-height: 800px;
+    @include breakpoint($break-desktop-med){
       min-height: 700px;
       margin-top: 0;
       @include flex-stretch;
     }
   }
+  &__container{
+    @include container-defaults;
+  }
+  &__container-background{
+    @include container-defaults;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    @include breakpoint($break-desktop-med){
+      display: flex;
+      justify-content: flex-end;
+      &__image-text{
+        width: 50%;
+      }
+    }
+  }
   &__heading{
     @include font-display;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
   }
   &__intro{
     margin-bottom: 1.5rem;
-  }
-  &__text{
-    display: block;
-    margin-bottom: 1.5rem;
-    @include breakpoint($break-desktop){
-      display: none;
-    }
   }
   &__main{
     display: flex;
@@ -42,7 +59,8 @@
     flex-grow: 1;
     justify-content:center;
     width: 100%;
-    @include breakpoint($break-desktop){
+    padding-right: 3vw;
+    @include breakpoint($break-desktop-med){
       flex-grow: unset;
       width: 50%;
     }
@@ -53,7 +71,10 @@
       display:block;
       flex-grow: 1;
       height: auto;
-      background-image: url(#{$asset-path}/img/ribbon-red-top.svg);
+      background-image: url(#{$asset-path}/img/ribbon-white-top.svg);
+      .c-hero-carousel &{
+        background-image: url(#{$asset-path}/img/ribbon-red-top.svg);
+      }
       background-position: bottom left;
       content: '';
     }
@@ -61,20 +82,33 @@
       display:block;
       flex-grow: 1;
       height: auto;
-      background-image: url(#{$asset-path}/img/ribbon-red-bottom.svg);
+      background-image: url(#{$asset-path}/img/ribbon-white-bottom.svg);
+      .c-hero-carousel &{
+        background-image: url(#{$asset-path}/img/ribbon-red-bottom.svg);
+      }
       background-position: top left;
       content: '';
     }
     &__inner{
-      padding: 3rem 0;
-      &>*:last-of-type{
-        margin-bottom: 0;
+      padding: 6rem 0;
+      &__main{
+        *:last-child{
+          margin-bottom: 0;
+        }
+      }
+      &__text{
+        display: block;
+        margin-top:1.5rem;
+        margin-bottom: none;
+        @include breakpoint($break-desktop-med){
+          display: none;
+        }
       }
     }
   }
   &__image-text{
     display: none;
-    @include breakpoint($break-desktop){
+    @include breakpoint($break-desktop-med){
       display: block;
       width: 50%;
       @include flex-center;
@@ -87,6 +121,7 @@
     }
     &__text{
       @include flex-center;
+      padding-right:60px;
     }
   }
 } 
