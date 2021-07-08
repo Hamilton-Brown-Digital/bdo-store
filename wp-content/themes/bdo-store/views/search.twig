@@ -2,13 +2,17 @@
 
 {% block content %}
 
+    {% include 'partials/hero.twig' with {
+        account: true,
+        header: 'Results for `'~title~'`',
+        type: 'shallow'
+    } %}
+
     <div class="c-search">
 
 	    <div class="o-row o-row--no-margin">
 
 		    <div class="o-grid-container c-search__container">
-
-                <h1>Results for `{{ title }}`</h1>
 
                 <div class="c-search__results-meta">
 
