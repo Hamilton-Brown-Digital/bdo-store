@@ -12,9 +12,6 @@
       padding-right: 30px;
       padding-left: 30px;
     }
-    @include breakpoint($break-desktop-med $break-site-width){
-      padding-right:0;
-    }
   }
   .c-hero-carousel &{
     border-bottom: none;
@@ -62,6 +59,7 @@
     flex-grow: 1;
     justify-content:center;
     width: 100%;
+    padding-right: 3vw;
     @include breakpoint($break-desktop-med){
       flex-grow: unset;
       width: 50%;

@@ -59,7 +59,7 @@
                         {% endif %}
                     </div>
                     
-                    {% if type == 'full' and content %}
+                    {% if type == 'full' and moreContent == 'text' and content %}
                         <p class="c-hero__main__inner__text">{{ content }}</p>
                     {% endif %}
 
@@ -77,15 +77,15 @@
             {% endif %}
         </div>
 
-            {% if moreContent == 'image' and image %}
-        <div class="o-grid-container o-grid-container--full-width c-hero__container-background">
-        
-            <div class="c-hero__container-background__image-text">
-                <img class="c-hero__image-text__image" src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
-            </div>
+        {% if moreContent == 'image' and image %}
+            <div class="o-grid-container o-grid-container--full-width c-hero__container-background">
+    
+                <div class="c-hero__container-background__image-text">
+                    <img class="c-hero__image-text__image" src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
+                </div>
 
-        </div>
-    {% endif %}
+            </div>
+        {% endif %}
 
     </div>
 
