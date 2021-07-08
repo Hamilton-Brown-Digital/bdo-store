@@ -222,6 +222,40 @@
                                 "id": ""
                             },
                             "clone": "",
+<<<<<<< HEAD
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60e7170c11161": {
+                    "key": "layout_60e7170c11161",
+                    "name": "media",
+                    "label": "Media",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60e7171111162",
+                            "label": "Media",
+                            "name": "media",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60e715dc0134d"
+                            ],
+=======
+>>>>>>> develop
                             "display": "seamless",
                             "layout": "block",
                             "prefix_label": 0,
@@ -278,5 +312,9 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+<<<<<<< HEAD
+    "modified": 1625757478
+=======
     "modified": 1625755460
+>>>>>>> develop
 }

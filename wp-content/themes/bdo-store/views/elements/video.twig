@@ -1,5 +1,20 @@
+{% set videoSrc = video|split("src=") %}
+{% set videoUrl = videoSrc[1]|split('"')[1] %}
+{% set videoParams = videoUrl|split('/', 5)[4] %}
+{% set videoId = videoParams|split('?')[0] %}
+
 <div class="e-video">
 
-    {{ media.video }}
+    <div class="e-video__placeholder js-video-placeholder" style="background-image:url(//img.youtube.com/vi/{{ videoId }}/maxresdefault.jpg);">
+        <div class="e-video__play"></div>
+    </div>
+
+    <iframe
+        class="e-video__iframe js-video" type="text/html"
+        width="640" height="360"
+        src="{{ videoUrl }}&enablejsapi=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
 
 </div>
