@@ -3,6 +3,7 @@
   @extend .dark;
   border-bottom: $brand-red solid 25px;
   &__row{
+    position: relative;
     width: 100%;
     padding-right:9px;
     padding-left:9px;
@@ -22,9 +23,8 @@
     border-bottom: none;
   }
   @include page-color('border-color');
-  &__container{
+  @mixin container-defaults{
     @include flex-column;
-    gap:6rem;
     position: relative;
     height: auto;
     height: calc(100vh - #{$header-height-mobile});
@@ -33,6 +33,23 @@
       min-height: 700px;
       margin-top: 0;
       @include flex-stretch;
+    }
+  }
+  &__container{
+    @include container-defaults;
+  }
+  &__container-background{
+    @include container-defaults;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    @include breakpoint($break-desktop-med){
+      display: flex;
+      justify-content: flex-end;
+      &__image-text{
+        width: 50%;
+      }
     }
   }
   &__heading{

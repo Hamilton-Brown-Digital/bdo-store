@@ -14,7 +14,6 @@
 
     <div class="c-hero__row">
         <div class="o-grid-container c-hero__container">
-
             <div class="c-hero__main">
 
                 <div class="c-hero__main__inner">
@@ -70,17 +69,23 @@
 
             {% if moreContent != 'none' %}
             <div class="c-hero__image-text">
-                {% if moreContent == 'image' and image %}
-                    <img class="c-hero__image-text__image" src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
-                {% endif %}
 
                 {% if moreContent == 'text' and content %}
                     <p class="c-hero__image-text__text">{{ content }}</p>
                 {% endif %}
             </div>
             {% endif %}
+        </div>
+
+            {% if moreContent == 'image' and image %}
+        <div class="o-grid-container o-grid-container--full-width c-hero__container-background">
+        
+            <div class="c-hero__container-background__image-text">
+                <img class="c-hero__image-text__image" src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
+            </div>
 
         </div>
+    {% endif %}
 
     </div>
 

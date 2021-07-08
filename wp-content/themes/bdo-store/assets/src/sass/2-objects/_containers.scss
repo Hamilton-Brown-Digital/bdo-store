@@ -49,4 +49,7 @@
   max-width: $site-width;
   margin-right: auto;
   margin-left: auto;
+  &--full-width{
+    max-width: unset;
+  }
 }
