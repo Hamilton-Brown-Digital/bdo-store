@@ -8,9 +8,13 @@
         <div class="o-grid-container">
 
             {% if media.type == 'video' %}
-                {% include "./elements/video.twig" %}
+                {% include "./elements/video.twig" with {
+                    video: media.video
+                } %}
             {% else %}
-                <img src="{{ TimberImage(media.image).src }}" srcset="{{ TimberImage(media.image).srcset()}}" />
+                {% include "./elements/image.twig" with {
+                    image: media.image
+                } %}
             {% endif %}
 
             {{ content.subhead }}

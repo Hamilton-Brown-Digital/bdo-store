@@ -1,6 +1,7 @@
 import Header from './classes/Header.js';
 import HeroCarousel from './classes/HeroCarousel.js';
 import Accordion from './classes/Accordion.js';
+import Video from './classes/Video.js';
 import Init from './classes/Init';
 
 const siteFunctions = {
@@ -21,6 +22,18 @@ const siteFunctions = {
     const accordion = new Accordion();
     accordion.init();
   },
+
+  video__ready() {
+    const video = new Video();
+    video.init()
+
+    /* eslint-disable */
+    window.onYouTubeIframeAPIReady = () => {
+      video.initYoutube()
+    };
+    /* eslint-enable */
+
+  }
 };
 
 window.functionCore = new Init(siteFunctions);
