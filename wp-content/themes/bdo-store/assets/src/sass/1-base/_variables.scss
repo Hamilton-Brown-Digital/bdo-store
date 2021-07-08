@@ -14,8 +14,8 @@ $font-size-base: 62.5%;
 $reg: normal;
 $bold: 500;
 
-$site-width:97.5em; // 1560
-$site-width-margins:calc(#{$site-width} + 30px);
+$site-width:1560px;
+$site-width-margins:calc(1560px + 30px);
 
 $break-mobile: 22.438em; // 359px
 $break-mobile-land: 32em; // 512px
@@ -34,7 +34,6 @@ $break-tablet-under: 0 $break-tablet;
 $break-desktop-under: 0 $break-desktop;
 
 $grid-gap: clamp(0.5rem, 3vw, 3rem);
-
 
 $white: #fff;
 $black: #000;

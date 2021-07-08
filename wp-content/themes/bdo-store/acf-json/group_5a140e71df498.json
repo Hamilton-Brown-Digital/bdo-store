@@ -202,16 +202,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_60e2fe8429cc6": {
-                    "key": "layout_60e2fe8429cc6",
-                    "name": "content_row",
-                    "label": "Content row",
+                "layout_60e70f12fb507": {
+                    "key": "layout_60e70f12fb507",
+                    "name": "sitemap",
+                    "label": "Sitemap",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60e2fe9729cc7",
-                            "label": "Row",
-                            "name": "acf_clone_row",
+                            "key": "field_60e70f17fb508",
+                            "label": "Sitemap",
+                            "name": "acf_clone_sitemap",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -221,40 +221,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "clone": [
-                                "group_60e2f6f6a72d1"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_60e38fbf58897": {
-                    "key": "layout_60e38fbf58897",
-                    "name": "price_comparison",
-                    "label": "Price comparison",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_60e38fe358898",
-                            "label": "Price comparison table",
-                            "name": "acf_price_comparison_table",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_60de0977bf3ec"
-                            ],
+                            "clone": "",
                             "display": "seamless",
                             "layout": "block",
                             "prefix_label": 0,
@@ -287,12 +254,12 @@
             {
                 "param": "page",
                 "operator": "!=",
-                "value": "22"
+                "value": "42"
             },
             {
                 "param": "page",
                 "operator": "!=",
-                "value": "22"
+                "value": "43"
             }
         ],
         [
@@ -311,5 +278,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625526354
+    "modified": 1625755460
 }
