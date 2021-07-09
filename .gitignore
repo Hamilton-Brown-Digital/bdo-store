@@ -63,6 +63,13 @@ wp-content/wp-cache-config.php
 wp-content/cache/*
 wp-content/cache/supercache/*
 
+
+
+# plugins specific
+wp-content/ai1wm-backups/
+
+
+
 # wpengine specific
 .smushit-status
 .gitattributes
