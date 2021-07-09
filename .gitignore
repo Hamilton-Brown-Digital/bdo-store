@@ -2,7 +2,7 @@
 wp-content/themes/bdo-store/assets/css/maps/main.css.map
 wp-content/themes/bdo-store/assets/js/maps/main.min.js.map
 wp-content/themes/bdo-store/assets/dist/stats.json
-wp-content/themes/bdo-store/assets/dist/*
+# wp-content/themes/bdo-store/assets/dist/*
 wp-content/themes/bdo-store/assets/dist/*.hot-update.json
 wp-content/themes/bdo-store/assets/dist/*.hot-update.js
 .svn
