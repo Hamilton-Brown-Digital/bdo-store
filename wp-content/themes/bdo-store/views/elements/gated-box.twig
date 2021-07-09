@@ -1,8 +1,6 @@
-<div class="e-gated-box">
-    {# BARRY - Left this here so you can use it as you please. A class maybe? #}
-    {{ status }}
+<div class="e-gated-box e-gated-box--{{ status }}">
     
-    {{ title }}
+    <h3>{{ title }}</h3>
 
     {% set buttonArgs = {
         title: button_text,
@@ -15,6 +13,8 @@
         {% set buttonArgs = buttonArgs|merge({
             title: 'Processing',
             url: '#',
+            disabled: true,
+            altClass: 'e-cta-button--disabled'
         })%}
     {% endif %}
 

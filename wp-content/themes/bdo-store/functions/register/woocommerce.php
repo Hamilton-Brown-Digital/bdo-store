@@ -13,3 +13,5 @@
     include 'woocommerce/login-register.php';
 
     include 'woocommerce/status.php';
+
+    include 'woocommerce/cart.php';
