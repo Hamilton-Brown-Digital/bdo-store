@@ -1,0 +1,30 @@
+{% block html_head_container %}
+	{% include 'html-header.twig' %}
+{% endblock %}
+
+	{% if post.terms('product_cat')[0] %}
+		{% set prodCat = post.terms('product_cat')[0] %}
+	{% else %}
+		{% set prodCat = TimberTerm(post.product_category) %}
+	{% endif %}
+	
+	<body class="{{body_class}}{% if prodCat %} theme-color theme-color--{{ prodCat.colour }}{% endif %}" data-template="base.twig" itemscope itemtype="http://schema.org/WebPage">
+
+		{% block header %}
+      		{% include 'header.twig' %}
+		{% endblock %}
+
+		<main class="main">
+			{% block content %}
+				Sorry, no content
+			{% endblock %}
+   		 </main>
+
+		{% block footer %}
+			{% include 'footer.twig' %}
+			{{ function('wp_footer') }}
+		{% endblock %}
+
+	</body>
+	
+</html>

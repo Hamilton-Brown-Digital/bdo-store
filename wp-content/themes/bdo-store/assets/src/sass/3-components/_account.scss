@@ -1,0 +1,245 @@
+.c-account {
+
+  .woocommerce {
+    @include breakpoint($break-desktop-wide) {
+      display: flex;        
+    }
+  }
+
+  // NAVIGATION
+  .woocommerce-MyAccount-navigation {
+    position: relative;
+    padding: 40px 0;
+    background-color: $color-line;
+    @include font-size(24);
+    line-height: 30px;
+
+    @include breakpoint($break-desktop-wide) {
+      width: 20%;
+      padding: 70px 50px 70px 0;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -100vw;
+      width: 100vw;
+      height: 100%;
+      background-color: $color-line;
+      content: '';
+    }
+
+    h2 {
+      @include font-size(30);
+      position: relative;
+      margin-bottom: 35px;
+      padding-bottom: 42px;
+      line-height: 30px;
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 86px;
+        height: 8px;
+        background-color: $brand-red;
+        content: '';
+      }
+    }
+
+    li {
+      margin: 23px 0;
+        
+      &.is-active a {
+        color: $brand-red;
+        font-family: $font-bold;
+      }
+    }
+  }
+
+  // CONTENT AREA
+  .woocommerce-MyAccount-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+
+    @include breakpoint($break-desktop-wide) {
+      width: 80%;
+      padding: 70px 0 70px 135px;
+    }
+
+  }
+
+}
+
+.c-account__message {
+  margin-top: 10px;
+  p {
+    margin-top: 25px;
+    @include font-size(16);
+    line-height: 22px;
+
+    strong {
+      font-family: $font-bold;
+    }
+
+    a {
+      color: $brand-red;
+      text-decoration: underline;
+    }
+  }
+}
+
+// ORDER
+.woocommerce-order-details__title,
+.woocommerce-column__title,
+.woocommerce-Address-title {
+  margin-bottom: 20px;
+  line-height: 30px;
+  @include font-size(26);
+}
+
+mark {
+  background-color: $color-line;
+}
+
+.woocommerce-table,
+.woocommerce-orders-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+    
+  thead {
+    th {
+      font-family: $font-bold;
+      line-height: 20px;
+      @include font-size(16);
+    }
+  }
+
+  tbody {
+    td {
+      padding: 40px 0;
+      border-top: 1px solid $color-line-dark;
+      line-height: 30px;
+      @include font-size(18);
+    }
+
+    tr:first-child {
+      td {
+        border-top: none;
+      }
+    }
+
+    a {
+      color: $brand-red;
+      text-decoration: underline;
+    }
+  }
+
+  tfoot {
+    th {
+      font-family: $font-bold;
+      line-height: 20px;
+      @include font-size(16);
+    }
+  }
+}
+
+// ORDER DETAILS
+.woocommerce-order-details,
+.woocommerce-customer-details {
+  margin-top: 30px;
+}
+
+.woocommerce-table {
+  tbody {
+    td {
+      padding: 20px 0;
+    }
+  }
+}
+
+// ADDRESS
+.woocommerce-Address {
+  margin-top: 30px;
+
+  .edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 140px;
+    height: 47px;
+    margin-top: 10px;
+    padding: 0 20px;
+    background-color: $brand-red;
+    color: $white;
+    font-family: $font-bold;
+    line-height: 22px;
+    @include font-size(18);
+  }
+}
+
+// ADDRESS FIELDS
+.woocommerce-address-fields,
+.edit-account {
+  max-width: 600px;
+  margin-top: 30px;
+
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: $font-bold;
+    line-height: 30px;
+    @include font-size(20);
+  }
+
+  input[type='text'], input[type='tel'], input[type='email'], input[type='password'] {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    border: 2px solid $brand-pale-charcoal;
+  }
+
+  .select2-container .select2-selection--single {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 50px;
+  }
+
+  span em {
+    display: block;
+    margin-bottom: 20px;
+    line-height: 20px;
+    @include font-size(16);
+  }
+
+  legend {
+    display: none;
+  }
+
+  fieldset {
+    border: none;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 180px;
+    height: 47px;
+    margin-top: 10px;
+    padding: 0 20px;
+    background-color: $brand-red;
+    color: $white;
+    font-family: $font-bold;
+    line-height: 22px;
+    @include font-size(18);
+  }
+}

@@ -1,0 +1,71 @@
+<footer id="footer" class="c-footer">
+
+    <div class="o-row o-row--no-margin">
+    
+        <div class="o-grid-container c-footer__container">
+
+            <div class="c-footer__socials c-footer__section">
+
+                {% if options.socials %}
+
+                    {% for social in options.socials %}
+
+                        <a class="c-footer__socials__link" href="{{ social.link }}" target="_blank" title="{{ social.name }}">
+                            <img src="{{ social.icon['url'] }}" alt="{{ social.icon['alt'] }}" title="{{ social.icon['title'] }}" />
+                        </a>
+
+                    {% endfor %}
+
+                {% endif %}
+
+            </div>
+
+            {% if navigation_utility.get_items %}
+            <div class="c-footer__menu c-footer__section">
+
+                <nav>
+                    <ul class="c-footer__menu__list">
+                    
+                        {% for item in navigation_utility.get_items %}
+                        <li class="{{ item.classes | join(' ') }}">
+                            <a class="c-footer__menu__list__item" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+                </nav>
+
+            </div>
+            {% endif %}
+
+            {% if navigation_legal.get_items %}
+            <div class="c-footer__menu c-footer__section">
+
+                <nav>
+                    <ul class="c-footer__navigation__list">
+
+                        {% for item in navigation_legal.get_items %}
+                        <li class="{{ item.classes | join(' ') }}">
+                            <a class="c-footer__menu__list__item" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+                </nav>
+
+            </div>
+            {% endif %}
+
+            <div class="c-footer__copyright c-footer__section">
+                <div class="c-footer__copyright__notice">
+                    <span>&copy; Copyright {{ now|date('Y') }}</span>
+                    <span class="vertical-bar"></span>
+                    <span>{{ options.copyright }}</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

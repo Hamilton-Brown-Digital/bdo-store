@@ -1,0 +1,62 @@
+.flex {
+  @include flex;
+}
+.flex-stretch{
+  @include flex-stretch;
+}
+.flex-center{
+  @include flex-center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.dark{
+  background-color: #333333;
+  color:$white;
+  p, li, a{
+    color:$white;
+  }
+}
+
+.vertical-bar{
+  display: inline-block;
+  width: 1px;
+  height: 1.6em;
+  margin: 0 0.5em;
+  background-color:$color-line-dark;
+}
+
+// Padding
+
+.padding{
+  padding-top:4rem;
+  padding-bottom: 4rem;
+}
+.nopaddingtop{
+  padding-top:0;
+  padding-bottom: 4rem;
+}
+.nopaddingbottom{
+  padding-top:4rem;
+  padding-bottom: 0;
+}
+.nopadding{
+  padding-top:0;
+  padding-bottom: 0;
+}
+
+
+// backgrounds
+
+.background--white{
+  background-color:$white;
+}
+.background--gray{
+  background-color:$color-bg-feint;
+}

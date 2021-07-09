@@ -1,0 +1,27 @@
+<div class="c-form padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}" data-form-id="{{acf.form.id}}" data-form-name="{{acf.form.title}}">
+
+	<div class="o-row">
+
+		<div class="o-grid-container">
+
+			{% if acf.header %}
+				<h2 class="c-form__title">
+					{{ acf.header }}
+				</h2>
+			{% endif %}
+
+			{% if acf.intro %}
+				<div class="c-form__description">
+					{{ acf.intro }}
+				</div>
+			{% endif %}
+
+			<div class="c-form">
+				{{ function('do_shortcode', '[gravityform id="' ~ (acf.form.id) ~ '" title="false" description="false" tabindex="49" output="raw" ajax="true"]') }}
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

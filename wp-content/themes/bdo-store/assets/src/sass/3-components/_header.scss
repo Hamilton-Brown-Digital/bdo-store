@@ -1,0 +1,32 @@
+.c-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color:$color-bg-4;
+
+  @include breakpoint($break-desktop-wide) {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__menu-wrap {
+    position: fixed;
+    right: -100vw;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: all 200ms;
+
+    @include breakpoint($break-desktop-wide) {
+      position: static;
+      right: 0;
+    }
+
+    &.open {
+      right: 0;
+    }
+  }
+}

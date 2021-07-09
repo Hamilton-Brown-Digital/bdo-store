@@ -1,0 +1,22 @@
+<div class="e-gated-box e-gated-box--{{ status }}">
+    
+    <h3>{{ title }}</h3>
+
+    {% set buttonArgs = {
+        title: button_text,
+        url: button_url,
+        color: 'red',
+        size: 'small'
+    } %}
+
+    {% if status != 'completed' %}
+        {% set buttonArgs = buttonArgs|merge({
+            title: 'Processing',
+            url: '#',
+            disabled: true,
+            altClass: 'e-cta-button--disabled'
+        })%}
+    {% endif %}
+
+    {% include "./elements/button.twig" with buttonArgs %}
+</div>

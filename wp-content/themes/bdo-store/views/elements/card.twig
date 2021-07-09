@@ -1,0 +1,65 @@
+{% set buttonText = 'Find out more' %}
+{% if productCount %}
+    {% set buttonText = 'Browse products' %}
+{% endif %}
+
+<div class="e-card{% if type %} e-card--{{ type }}{% endif %}{% if color %} e-card--{{ color }}{% endif %}">
+
+    {% if image %}
+    <div class="e-card__image">
+        <a href="{{url}}">
+        <img src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
+        </a>
+    </div>
+    {% endif %}
+
+    <div class="e-card__main">
+
+        {% if terms %}
+        <div class="e-card__tagline">
+            {{ terms }}
+        </div>
+        {% endif %}
+
+        {% if title %}
+        <h3 class="e-card__title">
+        <a href="{{url}}">{{ title }}</a>
+        </h3>
+        {% endif %}
+
+        {% if excerpt %}
+        <p class="e-card__excerpt">
+            {{ excerpt }}
+        </p>
+        {% endif %}
+
+    </div>
+
+    <div class="e-card__footer">
+
+        {% if productCount %}
+        <div class="e-card__count">
+            {{ productCount }} product{% if productCount > 1 %}s{% endif %}
+        </div>
+        {% elseif price %}
+        <div class="e-card__price">
+            From <span class="e-card__price__price">£{{ price|number_format(2, '.', ',') }}</span>
+        </div>
+        {% endif %}
+
+        {% if url %}
+        <div class="e-card__button">
+        {% include "./elements/button.twig"
+            with  {
+                title: buttonText,
+                url: url,
+                color: 'red',
+                size: 'small'
+            }
+        %}
+        </div>
+        {% endif %}
+
+    </div>
+
+</div>

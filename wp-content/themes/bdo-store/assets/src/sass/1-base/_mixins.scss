@@ -1,0 +1,421 @@
+// standard clearfix
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  & {
+    *zoom: 1;
+  }
+}
+
+// aspect ratio mixin
+@mixin aspect-ratio($arglist...) {
+  $map: keywords($arglist);
+  $height: map-get($map, height) or nth-or-null($arglist, 2);
+  $width: map-get($map, width) or nth-or-null($arglist, 1);
+  $ratio: map-get($map, ratio) or if($width and $height, $width/$height, nth-or-null($arglist, 1)) or 1;
+  $padding: 1 / $ratio * 100%;
+
+  &::before {
+    content: '';
+    position: relative;
+    display: block;
+    padding-bottom: $padding;
+  }
+
+  &::after {
+    content: '';
+    display: table;
+  }
+}
+
+// Helper function
+// Return null rather than throwing an error if index is outside list range.
+@function nth-or-null($list, $index) {
+  @return if(length($list) >= $index, nth($list, $index), null);
+}
+
+// remove default styles in iOS.
+@mixin remove-webkit-defaults {
+  border-radius: 0;
+  appearance: none;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+// USAGE: @include font-size(12);
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+}
+
+// USAGE: @include stagger-transition-delay(10, 0.5s, 0.1s);
+@mixin stagger-transition-delay($i, $initial-delay, $stagger-delay) {
+  @while $i > 0 {
+    &:nth-child(#{$i}) {
+      transition-delay: $initial-delay + $stagger-delay * $i;
+    }
+
+    $i: $i - 1;
+  }
+}
+
+// USAGE: @include hocus {color: red;}
+@mixin hocus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+// USe the wysiwyg styles anywhere
+//USAGE: @wysiwyg-style;
+@mixin wysiwyg-style {
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin: 0 0 16px;
+    @media (min-width: $break-desktop) {
+      margin: 0 0 24px;
+    }
+  }
+
+  a {
+    border-bottom: 2px dashed $text-link;
+    color: $text-link;
+  }
+
+  a:hover {
+    border-bottom: 2px dashed $dark-blue;
+    color: $dark-blue;
+  }
+
+  a:active {
+    background-color: $dark-blue;
+    border-bottom: none;
+    color: $white;
+  }
+
+  a:focus {
+    border: 3px dashed $dark-blue;
+  }
+
+  a:visited {
+    border: none;
+    border: 3px dashed $purple;
+    color: $purple;
+  }
+
+  hr {
+    margin-bottom: 30px;
+    border-top-color: $text;
+  }
+
+  ol,
+  ul {
+    list-style-position: inside;
+    margin-bottom: 30px;
+  }
+
+  li {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 24px;
+    @media (min-width: $break-desktop) {
+      @include font-size(19);
+      margin-bottom: 10px;
+      line-height: 28px;
+    }
+  }
+
+  ul {
+    li {
+      @include font-size(18);
+      position: relative;
+      padding-left: 20px;
+      list-style: none;
+      line-height: 1.4;
+      &:before {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: $text-link;
+        border-radius: 10px;
+        content: '';
+      }
+    }
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: li;
+
+    li {
+      counter-increment: item;
+      margin-bottom: 5px;
+    }
+    li:before {
+      display: inline-block;
+
+      width: 1.2em;
+      margin-right: 10px;
+      border-radius: 100%;
+      color: $text-link;
+      font-weight: bold;
+      text-align: center;
+      content: counter(item) '. ';
+    }
+  }
+
+  .c-text__h2-bulletpoint {
+    li {
+      padding-left: 28px;
+      &:before {
+        top: 22px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  .c-text__h3-bulletpoint {
+    li {
+      padding-left: 24px;
+      &:before {
+        top: 12px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+
+
+
+// Typography mixins
+
+@mixin font-bold{
+  font-family:$font-bold, $font-secondary;
+}
+@mixin font-display{
+  font-family:$font-bold, $font-secondary;
+}
+
+// Underline under headings
+
+@mixin underline{
+  display: block;
+  width: 72px;
+  height: 6px;
+  margin-top:1em;
+  margin-bottom:1em;
+  padding:0;
+  background-color:$brand-red;
+  border:none;
+  @include breakpoint($break-desktop){
+    width: 220px;
+    height: 8px;
+  }
+}
+
+// Huge section headings
+@mixin header-section($underline: false){
+  @include font-bold;
+  @include font-size(20);
+  margin-top: 0;
+  @include breakpoint($break-mobile){
+    @include font-size(30);
+  }
+  @include breakpoint($break-tablet){
+    @include font-size(40);
+  }
+  @include breakpoint($break-desktop){
+    @include font-size(60);
+  }
+  @if $underline {
+    &:after{
+      content: '';
+      @include underline;
+    }
+  }
+}
+// Regular headings
+@mixin header-regular($underline: false){
+  @include font-bold;
+  @include font-size(20);
+  @include breakpoint($break-mobile){
+    @include font-size(20);
+  }
+  @include breakpoint($break-tablet){
+    @include font-size(30);
+  }
+  @include breakpoint($break-desktop){
+    @include font-size(40);
+  }
+  @if $underline {
+    &:after{
+      content: '';
+      @include underline;
+    }
+  }
+}
+
+// Small headings
+@mixin header-small($underline: false){
+  @include font-bold;
+  @include font-size(20);
+  @include breakpoint($break-tablet){
+    @include font-size(20);
+  }
+  @include breakpoint($break-desktop-wide){
+    @include font-size(24);
+  }
+  @if $underline {
+    &:after{
+      content: '';
+      @include underline;
+    }
+  }
+}
+
+// tagline above headings
+@mixin header-subhead{
+  color: $brand-red;
+  text-transform: uppercase;
+  @include font-size(14);
+  @include breakpoint($break-tablet){
+    @include font-size(18);
+  }
+}
+
+
+
+@mixin image-with-focus {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &--left-top {
+    img {
+      object-position: left top;
+    }
+  }
+
+  &--center-top {
+    img {
+      object-position: center top;
+    }
+  }
+
+  &--right-top {
+    img {
+      object-position: right top;
+    }
+  }
+
+  &--left-center {
+    img {
+      object-position: left center;
+    }
+  }
+
+  &--center-center {
+    img {
+      object-position: center center;
+    }
+  }
+
+  &--right-center {
+    img {
+      object-position: right center;
+    }
+  }
+
+  &--left-bottom {
+    img {
+      object-position: left bottom;
+    }
+  }
+
+  &--center-bottom {
+    img {
+      object-position: center bottom;
+    }
+  }
+
+  &--right-bottom {
+    img {
+      object-position: right bottom;
+    }
+  }
+}
+
+// Flex
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+@mixin flex-top{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content:flex-start;
+}
+@mixin flex-bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content:flex-start;
+}
+@mixin flex-stretch{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content:flex-start;
+}
+@mixin flex-center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+}
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+// set colors
+
+@mixin page-color($rule){
+  .theme-color--orange &{
+    #{$rule}: $brand-gold;
+  }
+  .theme-color--blue &{
+    #{$rule}: $brand-ocean;
+  }
+  .theme-color--green &{
+    #{$rule}: $brand-emerald;
+  }
+}

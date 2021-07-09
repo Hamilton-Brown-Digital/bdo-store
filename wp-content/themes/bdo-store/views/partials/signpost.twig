@@ -1,0 +1,40 @@
+{% set media = acf.signpost_media %}
+{% set content = acf.signpost_content %}
+
+<div class="c-signpost padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
+
+    <div class="o-row o-row--no-margin">
+
+        <div class="o-grid-container">
+
+            {% if media.type == 'video' %}
+                {% include "./elements/video.twig" with {
+                    video: media.video
+                } %}
+            {% else %}
+                {% include "./elements/image.twig" with {
+                    image: media.image
+                } %}
+            {% endif %}
+
+            {{ content.subhead }}
+
+            {{ content.heading }}
+
+            {{ content.content }}
+
+            {% if content.link %}
+                {% include "./elements/button.twig"
+                    with  {
+                        title : content.link['title'],
+                        url: content.link['url'],
+                        target: content.link['target']
+                    }
+                %}
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>

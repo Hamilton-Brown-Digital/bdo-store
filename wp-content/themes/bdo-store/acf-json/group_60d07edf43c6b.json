@@ -1,0 +1,256 @@
+{
+    "key": "group_60d07edf43c6b",
+    "title": "Hero",
+    "fields": [
+        {
+            "key": "field_60d9d5ab614e8",
+            "label": "Type",
+            "name": "hero_type",
+            "type": "button_group",
+            "instructions": "Hero format.\r\nIf this is a product category page, use full.\r\nAny other page, use basic or shallow.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Basic",
+                "shallow": "Shallow",
+                "full": "Full"
+            },
+            "allow_null": 0,
+            "default_value": "default : Basic",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_60d07ee7e5c46",
+            "label": "Header",
+            "name": "hero_header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60d9d7eca925e",
+            "label": "Intro",
+            "name": "hero_intro",
+            "type": "text",
+            "instructions": "Short sentence just underneath heading.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d9d5ab614e8",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 200
+        },
+        {
+            "key": "field_60d1e98865e10",
+            "label": "More Content",
+            "name": "hero_more_content",
+            "type": "button_group",
+            "instructions": "Content on the right column of the hero. Choose image, text or none. If homepage, only shows image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d9d5ab614e8",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "image": "Image",
+                "text": "Text"
+            },
+            "allow_null": 0,
+            "default_value": "image",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_60d1e96e65e0f",
+            "label": "Image",
+            "name": "hero_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d1e98865e10",
+                        "operator": "==",
+                        "value": "image"
+                    },
+                    {
+                        "field": "field_60d9d5ab614e8",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_60d1e92665e0d",
+            "label": "Content",
+            "name": "hero_content",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d9d5ab614e8",
+                        "operator": "==",
+                        "value": "full"
+                    },
+                    {
+                        "field": "field_60d1e98865e10",
+                        "operator": "==",
+                        "value": "text"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_60d1e9ae65e11",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d1e98865e10",
+                        "operator": "==",
+                        "value": "none"
+                    },
+                    {
+                        "field": "field_60d9d5ab614e8",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "This Hero has no image or text.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_60e5e0de8449b",
+            "label": "Button",
+            "name": "hero_button",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60e5e082774c4"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "97"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1625701722
+}

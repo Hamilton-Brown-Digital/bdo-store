@@ -1,0 +1,55 @@
+.o-row {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-right: 9px;
+  padding-left: 9px;
+
+  @include breakpoint($break-tablet) {
+    margin-bottom: 35px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @include breakpoint($break-desktop) {
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint($break-desktop-wide) {
+    margin-bottom: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include breakpoint($break-desktop-wider) {
+    margin-bottom: 60px;
+  }
+
+  &--no-margin {
+    margin: 0px;
+  }
+
+  &--no-margin__bottom {
+    margin-bottom: 0px;
+  }
+
+  &--no-padding {
+    padding: 0px;
+  }
+
+  &--no-padding__left {
+    padding-left: 0px;
+  }
+
+  &--no-padding__right {
+    padding-right: 0px;
+  }
+}
+
+.o-grid-container {
+  max-width: $site-width;
+  margin-right: auto;
+  margin-left: auto;
+  &--full-width{
+    max-width: unset;
+  }
+}

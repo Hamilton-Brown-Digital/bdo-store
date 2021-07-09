@@ -1,0 +1,36 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+    {% if fn('is_user_logged_in') %}
+        {% include './partials/hero.twig' with {
+            account: true,
+            type: 'shallow'
+        } %}
+    {% endif %}
+
+    {% if fn('is_page', 'register') %}
+
+        {% filter shortcodes %}
+            [wc_reg_form]
+        {% endfilter %}
+
+    {% else %}
+
+        {% filter shortcodes %}
+        <div class="c-account background--white">
+
+            <div class="o-row o-row--no-margin">
+
+                <div class="o-grid-container">
+                    [woocommerce_my_account]
+                </div>
+
+            </div>
+
+        </div>
+        {% endfilter %}
+
+    {% endif %}
+
+{% endblock %}

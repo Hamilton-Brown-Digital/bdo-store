@@ -1,0 +1,17 @@
+{% if menu %}
+<nav class="c-navigation js-primary-nav">
+
+  <ul class="c-navigation__list">
+
+    {% for item in menu %}
+    <li class="{{ item.classes | join(' ') }} c-navigation__item">
+
+      <a class="c-navigation__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}<span class="icon"></span></a>
+
+    </li>
+    {% endfor %}
+
+  </ul>
+
+</nav>
+{% endif %}

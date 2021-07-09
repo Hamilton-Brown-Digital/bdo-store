@@ -1,0 +1,155 @@
+.c-header-main__menu-wrap {
+  @include breakpoint($break-desktop-wide) {
+    order: 2;
+  }
+}
+
+.c-header-main{
+  $elemheight:82px;
+  border-bottom: 1px solid $color-line;
+
+  @include breakpoint($break-desktop-wide) {
+    order: 2;
+  }
+
+  &__container{
+    @include flex;
+    justify-content: space-between;
+    width: 100%;
+    height: $elemheight;
+    padding: 0 26px;
+
+    @include breakpoint($break-desktop-wide) {
+      padding: 0;
+    }
+  }
+
+  &__logo{
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    &__image{
+      width: 100%;
+      max-width: 132px;
+      margin-top: 2px;
+
+      @include breakpoint($break-desktop-wide) {
+        max-width: 175px;
+      }
+    }
+
+  }
+  &__menu{
+    background-color: $color-line;
+
+    @include breakpoint($break-desktop-wide) {
+      display: flex;
+      flex-grow: 1;
+      order: 2;
+      margin-bottom: -82px;
+      padding-left: 235px;
+      background-color: $white;
+    }
+
+    nav {
+      @include breakpoint($break-desktop-wide) {
+        width: calc(100% - 172px);
+      }
+    }
+
+    ul {
+      padding: 10px 0;
+      @include breakpoint($break-desktop-wide) {
+        align-self: stretch;
+        justify-content: flex-start;
+        padding: 0;
+        @include flex;
+      }
+    }
+
+    li {
+      @include breakpoint($break-desktop-wide) {
+        display: block;
+        height: $elemheight;
+        border-right: 1px solid $color-line;
+      }
+
+      &:last-of-type {
+        @include breakpoint($break-desktop-wide) {
+          border-right: none;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 20px 36px;
+        font-family: $font-bold;
+        line-height: 24px;
+        @include font-size(18);
+
+        @include breakpoint($break-desktop-wide) {
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: $elemheight;
+          padding: 0 48px;
+          text-align: center;
+        }
+      }
+
+      a:after {
+        @include breakpoint($break-desktop-wide) {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display:block;
+          width: 100%;
+          height: 8px;
+          content: '';
+        }
+      }
+
+      a:hover:after {
+        @include breakpoint($break-desktop-wide) {
+          background-color: $brand-red;
+          @include page-color('background-color');
+        }
+      }
+
+    }
+
+  }
+
+  &__basket{
+    align-self: stretch;
+    padding: 1.5rem;
+    color: $white;
+    @include flex;
+    @include breakpoint($break-desktop-wide) {
+      background-color: $brand-red;
+    }
+    &__icon{
+      width: 20px;
+      height: 20px;
+      background-image: url('#{$asset-path}/img/icons/basket.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px 20px;
+      @include breakpoint($break-desktop-wide) {
+        background-image: url('#{$asset-path}/img/icons/basket-white.svg');
+      }
+    }
+    &__label{
+      display: none;
+      @include breakpoint($break-desktop-wide) {
+        display:block;
+        padding-left: 1em;
+      }
+    }
+  }
+  &__hamburger{
+    @include breakpoint($break-desktop-wide) {
+      display: none;
+    }
+  }
+}

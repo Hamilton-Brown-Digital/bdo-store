@@ -1,0 +1,27 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+    {% if logged_in and purchased %}
+
+        {% set gated_builder = post.meta('gated_modules') %}
+
+        {% include 'partials/hero.twig' with {
+            product: true,
+            header: post.title
+        } %}
+
+        {% for acf in gated_builder %}
+            {% include 'partials/' ~ acf.acf_fc_layout ~ '.twig' %}
+        {% endfor %}
+
+    {% else %}
+
+        {% include 'partials/hero.twig' with {
+            product: true,
+            header: 'DOO OONNEEEEE MAAAAATE!!'
+        } %}
+
+    {% endif %}
+
+{% endblock %}

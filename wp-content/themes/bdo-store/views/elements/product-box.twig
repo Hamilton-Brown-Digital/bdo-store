@@ -1,0 +1,11 @@
+<div class="c-product-box">
+    
+    {% do action('woocommerce_before_single_product_summary') %}
+
+    {% do action('woocommerce_single_product_summary') %}
+
+    {% do action('woocommerce_after_single_product_summary') %}
+
+    {{ options.store_need_help }}
+
+</div>

@@ -1,0 +1,136 @@
+.c-hero{
+  background-color: $brand-charcoal;
+  @extend .dark;
+  border-bottom: $brand-red solid 25px;
+  &__row{
+    position: relative;
+    width: 100%;
+    padding-right:30px;
+    padding-left:30px;
+    box-sizing: border-box;
+    @include breakpoint($break-tablet) {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+  .c-hero-carousel &{
+    border-bottom: none;
+  }
+  @include page-color('border-color');
+  @mixin container-defaults{
+    @include flex-column;
+    position: relative;
+    height: auto;
+    height: calc(100vh - #{$header-height-mobile});
+    max-height: 600px;
+    @include breakpoint($break-desktop-med){
+      max-height: 800px;
+      margin-top: 0;
+      @include flex-stretch;
+    }
+    .c-hero--shallow &{
+      height: auto;
+    }
+  }
+  &__container{
+    @include container-defaults;
+  }
+  &__container-background{
+    @include container-defaults;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    @include breakpoint($break-desktop-med){
+      display: flex;
+      justify-content: flex-end;
+      &__image-text{
+        width: 50%;
+      }
+    }
+  }
+  &__heading{
+    @include font-display;
+    margin-bottom: 1.5rem;
+  }
+  &__intro{
+    margin-bottom: 1.5rem;
+  }
+  &__main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content:center;
+    width: 100%;
+    padding-right: 3vw;
+    @include breakpoint($break-desktop-med){
+      flex-grow: unset;
+      width: 50%;
+    }
+    @include breakpoint($break-site-width-margins){
+      padding-left: 0;
+    }
+    &:before{
+      display:block;
+      flex-grow: 1;
+      height: auto;
+      background-image: url(#{$asset-path}/img/ribbon-white-top.svg);
+      .c-hero-carousel &{
+        background-image: url(#{$asset-path}/img/ribbon-red-top.svg);
+      }
+      background-position: bottom left;
+      content: '';
+      .c-hero--shallow &{
+        display:none;
+      }
+    }
+    &:after{
+      display:block;
+      flex-grow: 1;
+      height: auto;
+      background-image: url(#{$asset-path}/img/ribbon-white-bottom.svg);
+      .c-hero-carousel &{
+        background-image: url(#{$asset-path}/img/ribbon-red-bottom.svg);
+      }
+      background-position: top left;
+      content: '';
+      .c-hero--shallow &{
+        display:none;
+      }
+    }
+    &__inner{
+      padding: 6rem 0;
+      &__main{
+        *:last-child{
+          margin-bottom: 0;
+        }
+      }
+      &__text{
+        display: block;
+        margin-top:1.5rem;
+        margin-bottom: none;
+        @include breakpoint($break-desktop-med){
+          display: none;
+        }
+      }
+    }
+  }
+  &__image-text{
+    display: none;
+    @include breakpoint($break-desktop-med){
+      display: block;
+      width: 50%;
+      @include flex-center;
+    }
+    &__image{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__text{
+      @include flex-center;
+      padding-right:60px;
+    }
+  }
+} 

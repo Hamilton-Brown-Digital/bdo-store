@@ -1,0 +1,26 @@
+.c-featurelist{
+  text-align: left;
+  &__title{
+    margin-bottom: 1em;
+    @include font-bold;
+    @include font-size(20);
+  }
+  &__list{
+    display: grid;
+    &__item{
+      display: block;
+      padding-top:0.5em;
+      padding-bottom:0.5em;
+      padding-left: calc(1em + 12px);
+      background-position: left center;
+      background-size: 12px 9px;
+      &--yes{
+        background-image:url(#{$image-path}/icons/tick.svg);
+      }
+      &--no{
+        background-image:url(#{$image-path}/icons/cross2.svg);
+        opacity: 0.5;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{% if not (carousel or product or account) %}
+    {% set header = post.hero_header %}
+    {% set intro = post.hero_intro %}
+    {% set content = post.hero_content %}
+    {% set image = post.hero_image %}
+    {% set moreContent = post.hero_more_content %}
+    {% set type = post.hero_type %}
+    {% set linktype = post.hero_button_hero_link_config %}
+    {% set link = post.hero_button_hero_link %}
+    {% set skiplinktext = post.hero_button_link_text %}
+{% endif %}
+
+<div class="c-hero{%if type == 'full' %} c-hero--{{ type }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
+
+    <div class="c-hero__row">
+        <div class="o-grid-container c-hero__container">
+            <div class="c-hero__main">
+
+                <div class="c-hero__main__inner">
+
+                    <div class="c-hero__main__inner__main">
+                        {% if product and category %}
+                            {{ category }}
+                        {% endif %}
+                        <h1 class="c-hero__heading">
+                            {% if header %}
+                                {{ header }}
+                            {% else %}
+                                {% if carousel %}
+                                    {{ hero.post_title }}
+                                {% else %}
+                                    {{ post.title }}
+                                {% endif %}
+                            {% endif %}
+                        </h1>
+                        {% if type == 'full' and intro %}
+                            <p class="c-hero__intro">{{ intro }}</p>
+                        {% endif %}
+                        
+                        {% if type == 'full' and linktype != 'none' %}
+                            {% if linktype == 'customlink' %}
+                                {% include "./elements/button.twig"
+                                    with  {
+                                        title : link['title'],
+                                        url: link['url'],
+                                        target: link['target'],
+                                        color: 'red'
+                                    }
+                                %}
+                            {% elseif linktype == 'skiplink' %}
+                                {% include "./elements/button.twig"
+                                    with  {
+                                        title : skiplinktext,
+                                        url: post.link ~ "#details",
+                                        color: 'red'
+                                    }
+                                %}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    
+                    {% if type == 'full' and moreContent == 'text' and content %}
+                        <p class="c-hero__main__inner__text">{{ content }}</p>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            {% if moreContent != 'none' %}
+            <div class="c-hero__image-text">
+
+                {% if moreContent == 'text' and content %}
+                    <p class="c-hero__image-text__text">{{ content }}</p>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+
+        {% if moreContent == 'image' and image %}
+            <div class="o-grid-container o-grid-container--full-width c-hero__container-background">
+    
+                <div class="c-hero__container-background__image-text">
+                    <img class="c-hero__image-text__image" src="{{ TimberImage(image).src }}" srcset="{{ TimberImage(image).srcset()}}" />
+                </div>
+
+            </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+
+<div id="#details"></div>

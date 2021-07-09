@@ -1,0 +1,24 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+    {% include './partials/hero.twig' with {
+        account: true,
+        type: 'shallow'
+    } %}
+
+    {% filter shortcodes %}
+        <div class="c-basket padding background--white">
+
+            <div class="o-row o-row--no-margin">
+
+                <div class="o-grid-container">
+                    [woocommerce_cart]
+                </div>
+
+            </div>
+
+        </div>
+    {% endfilter %}
+
+{% endblock %}

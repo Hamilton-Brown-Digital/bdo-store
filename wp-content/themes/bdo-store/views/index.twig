@@ -1,0 +1,23 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+<div class="page-content">
+
+
+	{% set page_builder = post.meta('page_modules') %}
+
+	{% if fn('is_front_page') %}
+		{% include 'partials/hero-carousel.twig' %}
+	{% else %}
+		{% include 'partials/hero.twig' %}
+	{% endif %}
+
+	{% for acf in page_builder %}
+		{% include 'partials/' ~ acf.acf_fc_layout ~ '.twig' %}
+	{% endfor %}
+
+
+</div>
+
+{% endblock %}

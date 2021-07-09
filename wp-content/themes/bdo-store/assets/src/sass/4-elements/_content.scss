@@ -1,0 +1,12 @@
+.e-content{
+  h2{
+    @include header-regular($underline: true);
+  }
+  p{
+    margin-bottom: 1em;
+  }
+  a{
+    color: $brand-red;
+    text-decoration: underline;
+  }
+}
