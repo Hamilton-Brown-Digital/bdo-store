@@ -22,15 +22,24 @@
         link: linkArr[0]
     } %}
 
-    <div id="product-details" class="product-details">
-
-        {% for acf in product_builder %}
-            {% include './partials/' ~ acf.acf_fc_layout ~ '.twig' %}
-        {% endfor %}
-
+    <div id="product-details" class="c-product-details background--gray">
+        <div class="o-row">
+            <div class="o-grid-container c-product-details__container">
+                <div class="c-product-details__content">
+                    {% for acf in product_builder %}
+                        {% include './partials/' ~ acf.acf_fc_layout ~ '.twig' %}
+                    {% endfor %}
+                </div>
+                <div class="c-product-details__product-order">
+                    <div class="c-product-details__product-order__form c-product-box">
+                        {% include './elements/product-box.twig' %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    {% include './elements/product-box.twig' %}
+    
 
     {% do action('woocommerce_after_single_product') %}
 

@@ -18,8 +18,8 @@
             "layouts": {
                 "layout_60d07efb9fd5f": {
                     "key": "layout_60d07efb9fd5f",
-                    "name": "Content",
-                    "label": "Content",
+                    "name": "content_block",
+                    "label": "Content block",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -36,7 +36,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_60d41afb7c185"
+                                "group_60e31e15aa26e"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -77,6 +77,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60e76cf13044c": {
+                    "key": "layout_60e76cf13044c",
+                    "name": "media",
+                    "label": "Media",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60e76d0c3044d",
+                            "label": "Media",
+                            "name": "acf_clone_media",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60e715dc0134d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Module",
@@ -101,5 +132,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625152091
+    "modified": 1625779702
 }

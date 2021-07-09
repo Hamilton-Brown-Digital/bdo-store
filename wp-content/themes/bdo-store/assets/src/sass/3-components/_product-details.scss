@@ -1,0 +1,26 @@
+.c-product-details{
+  &__container{
+    display:grid;
+    grid-gap: $grid-gap;
+    @include breakpoint($break-desktop-med) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__product-order{
+    position: relative;
+    @include breakpoint($break-desktop-med) {
+      top: -590px;
+      height: calc(100% + 590px);
+    }
+    &__form{
+      height: 565px;
+      padding:3rem;
+      background: $color-bg-3;
+      @include breakpoint($break-desktop-med) {
+        position:sticky;
+        top: 6rem;
+        width: 100%;
+      }
+    }
+  }
+}

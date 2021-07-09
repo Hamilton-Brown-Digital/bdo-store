@@ -18,6 +18,9 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 // Remove meta from product pages
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
+// remove related
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
 // Remove product thumbnail from the cart page
 add_filter( 'woocommerce_cart_item_thumbnail', '__return_empty_string' );
 
