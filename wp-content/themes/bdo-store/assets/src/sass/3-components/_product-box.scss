@@ -1,0 +1,48 @@
+.c-product-box{
+  .gform_body{
+    margin-bottom: 3rem;
+  }
+  .gform_fields{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border: none;
+    gap:3rem;
+  }
+  .gfield{
+    width:100%;
+    width:calc(50% - 1.5rem);
+    border: none;
+    border-bottom:2px solid $brand-red;
+    @include page-color(border-bottom-color);
+  }
+  .gfield_label{
+    display: block;
+    @include font-bold;
+    margin-bottom:1em;
+  }
+  .form-fields{
+    &__new-renewal{
+    }
+    &__license-type{
+    }
+    &__num-employees{
+    }
+  }
+  select{
+    padding:0.8em;
+    border-style: unset;
+    color: unset;
+  }
+  .gform_hidden{
+    display:none;
+  }
+  .gfield_radio{
+    display: flex;
+    flex-direction: column;
+    padding:0.3em;
+    .gchoice{
+      padding:0.3em;
+    }
+  }
+}

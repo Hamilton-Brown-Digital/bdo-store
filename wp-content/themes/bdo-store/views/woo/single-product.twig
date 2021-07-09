@@ -31,15 +31,15 @@
                     {% endfor %}
                 </div>
                 <div class="c-product-details__product-order">
-                    <div class="c-product-details__product-order__form">
-                        form here
+                    <div class="c-product-details__product-order__form c-product-box">
+                        {% include './elements/product-box.twig' %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    {% include './elements/product-box.twig' %}
+    
 
     {% do action('woocommerce_after_single_product') %}
 
