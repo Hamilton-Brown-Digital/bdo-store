@@ -3,7 +3,7 @@
     display:grid;
     grid-gap: $grid-gap;
     @include breakpoint($break-desktop-med) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 585px;
     }
   }
   &__product-order{
@@ -13,9 +13,11 @@
       height: calc(100% + 590px);
     }
     &__form{
-      height: 565px;
-      padding:3rem;
+      height: auto;
       background: $color-bg-3;
+      @include breakpoint($break-tablet){
+        height: 565px;
+      }
       @include breakpoint($break-desktop-med) {
         position:sticky;
         top: 6rem;
