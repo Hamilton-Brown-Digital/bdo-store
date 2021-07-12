@@ -21,7 +21,9 @@
 
                     <div class="c-hero__main__inner__main">
                         {% if product or category %}
+                        <div class="c-hero__tagline">
                             {{ category }}
+                        </div>
                         {% endif %}
                         <h1 class="c-hero__heading">
                             {% if header %}
@@ -66,6 +68,15 @@
                                     color: 'outline'
                                 }
                             %}
+                            <div class="c-hero__skip-to-price-button">
+                                {% include "./elements/button.twig"
+                                    with  {
+                                        title : 'Buy now',
+                                        url: post.link ~ "#product-order-form",
+                                        color: 'outline'
+                                    }
+                                %}
+                            </div>
                         {% endif %}
                     </div>
                     

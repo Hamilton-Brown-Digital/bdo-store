@@ -6,6 +6,11 @@
       grid-template-columns: 1fr 630px;
     }
   }
+  &__content{
+    &>div:last-of-type{
+      padding-bottom:0;
+    }
+  }
   &__product-order{
     position: relative;
     @include breakpoint($break-desktop-med) {
@@ -14,6 +19,7 @@
     }
     &__form{
       height: auto;
+      margin-bottom:3rem;
       background: $color-bg-3;
       @include breakpoint($break-tablet){
         height: 565px;

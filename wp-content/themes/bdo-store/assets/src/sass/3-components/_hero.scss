@@ -34,6 +34,13 @@
   }
   &__container{
     @include container-defaults;
+    .c-hero--product &{
+      display:grid;
+      grid-gap: $grid-gap;
+      @include breakpoint($break-desktop-med) {
+        grid-template-columns: 1fr 630px;
+      }
+    }
   }
   &__container-background{
     @include container-defaults;
@@ -49,12 +56,16 @@
       }
     }
   }
+  &__tagline{
+    margin-bottom: 1.5rem;
+    @include page-color('color');
+  }
   &__heading{
     @include font-display;
     margin-bottom: 1.5rem;
   }
   &__intro{
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
   &__main{
     display: flex;
@@ -66,6 +77,9 @@
     @include breakpoint($break-desktop-med){
       flex-grow: unset;
       width: 50%;
+      .c-hero--product &{
+        width: 100%;
+      }
     }
     @include breakpoint($break-site-width-margins){
       padding-left: 0;
@@ -131,6 +145,12 @@
     &__text{
       @include flex-center;
       padding-right:60px;
+    }
+  }
+  &__skip-to-price-button{
+    display: block;
+    @include breakpoint($break-tablet){
+      display: none;
     }
   }
 } 
