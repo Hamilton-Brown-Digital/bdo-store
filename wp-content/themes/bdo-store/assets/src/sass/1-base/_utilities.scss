@@ -34,17 +34,31 @@
 
 // Padding
 
+$padding-std: clamp(3rem, 3vw, 4rem);
+$padding-deep: clamp(3rem, 3vw, 6rem);
 .padding{
-  padding-top:4rem;
-  padding-bottom: 4rem;
+  padding-top:$padding-deep;
+  padding-bottom: $padding-deep;
+  .c-product-details &{
+    padding-top:$padding-deep;
+    padding-bottom: $padding-deep;
+  }
 }
 .nopaddingtop{
   padding-top:0;
-  padding-bottom: 4rem;
+  padding-bottom: $padding-deep;
+  .c-product-details &{
+    padding-top:$padding-deep;
+    padding-bottom: $padding-deep;
+  }
 }
 .nopaddingbottom{
-  padding-top:4rem;
+  padding-top:$padding-deep;
   padding-bottom: 0;
+  .c-product-details &{
+    padding-top:$padding-deep;
+    padding-bottom: $padding-deep;
+  }
 }
 .nopadding{
   padding-top:0;

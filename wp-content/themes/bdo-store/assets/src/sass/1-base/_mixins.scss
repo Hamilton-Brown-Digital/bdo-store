@@ -224,8 +224,8 @@
   display: block;
   width: 72px;
   height: 6px;
-  margin-top:1em;
-  margin-bottom:1em;
+  margin-top:1.5em;
+  margin-bottom:1.5em;
   padding:0;
   background-color:$brand-red;
   border:none;
@@ -267,7 +267,7 @@
     @include font-size(30);
   }
   @include breakpoint($break-desktop){
-    @include font-size(40);
+    @include font-size(50);
   }
   @if $underline {
     &:after{

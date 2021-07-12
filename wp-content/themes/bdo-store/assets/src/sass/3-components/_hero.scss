@@ -147,10 +147,18 @@
       padding-right:60px;
     }
   }
-  &__skip-to-price-button{
-    display: block;
-    @include breakpoint($break-tablet){
+  &__product-cta{
+    &__details{
       display: none;
+      @include breakpoint($break-tablet){
+        display: block;
+      }
+    }
+    &__form{
+      display: block;
+      @include breakpoint($break-tablet){
+        display: none;
+      }
     }
   }
 } 

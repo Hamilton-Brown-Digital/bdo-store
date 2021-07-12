@@ -61,21 +61,25 @@
                             {% endif %}
                         {% endif %}
                         {% if product %}
-                            {% include "./elements/button.twig"
-                                with  {
-                                    title : link.title,
-                                    url: post.link ~ "#details",
-                                    color: 'outline'
-                                }
-                            %}
-                            <div class="c-hero__skip-to-price-button">
-                                {% include "./elements/button.twig"
-                                    with  {
-                                        title : 'Buy now',
-                                        url: post.link ~ "#product-order-form",
-                                        color: 'outline'
-                                    }
-                                %}
+                            <div class="c-hero__product-cta">
+                                <div class="c-hero__product-cta__details">
+                                    {% include "./elements/button.twig"
+                                        with  {
+                                            title : link.title,
+                                            url: post.link ~ "#details",
+                                            color: 'outline'
+                                        }
+                                    %}
+                                </div>
+                                <div class="c-hero__product-cta__form">
+                                    {% include "./elements/button.twig"
+                                        with  {
+                                            title : 'Buy now',
+                                            url: post.link ~ "#product-order-form",
+                                            color: 'outline'
+                                        }
+                                    %}
+                                </div>
                             </div>
                         {% endif %}
                     </div>
