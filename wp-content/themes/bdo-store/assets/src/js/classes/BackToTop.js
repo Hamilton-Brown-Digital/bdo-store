@@ -35,11 +35,13 @@ class BackToTop {
         this.btn.classList.remove('show')
     }
 
+    /* eslint-disable */
     trigger () {
         document.querySelector('body').scrollIntoView({
             behavior: "smooth"
         })
     }
+    /* eslint-enable */
 
 }
 
