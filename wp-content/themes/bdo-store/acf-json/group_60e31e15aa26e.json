@@ -44,7 +44,7 @@
         },
         {
             "key": "field_60ecc24b9a37c",
-            "label": "Link",
+            "label": "CTA link",
             "name": "contentblock_link",
             "type": "clone",
             "instructions": "",
@@ -81,5 +81,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1626129079
+    "modified": 1626130764
 }

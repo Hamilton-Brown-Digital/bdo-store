@@ -39,6 +39,14 @@
     color: $color-text;
   }
   @include page-color('background-color');
+  &--outline{
+    background-color:transparent;
+    border:solid 3px $white;
+  }
+  .c-hero--product &{
+    background-color:transparent;
+    border:solid 3px $white;
+  }
   &:after{
     position: absolute;
     top:0;

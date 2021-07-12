@@ -4,10 +4,10 @@
     "fields": [
         {
             "key": "field_60ecc2120207d",
-            "label": "Link",
+            "label": "CTA link",
             "name": "content_link",
             "type": "link",
-            "instructions": "",
+            "instructions": "Optional button link at bottom of block.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -35,5 +35,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1626128995
+    "modified": 1626132861
 }

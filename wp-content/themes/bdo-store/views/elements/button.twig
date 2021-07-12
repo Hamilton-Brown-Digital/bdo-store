@@ -1,5 +1,4 @@
-<a
-	class="e-cta-button{% if color %} e-cta-button--{{color}}{% endif %} {% if size %}e-cta-button--{{size}}{% endif %}{% if altClass %} {{ altClass }}{% endif %}" {% if not disabled %}href="{{url}}"{% endif %} {% if target %}target="{{target}}"{% endif %}>
+<a class="e-cta-button{% if color %} e-cta-button--{{color}}{% else %} e-cta-button--theme-color{% endif %}{% if size %} e-cta-button--{{size}}{% endif %}{% if altClass %} {{ altClass }}{% endif %}"{% if not disabled %} href="{{url}}"{% endif %}{% if target %} target="{{target}}"{% endif %}>
 	<span>
 		{{title}}
 	</span>
