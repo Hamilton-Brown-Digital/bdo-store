@@ -43,19 +43,26 @@
                                     with  {
                                         title : link['title'],
                                         url: link['url'],
-                                        target: link['target'],
-                                        color: 'red'
+                                        target: link['target']
                                     }
                                 %}
                             {% elseif linktype == 'skiplink' %}
                                 {% include "./elements/button.twig"
                                     with  {
                                         title : skiplinktext,
-                                        url: post.link ~ "#details",
-                                        color: 'red'
+                                        url: post.link ~ "#details"
                                     }
                                 %}
                             {% endif %}
+                        {% endif %}
+                        {% if product %}
+                            {% include "./elements/button.twig"
+                                with  {
+                                    title : link.title,
+                                    url: post.link ~ "#details",
+                                    color: 'outline'
+                                }
+                            %}
                         {% endif %}
                     </div>
                     

@@ -9,7 +9,6 @@
   color: $white;
   text-align: center;
   @include font-bold;
-  @include page-color('background-color');
   &:after{
     content: '';
     position: absolute;
@@ -51,6 +50,11 @@
     padding:0 1em;
   }
 
+  &--outline{
+    background:transparent;
+    border:solid 3px white;
+  }
+
   &--red{
     background-color: $brand-red;
   }
@@ -77,5 +81,8 @@
     background-color: $brand-burgundy;
     color: $color-text;
   }
-
+  &--theme-color{
+    background-color:$brand-red;
+    @include page-color('background-color');
+  }
 }

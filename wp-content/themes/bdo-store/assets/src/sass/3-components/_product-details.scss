@@ -3,7 +3,7 @@
     display:grid;
     grid-gap: $grid-gap;
     @include breakpoint($break-desktop-med) {
-      grid-template-columns: 1fr 585px;
+      grid-template-columns: 1fr 630px;
     }
   }
   &__product-order{

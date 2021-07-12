@@ -7,6 +7,8 @@
 
     {% do action('woocommerce_before_single_product') %}
 
+    
+
     {% set linkArr = [{
         'title': 'Product details',
         'url': '#product-details',
@@ -23,7 +25,7 @@
     } %}
 
     <div id="product-details" class="c-product-details background--white">
-        <div class="o-row">
+        <div class="o-row o-row--no-margin">
             <div class="o-grid-container c-product-details__container">
                 <div class="c-product-details__content">
                     {% for acf in product_builder %}
@@ -38,6 +40,9 @@
             </div>
         </div>
     </div>
+
+
+    
 
     
 
