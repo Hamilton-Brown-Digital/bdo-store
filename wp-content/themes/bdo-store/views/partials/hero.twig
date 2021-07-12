@@ -8,6 +8,7 @@
     {% set linktype = post.hero_button_hero_link_config %}
     {% set link = post.hero_button_hero_link %}
     {% set skiplinktext = post.hero_button_link_text %}
+    {% set category = post.parent %}
 {% endif %}
 
 <div class="c-hero{%if type == 'full' %} c-hero--{{ type }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
@@ -19,7 +20,7 @@
                 <div class="c-hero__main__inner">
 
                     <div class="c-hero__main__inner__main">
-                        {% if product and category %}
+                        {% if product or category %}
                             {{ category }}
                         {% endif %}
                         <h1 class="c-hero__heading">
@@ -50,7 +51,13 @@
                                 {% include "./elements/button.twig"
                                     with  {
                                         title : skiplinktext,
+<<<<<<< HEAD
                                         url: post.link ~ "#details"
+=======
+                                        url: post.link ~ "#details",
+                                        color: 'red',
+                                        altClass: 'e-cta-button--skip'
+>>>>>>> develop
                                     }
                                 %}
                             {% endif %}
@@ -99,4 +106,4 @@
 </div>
 
 
-<div id="#details"></div>
+<div id="details"></div>
