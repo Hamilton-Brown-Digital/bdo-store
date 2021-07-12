@@ -296,12 +296,12 @@
 }
 
 // tagline above headings
-@mixin header-subhead{
+@mixin header-tagline{
   color: $brand-red;
   text-transform: uppercase;
   @include font-size(14);
   @include breakpoint($break-tablet){
-    @include font-size(18);
+    @include font-size(16);
   }
 }
 

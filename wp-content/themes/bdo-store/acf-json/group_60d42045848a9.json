@@ -172,6 +172,25 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_60ecb09a31f72",
+                    "label": "Intro",
+                    "name": "intro",
+                    "type": "textarea",
+                    "instructions": "Optional introduction paragraph",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": 160,
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
                     "key": "field_60d4211a1725f",
                     "label": "Content",
                     "name": "content",
@@ -186,7 +205,7 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "maxlength": "",
+                    "maxlength": 300,
                     "rows": 4,
                     "new_lines": "wpautop"
                 },
@@ -206,6 +225,27 @@
                     "return_format": "array"
                 }
             ]
+        },
+        {
+            "key": "field_60ecbbaa4ea94",
+            "label": "Button",
+            "name": "signpost_cta",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60ecbabe30d15"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -225,5 +265,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625080947
+    "modified": 1626127474
 }

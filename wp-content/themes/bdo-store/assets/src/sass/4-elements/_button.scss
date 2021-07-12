@@ -3,15 +3,43 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 57px;
-  padding: 0 3em;
+  height: 44px;
+  padding: 0 2em;
+  background-color: $brand-red;
   border-radius: 2px;
   color: $white;
   text-align: center;
+  @include font-size(16);
+  cursor:pointer;
   @include font-bold;
+  &--red{
+    background-color: $brand-red;
+  }
+  &--emerald{
+    background-color: $brand-emerald;
+  }
+  &--ocean{
+    background-color: $brand-ocean;
+  }
+  &--charcoal{
+    background-color: $brand-charcoal;
+  }
+  &--pale-charcoal{
+    background-color: $brand-pale-charcoal;
+  }
+  &--gold{
+    background-color: $brand-gold;
+    color: $color-text;
+  }
+  &--slate{
+    background-color: $brand-slate;
+  }
+  &--burgundy{
+    background-color: $brand-burgundy;
+    color: $color-text;
+  }
   @include page-color('background-color');
   &:after{
-    content: '';
     position: absolute;
     top:0;
     left: 0;
@@ -20,6 +48,7 @@
     height: 100%;
     background-color: rgba($black, 0);
     transition: background-color 0.3s;
+    content: '';
   }
   &:hover{
     &:after{
@@ -50,32 +79,4 @@
     height: 45px;
     padding:0 1em;
   }
-
-  &--red{
-    background-color: $brand-red;
-  }
-  &--emerald{
-    background-color: $brand-emerald;
-  }
-  &--ocean{
-    background-color: $brand-ocean;
-  }
-  &--charcoal{
-    background-color: $brand-charcoal;
-  }
-  &--pale-charcoal{
-    background-color: $brand-pale-charcoal;
-  }
-  &--gold{
-    background-color: $brand-gold;
-    color: $color-text;
-  }
-  &--slate{
-    background-color: $brand-slate;
-  }
-  &--burgundy{
-    background-color: $brand-burgundy;
-    color: $color-text;
-  }
-
 }
