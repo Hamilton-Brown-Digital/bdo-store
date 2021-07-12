@@ -1,6 +1,7 @@
 import Header from './classes/Header.js';
 import HeroCarousel from './classes/HeroCarousel.js';
 import Accordion from './classes/Accordion.js';
+import Skip from './classes/Skip.js';
 import Video from './classes/Video.js';
 import Init from './classes/Init';
 
@@ -21,6 +22,11 @@ const siteFunctions = {
   accordion__ready() {
     const accordion = new Accordion();
     accordion.init();
+  },
+
+  skip__ready() {
+    const skip = new Skip();
+    skip.init();
   },
 
   video__ready() {

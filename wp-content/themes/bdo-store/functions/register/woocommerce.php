@@ -6,6 +6,8 @@
         add_theme_support( 'woocommerce' );
     }
 
+    include 'woocommerce/general.php';
+    
     include 'woocommerce/product.php';
 
     include 'woocommerce/account.php';
