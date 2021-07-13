@@ -1,0 +1,23 @@
+<div class="e-cookie">
+
+    <div class="e-cookie__content">
+
+        <div class="e-cookie__header">
+            Cookies
+        </div>
+
+        <div class="e-cookie__text">
+            This site uses cookies to provide you with a more responsive and personalised service. By using this site you agree to our use of cookies. Please read our Cookie Policy for more information on the cookies we use and how to delete or block them. 
+        </div>
+
+        {% include "./elements/button.twig"
+            with  {
+                title : 'Okay, thank you',
+                url: '',
+                altClass: 'e-cookie__cta'
+            }
+        %}
+
+    </div>
+
+</div>

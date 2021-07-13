@@ -15,16 +15,18 @@ class Video {
   }
 
   initYoutube () {
-    this.player = new YT.Player(this.playeriFrame, {
-        events: {
-            'onReady': () => {
-                this.onPlayerReady( this )
-            },
-            'onStateChange': ( ev ) => {
-                this.onPlayerStateChange( ev, this )
-            }
-        }
-    });
+    if ( this.playeriFrame ) {
+      this.player = new YT.Player(this.playeriFrame, {
+          events: {
+              'onReady': () => {
+                  this.onPlayerReady( this )
+              },
+              'onStateChange': ( ev ) => {
+                  this.onPlayerStateChange( ev, this )
+              }
+          }
+      })
+    }
   }
 
   onPlayerReady( self ) {
