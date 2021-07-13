@@ -7,11 +7,9 @@
 
     {% do action('woocommerce_before_single_product') %}
 
-    
-
     {% set linkArr = [{
         'title': 'Product details',
-        'url': '#product-details',
+        'url': '#details',
         'target': ''
     }] %}
 
@@ -24,7 +22,7 @@
         link: linkArr[0]
     } %}
 
-    <div id="product-details" class="c-product-details background--white">
+    <div class="c-product-details background--white">
         <div class="o-row o-row--no-margin">
             <div class="o-grid-container c-product-details__container">
                 <div class="c-product-details__content">
@@ -40,11 +38,6 @@
             </div>
         </div>
     </div>
-
-
-    
-
-    
 
     {% do action('woocommerce_after_single_product') %}
 

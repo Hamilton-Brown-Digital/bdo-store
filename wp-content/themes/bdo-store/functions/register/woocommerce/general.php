@@ -24,3 +24,70 @@ function stripe_payment_metadata_filter_callback( $metadata, $order, $prepared_s
 
     return $metadata;
 }
+
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+function remove_admin_bar_links() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('view-store');
+}
+
+// HIDE ADMIN MENU FOR SHOP MANAGER
+function is_shop_manager() {
+    $user = wp_get_current_user();
+    if ( in_array('shop_manager', $user->roles) ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+add_action('admin_menu', 'remove_shop_manager_menus', 9999);
+function remove_shop_manager_menus() {
+    if ( is_shop_manager() ) {
+        remove_menu_page( 'index.php' );                                //Dashboard
+        remove_menu_page( 'upload.php' );                               //Media
+        remove_menu_page( 'edit.php?post_type=page' );                  //Pages
+        remove_menu_page( 'themes.php' );                               //Appearance
+        remove_menu_page( 'plugins.php' );                              //Plugins
+        remove_menu_page( 'users.php' );                                //Users
+        remove_menu_page( 'tools.php' );                                //Tools
+        remove_menu_page( 'options-general.php' );                      //Settings
+        remove_menu_page( 'gf_edit_forms' );                            //Gravity Forms
+        remove_menu_page( 'edit.php?post_type=gated' );                 //Gated
+        remove_menu_page( 'theme-options' );                            //Theme Options
+        remove_menu_page( 'wpseo_dashboard' );                          //Yoast
+        remove_menu_page( 'edit.php?post_type=acf-field-group' );       //ACF
+
+        remove_menu_page( 'edit.php?post_type=product' );               //Product
+        remove_menu_page('wc-admin&path=/analytics/overview');          //Analytics
+        remove_menu_page('woocommerce-marketing');                      //Marketing
+
+        remove_submenu_page('woocommerce', 'wc-admin');                 //Woo Home
+        remove_submenu_page('woocommerce', 'coupons-moved');            //Woo Coupons
+        remove_submenu_page('woocommerce', 'wc-reports');               //Woo Reports
+        remove_submenu_page('woocommerce', 'wc-settings');              //Woo Settings
+        remove_submenu_page('woocommerce', 'wc-status');                //Woo Status
+        remove_submenu_page('woocommerce', 'wc-addons');                //Woo Addons
+    }
+}
+
+add_filter('login_redirect', 'admin_default_page');
+function admin_default_page() {
+    if ( is_shop_manager() ) {
+        return '/wp-admin/edit.php?post_type=shop_order';
+    }
+}
+
+add_filter( 'login_redirect', 'login_redirect', 10, 3 );
+function login_redirect( $redirect_to, $request, $user ) {
+    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+        if ( in_array( 'administrator', $user->roles ) || in_array( 'editor', $user->roles ) || in_array( 'author', $user->roles ) ) {
+            $redirect_to = admin_url();
+        } else if ( in_array( 'customer', $user->roles ) || in_array( 'shop_manager', $user->roles ) ) {
+            $redirect_to = admin_url() . 'edit.php?post_type=shop_order';
+        } else {
+            $redirect_to = home_url();
+        }
+        return $redirect_to;
+    }
+}

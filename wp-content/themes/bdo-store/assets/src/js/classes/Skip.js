@@ -10,10 +10,12 @@ class Skip {
     }
   
     events() {
-        this.skips.addEventListener( 'click', ( ev ) => {
-            ev.preventDefault()
-            this.trigger()
-        })
+        if ( this.skips ) {
+            this.skips.addEventListener( 'click', ( ev ) => {
+                ev.preventDefault()
+                this.trigger()
+            })
+        }
     }
 
     trigger () {

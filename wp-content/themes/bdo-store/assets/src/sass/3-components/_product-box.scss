@@ -1,7 +1,7 @@
 .c-product-box{
   padding:1.5rem;
   @include breakpoint($break-tablet){
-    padding:2.5rem;
+    padding:2rem;
   }
   .gform_body{
     margin-bottom: 2.5rem;
@@ -122,4 +122,19 @@
       }
     }
   }
+
+  &__help {
+    margin-top: 30px;
+
+    p {
+      line-height: 20px;
+      @include font-size(16);
+    }
+
+    a {
+      color: $brand-red;
+      text-decoration: underline;
+    }
+  }
+
 }
