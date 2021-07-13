@@ -4,7 +4,27 @@
 
 		<div class="o-grid-container">
 
-            DOWNLOAD
+            {% for download in acf.downloads %}
+
+                <div class="c-download__item">
+
+                    {{ download.title }}
+
+                    {{ download.description }}
+
+                    {% include "./elements/button.twig"
+                        with  {
+                            title : download.link['title'],
+                            url: download.link['url'],
+                            target: download.link['target']
+                        }
+                    %}
+
+                    {{ download.additional_content }}
+
+                </div>
+
+            {% endfor %}
 
         </div>
 

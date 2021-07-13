@@ -22,6 +22,99 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_60edcbfc7d170",
+            "label": "Downloads",
+            "name": "downloads",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Download",
+            "sub_fields": [
+                {
+                    "key": "field_60edcc7c7d171",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60edcc857d172",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "visual",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_60edcc927d173",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_60edce0d7d174",
+                    "label": "Additional Content",
+                    "name": "additional_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "visual",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -41,5 +134,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1626177168
+    "modified": 1626197590
 }
