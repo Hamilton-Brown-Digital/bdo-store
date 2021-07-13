@@ -21,7 +21,9 @@
 
                     <div class="c-hero__main__inner__main">
                         {% if product or category %}
+                        <div class="c-hero__tagline">
                             {{ category }}
+                        </div>
                         {% endif %}
                         <h1 class="c-hero__heading">
                             {% if header %}
@@ -44,8 +46,7 @@
                                     with  {
                                         title : link['title'],
                                         url: link['url'],
-                                        target: link['target'],
-                                        color: 'red'
+                                        target: link['target']
                                     }
                                 %}
                             {% elseif linktype == 'skiplink' %}
@@ -58,6 +59,28 @@
                                     }
                                 %}
                             {% endif %}
+                        {% endif %}
+                        {% if product %}
+                            <div class="c-hero__product-cta">
+                                <div class="c-hero__product-cta__details">
+                                    {% include "./elements/button.twig"
+                                        with  {
+                                            title : link.title,
+                                            url: post.link ~ "#details",
+                                            color: 'outline'
+                                        }
+                                    %}
+                                </div>
+                                <div class="c-hero__product-cta__form">
+                                    {% include "./elements/button.twig"
+                                        with  {
+                                            title : 'Buy now',
+                                            url: post.link ~ "#product-order-form",
+                                            color: 'outline'
+                                        }
+                                    %}
+                                </div>
+                            </div>
                         {% endif %}
                     </div>
                     

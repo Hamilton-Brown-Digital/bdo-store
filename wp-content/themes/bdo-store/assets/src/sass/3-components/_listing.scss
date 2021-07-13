@@ -1,7 +1,7 @@
 .c-listing{
   &__subhead{
     margin-bottom:1.5rem;
-    @include header-subhead;
+    @include header-tagline;
   }
   &__heading{
     @include header-regular;
