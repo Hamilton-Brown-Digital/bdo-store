@@ -1,23 +1,21 @@
 .e-cookie {
   position: fixed;
-  bottom: 10px;
-  left: 10px;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  @include breakpoint($break-desktop){
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+  z-index: 5;
   display: none;
-  width: 300px;
-  padding: 20px 25px;
+  width:300px;
+  padding: 1.5rem;
   background-color: $color-bg-1;
   border-radius: 3px;
   color: $white;
-
   &.show {
     display: block;
   }
-
-  @include breakpoint($break-desktop){
-    bottom: 50px;
-    left: 50px;
-  }
-
   &__header {
     margin-bottom: 15px;
     font-family: $font-bold;
