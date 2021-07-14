@@ -38,20 +38,6 @@ $grid-gap: clamp(0.5rem, 3vw, 3rem);
 $white: #fff;
 $black: #000;
 
-// for testing
-$gold: rgb(242, 208, 14);
-$yellow: rgb(255, 255, 0);
-
-// Text colors
-$color-text:#333333;
-$color-text-reverse: #ffffff;
-
-// line color
-$color-line:#F2F2F2;
-$color-line-dark:#707070;
-$line: 1px solid $color-line;
-$line-dark: 1px solid $color-line-dark;
-
 // BDO brand colors
 $brand-red: #ed1a3b;
 $brand-emerald: #218f8b;
@@ -69,6 +55,24 @@ $color-bg-3:#F2F2F2;
 $color-bg-4:#ffffff;
 $color-bg-solid:$brand-charcoal;
 $color-bg-feint:$color-bg-3;
+
+// for testing
+$gold: rgb(242, 208, 14);
+$yellow: rgb(255, 255, 0);
+
+// Text colors
+$color-text:#333333;
+$color-text-reverse: #ffffff;
+
+// line color
+$color-line:#F2F2F2;
+$color-line-darker:#d8d8d8;
+// for dark background
+$color-line-dark:#707070;
+
+
+
+$color-text-link:$brand-red;
 
 
 $susy: (

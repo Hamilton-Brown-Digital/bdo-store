@@ -8,7 +8,8 @@
 
         {% include 'partials/hero.twig' with {
             product: true,
-            header: post.title
+            header: post.title,
+            type: 'shallow'
         } %}
 
         {% for acf in gated_builder %}
@@ -19,7 +20,8 @@
 
         {% include 'partials/hero.twig' with {
             product: true,
-            header: 'Sorry, you cannot access this page'
+            header: 'Sorry, you cannot access this page',
+            type: 'shallow'
         } %}
 
     {% endif %}
