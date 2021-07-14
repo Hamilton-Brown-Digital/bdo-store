@@ -8,7 +8,6 @@
     width: 100%;
     background-color: $brand-red;
     color: $white;
-    @include page-color('background-color');
     @include breakpoint($break-desktop) {
       top: 0;
     }
@@ -18,11 +17,10 @@
     .woocommerce-error {
       margin: 0 auto;
       padding: 15px 10px;
-  
       @include breakpoint($break-desktop) {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         max-width: 1565px;
         padding-right: 0;
         padding-left: 0;
@@ -64,5 +62,23 @@
         @extend .e-cta-button;
       }
     }
+  }
+}
+
+
+
+.theme-color--orange{
+  .woocommerce-notices-wrapper{
+    background-color: $brand-gold;
+  }
+}
+.theme-color--green{
+  .woocommerce-notices-wrapper{
+    background-color: $brand-emerald;
+  }
+}
+.theme-color--blue{
+  .woocommerce-notices-wrapper{
+    background-color: $brand-ocean;
   }
 }
