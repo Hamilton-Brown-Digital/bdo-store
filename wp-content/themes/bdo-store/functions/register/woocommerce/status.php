@@ -39,7 +39,7 @@ function register_custom_post_status() {
         'label_count'               => _n_noop( 'Stripe payment made, CC passed <span class="count">(%s)</span>', 'Stripe payment made, CC passed <span class="count">(%s)</span>', 'woocommerce' )
     ) );
 
-    register_post_status( 'inv-payment-made', array(
+    register_post_status( 'wc-inv-payment-made', array(
         'label'                     => _x( 'Invoice payment made', 'Order status', 'woocommerce' ),
         'public'                    => true,
         'exclude_from_search'       => false,
@@ -62,7 +62,7 @@ function custom_wc_order_statuses( $order_statuses ) {
             $new_order_statuses['wc-failed'] = _x( 'Invoice payment, CC failed', 'Order status', 'woocommerce' );
             $new_order_statuses['wc-failed-refund'] = _x( 'Stripe payment made, CC failed', 'Order status', 'woocommerce' );
             $new_order_statuses['wc-passed-stripe'] = _x( 'Stripe payment made, CC passed', 'Order status', 'woocommerce' );
-            $new_order_statuses['inv-payment-made'] = _x( 'Invoice payment made', 'Order status', 'woocommerce' );
+            $new_order_statuses['wc-inv-payment-made'] = _x( 'Invoice payment made', 'Order status', 'woocommerce' );
         }
 
         if ( 'wc-pending' === $key ) {
@@ -96,7 +96,7 @@ function custom_dropdown_bulk_actions_shop_order( $actions ) {
     $actions['wc-failed'] = __( 'Invoice payment, CC failed', 'woocommerce' );
     $actions['wc-failed-refund'] = __( 'Stripe payment made, CC failed', 'woocommerce' );
     $actions['wc-passed-stripe'] = __( 'Stripe payment made, CC passed', 'woocommerce' );
-    $actions['inv-payment-made'] = __( 'Invoice payment made', 'woocommerce' );
+    $actions['wc-inv-payment-made'] = __( 'Invoice payment made', 'woocommerce' );
 
     $actions['wc-pending'] = __( 'Pending order', 'woocommerce' );
     $actions['wc-on-hold'] = __( 'Invoice payment, Pending CC', 'woocommerce' );
@@ -106,25 +106,41 @@ function custom_dropdown_bulk_actions_shop_order( $actions ) {
     return $actions;
 }
 
-add_action('woocommerce_order_status_passed-pending', 'passed_pending_order_status_email_notification', 20, 2);
-function passed_pending_order_status_email_notification ( $order_id, $order ) {    
+add_action('woocommerce_order_status_on-hold', 'order_status_email_notification', 20, 2);
+add_action('woocommerce_order_status_processing', 'order_status_email_notification', 20, 2);
+add_action('woocommerce_order_status_passed-pending', 'order_status_email_notification', 20, 2);
+add_action('woocommerce_order_status_failed', 'order_status_email_notification', 20, 2);
+add_action('woocommerce_order_status_failed-refund', 'order_status_email_notification', 20, 2);
+add_action('woocommerce_order_status_passed-stripe', 'order_status_email_notification', 20, 2);
+add_action('woocommerce_order_status_inv-payment-made', 'order_status_email_notification', 20, 2);
+function order_status_email_notification ( $order_id, $order ) {    
         $email_key   = 'WC_Email_Customer_Processing_Order';
         $email_obj = WC()->mailer()->get_emails()[$email_key];
         $email_obj->trigger( $order_id );
 }
 
-add_filter( 'woocommerce_email_heading_customer_processing_order', 'email_heading_passed_pending', 10, 2 );
-function email_heading_passed_pending ( $header, $order ) {
-    if( $order->has_status( 'passed-pending' ) ) {
-        $header = __('Invoice payment, CC passed', 'woocommerce');
-    }
-    return $header;
-}
-
 add_filter( 'woocommerce_email_subject_customer_processing_order', 'email_subject_passed_pending', 10, 2 );
 function email_subject_passed_pending ( $subject, $order ) {
+    if( $order->has_status( 'on-hold' ) ) {
+        $subject = __('Invoice payment, Pending CC - Order #'.$order->get_order_number(), 'woocommerce');
+    }
+    if( $order->has_status( 'processing' ) ) {
+        $subject = __('Stripe payment made, Pending CC - Order #'.$order->get_order_number(), 'woocommerce');
+    }
     if( $order->has_status( 'passed-pending' ) ) {
-        $subject = __('Invoice payment, CC passed (#'.$order->get_order_number().')', 'woocommerce');
+        $subject = __('Invoice payment, CC passed - Order #'.$order->get_order_number(), 'woocommerce');
+    }
+    if( $order->has_status( 'failed' ) ) {
+        $subject = __('Invoice payment, CC failed - Order #'.$order->get_order_number(), 'woocommerce');
+    }
+    if( $order->has_status( 'failed-refund' ) ) {
+        $subject = __('Stripe payment made, CC failed - Order #'.$order->get_order_number(), 'woocommerce');
+    }
+    if( $order->has_status( 'passed-stripe' ) ) {
+        $subject = __('Stripe payment made, CC passed - Order #'.$order->get_order_number(), 'woocommerce');
+    }
+    if( $order->has_status( 'inv-payment-made' ) ) {
+        $subject = __('Invoice payment made - Order #'.$order->get_order_number(), 'woocommerce');
     }
     return $subject;
 }
