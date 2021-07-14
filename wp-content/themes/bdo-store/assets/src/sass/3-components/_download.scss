@@ -1,3 +1,42 @@
 .c-download {
-    
+  &__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:$grid-gap;
+    @include breakpoint($break-desktop-med){
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+  &__main{
+    grid-column-end: span 3;
+    &__intro{
+      @include intro-text;
+      margin-bottom:1.5rem;
+    }
+    &__content{
+      margin-bottom:1.5rem;
+      @include wysiwyg-style;
+    }
+  }
+  &__downloads{
+    grid-column-end: span 2;
+  }
+  &__item{
+    @include bordered-box;
+    margin-bottom:1.5rem;
+    &__title{
+      @include header-small;
+      margin-bottom:1.5rem;
+    }
+    &__description{
+      margin-bottom:1.5rem;
+      @include wysiwyg-style;
+    }
+    &__cta{
+      margin-bottom:1.5rem;
+    }
+    &__additional-content{
+      @include wysiwyg-style;
+    }
+  }
 }

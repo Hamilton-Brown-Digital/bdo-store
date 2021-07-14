@@ -8,11 +8,12 @@
     width: 100%;
     background-color: $brand-red;
     color: $white;
-
+    @include page-color('background-color');
     @include breakpoint($break-desktop) {
       top: 0;
     }
-  
+    
+    
     .woocommerce-message,
     .woocommerce-error {
       margin: 0 auto;
@@ -63,24 +64,5 @@
         @extend .e-cta-button;
       }
     }
-  }
-
-}
-
-.theme-color--green {
-  .woocommerce-notices-wrapper{
-    background-color: $brand-emerald;
-  }
-}
-
-.theme-color--orange {
-  .woocommerce-notices-wrapper{
-    background-color: $brand-gold;
-  }
-}
-
-.theme-color--blue {
-  .woocommerce-notices-wrapper{
-    background-color: $brand-ocean;
   }
 }

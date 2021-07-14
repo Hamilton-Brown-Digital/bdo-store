@@ -223,7 +223,21 @@ class GFFormDetail {
 			</div>
 		</div>
 
-		<div id="form_editor_fields_container" class="form_editor_fields_container gform-show-if-not-ie">
+		<?php
+			$no_conflict_mode   = get_option( 'gform_enable_noconflict' );
+			$no_conflict_class  = $no_conflict_mode ? ' form_editor_no_conflict' : '';
+			$no_fields_class    = empty( $form['fields'] ) ? ' form_editor_fields_no_fields' : '';
+			$form_editor_class = sprintf( 'form_editor_fields_container gform-show-if-not-ie%s%s', $no_fields_class, $no_conflict_class );
+		?>
+
+		<div
+			id="form_editor_fields_container"
+			class="<?php esc_attr_e( $form_editor_class ); ?>"
+			<?php if ( ! $no_conflict_mode ) { ?>
+			<?php echo ! empty( $form['fields'] ) ? 'data-simplebar' : ''; ?>
+			<?php echo ! empty( $form['fields'] ) && is_rtl() ? 'data-simplebar-direction="rtl"' : ''; ?>
+			<?php } ?>
+		>
 		<?php
 		$has_pages  = GFCommon::has_pages( $form );
 		$wrapper_el = GFCommon::is_legacy_markup_enabled( $form_id ) ? 'ul' : 'div';
@@ -250,12 +264,12 @@ class GFFormDetail {
 					}
 					?>
 				</<?php echo $wrapper_el; ?>>
-
 				<div id="no-fields-drop" class="dropzone__target" style="<?php echo empty( $form['fields'] ) ? '' : 'display:none;'; ?>"></div>
 				<div id="no-fields" class="dropzone__placeholder" style="<?php echo empty( $form['fields'] ) ? '' : 'display:none;'; ?>">
 					<img class="gform-editor__no-fields-graphic" src="<?php echo GFCommon::get_base_url() . '/images/no-fields.svg'; ?>" alt="" />
 					<p><?php esc_html_e( 'Simply drag and drop the fields or elements you want in this form.', 'gravityforms' ); ?></p>
 				</div>
+
 				<div id="gform_last_page_settings" data-title="<?php esc_attr_e('Last page options', 'gravityforms');?>" data-description="<?php esc_attr_e('Manage last page options', 'gravityforms');?>" class="selectable" style="display:<?php echo $has_pages ? 'block' : 'none' ?>;">
 					<div class="gf-pagebreak-end gf-pagebreak"><?php esc_html_e( 'END PAGING', 'gravityforms' ) ?></div>
 				</div>
@@ -336,7 +350,7 @@ class GFFormDetail {
 					<div class="sidebar-instructions">
 						<p><?php esc_html_e( 'Drag a field to the left to start building your form and then start configuring it.', 'gravityforms' ); ?></p>
 					</div>
-					<div class="panel-block panel-block-tabs "id="add_fields_menu" >
+					<div class="panel-block panel-block-tabs "id="add_fields_menu" data-simplebar<?php echo is_rtl() ? ' data-simplebar-direction="rtl"' : ''; ?>>
 						<?php
 						$field_groups = self::get_field_groups();
 
@@ -380,7 +394,7 @@ class GFFormDetail {
 							<div id="sidebar_field_text"></div>
 						</div>
 					</div>
-					<div class="panel-block panel-block-tabs panel-block--hidden field_settings">
+					<div class="panel-block panel-block-tabs panel-block--hidden field_settings" data-js="gform-simplebar" data-simplebar-delay="1000">
 						<button tabindex="0" id="general_tab_toggle" class="panel-block-tabs__toggle">
 							<?php esc_html_e( 'General', 'gravityforms' ); ?>
 						</button>
@@ -417,13 +431,13 @@ class GFFormDetail {
 										<option value="custom">  <?php esc_html_e( 'Custom', 'gravityforms' ); ?>  </option>
 									</select>
 								</div>
-								<div class="percentage_custom_container" style="padding-left: 20px;">
+								<div class="percentage_custom_container">
 									<label for="percentage_background_color" style="display:block;">
 										<?php esc_html_e( 'Text Color', 'gravityforms' ); ?>
 									</label>
 									<?php self::color_picker( 'percentage_style_custom_color', '' ); ?>
 								</div>
-								<div class="percentage_custom_container" style="padding-left: 20px;">
+								<div class="percentage_custom_container">
 									<label for="percentage_background_bgcolor" style="display:block;">
 										<?php esc_html_e( 'Background Color', 'gravityforms' ); ?>
 									</label>
@@ -643,7 +657,7 @@ class GFFormDetail {
 									<?php esc_html_e( 'Content', 'gravityforms' ); ?>
 									<?php gform_tooltip( 'form_field_content' ); ?>
 								</label>
-								<textarea id="field_content" fieldheight-1 merge-tag-support mt-position-right mt-prepopulate"></textarea>
+								<textarea id="field_content" class="fieldheight-1 merge-tag-support mt-position-right mt-prepopulate"></textarea>
 
 							</li>
 
@@ -2696,9 +2710,7 @@ case 'invalid_json' :
 	 */
 	private static function display_buttons( $buttons ) {
 		foreach ( $buttons as $button ) {
-			unset( $button['class'] );
-
-			$button['data-icon']        = empty( $button['data-icon'] ) ? 'dashicons-admin-generic' : $button['data-icon'];
+			$button['data-icon']        = empty( $button['data-icon'] ) ? 'gform-icon--cog' : $button['data-icon'];
 			$button['data-description'] = empty( $button['data-description'] ) ? sprintf( esc_attr__( 'Add a %s field to your form.', 'gravityforms' ), $button['value'] ) : $button['data-description'];
 			?>
 			<li>
