@@ -10,14 +10,16 @@ if (!class_exists('acf')) {
     return;
 }
 
-global $wp_query;
-$foundPosts = $wp_query->found_posts;
+$query = new WP_Query( array(
+    's' => get_search_query(),
+    'post_type' => array( 'page', 'product' )
+) );
+
+$foundPosts = $query->found_posts;
 $not_singular = $foundPosts > 1 ? 'results' : 'result';
 
-$post = new TimberPost();
-
 $context = Timber::get_context();
-$context['posts'] = new Timber\PostQuery();
+$context['posts'] = new Timber\PostQuery($query);
 $context['title'] = get_search_query();
 $context['count'] = $foundPosts . ' ' . $not_singular;
 

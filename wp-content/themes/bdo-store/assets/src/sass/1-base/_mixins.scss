@@ -77,86 +77,63 @@
   }
 }
 
-// USe the wysiwyg styles anywhere
+// Use the wysiwyg styles anywhere
 //USAGE: @wysiwyg-style;
 @mixin wysiwyg-style {
   h2,
   h3,
   h4,
-  h5 {
-    margin-bottom: 24px;
+  h5,
+  p,
+  ul,
+  ol,
+  hr
+  {
+    margin-bottom:1.5rem;
   }
 
-  p {
-    margin: 0 0 16px;
-    @media (min-width: $break-desktop) {
-      margin: 0 0 24px;
-    }
+  p, a, li{
+    @include font-size(19);
   }
-
   a {
-    border-bottom: 2px dashed $text-link;
-    color: $text-link;
-  }
-
-  a:hover {
-    border-bottom: 2px dashed $dark-blue;
-    color: $dark-blue;
+    color: $color-text-link;
   }
 
   a:active {
-    background-color: $dark-blue;
-    border-bottom: none;
-    color: $white;
+    border-bottom: 1px solid $color-text-link;
   }
 
   a:focus {
-    border: 3px dashed $dark-blue;
+    border-bottom: 1px solid $color-text-link;
   }
 
   a:visited {
-    border: none;
-    border: 3px dashed $purple;
-    color: $purple;
+    border-bottom: 1px solid $color-text-link;
   }
 
   hr {
-    margin-bottom: 30px;
-    border-top-color: $text;
+    border-top-color: $color-line;
   }
 
   ol,
   ul {
     list-style-position: inside;
-    margin-bottom: 30px;
-  }
-
-  li {
-    margin-bottom: 14px;
-    font-size: 16px;
-    line-height: 24px;
-    @media (min-width: $break-desktop) {
-      @include font-size(19);
-      margin-bottom: 10px;
-      line-height: 28px;
-    }
   }
 
   ul {
     li {
-      @include font-size(18);
       position: relative;
-      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.4em;
       list-style: none;
       line-height: 1.4;
       &:before {
-        position: absolute;
-        top: 8px;
-        left: 0;
-        width: 10px;
-        height: 10px;
-        background-color: $text-link;
-        border-radius: 10px;
+        flex-grow: 0;
+        width: 5px;
+        height: 5px;
+        margin-right: 0.5em;
+        background-color: $color-text-link;
         content: '';
       }
     }
@@ -165,42 +142,19 @@
   ol {
     list-style: none;
     counter-reset: li;
-
     li {
       counter-increment: item;
-      margin-bottom: 5px;
-    }
-    li:before {
-      display: inline-block;
-
-      width: 1.2em;
-      margin-right: 10px;
-      border-radius: 100%;
-      color: $text-link;
-      font-weight: bold;
-      text-align: center;
-      content: counter(item) '. ';
-    }
-  }
-
-  .c-text__h2-bulletpoint {
-    li {
-      padding-left: 28px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.4em;
+      list-style: none;
+      line-height: 1.4;
       &:before {
-        top: 22px;
-        width: 14px;
-        height: 14px;
-      }
-    }
-  }
-
-  .c-text__h3-bulletpoint {
-    li {
-      padding-left: 24px;
-      &:before {
-        top: 12px;
-        width: 12px;
-        height: 12px;
+        margin-right: 10px;
+        border-radius: 100%;
+        color: $color-text-link;
+        content: counter(item) '. ';
       }
     }
   }
@@ -217,6 +171,10 @@
 @mixin font-display{
   font-family:$font-bold, $font-secondary;
 }
+@mixin text-small{
+  @include font-size(15);
+  line-height: 1.4;
+}
 
 // Underline under headings
 
@@ -224,8 +182,8 @@
   display: block;
   width: 72px;
   height: 6px;
-  margin-top:1em;
-  margin-bottom:1em;
+  margin-top:1.5em;
+  margin-bottom:1.5em;
   padding:0;
   background-color:$brand-red;
   border:none;
@@ -233,6 +191,16 @@
     width: 220px;
     height: 8px;
   }
+}
+@mixin underline-small{
+  display: block;
+  width: 72px;
+  height: 6px;
+  margin-top:1.5em;
+  margin-bottom:1.5em;
+  padding:0;
+  background-color:$brand-red;
+  border:none;
 }
 
 // Huge section headings
@@ -267,7 +235,7 @@
     @include font-size(30);
   }
   @include breakpoint($break-desktop){
-    @include font-size(40);
+    @include font-size(50);
   }
   @if $underline {
     &:after{
@@ -290,21 +258,26 @@
   @if $underline {
     &:after{
       content: '';
-      @include underline;
+      @include underline-small;
     }
   }
 }
 
 // tagline above headings
-@mixin header-subhead{
+@mixin header-tagline{
   color: $brand-red;
   text-transform: uppercase;
   @include font-size(14);
   @include breakpoint($break-tablet){
-    @include font-size(18);
+    @include font-size(16);
   }
 }
 
+// intros
+@mixin intro-text{
+  @include font-size(24);
+  @include font-bold;
+}
 
 
 @mixin image-with-focus {
@@ -417,5 +390,95 @@
   }
   .theme-color--green &{
     #{$rule}: $brand-emerald;
+  }
+}
+
+
+
+// button
+
+@mixin buttondefaults{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 2em;
+  background-color: $brand-red;
+  border-radius: 2px;
+  color: $white;
+  text-align: center;
+  @include font-size(16);
+  cursor:pointer;
+  @include font-bold;
+  &:after{
+    position: absolute;
+    top:0;
+    left: 0;
+    display: block;
+    width:100%;
+    height: 100%;
+    background-color: rgba($black, 0);
+    transition: background-color 0.3s;
+    content: '';
+  }
+  &:hover{
+    &:after{
+      background-color: rgba($black, 0.1);
+    }
+  }
+  span {
+    @include font-bold;
+    z-index: 1;
+  }
+  svg {
+    path {
+      transition: all 300ms;
+      fill: $white;
+    }
+
+    @include breakpoint($break-tablet) {
+      width: 16px;
+      height: 18px;
+    }
+  }
+}
+
+
+// form mixins
+
+@mixin form-label{
+  display: block;
+  @include font-size(16);
+  width: 100%;
+  margin-bottom:0.5em;
+  @include font-bold;
+  @include breakpoint($break-desktop-wide) {
+    @include font-size(18);
+  }
+}
+@mixin form-input{
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.5em;
+  border: 2px solid $color-bg-2;
+  @include breakpoint($break-desktop-wide) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+@mixin bordered-box{
+  padding:3rem;
+  border: 2px solid $color-line;
+  .background--gray &{
+    border-color:$color-line-darker;
+  }
+}
+@mixin bordered-box--small{
+  padding:1.5rem;
+  border: 2px solid $color-line;
+  .background--gray &{
+    border-color:$color-line-darker;
   }
 }

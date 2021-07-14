@@ -20,6 +20,27 @@
             "maxlength": "",
             "rows": 2,
             "new_lines": ""
+        },
+        {
+            "key": "field_60ebfdbd7ac39",
+            "label": "More content button",
+            "name": "product_hero_more_content_button",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_60e5dee4ef138"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -39,5 +60,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625147282
+    "modified": 1626079144
 }

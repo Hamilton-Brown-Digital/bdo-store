@@ -18,7 +18,6 @@ if (!class_exists('acf')) {
 
 $orders = wc_get_orders( array(
     'numberposts' => -1
-    // 'status' => 'completed'
 ) );
 
 $gated = array();

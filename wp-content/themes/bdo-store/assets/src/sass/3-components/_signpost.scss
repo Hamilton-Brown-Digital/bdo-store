@@ -1,0 +1,34 @@
+.c-signpost{
+  &__grid{
+    @include breakpoint($break-desktop){
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-gap: $grid-gap;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__media{
+    margin-bottom:2rem;
+  }
+  &__tagline{
+    margin-bottom:1.5rem;
+    @include header-tagline;
+  }
+  &__heading{
+    @include header-regular;
+    margin-top: 0.3em;
+    margin-bottom: 1.5rem;
+  }
+  &__intro{
+    @include font-bold;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  &__content-main{
+    margin-bottom: 1.5rem;
+  }
+  &__cta{
+    margin-bottom: 1.5rem;
+  }
+}

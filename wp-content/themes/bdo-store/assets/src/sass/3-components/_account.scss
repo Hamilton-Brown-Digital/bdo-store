@@ -1,9 +1,47 @@
 .c-account {
 
-  .woocommerce {
-    @include breakpoint($break-desktop-wide) {
-      display: flex;        
+  h2, h3, h4{
+    margin-bottom:1.5rem;
+  }
+  h2{
+    @include font-size(32);
+  }
+  h3{
+    @include font-size(26);
+  }
+
+  p{
+    font-size:16px;
+  }
+
+  .woocommerce-Button, button, .edit{
+    @include buttondefaults;
+    &:after{
+      display: none;
     }
+    &:hover{
+      background-color: darken($brand-red, 5%);
+    }
+  }
+
+  .woocommerce-Message{
+    .woocommerce-Button{
+      margin-right: 1.5rem;
+    }
+  }
+
+
+  .woocommerce {
+    @include breakpoint($break-tablet){
+      min-height: 800px;
+    }
+    @include breakpoint($break-desktop-med) {
+      display: flex;
+    }
+  }
+
+  .logged-in &{
+    background-color:$white;
   }
 
   // NAVIGATION
@@ -11,10 +49,10 @@
     position: relative;
     padding: 40px 0;
     background-color: $color-line;
-    @include font-size(24);
+    @include font-size(22);
     line-height: 30px;
 
-    @include breakpoint($break-desktop-wide) {
+    @include breakpoint($break-desktop-med) {
       width: 20%;
       padding: 70px 50px 70px 0;
     }
@@ -28,23 +66,21 @@
       background-color: $color-line;
       content: '';
     }
+    &:after {
+      position: absolute;
+      top: 0;
+      right: -100vw;
+      width: 100vw;
+      height: 100%;
+      background-color: $color-line;
+      content: '';
+      @include breakpoint($break-desktop-med) {
+        display: none;
+      }
+    }
 
     h2 {
-      @include font-size(30);
-      position: relative;
-      margin-bottom: 35px;
-      padding-bottom: 42px;
-      line-height: 30px;
-
-      &:after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 86px;
-        height: 8px;
-        background-color: $brand-red;
-        content: '';
-      }
+      @include header-small(true);
     }
 
     li {
@@ -52,21 +88,19 @@
         
       &.is-active a {
         color: $brand-red;
-        font-family: $font-bold;
+        @include font-bold;
       }
     }
   }
 
   // CONTENT AREA
   .woocommerce-MyAccount-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 40px 0;
-
-    @include breakpoint($break-desktop-wide) {
+    @include breakpoint($break-desktop-med) {
       width: 80%;
-      padding: 70px 0 70px 135px;
+      padding:clamp(20px, 8vw, 140px);
+      padding-top:70px;
+      padding-right: 0;
     }
 
   }
@@ -77,13 +111,14 @@
   margin-top: 10px;
   p {
     margin-top: 25px;
-    @include font-size(16);
-    line-height: 22px;
-
-    strong {
-      font-family: $font-bold;
+    &:first-of-type{
+      margin-top:0;
     }
-
+    line-height: 22px;
+    strong {
+      font-weight: unset;
+      @include font-bold;
+    }
     a {
       color: $brand-red;
       text-decoration: underline;
@@ -100,6 +135,23 @@
   @include font-size(26);
 }
 
+.woocommerce-Addresses{
+  @include breakpoint($break-desktop) {
+    display: grid;
+    gap:3rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.woocommerce-Address{
+  margin-top: 30px;
+  @include bordered-box--small;
+}
+.woocommerce-Address-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 mark {
   background-color: $color-line;
 }
@@ -112,7 +164,7 @@ mark {
     
   thead {
     th {
-      font-family: $font-bold;
+      @include font-bold;
       line-height: 20px;
       @include font-size(16);
     }
@@ -140,7 +192,7 @@ mark {
 
   tfoot {
     th {
-      font-family: $font-bold;
+      @include font-bold;
       line-height: 20px;
       @include font-size(16);
     }
@@ -161,47 +213,17 @@ mark {
   }
 }
 
-// ADDRESS
-.woocommerce-Address {
-  margin-top: 30px;
-
-  .edit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 140px;
-    height: 47px;
-    margin-top: 10px;
-    padding: 0 20px;
-    background-color: $brand-red;
-    color: $white;
-    font-family: $font-bold;
-    line-height: 22px;
-    @include font-size(18);
-  }
-}
-
 // ADDRESS FIELDS
 .woocommerce-address-fields,
 .edit-account {
   max-width: 600px;
-  margin-top: 30px;
 
   label {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    font-family: $font-bold;
-    line-height: 30px;
-    @include font-size(20);
+    @include form-label;
   }
 
   input[type='text'], input[type='tel'], input[type='email'], input[type='password'] {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 20px;
-    padding: 0 15px;
-    border: 2px solid $brand-pale-charcoal;
+    @include form-input;
   }
 
   .select2-container .select2-selection--single {
@@ -214,6 +236,8 @@ mark {
   }
 
   span em {
+    position: relative;
+    top: -0.5em;
     display: block;
     margin-bottom: 20px;
     line-height: 20px;
@@ -226,20 +250,5 @@ mark {
 
   fieldset {
     border: none;
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 180px;
-    height: 47px;
-    margin-top: 10px;
-    padding: 0 20px;
-    background-color: $brand-red;
-    color: $white;
-    font-family: $font-bold;
-    line-height: 22px;
-    @include font-size(18);
   }
 }

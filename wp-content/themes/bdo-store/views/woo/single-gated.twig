@@ -2,13 +2,14 @@
 
 {% block content %}
 
-    {% if logged_in and purchased %}
+    {% if (logged_in and purchased) or (logged_in and user.roles['administrator']) %}
 
         {% set gated_builder = post.meta('gated_modules') %}
 
         {% include 'partials/hero.twig' with {
             product: true,
-            header: post.title
+            header: post.title,
+            type: 'shallow'
         } %}
 
         {% for acf in gated_builder %}
@@ -19,7 +20,8 @@
 
         {% include 'partials/hero.twig' with {
             product: true,
-            header: 'DOO OONNEEEEE MAAAAATE!!'
+            header: 'Sorry, you cannot access this page',
+            type: 'shallow'
         } %}
 
     {% endif %}

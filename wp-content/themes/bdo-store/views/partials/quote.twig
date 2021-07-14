@@ -1,17 +1,13 @@
-<div class="c-quote padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
-
-    <div class="o-row o-row--no-margin__bottom">
-
-        <div class="o-grid-container">
-
+<div class="c-quote">
+    <div class="c-quote__inner">
+        <div class="c-quote__quote">
             {{ acf.quote_quote }}
-
-            {{ acf.quote_who }}
-
-            {{ acf.quote_role }}
-
         </div>
-
+        <div class="c-quote__person">
+            {{ acf.quote_who }}
+        </div>
+        <div class="c-quote__position">
+            {{ acf.quote_role }}
+        </div>
     </div>
-
 </div>

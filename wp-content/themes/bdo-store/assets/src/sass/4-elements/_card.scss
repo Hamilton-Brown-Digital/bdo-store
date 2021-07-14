@@ -16,7 +16,6 @@
     width: 100%;
     height: 0;
     padding-bottom: 45.49%;
-    background: $gold;
     img{
       position: absolute;
       top: 0;
@@ -59,8 +58,7 @@
     line-height: 1.2;
   }
   &__excerpt{
-    @include font-size(15);
-    line-height: 1.4;
+    @include text-small;
     .c-listing__grid--4cols &{
       display: none;
     }

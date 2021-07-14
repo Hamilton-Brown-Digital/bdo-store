@@ -1,12 +1,15 @@
 .c-accordion{
+
   &__subhead{
     margin-bottom:1.5rem;
-    @include header-subhead;
+    @include header-tagline;
   }
+
   &__main-heading{
     @include header-regular;
     margin-bottom:1.5rem;
   }
+
   &__container{
     display: grid;
     grid-template-columns: 1fr;
@@ -16,8 +19,7 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-  &__details{
-  }
+
   &__menu{
     &__item{
       display: block;
@@ -30,52 +32,120 @@
       }
     }
   }
+
   &__blocks{
     grid-column-end: span 2;
   }
+
   &__block{
+    margin-top: 70px;
+
     &__title{
-      @include header-small;
+      @include font-size(30);
       margin: 1em 0;
+      line-height: 30px;
     }
+
     &:first-of-type{
+      margin-top: 0;
+
       @include breakpoint($break-desktop-med){
         .c-accordion__block__title{
-          margin-top:0;
+          margin-top: 0;
         }
       }
     }
+
   }
+
   &__item{
     margin-bottom: 0.8rem;
     background-color: $color-bg-feint;
     border-top: 4px solid $brand-red;
     @include page-color('border-color');
+    transition: all 200ms;
+
     &__title{
+      position: relative;
       display: block;
-      padding: 2rem;
-      background-image: url(#{$asset-path}/img/dash.svg);
+      padding: 22px 40px 20px;
+      background-color: $white;
       background-position: center right 2rem;
+      transition: all 200ms;
       cursor: pointer;
+      @include font-size(24);
+
+      &:before, &:after {
+        position: absolute;
+        top: 35px;
+        right: 40px;
+        width: 17px;
+        height: 2px;
+        background-color: $color-text;
+        content: '';
+      }
+
+      &:after {
+        transform: rotate(90deg);
+        transition: all 200ms;
+      }
+
       &__title{
-        @include header-small;
+        @include font-size(24);
+        line-height: 30px;
       }
     }
+
     &__content{
-      height: 0;
-      visibility: hidden;
+      max-height: 0;
+      overflow: hidden;
+      background-color: $white;
+      transition: all 200ms;
     }
+
+    &__content-inner{
+      padding: 22px 40px 30px;
+    }
+
     &--active{
       border-top-width: 8px;
       .c-accordion__item__title{
-        background-image: url(#{$asset-path}/img/cross.svg);
+        &:after {
+          transform: rotate(0deg)
+        }
       }
       .c-accordion__item__content{
-        height: auto;
-        padding: 2rem;
+        max-height: 500px;
         padding-top:0;
         visibility: visible;
       }
     }
+
   }
+
+  &--orange {
+    .c-accordion__item {
+      border-top-color: $brand-gold;
+    }
+  }
+
+  &--blue {
+    .c-accordion__item {
+      border-top-color: $brand-ocean;
+    }
+  }
+
+  &--green {
+    .c-accordion__item {
+      border-top-color: $brand-emerald;
+    }
+  }
+
+  &.background--white {
+    .c-accordion__item__title,
+    .c-accordion__item__content{ 
+      background-color: $color-line;
+    }
+  }
+
 }

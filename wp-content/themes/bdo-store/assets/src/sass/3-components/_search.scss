@@ -1,0 +1,15 @@
+.c-search {
+
+  &__count {
+    margin: 20px 0 -35px;
+    @include font-bold;
+    line-height: 30px;
+    @include font-size(20);
+
+    @include breakpoint($break-desktop-wide) {
+      @include font-size(24);
+      margin: 80px 0 -65px;
+    }
+  }
+
+}

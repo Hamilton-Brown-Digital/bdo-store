@@ -1,6 +1,6 @@
 .c-sitemap {
   @include font-size(16);
-  font-family: $font-bold;
+  @include font-bold;
   line-height: 22px;
 
   @include breakpoint($break-desktop-wide) {

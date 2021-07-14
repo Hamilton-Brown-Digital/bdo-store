@@ -8,6 +8,7 @@
     {% set linktype = post.hero_button_hero_link_config %}
     {% set link = post.hero_button_hero_link %}
     {% set skiplinktext = post.hero_button_link_text %}
+    {% set category = post.parent %}
 {% endif %}
 
 <div class="c-hero{%if type == 'full' %} c-hero--{{ type }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
@@ -19,8 +20,10 @@
                 <div class="c-hero__main__inner">
 
                     <div class="c-hero__main__inner__main">
-                        {% if product and category %}
+                        {% if product or category %}
+                        <div class="c-hero__tagline">
                             {{ category }}
+                        </div>
                         {% endif %}
                         <h1 class="c-hero__heading">
                             {% if header %}
@@ -43,8 +46,7 @@
                                     with  {
                                         title : link['title'],
                                         url: link['url'],
-                                        target: link['target'],
-                                        color: 'red'
+                                        target: link['target']
                                     }
                                 %}
                             {% elseif linktype == 'skiplink' %}
@@ -52,10 +54,34 @@
                                     with  {
                                         title : skiplinktext,
                                         url: post.link ~ "#details",
-                                        color: 'red'
+                                        color: 'red',
+                                        altClass: 'e-cta-button--skip'
                                     }
                                 %}
                             {% endif %}
+                        {% endif %}
+                        {% if product and link %}
+                            <div class="c-hero__product-cta">
+                                <div class="c-hero__product-cta__details">
+                                    {% include "./elements/button.twig"
+                                        with  {
+                                            title : link.title,
+                                            url: post.link ~ "#details",
+                                            color: 'outline',
+                                            altClass: 'e-cta-button--skip'
+                                        }
+                                    %}
+                                </div>
+                                <div class="c-hero__product-cta__form">
+                                    {% include "./elements/button.twig"
+                                        with  {
+                                            title : 'Buy now',
+                                            url: post.link ~ "#product-order-form",
+                                            color: 'outline'
+                                        }
+                                    %}
+                                </div>
+                            </div>
                         {% endif %}
                     </div>
                     
@@ -92,4 +118,4 @@
 </div>
 
 
-<div id="#details"></div>
+<div id="details"></div>

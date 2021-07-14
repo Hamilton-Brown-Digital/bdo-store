@@ -1,38 +1,55 @@
 .c-product-box{
+  padding:1.5rem;
+  @include breakpoint($break-tablet){
+    padding:2rem;
+  }
   .gform_body{
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
   .gform_fields{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    border: none;
-    gap:3rem;
+    @include breakpoint($break-tablet){
+      display: grid;
+      border: none;
+      gap:3rem;
+      grid-template-columns: 1fr 1fr;
+    }
   }
   .gfield{
-    width:100%;
-    width:calc(50% - 1.5rem);
     border: none;
-    border-bottom:2px solid $brand-red;
-    @include page-color(border-bottom-color);
+    @include breakpoint($break-tablet){
+      grid-column-end: span 2;
+    }
+    &--width-half{
+      grid-column-end:span 1;
+    }
   }
   .gfield_label{
     display: block;
     @include font-bold;
     margin-bottom:1em;
   }
-  .form-fields{
-    &__new-renewal{
-    }
-    &__license-type{
-    }
-    &__num-employees{
-    }
-  }
-  select{
-    padding:0.8em;
-    border-style: unset;
+  .gfield_select{
+    width: 100%;
+    padding:0.8em 0;
+    background-image:url('#{$image-path}/icons/arrow-down-blue.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    border-bottom:2px solid $brand-red;
     color: unset;
+    @include page-color(border-bottom-color);
+    .theme-color--orange &{
+      background-image:url('#{$image-path}/icons/arrow-down-orange.svg');
+    }
+    .theme-color--blue &{
+      background-image:url('#{$image-path}/icons/arrow-down-blue.svg');
+    }
+    .theme-color--green &{
+      background-image:url('#{$image-path}/icons/arrow-down-green.svg');
+    }
+    option{
+      display: block;
+      font-family: $font-primary;
+    }
   }
   .gform_hidden{
     display:none;
@@ -40,9 +57,76 @@
   .gfield_radio{
     display: flex;
     flex-direction: column;
-    padding:0.3em;
+    padding:0.8em 0;
     .gchoice{
       padding:0.3em;
     }
   }
+  .product_totals{
+    .gform_fields{
+      display: block;
+      .gfield_label{
+        display:none;
+      }
+    }
+  }
+  .ginput_total{
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    text-transform:uppercase;
+    @include font-size(30);
+    @include font-bold;
+    small{
+      @include font-size(24);
+      font-family:$font-primary;
+    }
+  }
+  .single_add_to_cart_button{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:100%;
+    height: 57px;
+    padding-left:1.5rem;
+    background-image: url('#{$asset-path}/img/icons/basket-white.svg');
+    background-position: center right 1.5rem;
+    background-size: 24px 21px;
+    border-radius: 2px;
+    color: $white;
+    text-align: left;
+    @include font-bold;
+    @include page-color('background-color');
+    &:after{
+      position: absolute;
+      top:0;
+      left: 0;
+      display: block;
+      width:100%;
+      height: 100%;
+      background-color: rgba($black, 0);
+      transition: background-color 0.3s;
+      content: '';
+    }
+    &:hover{
+      &:after{
+        background-color: rgba($black, 0.1);
+      }
+    }
+  }
+
+  &__help {
+    margin-top: 30px;
+
+    p {
+      line-height: 20px;
+      @include font-size(16);
+    }
+
+    a {
+      color: $brand-red;
+      text-decoration: underline;
+    }
+  }
+
 }

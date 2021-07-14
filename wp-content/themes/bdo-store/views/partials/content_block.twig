@@ -1,5 +1,16 @@
-<div class="c-content_block padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
-    <div class="e-content">
+<div class="c-content-block nopaddingtop">
+    <div class="c-content_block__content e-content">
         {{ acf.contentblock_content }}
     </div>
+    {% if acf.content_link %}
+        <div class="c-content-block__link">
+            {% include "./elements/button.twig"
+            with  {
+                title : acf.content_link['title'],
+                url: acf.content_link['url'],
+                target: acf.content_link['target']
+            }
+            %}
+        </div>
+    {% endif %}
 </div>

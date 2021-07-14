@@ -1,9 +1,17 @@
 .c-product-details{
   &__container{
-    display:grid;
-    grid-gap: $grid-gap;
     @include breakpoint($break-desktop-med) {
-      grid-template-columns: 1fr 1fr;
+      display:grid;
+      grid-gap: $padding-deep;
+      grid-template-columns: 1fr 630px;
+    }
+  }
+  &__content{
+    &>div:first-of-type{
+      padding-top:$padding-std;
+    }
+    &>div:last-of-type{
+      padding-bottom:0;
     }
   }
   &__product-order{
@@ -13,14 +21,23 @@
       height: calc(100% + 590px);
     }
     &__form{
-      height: 565px;
-      padding:3rem;
+      height: auto;
+      margin-bottom:$padding-deep;
       background: $color-bg-3;
+      @include breakpoint($break-tablet){
+        height: 565px;
+      }
       @include breakpoint($break-desktop-med) {
         position:sticky;
         top: 6rem;
         width: 100%;
       }
     }
+  }
+}
+
+.product-full-width{
+  &>div:last-of-type{
+    padding-bottom:12rem;
   }
 }

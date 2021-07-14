@@ -5,33 +5,51 @@
 
     <div class="o-row o-row--no-margin">
 
-        <div class="o-grid-container">
+        <div class="o-grid-container c-signpost__grid">
 
-            {% if media.type == 'video' %}
-                {% include "./elements/video.twig" with {
-                    video: media.video
-                } %}
-            {% else %}
-                {% include "./elements/image.twig" with {
-                    image: media.image
-                } %}
-            {% endif %}
+            <div class="c-signpost__media">
 
-            {{ content.subhead }}
+                {% if media.type == 'video' %}
+                    {% include "./elements/video.twig" with {
+                        video: media.video
+                    } %}
+                {% else %}
+                    {% include "./elements/image.twig" with {
+                        image: media.image
+                    } %}
+                {% endif %}
 
-            {{ content.heading }}
+            </div>
 
-            {{ content.content }}
+            <div class="c-signpost__content">
 
-            {% if content.link %}
-                {% include "./elements/button.twig"
-                    with  {
-                        title : content.link['title'],
-                        url: content.link['url'],
-                        target: content.link['target']
-                    }
-                %}
-            {% endif %}
+                <div class="c-signpost__tagline">
+                    {{ content.subhead }}
+                </div>
+                <div class="c-signpost__heading">
+                    {{ content.heading }}
+                </div>
+                <div class="c-signpost__intro">
+                    <p>
+                        {{ content.intro }}
+                    </p>
+                </div>
+                <div class="c-signpost__content-main">
+                        {{ content.content }}
+                </div>
+                <div class="c-signpost__cta">
+                    {% if content.link %}
+                        {% include "./elements/button.twig"
+                            with  {
+                                title : content.link['title'],
+                                url: content.link['url'],
+                                target: content.link['target']
+                            }
+                        %}
+                    {% endif %}
+                </div>
+
+            </div>
 
         </div>
 

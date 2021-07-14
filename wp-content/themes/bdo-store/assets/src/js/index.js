@@ -1,7 +1,10 @@
 import Header from './classes/Header.js';
 import HeroCarousel from './classes/HeroCarousel.js';
 import Accordion from './classes/Accordion.js';
+import Skip from './classes/Skip.js';
+import BackToTop from './classes/BackToTop.js';
 import Video from './classes/Video.js';
+import Cookie from './classes/Cookie.js';
 import Init from './classes/Init';
 
 const siteFunctions = {
@@ -21,6 +24,21 @@ const siteFunctions = {
   accordion__ready() {
     const accordion = new Accordion();
     accordion.init();
+  },
+
+  skip__ready() {
+    const skip = new Skip();
+    skip.init();
+  },
+  
+  backToTop__ready() {
+    const backToTop = new BackToTop();
+    backToTop.init();
+  },
+
+  cookie__ready() {
+    const cookie = new Cookie();
+    cookie.init();
   },
 
   video__ready() {
