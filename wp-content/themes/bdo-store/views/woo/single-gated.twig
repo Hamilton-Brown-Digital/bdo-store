@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    {% if logged_in and purchased %}
+    {% if (logged_in and purchased) or (logged_in and user.roles['administrator']) %}
 
         {% set gated_builder = post.meta('gated_modules') %}
 
