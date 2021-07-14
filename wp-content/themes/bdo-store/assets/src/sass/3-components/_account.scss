@@ -144,8 +144,7 @@
 }
 .woocommerce-Address{
   margin-top: 30px;
-  padding:1.5rem;
-  border: 2px solid $color-line;
+  @include bordered-box--small;
 }
 .woocommerce-Address-title{
   display: flex;

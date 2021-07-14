@@ -1,31 +1,39 @@
 <div class="c-download padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
-
     <div class="o-row">
 
-		<div class="o-grid-container">
-
-            {% for download in acf.downloads %}
-
-                <div class="c-download__item">
-
-                    {{ download.title }}
-
-                    {{ download.description }}
-
-                    {% include "./elements/button.twig"
-                        with  {
-                            title : download.link['title'],
-                            url: download.link['url'],
-                            target: download.link['target']
-                        }
-                    %}
-
-                    {{ download.additional_content }}
-
+		<div class="o-grid-container c-download__container">
+            <div class="c-download__main">
+                <div class="c-download__main__intro">
+                    {{ acf.downloads_main_content.intro }}
                 </div>
-
-            {% endfor %}
-
+                <div class="c-download__main__content">
+                    {{ acf.downloads_main_content.main_content }}
+                </div>
+            </div>
+            <div class="c-download__downloads">
+                {% for download in acf.downloads %}
+                    <div class="c-download__item">
+                        <h3 class="c-download__item__title">
+                            {{ download.title }}
+                        </h3>
+                        <div class="c-download__item__description">
+                            {{ download.description }}
+                        </div>
+                        <div class="c-download__item__cta">
+                        {% include "./elements/button.twig"
+                            with  {
+                                title : download.link['title'],
+                                url: download.link['url'],
+                                target: download.link['target']
+                            }
+                        %}
+                        </div>
+                        <div class="c-download__item__additional-content">
+                            {{ download.additional_content }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
 
     </div>
