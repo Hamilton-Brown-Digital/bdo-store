@@ -36,8 +36,14 @@ function tinymce_2_buttons($buttons) {
 add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats');
 function tiny_mce_remove_unused_formats($init) {
     $init['block_formats'] = 'Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4=h4;';
+    $init['paste_as_text'] = true;
     return $init;
 }
+
+add_filter( 'teeny_mce_plugins', function( $plugins ) {
+	$plugins[] = 'paste';
+	return $plugins;
+});
 
 function acf_set_product_categories($field) {
     $field['choices'] = array();
