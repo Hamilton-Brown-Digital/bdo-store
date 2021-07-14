@@ -98,7 +98,7 @@ function custom_dropdown_bulk_actions_shop_order( $actions ) {
     $actions['wc-passed-stripe'] = __( 'Stripe payment made, CC passed', 'woocommerce' );
     $actions['wc-inv-payment-made'] = __( 'Invoice payment made', 'woocommerce' );
 
-    $actions['wc-pending'] = __( 'I can turn the paste tePending order', 'woocommerce' );
+    $actions['wc-pending'] = __( 'Pending order', 'woocommerce' );
     $actions['wc-on-hold'] = __( 'Invoice payment, Pending CC', 'woocommerce' );
     $actions['wc-processing'] = __( 'Stripe payment made, Pending CC', 'woocommerce' );
     $actions['wc-completed'] = __( 'Order fulfilled', 'woocommerce' );
