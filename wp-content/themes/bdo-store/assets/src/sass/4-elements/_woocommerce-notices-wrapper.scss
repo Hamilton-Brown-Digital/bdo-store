@@ -1,18 +1,68 @@
-.woocommerce-notices-wrapper{
-  position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  @include breakpoint($break-desktop){
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-  z-index: 5;
-  width:300px;
-  padding: 1.5rem;
-  background-color: $brand-red;
-  border-radius: 3px;
-  color: $white;
-  .button{
-    @include buttondefaults;
+.single-product {
+
+  .woocommerce-notices-wrapper{
+    position: absolute;
+    top: 37px;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: $brand-red;
+    color: $white;
+    @include page-color('background-color');
+    @include breakpoint($break-desktop) {
+      top: 0;
+    }
+    
+    
+    .woocommerce-message,
+    .woocommerce-error {
+      margin: 0 auto;
+      padding: 15px 10px;
+  
+      @include breakpoint($break-desktop) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 1565px;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  
+    p {
+      margin-top: 3px;
+      @include font-bold;
+      margin-right: 15px;
+      margin-bottom: 15px;
+
+      @include breakpoint($break-desktop) {
+        margin-bottom: 0;
+      }
+    }
+  
+    .e-cta-button {
+      width: 100%;
+      background-color: $color-text;
+      color: $white;
+
+      @include breakpoint($break-desktop) {
+        width: auto;
+      }
+    }
+
+    .woocommerce-error {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      p {
+        order: 1;
+      }
+      .button {
+        order: 2;
+        @extend .e-cta-button;
+      }
+    }
   }
 }

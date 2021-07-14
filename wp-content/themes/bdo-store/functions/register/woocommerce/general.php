@@ -91,3 +91,32 @@ function login_redirect( $redirect_to, $request, $user ) {
         return $redirect_to;
     }
 }
+
+// WRAP MESSAGE TEXT IN P TAGS
+add_filter('wc_add_to_cart_message_html', 'handler_function_name', 10, 2);
+function handler_function_name($message, $products) {
+    $titles = array();
+
+    foreach ( $products as $product_id => $qty ) {
+        $titles[] = strip_tags( get_the_title( $product_id ) );
+    }
+
+    $titles = array_filter( $titles );
+    $added_text = 'Successfully added to your basket.';
+
+    // Output success messages
+    if ( 'yes' === get_option( 'woocommerce_cart_redirect_after_add' ) ) {
+        $return_to = apply_filters( 'woocommerce_continue_shopping_redirect', wc_get_raw_referer() ? wp_validate_redirect( wc_get_raw_referer(), false ) : '/' );
+        $message   = sprintf( '%s <a href="%s" class="e-cta-button">%s</a>', '<p>Successfully added to your basket.</p>',  esc_url( $return_to ), esc_html__( 'Continue shopping', 'woocommerce' ) );
+    } else {
+        $message   = sprintf( '%s <a href="%s" class="e-cta-button">%s</a>', '<p>Successfully added to your basket.</p>', esc_url( wc_get_page_permalink( 'cart' ) ), esc_html__( 'View basket', 'woocommerce' ) );
+    }
+    return $message;
+}
+
+add_filter( 'woocommerce_cart_product_cannot_add_another_message', 'notAnotherInCart', 10, 2 );
+function notAnotherInCart( $message, $product_data ){
+	$message = '<p>Another one of these cannot be added to your basket</p>';
+
+	return $message;
+}
