@@ -74,6 +74,9 @@ textarea {
   position: relative;
   flex-grow: 1;
   padding-top: 82px;
+  @include breakpoint($break-tablet) {
+    min-height: 800px;
+  }
   @include breakpoint($break-desktop-wide) {
     padding-top: 0;
   }
