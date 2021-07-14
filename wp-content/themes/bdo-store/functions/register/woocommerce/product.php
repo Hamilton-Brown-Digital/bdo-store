@@ -24,8 +24,24 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 // Remove product thumbnail from the cart page
 add_filter( 'woocommerce_cart_item_thumbnail', '__return_empty_string' );
 
-// To change add to cart text on single product page
-add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
-function woocommerce_custom_single_add_to_cart_text() {
-    return __( 'Add to basket', 'woocommerce' ); 
+// To change cart text to basket
+add_filter('gettext', 'cartToBasket', 20, 3);
+function cartToBasket ( $translated_text, $text, $domain ) {
+    if ($domain == 'woocommerce') {
+        switch ($translated_text) {
+            case 'Cart totals':
+                $translated_text = __('Order summary', 'woocommerce');
+                break;
+            case 'Update cart':
+                $translated_text = __('Update basket', 'woocommerce');
+                break;
+            case 'Add to cart':
+                $translated_text = __('Add to basket', 'woocommerce');
+                break;
+            case 'View cart':
+                $translated_text = __('View basket', 'woocommerce');
+                break;
+        }
+    }
+    return $translated_text;
 }
