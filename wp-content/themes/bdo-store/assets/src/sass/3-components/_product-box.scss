@@ -7,34 +7,26 @@
     margin-bottom: 2.5rem;
   }
   .gform_fields{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    border: none;
-    gap:3rem;
+    @include breakpoint($break-tablet){
+      display: grid;
+      border: none;
+      gap:3rem;
+      grid-template-columns: 1fr 1fr;
+    }
   }
   .gfield{
-    width:100%;
     border: none;
     @include breakpoint($break-tablet){
-      width:calc(50% - 1.5rem);
+      grid-column-end: span 2;
+    }
+    &--width-half{
+      grid-column-end:span 1;
     }
   }
   .gfield_label{
     display: block;
     @include font-bold;
     margin-bottom:1em;
-  }
-  // custom form classes
-  .form-fields{
-    &__new-renewal{
-    }
-    &__license-type{
-    }
-    &__num-employees{
-      width: 100%;
-      max-width: 550px;
-    }
   }
   .gfield_select{
     width: 100%;

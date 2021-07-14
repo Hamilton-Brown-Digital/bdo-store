@@ -1,4 +1,4 @@
-.e-cookie {
+.woocommerce-notices-wrapper{
   position: fixed;
   bottom: 1.5rem;
   left: 1.5rem;
@@ -7,15 +7,11 @@
     left: 1.5rem;
   }
   z-index: 5;
-  display: none;
   width:300px;
   padding: 1.5rem;
-  background-color: $color-bg-1;
+  background-color: $brand-red;
   border-radius: 3px;
   color: $white;
-  &.show {
-    display: block;
-  }
   &__header {
     margin-bottom: 15px;
     @include font-bold;

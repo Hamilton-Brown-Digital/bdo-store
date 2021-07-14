@@ -1,17 +1,5 @@
 .e-cta-button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 44px;
-  padding: 0 2em;
-  background-color: $brand-red;
-  border-radius: 2px;
-  color: $white;
-  text-align: center;
-  @include font-size(16);
-  cursor:pointer;
-  @include font-bold;
+  @include buttondefaults;
   &--red{
     background-color: $brand-red;
   }
@@ -47,40 +35,8 @@
     background-color:transparent;
     border:solid 3px $white;
   }
-  &:after{
-    position: absolute;
-    top:0;
-    left: 0;
-    display: block;
-    width:100%;
-    height: 100%;
-    background-color: rgba($black, 0);
-    transition: background-color 0.3s;
-    content: '';
-  }
-  &:hover{
-    &:after{
-      background-color: rgba($black, 0.1);
-    }
-  }
   &--disabled {
     opacity: 0.5;
-  }
-  svg {
-    path {
-      transition: all 300ms;
-      fill: $white;
-    }
-
-    @include breakpoint($break-tablet) {
-      width: 16px;
-      height: 18px;
-    }
-  }
-
-  span {
-    @include font-bold;
-    z-index: 1;
   }
 
   &--small{
