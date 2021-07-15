@@ -6,7 +6,6 @@
 
 .c-header-main{
   $elemheight:82px;
-  border-bottom: 1px solid $color-line;
 
   @include breakpoint($break-desktop-wide) {
     order: 2;

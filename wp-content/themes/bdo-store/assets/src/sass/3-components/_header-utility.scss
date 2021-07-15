@@ -70,33 +70,43 @@
   }
 
   &__menu{
-
+    @include breakpoint($break-desktop-wide) {
+      height: 100%;
+    }
     ul {
       padding: 20px 0;
-
       @include breakpoint($break-desktop-wide) {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: flex-start;
         gap: 4em;
         margin-right:4em;
         padding: 0;
       }
-
       li {
-        display: block;
+        @include breakpoint($break-desktop-wide) {
+          height: 100%;
+        }
       }
 
       a {
         display: block;
-        padding: 20px 36px;
-        line-height: 24px;
         @include font-size(18);
-
+        @include font-bold;
         @include breakpoint($break-desktop-wide) {
-          padding: 0;
-          line-height: 17px;
+          display: flex;
+          align-items: center;
+          height: 64px;
+          padding: 1em;
+          border-top:8px solid transparent;
+          border-bottom:8px solid transparent;
+          box-sizing: border-box;
           @include font-size(14);
+          /* stylelint-disable */
+          &:hover{
+            border-top-color:$brand-red;
+          }
+          /* stylelint-enable */
         }
       }
 
