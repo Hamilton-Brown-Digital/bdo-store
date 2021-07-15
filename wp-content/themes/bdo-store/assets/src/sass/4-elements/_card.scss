@@ -44,7 +44,7 @@
     @include breakpoint($break-desktop-wide) {
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
     }
   }
   &__tagline{
@@ -64,6 +64,7 @@
     }
   }
   &__price{
+    flex-grow: 1;
     &__price{
       @include font-bold;
       color: $brand-red;
@@ -71,13 +72,14 @@
     }
   }
   &__count{
+    flex-grow: 1;
     text-transform: uppercase;
     @include font-bold;
     @include font-size(15);
   }
   &__button{
-    a{
-      padding: 0.5em 1em;
+    .e-cta-button{
+      @include page-color(background-color);
     }
   }
   &--blue{

@@ -105,7 +105,7 @@
   }
 
   input[type='text'], input[type='email'], input[type='password'] {
-    @include form-input;
+    @include form-input-text;
   }
 
   .woocommerce-form-login__rememberme {
@@ -133,7 +133,7 @@
   }
 
   .woocommerce-LostPassword {
-    margin-top: 20px;
+    margin-top: 1.5rem;
     @include text-small;
   }
 

@@ -11,7 +11,7 @@
     {% set category = post.parent %}
 {% endif %}
 
-<div class="c-hero{%if type == 'full' %} c-hero--{{ type }}{% endif %}{% if type == 'shallow' %} c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
+<div class="c-hero {% if type %}c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
 
     <div class="c-hero__row">
         <div class="o-grid-container c-hero__container">
@@ -41,24 +41,25 @@
                         {% endif %}
                         
                         {% if type == 'full' and linktype != 'none' %}
-                            {% if linktype == 'customlink' %}
-                                {% include "./elements/button.twig"
-                                    with  {
-                                        title : link['title'],
-                                        url: link['url'],
-                                        target: link['target']
-                                    }
-                                %}
-                            {% elseif linktype == 'skiplink' %}
-                                {% include "./elements/button.twig"
-                                    with  {
-                                        title : skiplinktext,
-                                        url: post.link ~ "#details",
-                                        color: 'red',
-                                        altClass: 'e-cta-button--skip'
-                                    }
-                                %}
-                            {% endif %}
+                            <div class="c-hero__cta">
+                                {% if linktype == 'customlink' %}
+                                    {% include "./elements/button.twig"
+                                        with  {
+                                            title : link['title'],
+                                            url: link['url'],
+                                            target: link['target']
+                                        }
+                                    %}
+                                {% elseif linktype == 'skiplink' %}
+                                    {% include "./elements/button.twig"
+                                        with  {
+                                            title : skiplinktext,
+                                            url: post.link ~ "#details",
+                                            altClass: 'e-cta-button--skip'
+                                        }
+                                    %}
+                                {% endif %}
+                            </div>
                         {% endif %}
                         {% if product and link %}
                             <div class="c-hero__product-cta">

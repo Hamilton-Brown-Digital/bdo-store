@@ -31,6 +31,9 @@
     .c-hero--shallow &{
       height: auto;
     }
+    .c-hero--default &{
+      max-height: 480px;
+    }
   }
   &__container{
     @include container-defaults;
@@ -148,7 +151,14 @@
       padding-right:60px;
     }
   }
+  &__cta{
+    .e-cta-button{
+      @include page-color(background-color);
+    }
+  }
   &__product-cta{
+    .e-cta-button{
+    }
     &__details{
       display: none;
       @include breakpoint($break-tablet){
