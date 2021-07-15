@@ -23,12 +23,13 @@
   .gfield_label{
     @include form-label;
   }
-  .gfield_select{
+  .ginput_container_select{
     @include form-dropdown;
     padding-right: 0;
     padding-left: 0;
     background-color: transparent;
     background-position:right center;
+    border: none;
     border-bottom:2px solid $brand-red;
   }
   .gform_hidden{

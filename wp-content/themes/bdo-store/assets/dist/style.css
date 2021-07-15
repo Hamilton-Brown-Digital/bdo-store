@@ -1027,16 +1027,17 @@ h6,
     .h6 {
       font-size: 1.125rem; } }
 
-a,
-a:active {
+a {
   outline: none;
   color: inherit;
   text-decoration: none;
   transition: all 100ms ease-out; }
-  main a, main
-  a:active {
+  main a {
     color: #ed1a3b;
     text-decoration: underline; }
+  h1 a, h2 a, h3 a, h4 a {
+    color: inherit;
+    text-decoration: none; }
 
 p {
   color: inherit;
@@ -1129,20 +1130,28 @@ li {
   padding-left: 9px; }
   @media (min-width: 40.063em) {
     .o-row {
-      margin-bottom: 35px;
-      padding-right: 30px;
-      padding-left: 30px; } }
+      padding-right: 35px;
+      padding-left: 35px; } }
+  @media (min-width: 75em) {
+    .o-row {
+      padding-right: 40px;
+      padding-left: 40px; } }
+  @media (min-width: 40.063em) {
+    .o-row {
+      margin-bottom: 35px; } }
   @media (min-width: 50em) {
     .o-row {
       margin-bottom: 40px; } }
   @media (min-width: 75em) {
     .o-row {
-      margin-bottom: 50px;
-      padding-right: 40px;
-      padding-left: 40px; } }
+      margin-bottom: 50px; } }
   @media (min-width: 83.75em) {
     .o-row {
       margin-bottom: 60px; } }
+  @media (min-width: 0) and (max-width: 40.063em) {
+    .o-row--mobile-loose {
+      padding-right: 30px;
+      padding-left: 30px; } }
   .o-row--no-margin {
     margin: 0px; }
   .o-row--no-margin__bottom {
@@ -1205,12 +1214,13 @@ li {
     display: none; }
     @media (min-width: 75em) {
       .c-header-utility__breadcrumb {
-        display: inline;
+        display: block;
         flex-grow: 1;
-        line-height: 17px;
+        font-family: "Proxima Nova Bold", sans-serif, sans-serif;
         font-size: 0.875rem; } }
   .c-header-utility__search {
-    padding: 0 36px 40px; }
+    padding: 0;
+    padding-bottom: 2.5rem; }
     @media (min-width: 75em) {
       .c-header-utility__search {
         padding: 0; } }
@@ -1251,7 +1261,7 @@ li {
     .c-header-utility__menu {
       height: 100%; } }
   .c-header-utility__menu ul {
-    padding: 20px 0; }
+    padding: 1.5rem 0; }
     @media (min-width: 75em) {
       .c-header-utility__menu ul {
         display: flex;
@@ -1266,13 +1276,13 @@ li {
     .c-header-utility__menu ul a {
       display: block;
       font-size: 1.125rem;
-      font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+      font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+      padding: 1rem 0; }
       @media (min-width: 75em) {
         .c-header-utility__menu ul a {
           display: flex;
           align-items: center;
           height: 64px;
-          padding: 1em;
           border-top: 8px solid transparent;
           border-bottom: 8px solid transparent;
           box-sizing: border-box;
@@ -1294,15 +1304,15 @@ li {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
-  height: 82px;
-  padding: 0 26px; }
+  height: 82px; }
   @media (min-width: 75em) {
     .c-header-main__container {
       padding: 0; } }
 
 .c-header-main__logo {
+  flex-grow: 1;
   flex-shrink: 0; }
   .c-header-main__logo__image {
     width: 100%;
@@ -1326,7 +1336,7 @@ li {
     .c-header-main__menu nav {
       width: calc(100% - 172px); } }
   .c-header-main__menu ul {
-    padding: 10px 0; }
+    padding: 1.5rem 0; }
     @media (min-width: 75em) {
       .c-header-main__menu ul {
         align-self: stretch;
@@ -1345,7 +1355,7 @@ li {
       border-right: none; } }
   .c-header-main__menu li a {
     display: block;
-    padding: 20px 36px;
+    padding: 1rem 30px;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     line-height: 24px;
     font-size: 1.125rem; }
@@ -1418,8 +1428,8 @@ li {
     box-sizing: border-box; }
     @media (min-width: 40.063em) {
       .c-hero__row {
-        padding-right: 30px;
-        padding-left: 30px; } }
+        padding-right: 35px;
+        padding-left: 35px; } }
   .c-hero-carousel .c-hero {
     border-bottom: none; }
   .theme-color--orange .c-hero {
@@ -1433,19 +1443,27 @@ li {
     flex-direction: column;
     position: relative;
     height: auto;
-    height: calc(100vh - 82px);
-    max-height: 600px; }
+    height: calc(80vh - 82px);
+    min-height: 600px; }
     @media (min-width: 64.063em) {
       .c-hero__container {
-        max-height: 800px;
         margin-top: 0;
         display: flex;
         flex-direction: row;
         align-items: stretch;
         justify-content: flex-start; } }
     .c-hero--shallow .c-hero__container {
-      height: auto; }
+      height: auto;
+      min-height: unset;
+      max-height: unset; }
+      @media (min-width: 64.063em) {
+        .c-hero--shallow .c-hero__container {
+          max-height: 200px; } }
+    @media (min-width: 0) {
+      .c-hero--text .c-hero__container {
+        height: auto; } }
     .c-hero--default .c-hero__container {
+      min-height: 150px;
       max-height: 480px; }
     .c-hero--product .c-hero__container {
       display: grid;
@@ -1458,23 +1476,31 @@ li {
     flex-direction: column;
     position: relative;
     height: auto;
-    height: calc(100vh - 82px);
-    max-height: 600px;
+    height: calc(80vh - 82px);
+    min-height: 600px;
     position: absolute;
     top: 0;
     left: 0;
     display: none; }
     @media (min-width: 64.063em) {
       .c-hero__container-background {
-        max-height: 800px;
         margin-top: 0;
         display: flex;
         flex-direction: row;
         align-items: stretch;
         justify-content: flex-start; } }
     .c-hero--shallow .c-hero__container-background {
-      height: auto; }
+      height: auto;
+      min-height: unset;
+      max-height: unset; }
+      @media (min-width: 64.063em) {
+        .c-hero--shallow .c-hero__container-background {
+          max-height: 200px; } }
+    @media (min-width: 0) {
+      .c-hero--text .c-hero__container-background {
+        height: auto; } }
     .c-hero--default .c-hero__container-background {
+      min-height: 150px;
       max-height: 480px; }
     @media (min-width: 64.063em) {
       .c-hero__container-background {
@@ -1535,7 +1561,10 @@ li {
       .c-hero--shallow .c-hero__main:after {
         display: none; }
     .c-hero__main__inner {
-      padding: 6rem 0; }
+      padding: 3rem 0; }
+      @media (min-width: 64.063em) {
+        .c-hero__main__inner {
+          padding: 6rem 0; } }
       .c-hero__main__inner__main *:last-child {
         margin-bottom: 0; }
       .c-hero__main__inner__text {
@@ -1586,7 +1615,8 @@ li {
 
 .c-hero-carousel {
   position: relative;
-  background: #333333; }
+  padding-bottom: clamp(3rem, 3vw, 4rem);
+  background: #F2F2F2; }
   .c-hero-carousel .swiper-pagination {
     position: absolute;
     bottom: -4rem;
@@ -1719,9 +1749,15 @@ li {
 .c-accordion__block {
   margin-top: 70px; }
   .c-accordion__block__title {
-    font-size: 1.875rem;
-    margin: 1em 0;
-    line-height: 30px; }
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem; }
+    @media (min-width: 40.063em) {
+      .c-accordion__block__title {
+        font-size: 1.25rem; } }
+    @media (min-width: 75em) {
+      .c-accordion__block__title {
+        font-size: 1.5rem; } }
   .c-accordion__block:first-of-type {
     margin-top: 0; }
     @media (min-width: 64.063em) {
@@ -1741,17 +1777,21 @@ li {
     border-color: #218f8b; }
   .c-accordion__item__title {
     position: relative;
-    display: block;
-    padding: 22px 40px 20px;
-    background-color: #fff;
-    background-position: center right 2rem;
+    display: flex;
+    align-items: center;
+    height: auto;
+    min-height: 80px;
+    padding-top: 0.5em;
+    padding-right: 4rem;
+    padding-bottom: 0.5em;
+    padding-left: 1.5rem;
+    background: #fff;
     transition: all 200ms;
-    cursor: pointer;
-    font-size: 1.5rem; }
+    cursor: pointer; }
     .c-accordion__item__title:before, .c-accordion__item__title:after {
       position: absolute;
-      top: 35px;
-      right: 40px;
+      top: 50%;
+      right: 2rem;
       width: 17px;
       height: 2px;
       background-color: #333333;
@@ -1760,15 +1800,22 @@ li {
       transform: rotate(90deg);
       transition: all 200ms; }
     .c-accordion__item__title__title {
-      font-size: 1.5rem;
-      line-height: 30px; }
+      font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+      font-size: 1.25rem; }
+      @media (min-width: 40.063em) {
+        .c-accordion__item__title__title {
+          font-size: 1.25rem; } }
+      @media (min-width: 75em) {
+        .c-accordion__item__title__title {
+          font-size: 1.5rem; } }
   .c-accordion__item__content {
     max-height: 0;
     overflow: hidden;
     background-color: #fff;
     transition: all 200ms; }
   .c-accordion__item__content-inner {
-    padding: 22px 40px 30px; }
+    padding: 1.5rem;
+    padding-top: 0; }
   .c-accordion__item--active {
     border-top-width: 8px; }
     .c-accordion__item--active .c-accordion__item__title:after {
@@ -1850,15 +1897,8 @@ li {
     .background--gray .c-price-comparison__col {
       background-color: #fff; }
     .c-price-comparison__col__title {
-      font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       margin-bottom: 2rem; }
-      @media (min-width: 40.063em) {
-        .c-price-comparison__col__title {
-          font-size: 1.25rem; } }
-      @media (min-width: 75em) {
-        .c-price-comparison__col__title {
-          font-size: 1.5rem; } }
       .theme-color--orange .c-price-comparison__col__title {
         color: #df8639; }
       .theme-color--blue .c-price-comparison__col__title {
@@ -2550,7 +2590,7 @@ mark {
     @media (min-width: 75em) {
       .c-product-box .gfield_label {
         font-size: 1.125rem; } }
-  .c-product-box .gfield_select {
+  .c-product-box .ginput_container_select {
     width: 100%;
     background-color: #fff;
     background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down.svg");
@@ -2563,25 +2603,26 @@ mark {
     padding-left: 0;
     background-color: transparent;
     background-position: right center;
+    border: none;
     border-bottom: 2px solid #ed1a3b; }
-    .theme-color--orange .c-product-box .gfield_select {
+    .theme-color--orange .c-product-box .ginput_container_select {
       border-bottom-color: #df8639; }
-    .theme-color--blue .c-product-box .gfield_select {
+    .theme-color--blue .c-product-box .ginput_container_select {
       border-bottom-color: #02A5E2; }
-    .theme-color--green .c-product-box .gfield_select {
+    .theme-color--green .c-product-box .ginput_container_select {
       border-bottom-color: #218f8b; }
-    .theme-color--orange .c-product-box .gfield_select {
+    .theme-color--orange .c-product-box .ginput_container_select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-orange.svg"); }
-    .theme-color--blue .c-product-box .gfield_select {
+    .theme-color--blue .c-product-box .ginput_container_select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-blue.svg"); }
-    .theme-color--green .c-product-box .gfield_select {
+    .theme-color--green .c-product-box .ginput_container_select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-green.svg"); }
-    .c-product-box .gfield_select select {
+    .c-product-box .ginput_container_select select {
       position: relative;
       width: 100%;
       padding: 0.8em;
       cursor: pointer; }
-    .c-product-box .gfield_select option {
+    .c-product-box .ginput_container_select option {
       display: block;
       font-family: "Proxima Nova Regular", sans-serif; }
   .c-product-box .gform_hidden {
@@ -3099,7 +3140,7 @@ mark {
          object-position: center; }
   .e-card__main {
     flex-grow: 1;
-    padding: 2rem;
+    padding: 1.5rem;
     border-top: 8px solid #ed1a3b; }
     @media (min-width: 75em) {
       .e-card__main {
@@ -3107,7 +3148,7 @@ mark {
   .e-card__footer {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1.5rem;
     padding-top: 0;
     white-space: nowrap;
     gap: 1.5rem; }
@@ -3140,12 +3181,6 @@ mark {
     text-transform: uppercase;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     font-size: 0.9375rem; }
-  .theme-color--orange .e-card__button .e-cta-button, .theme-color--orange .e-card__button .woocommerce-notices-wrapper .woocommerce-error .button, .woocommerce-notices-wrapper .woocommerce-error .theme-color--orange .e-card__button .button {
-    background-color: #df8639; }
-  .theme-color--blue .e-card__button .e-cta-button, .theme-color--blue .e-card__button .woocommerce-notices-wrapper .woocommerce-error .button, .woocommerce-notices-wrapper .woocommerce-error .theme-color--blue .e-card__button .button {
-    background-color: #02A5E2; }
-  .theme-color--green .e-card__button .e-cta-button, .theme-color--green .e-card__button .woocommerce-notices-wrapper .woocommerce-error .button, .woocommerce-notices-wrapper .woocommerce-error .theme-color--green .e-card__button .button {
-    background-color: #218f8b; }
   .e-card--blue .e-card__main {
     border-top-color: #02A5E2; }
   .e-card--blue .e-card__tagline {
@@ -3329,7 +3364,8 @@ hr.e-seperator {
   color: rgba(0, 0, 0, 0.4);
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   font-size: 1.25rem;
-  line-height: 20px; }
+  line-height: 20px;
+  text-decoration: none; }
   @media (min-width: 75em) {
     .customer-login__tab {
       font-size: 1.875rem;

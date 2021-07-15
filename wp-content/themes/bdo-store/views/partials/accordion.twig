@@ -58,9 +58,11 @@
 
                                 {% for item in pulledAccordions.items %}
                                 <div class="c-accordion__item">
-                                        <a href="/" class="c-accordion__item__title">
-                                            <h2 class="c-accordion__item__title__title">{{ item.heading }}</h2>
-                                        </a>
+                                        <h2 class="c-accordion__item__title">
+                                            <a href="/" class="c-accordion__item__title__title">
+                                                {{ item.heading }}
+                                            </a>
+                                        </h2>
                                         <div class="c-accordion__item__content">
                                             <div class="c-accordion__item__content-inner">
                                             {{ item.content }}
@@ -79,9 +81,11 @@
 
                                 {% for item in list.items %}
                                     <div class="c-accordion__item">
-                                        <a href="/" class="c-accordion__item__title">
-                                            <h2 class="c-accordion__item__title__title">{{ item.heading }}</h2>
-                                        </a>
+                                        <h2 class="c-accordion__item__title">
+                                            <a href="/" class="c-accordion__item__title__title">
+                                                {{ item.heading }}
+                                            </a>
+                                        </h2>
                                         <div class="c-accordion__item__content">
                                             <div class="c-accordion__item__content-inner">
                                             {{ item.content }}
