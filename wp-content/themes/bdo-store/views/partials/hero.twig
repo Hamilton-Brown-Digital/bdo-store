@@ -11,7 +11,7 @@
     {% set category = post.parent %}
 {% endif %}
 
-<div class="c-hero {% if type %}c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}">
+<div class="c-hero {% if type %}c-hero--{{ type }}{% endif %}{% if product %} c-hero--product{% endif %}{% if moreContent == 'text' %} c-hero--text{%endif%}">
 
     <div class="c-hero__row">
         <div class="o-grid-container c-hero__container">

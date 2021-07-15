@@ -58,7 +58,7 @@
       background-color: $white;
     }
     &__title{
-      @include header-small;
+      @include font-size(24);
       @include page-color('color');
       margin-bottom: 2rem;
     }

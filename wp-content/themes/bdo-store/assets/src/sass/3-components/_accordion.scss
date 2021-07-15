@@ -41,9 +41,8 @@
     margin-top: 70px;
 
     &__title{
-      @include font-size(30);
-      margin: 1em 0;
-      line-height: 30px;
+      @include header-small;
+      margin-bottom:1.5rem;
     }
 
     &:first-of-type{
@@ -67,18 +66,21 @@
 
     &__title{
       position: relative;
-      display: block;
-      padding: 22px 40px 20px;
-      background-color: $white;
-      background-position: center right 2rem;
+      display: flex;
+      align-items: center;
+      height: auto;
+      min-height: 80px;
+      padding-top:0.5em;
+      padding-right: 4rem;
+      padding-bottom:0.5em;
+      padding-left: 1.5rem;
+      background: $white;
       transition: all 200ms;
       cursor: pointer;
-      @include font-size(24);
-
       &:before, &:after {
         position: absolute;
-        top: 35px;
-        right: 40px;
+        top: 50%;
+        right: 2rem;
         width: 17px;
         height: 2px;
         background-color: $color-text;
@@ -91,8 +93,7 @@
       }
 
       &__title{
-        @include font-size(24);
-        line-height: 30px;
+        @include header-small;
       }
     }
 
@@ -104,7 +105,8 @@
     }
 
     &__content-inner{
-      padding: 22px 40px 30px;
+      padding: 1.5rem;
+      padding-top: 0;
     }
 
     &--active{
