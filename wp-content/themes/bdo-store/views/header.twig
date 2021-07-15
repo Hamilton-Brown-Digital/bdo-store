@@ -1,6 +1,6 @@
 <header class="c-header">
 
-	<div class="o-row o-row--no-margin c-header-main">
+	<div class="o-row o-row--no-margin o-row--mobile-loose c-header-main">
 
 		<div class="o-grid-container c-header-main__container">
 
@@ -31,11 +31,13 @@
 			</div>
 		</div>
 
-		<div class="o-row o-row--no-margin o-row--no-padding c-header-utility">
+		<div class="o-row o-row--no-margin o-row--mobile-loose c-header-utility">
 
 			<div class="o-grid-container c-header-utility__container">
 
-				<div class="c-header-utility__breadcrumb">bdo.co.uk > BDO Store</div>
+				<div class="c-header-utility__breadcrumb">
+					<a href="https://bdo.co.uk">bdo.co.uk</a> > BDO Store
+				</div>
 
 				<div class="c-header-utility__menu">
 					{% include "utility.twig" with {'utility': navigation_utility.get_items} %}

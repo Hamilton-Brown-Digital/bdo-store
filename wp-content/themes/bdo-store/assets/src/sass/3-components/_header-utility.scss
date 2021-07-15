@@ -20,18 +20,17 @@
 
   &__breadcrumb {
     display: none;
-
     @include breakpoint($break-desktop-wide) {
-      display: inline;
+      display: block;
       flex-grow: 1;
-      line-height: 17px;
+      @include font-bold;
       @include font-size(14);
     }
   }
 
   &__search {
-    padding: 0 36px 40px;
-
+    padding: 0;
+    padding-bottom: 2.5rem;
     @include breakpoint($break-desktop-wide) {
       padding: 0;
     }
@@ -74,7 +73,7 @@
       height: 100%;
     }
     ul {
-      padding: 20px 0;
+      padding: 1.5rem 0;
       @include breakpoint($break-desktop-wide) {
         display: flex;
         align-items: stretch;
@@ -93,11 +92,11 @@
         display: block;
         @include font-size(18);
         @include font-bold;
+        padding: 1rem 0;
         @include breakpoint($break-desktop-wide) {
           display: flex;
           align-items: center;
           height: 64px;
-          padding: 1em;
           border-top:8px solid transparent;
           border-bottom:8px solid transparent;
           box-sizing: border-box;

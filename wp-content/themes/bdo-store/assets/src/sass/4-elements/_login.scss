@@ -38,7 +38,7 @@
   @include font-bold;
   @include font-size(20);
   line-height: 20px;
-
+  text-decoration: none;
   @include breakpoint($break-desktop-wide) {
     @include font-size(30);
     padding: 44px 20px 24px;

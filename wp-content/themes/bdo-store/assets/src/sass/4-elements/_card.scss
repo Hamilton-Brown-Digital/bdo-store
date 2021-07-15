@@ -28,7 +28,7 @@
   }
   &__main{
     flex-grow: 1;
-    padding:2rem;
+    padding:1.5rem;
     @include breakpoint($break-desktop-wide) {
       padding-bottom: 6rem;
     }
@@ -37,7 +37,7 @@
   &__footer{
     display: flex;
     flex-direction: column;
-    padding:2rem;
+    padding:1.5rem;
     padding-top: 0;
     white-space: nowrap;
     gap:1.5rem;
@@ -76,11 +76,6 @@
     text-transform: uppercase;
     @include font-bold;
     @include font-size(15);
-  }
-  &__button{
-    .e-cta-button{
-      @include page-color(background-color);
-    }
   }
   &--blue{
     .e-card__main{

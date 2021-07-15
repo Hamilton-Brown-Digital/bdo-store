@@ -5,12 +5,12 @@
   &__row{
     position: relative;
     width: 100%;
-    padding-right:30px;
-    padding-left:30px;
+    padding-right:$edgepadding-mobile-loose;
+    padding-left:$edgepadding-mobile-loose;
     box-sizing: border-box;
     @include breakpoint($break-tablet) {
-      padding-right: 30px;
-      padding-left: 30px;
+      padding-right: $edgepadding-tablet;
+      padding-left: $edgepadding-tablet;
     }
   }
   .c-hero-carousel &{
@@ -21,17 +21,28 @@
     @include flex-column;
     position: relative;
     height: auto;
-    height: calc(100vh - #{$header-height-mobile});
-    max-height: 600px;
+    height: calc(80vh - #{$header-height-mobile});
+    min-height: 600px;
     @include breakpoint($break-desktop-med){
-      max-height: 800px;
+      //max-height: unset;
       margin-top: 0;
       @include flex-stretch;
     }
     .c-hero--shallow &{
       height: auto;
+      min-height: unset;
+      max-height: unset;
+      @include breakpoint($break-desktop-med){
+        max-height: 200px;
+      }
+    }
+    .c-hero--text &{
+      @include breakpoint(0, $break-desktop-med){
+        height: auto;
+      }
     }
     .c-hero--default &{
+      min-height: 150px;
       max-height: 480px;
     }
   }
@@ -117,7 +128,10 @@
       }
     }
     &__inner{
-      padding: 6rem 0;
+      padding: 3rem 0;
+      @include breakpoint($break-desktop-med){
+        padding: 6rem 0;
+      }
       &__main{
         *:last-child{
           margin-bottom: 0;

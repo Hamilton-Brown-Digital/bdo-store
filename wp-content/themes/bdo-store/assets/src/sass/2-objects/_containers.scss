@@ -1,13 +1,26 @@
-.o-row {
+$edgepadding-mobile:9px;
+$edgepadding-mobile-loose:30px;
+$edgepadding-tablet:35px;
+$edgepadding-desktop:40px;
+
+@mixin rowdefaults{
   width: 100%;
   margin-bottom: 30px;
-  padding-right: 9px;
-  padding-left: 9px;
+  padding-right: $edgepadding-mobile;
+  padding-left: $edgepadding-mobile;
+
+  @include breakpoint($break-tablet) {
+    padding-right: $edgepadding-tablet;
+    padding-left: $edgepadding-tablet;
+  }
+
+  @include breakpoint($break-desktop-wide) {
+    padding-right: $edgepadding-desktop;
+    padding-left: $edgepadding-desktop;
+  }
 
   @include breakpoint($break-tablet) {
     margin-bottom: 35px;
-    padding-right: 30px;
-    padding-left: 30px;
   }
 
   @include breakpoint($break-desktop) {
@@ -16,12 +29,20 @@
 
   @include breakpoint($break-desktop-wide) {
     margin-bottom: 50px;
-    padding-right: 40px;
-    padding-left: 40px;
   }
 
   @include breakpoint($break-desktop-wider) {
     margin-bottom: 60px;
+  }
+}
+
+.o-row {
+  @include rowdefaults;
+  &--mobile-loose{
+    @include breakpoint(0 $break-tablet){
+      padding-right: $edgepadding-mobile-loose;
+      padding-left: $edgepadding-mobile-loose;
+    }
   }
 
   &--no-margin {
