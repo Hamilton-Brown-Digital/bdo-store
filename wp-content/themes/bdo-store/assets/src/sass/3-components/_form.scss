@@ -1,0 +1,62 @@
+.c-form {
+
+  .gform_fields{
+    @include breakpoint($break-tablet){
+      display: grid;
+      gap:0 1.5rem;
+      border: none;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .gfield{
+    border: none;
+    @include breakpoint($break-tablet){
+      grid-column-end: span 2;
+    }
+    &--width-half{
+      grid-column-end:span 1;
+    }
+  }
+
+  fieldset{
+    legend{
+      display:none;
+    }
+    border:none;
+  }
+  &__title{
+    @include header-regular(true, true);
+  }
+  &__description{
+    margin-bottom: 3rem;
+  }
+  &__container{
+    @include form-container;
+  }
+  .ginput_container{
+    input{
+      @include form-input-text;
+    }
+    textarea{
+      @include form-input-textarea;
+    }
+  }
+  .ginput_container_select{
+    @include form-dropdown;
+    margin-bottom: 1.5rem;
+    background-color:$white;
+  }
+  label{
+    @include form-label;
+  }
+  .gform_hidden{
+    display:none;
+  }
+  .gform_footer{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .gform_button{
+    @include form-submit;
+  }
+}

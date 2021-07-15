@@ -1,8 +1,5 @@
 .c-product-box{
-  padding:1.5rem;
-  @include breakpoint($break-tablet){
-    padding:2rem;
-  }
+  padding:4rem;
   .gform_body{
     margin-bottom: 2.5rem;
   }
@@ -24,32 +21,15 @@
     }
   }
   .gfield_label{
-    display: block;
-    @include font-bold;
-    margin-bottom:1em;
+    @include form-label;
   }
   .gfield_select{
-    width: 100%;
-    padding:0.8em 0;
-    background-image:url('#{$image-path}/icons/arrow-down-blue.svg');
-    background-repeat: no-repeat;
-    background-position: right center;
+    @include form-dropdown;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: transparent;
+    background-position:right center;
     border-bottom:2px solid $brand-red;
-    color: unset;
-    @include page-color(border-bottom-color);
-    .theme-color--orange &{
-      background-image:url('#{$image-path}/icons/arrow-down-orange.svg');
-    }
-    .theme-color--blue &{
-      background-image:url('#{$image-path}/icons/arrow-down-blue.svg');
-    }
-    .theme-color--green &{
-      background-image:url('#{$image-path}/icons/arrow-down-green.svg');
-    }
-    option{
-      display: block;
-      font-family: $font-primary;
-    }
   }
   .gform_hidden{
     display:none;

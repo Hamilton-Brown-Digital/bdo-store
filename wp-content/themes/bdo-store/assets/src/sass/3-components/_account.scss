@@ -15,7 +15,7 @@
   }
 
   .woocommerce-Button, button, .edit{
-    @include buttondefaults;
+    @include form-submit;
     &:after{
       display: none;
     }
@@ -216,14 +216,13 @@ mark {
 // ADDRESS FIELDS
 .woocommerce-address-fields,
 .edit-account {
-  max-width: 600px;
-
+  @include form-container;
   label {
     @include form-label;
   }
 
   input[type='text'], input[type='tel'], input[type='email'], input[type='password'] {
-    @include form-input;
+    @include form-input-text;
   }
 
   .select2-container .select2-selection--single {

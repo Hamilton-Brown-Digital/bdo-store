@@ -26,7 +26,7 @@
     background-color: $brand-burgundy;
     color: $color-text;
   }
-  @include page-color('background-color');
+  
   &--outline{
     background-color:transparent;
     border:solid 3px $white;
