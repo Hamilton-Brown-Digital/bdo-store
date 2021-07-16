@@ -9,19 +9,12 @@
   h3{
     @include font-size(26);
   }
-
   p{
     font-size:16px;
   }
 
   .woocommerce-Button, button, .edit{
     @include form-submit;
-    &:after{
-      display: none;
-    }
-    &:hover{
-      background-color: darken($brand-red, 5%);
-    }
   }
 
   .woocommerce-Message{
@@ -47,11 +40,15 @@
   // NAVIGATION
   .woocommerce-MyAccount-navigation {
     position: relative;
-    padding: 40px 0;
-    background-color: $color-line;
-    @include font-size(22);
-    line-height: 30px;
-
+    padding-top: 1.5rem;
+    padding-bottom:1.5rem;
+    background-color: $color-bg-feint;
+    h2 {
+      @include header-small(true);
+    }
+    a{
+      @include text-side-nav;
+    }
     @include breakpoint($break-desktop-med) {
       width: 20%;
       padding: 70px 50px 70px 0;
@@ -76,19 +73,6 @@
       content: '';
       @include breakpoint($break-desktop-med) {
         display: none;
-      }
-    }
-
-    h2 {
-      @include header-small(true);
-    }
-
-    li {
-      margin: 23px 0;
-        
-      &.is-active a {
-        color: $brand-red;
-        @include font-bold;
       }
     }
   }
@@ -134,7 +118,6 @@
   line-height: 30px;
   @include font-size(26);
 }
-
 .woocommerce-Addresses{
   @include breakpoint($break-desktop) {
     display: grid;
@@ -145,6 +128,9 @@
 .woocommerce-Address{
   margin-top: 30px;
   @include bordered-box--small;
+  h3{
+    margin-bottom: 0;
+  }
 }
 .woocommerce-Address-title{
   display: flex;
@@ -214,6 +200,9 @@ mark {
 }
 
 // ADDRESS FIELDS
+address{
+  line-height: 1.4;
+}
 .woocommerce-address-fields,
 .edit-account {
   @include form-container;
