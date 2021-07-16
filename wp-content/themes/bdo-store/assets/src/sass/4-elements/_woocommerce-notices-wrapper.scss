@@ -46,6 +46,14 @@
     }
   }
 
+  .woocommerce-message {
+    a {
+      @extend .e-cta-button;
+      margin-left: 15px;
+      background-color: $color-bg-solid;
+    }
+  }
+
   .woocommerce-error {
     li {
       display: flex;
@@ -60,5 +68,9 @@
       @extend .e-cta-button;
       background-color: $color-bg-solid;
     }
+  }
+
+  .cart-empty {
+    display: none;
   }
 }

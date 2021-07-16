@@ -1,38 +1,47 @@
-.c-quote{
+.c-quote {
   position:relative;
   color:$white;
-  @include page-color(background-color);
-  &:before{
-    position: absolute;
-    top: 0;
-    left: -50vw;
-    display: block;
-    width: 50vw;
-    height: 100%;
-    content: '';
+
+  &__inner {
     @include page-color(background-color);
-  }
-  &__inner{
+    position: relative;
     padding: 6rem;
     padding-top:calc(7.5rem + 67px);
     padding-left: 0;
     background-image:url('#{$image-path}/icons/quotemark.svg');
     background-position: top 4rem left 0;
-    @include breakpoint($break-site-width){
+    background-size:67px 83px;
+
+    @include breakpoint($break-site-width) {
       background-position: top 4rem left 3rem;
     }
-    background-size:67px 83px;
-    @include breakpoint($break-site-width){
+
+    @include breakpoint($break-site-width) {
       padding-left: 3rem;
     }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -50vw;
+      display: block;
+      width: 50vw;
+      height: 100%;
+      content: '';
+      @include page-color(background-color);
+    }
   }
-  &__quote{
+
+  &__quote {
     padding-bottom:1.5rem;
   }
-  &__person{
+
+  &__person {
     @include font-bold;
     padding-bottom:1rem;
   }
-  &__position{
+
+  &__position {
   }
+
 }

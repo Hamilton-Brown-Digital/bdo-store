@@ -45,6 +45,7 @@
   }
   &__container{
     @include container-defaults;
+    z-index: 2;
     .c-hero--product &{
       display:grid;
       grid-gap: $grid-gap;
