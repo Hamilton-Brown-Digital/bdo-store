@@ -67,6 +67,7 @@ wp-content/cache/supercache/*
 
 # plugins specific
 wp-content/ai1wm-backups/
+wp-content/updraft/
 
 
 
