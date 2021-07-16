@@ -5,7 +5,7 @@
         {
             "key": "field_60deecd83c9d4",
             "label": "Quote Options",
-            "name": "content_options",
+            "name": "quote_options",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -98,5 +98,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625226798
+    "modified": 1626432707
 }
