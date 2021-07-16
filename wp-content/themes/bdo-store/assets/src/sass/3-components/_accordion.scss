@@ -22,13 +22,8 @@
 
   &__menu{
     &__item{
-      display: block;
-      padding:0.75rem;
       a{
-        @include font-bold;
-        &:active{
-          color:$brand-red;
-        }
+        @include text-side-nav;
       }
     }
   }

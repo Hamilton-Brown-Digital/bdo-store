@@ -52,8 +52,7 @@
     color: $brand-red;
   }
   &__title{
-    @include font-bold;
-    @include font-size(24);
+    @include header-small;
     margin-bottom: 1.5rem;
     line-height: 1.2;
   }

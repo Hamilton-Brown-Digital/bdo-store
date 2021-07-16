@@ -24,7 +24,7 @@
     height: calc(80vh - #{$header-height-mobile});
     min-height: 600px;
     @include breakpoint($break-desktop-med){
-      //max-height: unset;
+      max-height: 750px;
       margin-top: 0;
       @include flex-stretch;
     }
@@ -32,9 +32,6 @@
       height: auto;
       min-height: unset;
       max-height: unset;
-      @include breakpoint($break-desktop-med){
-        max-height: 200px;
-      }
     }
     .c-hero--text &{
       @include breakpoint(0, $break-desktop-med){

@@ -110,6 +110,12 @@
         }
       }
 
+      &.current_page_item{
+        a:after{
+          @include page-color('background-color');
+        }
+      }
+
     }
 
   }
@@ -121,6 +127,9 @@
     @include flex;
     @include breakpoint($break-desktop-wide) {
       background-color: $brand-red;
+      &:hover{
+        background-color: darken($brand-red, 5%);
+      }
     }
     &__icon{
       width: 20px;
@@ -138,6 +147,7 @@
       @include breakpoint($break-desktop-wide) {
         display:block;
         padding-left: 1em;
+        @include font-bold;
       }
     }
   }
