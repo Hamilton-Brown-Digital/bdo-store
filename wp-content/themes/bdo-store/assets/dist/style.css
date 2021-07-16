@@ -1314,6 +1314,7 @@ ul, ol {
     .c-header-main__menu nav {
       width: calc(100% - 172px); } }
   .c-header-main__menu ul {
+    margin: 0;
     padding: 1.5rem 0;
     text-transform: uppercase; }
     @media (min-width: 75em) {

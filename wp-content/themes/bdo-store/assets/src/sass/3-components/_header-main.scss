@@ -52,6 +52,7 @@
     }
 
     ul {
+      margin: 0;
       padding: 1.5rem 0;
       text-transform: uppercase;
       @include breakpoint($break-desktop-wide) {
