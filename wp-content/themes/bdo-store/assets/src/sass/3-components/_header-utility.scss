@@ -78,36 +78,40 @@
         display: flex;
         align-items: stretch;
         justify-content: flex-start;
-        gap: 4em;
-        margin-right:4em;
+        gap: 2em;
+        margin-right:2em;
         padding: 0;
       }
       li {
         @include breakpoint($break-desktop-wide) {
           height: 100%;
         }
-      }
-
-      a {
-        display: block;
-        @include font-size(18);
-        @include font-bold;
-        padding: 1rem 0;
-        @include breakpoint($break-desktop-wide) {
-          display: flex;
-          align-items: center;
-          height: 64px;
-          border-top:8px solid transparent;
-          border-bottom:8px solid transparent;
-          box-sizing: border-box;
-          @include font-size(14);
-          /* stylelint-disable */
-          &:hover{
+        /* stylelint-disable */
+        a {
+          display: block;
+          @include font-size(18);
+          @include font-bold;
+          padding: 0 1em;
+          @include breakpoint($break-desktop-wide) {
+            display: flex;
+            align-items: center;
+            height: 64px;
+            border-top:8px solid transparent;
+            border-bottom:8px solid transparent;
+            box-sizing: border-box;
+            @include font-size(14);
+          }
+        }
+        
+        &.current-menu-item{
+          a{
             border-top-color:$brand-red;
           }
-          /* stylelint-enable */
         }
+        /* stylelint-enable */
       }
+
+
 
     }
   }

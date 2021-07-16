@@ -17,16 +17,15 @@
   }
   &__heading{
     @include header-regular;
-    margin-top: 0.3em;
     margin-bottom: 1.5rem;
   }
   &__intro{
-    @include font-bold;
-    display: block;
+    @include intro-text;
     margin-bottom: 1.5rem;
   }
   &__content-main{
     margin-bottom: 1.5rem;
+    @include text-format;
   }
   &__cta{
     margin-bottom: 1.5rem;

@@ -22,18 +22,19 @@
             </div>
 
             <div class="c-signpost__content">
-
+                {% if content.subhead %}
                 <div class="c-signpost__tagline">
                     {{ content.subhead }}
                 </div>
+                {% endif %}
                 <div class="c-signpost__heading">
                     {{ content.heading }}
                 </div>
+                {% if content.intro %}
                 <div class="c-signpost__intro">
-                    <p>
-                        {{ content.intro }}
-                    </p>
+                    {{ content.intro }}
                 </div>
+                {% endif %}
                 <div class="c-signpost__content-main">
                         {{ content.content }}
                 </div>
