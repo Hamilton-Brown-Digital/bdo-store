@@ -71,6 +71,11 @@
   &__tagline{
     margin-bottom: 1.5rem;
     @include page-color('color');
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
   }
   &__heading{
     @include font-display;

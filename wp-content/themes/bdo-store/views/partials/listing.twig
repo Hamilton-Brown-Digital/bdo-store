@@ -24,8 +24,13 @@
             </div>
             {% endif %}
 
-            <div class="c-listing__grid--{{ columns }} items-{{ itemnum }}">
+            {% if posts and post.parent == 0 and  post.type.slug == 'page' %}
+            <div class="c-listing__count">
+                {{ posts|length }} products available
+            </div>
+            {% endif %}
 
+            <div class="c-listing__grid--{{ columns }} items-{{ itemnum }}">
 
                 {% for card in posts %}
 
