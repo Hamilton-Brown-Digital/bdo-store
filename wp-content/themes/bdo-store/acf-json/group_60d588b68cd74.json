@@ -28,7 +28,7 @@
             "label": "Type",
             "name": "accordion_type",
             "type": "select",
-            "instructions": "",
+            "instructions": "Selecting Title will allow you to add a Subhead and a Head to the left of an accordion. Selecting Menu allows you to create Menu items that can anchor down to accordions on the right.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -96,7 +96,7 @@
                     "name": "heading",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -305,7 +305,7 @@
                                     "key": "field_60d58ace70715",
                                     "label": "Content",
                                     "name": "content",
-                                    "type": "textarea",
+                                    "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -315,10 +315,10 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": 2,
-                                    "new_lines": "wpautop"
+                                    "tabs": "visual",
+                                    "toolbar": "full",
+                                    "media_upload": 0,
+                                    "delay": 0
                                 }
                             ]
                         }
@@ -344,5 +344,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625498853
+    "modified": 1626694516
 }

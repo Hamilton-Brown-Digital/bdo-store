@@ -30,7 +30,7 @@
             "label": "Header",
             "name": "hero_header",
             "type": "text",
-            "instructions": "",
+            "instructions": "Max characters: 60",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -42,7 +42,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": 60
         },
         {
             "key": "field_60d9d7eca925e",
@@ -252,5 +252,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625701722
+    "modified": 1626691636
 }

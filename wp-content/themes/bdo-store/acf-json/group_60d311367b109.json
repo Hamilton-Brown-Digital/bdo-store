@@ -90,7 +90,7 @@
             "name": "listing_cards",
             "type": "relationship",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -129,5 +129,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625080058
+    "modified": 1626695127
 }
