@@ -22,7 +22,7 @@
                     <div class="c-hero__main__inner__main">
                         {% if product or category %}
                         <div class="c-hero__tagline">
-                            {{ category }}
+                            <a href="{{ category.link }}">{{ category }}</a>
                         </div>
                         {% endif %}
                         <h1 class="c-hero__heading">
