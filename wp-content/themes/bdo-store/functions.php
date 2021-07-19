@@ -61,6 +61,12 @@ if (class_exists('Timber')) {
     include 'functions/setup/post_support.php';
 
     /**
+     * @desc Change product categories to radios in backend
+     */
+
+    include 'functions/setup/product_categories.php';
+
+    /**
      * @desc Adding registering of custom post types
      */
 

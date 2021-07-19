@@ -94,7 +94,7 @@
 
             </div>
 
-            {% if moreContent != 'none' %}
+            {% if type == 'full' and moreContent != 'none' %}
             <div class="c-hero__image-text">
 
                 {% if moreContent == 'text' and content %}
@@ -104,7 +104,7 @@
             {% endif %}
         </div>
 
-        {% if moreContent == 'image' and image %}
+        {% if type == 'full' and moreContent == 'image' and image %}
             <div class="o-grid-container o-grid-container--full-width c-hero__container-background">
     
                 <div class="c-hero__container-background__image-text">
