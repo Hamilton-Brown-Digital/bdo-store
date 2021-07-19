@@ -21,13 +21,12 @@
   }
 
   &__logo{
-    flex-grow: 1;
     flex-shrink: 0;
+    margin-right: auto;
     &__image{
       width: 100%;
       max-width: 132px;
       margin-top: 2px;
-
       @include breakpoint($break-desktop-wide) {
         max-width: 175px;
       }

@@ -1,3 +1,9 @@
 .c-404{
-  background:$gold;
+  &__header{
+    @include header-regular(true);
+  }
+  &__main{
+    margin-bottom: 3rem;
+    @include text-format;
+  }
 }

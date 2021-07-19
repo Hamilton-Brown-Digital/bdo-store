@@ -13,6 +13,7 @@
       height: calc(100% + 590px);
     }
     &__form{
+      z-index: 5;
       height: auto;
       margin-bottom:$padding-deep;
       background: $color-bg-3;
