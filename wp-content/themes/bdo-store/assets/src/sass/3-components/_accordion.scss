@@ -97,6 +97,34 @@
       overflow: hidden;
       background-color: $white;
       transition: all 200ms;
+
+      h2, h3, h4 {
+        margin-bottom: 20px;
+      }
+  
+      p {
+        margin-bottom: 20px;
+      }
+      
+      ol {
+        margin-left: 20px;
+      }
+  
+      ul li {
+        position: relative;
+        padding-left: 20px;
+        
+        &:before {
+          position: absolute;
+          top: 9px;
+          left: 0;
+          width: 7px;
+          height: 7px;
+          background-color: $brand-red;
+          border-radius: 50%;
+          content: '';
+        }
+      }
     }
 
     &__content-inner{

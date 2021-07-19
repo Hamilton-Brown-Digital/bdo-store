@@ -24,7 +24,7 @@
             </div>
             {% endif %}
 
-            {% if posts and post.parent == 0 and  post.type.slug == 'page' %}
+            {% if not fn('is_front_page') and posts and post.parent == 0 and  post.type.slug == 'page' %}
             <div class="c-listing__count">
                 {{ posts|length }} products available
             </div>
