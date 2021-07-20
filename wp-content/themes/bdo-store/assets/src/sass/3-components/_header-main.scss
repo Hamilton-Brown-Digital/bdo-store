@@ -80,7 +80,7 @@
         padding: 1rem $edgepadding-mobile-loose;
         @include font-bold;
         line-height: 24px;
-        @include font-size(18);
+        @include font-size(16);
 
         @include breakpoint($break-desktop-wide) {
           position: relative;
