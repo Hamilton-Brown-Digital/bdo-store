@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 100;
   width: 100%;
   background-color:$color-bg-4;
 
@@ -15,11 +15,14 @@
   &__menu-wrap {
     position: fixed;
     right: -100vw;
+    z-index: 10;
+    @include breakpoint($break-tablet) {
+      z-index: unset;
+    }
     display: flex;
     flex-direction: column;
     width: 100%;
     transition: all 200ms;
-
     @include breakpoint($break-desktop-wide) {
       position: static;
       right: 0;

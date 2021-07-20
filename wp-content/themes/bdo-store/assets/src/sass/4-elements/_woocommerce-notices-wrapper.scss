@@ -4,7 +4,7 @@
   left: 0;
   z-index: 5;
   width: 100%;
-  background-color: $brand-red;
+  background-color: $color-bg-solid;
   @include page-color(background-color);
   color: $white;
   @include breakpoint($break-desktop) {

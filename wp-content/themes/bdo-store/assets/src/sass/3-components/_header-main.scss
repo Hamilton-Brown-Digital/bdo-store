@@ -21,13 +21,12 @@
   }
 
   &__logo{
-    flex-grow: 1;
     flex-shrink: 0;
+    margin-right: auto;
     &__image{
       width: 100%;
       max-width: 132px;
       margin-top: 2px;
-
       @include breakpoint($break-desktop-wide) {
         max-width: 175px;
       }
@@ -81,7 +80,7 @@
         padding: 1rem $edgepadding-mobile-loose;
         @include font-bold;
         line-height: 24px;
-        @include font-size(18);
+        @include font-size(16);
 
         @include breakpoint($break-desktop-wide) {
           position: relative;

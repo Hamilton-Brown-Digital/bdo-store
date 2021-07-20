@@ -2,15 +2,17 @@
 
 {% block content %}
 
-<div class="c-404">
+<div class="c-404 padding">
 
-    <div class="o-row o-row--no-margin">
+    <div class="o-row o-row--mobile-loose">
 
         <div class="o-grid-container">
 
             <h1 class="c-404__header">It seems like the page you are looking for doesn’t exist</h1>
 
-            <p>Looks like the page you are looking for doesn’t exist, has been moved or deleted. Try searching for something else or see if our most popular resources are useful.</p>
+            <div class="c-404__main">
+                <p>Looks like the page you are looking for doesn’t exist, has been moved or deleted. Try searching for something else or see if our most popular resources are useful.</p>
+            </div>
 
             <div class="c-404__button">
             {% include "./elements/button.twig"

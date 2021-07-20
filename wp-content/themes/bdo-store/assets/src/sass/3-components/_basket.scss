@@ -4,6 +4,9 @@
     font-size:18px !important;
     /* stylelint-enable */
   }
+  tr{
+    width: 100%;
+  }
   @mixin griddefaults{
     display: grid;
     width:100%;
@@ -20,22 +23,30 @@
       display: block;
     }
     thead tr{
-      @include griddefaults;
-      margin-bottom:1.5rem;
-      grid-template-columns: 50% 1fr 1fr 1fr 1fr;
+      display: none;
+      @include breakpoint($break-desktop) {
+        @include griddefaults;
+        margin-bottom:1.5rem;
+        grid-template-columns: 50% 1fr 1fr 1fr 1fr;
+      }
     }
     tbody tr{
-      @include griddefaults;
-      margin-bottom:1.5rem;
-      grid-template-columns: 50% 1fr 1fr 1fr 1fr;
+      @include breakpoint($break-desktop) {
+        @include griddefaults;
+        margin-bottom:1.5rem;
+        grid-template-columns: 50% 1fr 1fr 1fr 1fr;
+      }
       td.actions{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         padding-bottom: 3rem;
         border-bottom: 2px solid $color-line;
-        grid-column-start: 2;
-        grid-column-end: 6;
+        @include breakpoint($break-desktop) {
+          flex-direction: row;
+          grid-column-start: 2;
+          grid-column-end: 6;
+        }
       }
     }
     td{
@@ -65,6 +76,10 @@
       border:solid 3px $color-line-dark;
       color: $color-text;
     }
+  }
+
+  .woocommerce-Price-amount{
+
   }
   .woocommerce-cart-form__cart-item{
     padding-top: 1.5rem;
@@ -98,6 +113,11 @@
       p{
         @include textresets;
       }
+      dt, dd{
+        @include breakpoint($break-desktop) {
+          display: block;
+        }
+      }
       dt{
         padding-right: 0.5em;
       }
@@ -110,7 +130,10 @@
     width: 100%;
   }
   .cart_totals{
-    width: calc(50% - 1.5rem);
+    width: 100%;
+    @include breakpoint($break-desktop) {
+      width: calc(50% - 1.5rem);
+    }
     gap:1.5rem;
     box-sizing: border-box;
     .shop_table{
