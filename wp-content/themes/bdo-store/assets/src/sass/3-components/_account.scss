@@ -10,6 +10,7 @@
     @include font-size(26);
   }
   p{
+    max-width: 800px;
     font-size:16px;
   }
 
@@ -17,18 +18,9 @@
     @include form-submit;
   }
 
-  .woocommerce-Message{
-    .woocommerce-Button{
-      margin-right: 1.5rem;
-    }
-  }
-
 
   .woocommerce {
-    @include breakpoint($break-tablet){
-      min-height: 800px;
-    }
-    @include breakpoint($break-desktop-med) {
+    .logged-in &{
       display: flex;
     }
   }
@@ -77,6 +69,13 @@
     }
   }
 
+  // RESET PASSWORD
+  .lost_reset_password{
+    p{
+      margin-bottom: 1.5rem;
+    }
+  }
+
   // CONTENT AREA
   .woocommerce-MyAccount-content {
     padding: 40px 0;
@@ -86,7 +85,12 @@
       padding-top:70px;
       padding-right: 0;
     }
+  }
 
+  .woocommerce-message{
+    margin-top:3rem;
+    margin-bottom:3rem;
+    @include header-small;
   }
 
 }
