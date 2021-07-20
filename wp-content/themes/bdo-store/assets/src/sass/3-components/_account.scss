@@ -1,3 +1,7 @@
+.woocommerce-account {
+  background-color: $white;
+}
+
 .c-account {
 
   h2, h3, h4{
@@ -40,6 +44,11 @@
     }
     a{
       @include text-side-nav;
+    }
+    li.is-active {
+      a {
+        color: $brand-red;
+      }
     }
     @include breakpoint($break-desktop-med) {
       width: 20%;

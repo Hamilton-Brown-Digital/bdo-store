@@ -25,3 +25,5 @@ $context['count'] = $foundPosts . ' ' . $not_singular;
 
 $templates = array('search.twig');
 Timber::render($templates, $context);
+
+wp_reset_postdata();

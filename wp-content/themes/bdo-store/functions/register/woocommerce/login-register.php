@@ -3,8 +3,13 @@
 // REGISTER FORM
 add_shortcode( 'wc_reg_form', 'woo_separate_registration_form' );
 function woo_separate_registration_form() {
-    if ( is_admin() ) return;
-    if ( is_user_logged_in() ) return;
+    if ( is_admin() ) {
+        header('Location: /');
+    }
+
+    if ( is_user_logged_in() ) {
+        header('Location: /account/');
+    }
     ob_start();
 
     do_action( 'woocommerce_before_customer_login_form' );  

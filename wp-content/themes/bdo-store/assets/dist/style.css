@@ -1177,6 +1177,10 @@ ul, ol {
     .c-header__menu-wrap.open {
       right: 0; }
 
+.basket_count {
+  margin-left: 5px;
+  font-weight: bold; }
+
 .c-header-utility {
   background-color: #000; }
   @media (min-width: 75em) {
@@ -2263,6 +2267,9 @@ ul, ol {
   .menu-item-has-children {
     width: 33.33%; } }
 
+.woocommerce-account {
+  background-color: #fff; }
+
 .c-account h2, .c-account h3, .c-account h4 {
   margin-bottom: 1.5rem; }
 
@@ -2357,6 +2364,8 @@ ul, ol {
     text-decoration: none; }
     .c-account .woocommerce-MyAccount-navigation a:hover {
       color: #ed1a3b; }
+  .c-account .woocommerce-MyAccount-navigation li.is-active a {
+    color: #ed1a3b; }
   @media (min-width: 64.063em) {
     .c-account .woocommerce-MyAccount-navigation {
       width: 20%;
