@@ -2,6 +2,7 @@ class Accordion {
 
     constructor() {  
       this.accordions = document.querySelectorAll('.c-accordion__item')
+      this.accordionMenu = document.querySelectorAll('.js-accordion-menu')
     }
   
     init() {
@@ -13,6 +14,16 @@ class Accordion {
             accordion.querySelector('.c-accordion__item__title').addEventListener( 'click', ( ev ) => {
                 ev.preventDefault()
                 this.trigger( ev.target )
+            })
+        } )
+
+        this.accordionMenu.forEach( ( item ) => {
+            item.addEventListener( 'click', ( ev ) => {
+                ev.preventDefault()
+
+                document.querySelector(ev.target.getAttribute('href')).scrollIntoView({
+                    behavior: "smooth"
+                })
             })
         } )
     }
