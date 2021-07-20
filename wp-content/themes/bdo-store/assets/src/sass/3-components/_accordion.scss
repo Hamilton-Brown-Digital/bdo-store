@@ -1,5 +1,4 @@
 .c-accordion{
-
   &__subhead{
     margin-bottom:1.5rem;
     @include header-tagline;
@@ -20,6 +19,10 @@
     }
   }
 
+  &__details{
+    @include padding-loose;
+  }
+
   &__menu{
     &__item{
       a{
@@ -38,6 +41,7 @@
     &__title{
       @include header-small;
       margin-bottom:1.5rem;
+      @include padding-loose;
     }
 
     &:first-of-type{
