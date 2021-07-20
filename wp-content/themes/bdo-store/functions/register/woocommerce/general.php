@@ -120,3 +120,13 @@ function notAnotherInCart( $message, $product_data ){
 
 	return $message;
 }
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'woo_cart_count_fragments', 10, 1 );
+function woo_cart_count_fragments( $fragments ) {
+    if ( WC()->cart->get_cart_contents_count() > 0 ) {
+        $fragments['span.basket_count'] = '<span class="basket_count">(' . WC()->cart->get_cart_contents_count() . ')</span>';
+    } else {
+        $fragments['span.basket_count'] = '<span class="basket_count"></span>';
+    }
+    return $fragments;
+}
