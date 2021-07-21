@@ -19,3 +19,6 @@ function store_mall_wc_empty_cart_redirect_url() {
     $url = '/';
     return esc_url( $url );
 }
+
+// REMOVE VARIATION STUFF FROM NAME
+add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
