@@ -140,7 +140,7 @@
                     "label": "Link",
                     "name": "link",
                     "type": "link",
-                    "instructions": "",
+                    "instructions": "If adding an external link, please remember to add text to Link Text",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -189,5 +189,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1626264403
+    "modified": 1626862408
 }
