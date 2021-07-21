@@ -10,7 +10,12 @@ remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_pr
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 
 // Remove price from product pages
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+add_filter('woocommerce_variable_price_html','custom_from',10);
+add_filter('woocommerce_grouped_price_html','custom_from',10);
+add_filter('woocommerce_variable_sale_price_html','custom_from',10);
+function custom_from($price){
+    return false;
+}
 
 // Remove summary from product pages
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
