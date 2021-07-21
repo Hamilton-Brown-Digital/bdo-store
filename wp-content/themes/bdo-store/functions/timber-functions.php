@@ -67,6 +67,7 @@ class CustomTimber extends TimberSite
       $page = get_posts(array(
         'numberposts'	=> 1,
         'post_type'		=> 'page',
+        'post_parent' => 0,
         'meta_key'		=> 'product_category',
         'meta_value'	=> $id
       ));
