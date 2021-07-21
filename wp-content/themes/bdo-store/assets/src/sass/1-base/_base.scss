@@ -25,6 +25,9 @@ body {
   font-weight: $reg;
   text-align: left;
   overflow-x: hidden;
+  &.single-product{
+    background-color: $white;
+  }
 }
 
 * {

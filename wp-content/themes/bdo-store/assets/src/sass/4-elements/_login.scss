@@ -1,6 +1,6 @@
 .customer-login, .login-register{
   margin-top:3rem;
-  @include breakpoint($break-tablet) {
+  @include breakpoint($break-desktop-wide) {
     position: absolute;
     top:50%;
     left:50%;

@@ -3,65 +3,6 @@
   .gform_body{
     margin-bottom: 2.5rem;
   }
-  .gform_fields{
-    @include breakpoint($break-tablet){
-      display: grid;
-      border: none;
-      gap:3rem;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  .gfield{
-    border: none;
-    @include breakpoint($break-tablet){
-      grid-column-end: span 2;
-    }
-    &--width-half{
-      grid-column-end:span 1;
-    }
-  }
-  .gfield_label{
-    @include form-label;
-  }
-  .ginput_container_select{
-    @include form-dropdown;
-    padding-right: 0;
-    padding-left: 0;
-    background-color: transparent;
-    background-position:right center;
-    border: none;
-    border-bottom:2px solid $brand-red;
-  }
-  .gform_hidden{
-    display:none;
-  }
-  .gfield_radio{
-    display: flex;
-    flex-direction: column;
-    padding:0.8em 0;
-    .gchoice{
-      padding:0.3em;
-    }
-  }
-  .product_totals{
-    .gform_fields{
-      display: block;
-      .gfield_label{
-        display:none;
-      }
-    }
-  }
-  .ginput_total{
-    display: inline-block;
-    margin-bottom: 2.5rem;
-    text-transform:uppercase;
-    @include font-size(30);
-    @include font-bold;
-    small{
-      @include font-size(24);
-      font-family:$font-primary;
-    }
-  }
   .single_add_to_cart_button{
     position: relative;
     display: inline-flex;
@@ -95,19 +36,62 @@
       }
     }
   }
-
   &__help {
     margin-top: 30px;
-
     p {
-      line-height: 20px;
       @include font-size(16);
     }
-
-    a {
-      color: $brand-red;
-      text-decoration: underline;
+  }
+  .variations{
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    tbody{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+      gap: 3rem;
+      tr{
+        display: flex;
+        flex-direction: column;
+        &:last-of-type{
+          grid-column-end: span 2;
+        }
+      }
+    }
+    label{
+      @include form-label;
+    }
+    .value{
+      position: relative;
+      .reset_variations{
+        position: absolute;
+        right: 0;
+        bottom: -1.5rem;
+        display: inline-block;
+      }
+    }
+    select{
+      @include form-dropdown;
+      background-color: transparent;
+      border: none;
+      border-bottom:2px solid $brand-red;
     }
   }
-
+  .single_variation{
+    //margin-bottom: 1.5rem;
+  }
+  .single_variation_wrap{
+    display: flex;
+    gap:1.5rem;
+    flex-direction: column;
+  }
+  .woocommerce-Price-amount{
+    //margin-bottom: 2.5rem;
+    text-transform:uppercase;
+    @include font-size(30);
+    @include font-bold;
+  }
 }

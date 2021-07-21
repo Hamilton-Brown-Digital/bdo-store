@@ -1,9 +1,11 @@
-.woocommerce-account {
-  background-color: $white;
+.woocommerce-page{
+  .login-register, .c-account, .woocommerce{
+    min-height: 70vh;
+  }
 }
 
 .c-account {
-
+  min-height: 70vh;
   h2, h3, h4{
     margin-bottom:1.5rem;
   }
@@ -18,14 +20,16 @@
     font-size:16px;
   }
 
-  .woocommerce-Button, button, .edit{
+  .woocommerce-Button, .woocommerce-button, button, .edit{
     @include form-submit;
   }
 
 
   .woocommerce {
     .logged-in &{
-      display: flex;
+      @include breakpoint($break-desktop-med) {
+        display: flex;
+      }
     }
   }
 
@@ -105,13 +109,13 @@
 }
 
 .c-account__message {
-  margin-top: 10px;
+  margin-top: 3rem;
   p {
-    margin-top: 25px;
+    margin-top: 1.5rem;
+    line-height: 1.2;
     &:first-of-type{
       margin-top:0;
     }
-    line-height: 22px;
     strong {
       font-weight: unset;
       @include font-bold;
@@ -139,6 +143,7 @@
   }
 }
 .woocommerce-Address{
+  max-width: 756px;
   margin-top: 30px;
   @include bordered-box--small;
   h3{
@@ -154,40 +159,89 @@
 mark {
   background-color: $color-line;
 }
-
-.woocommerce-table,
 .woocommerce-orders-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  position:relative;
   width: 100%;
-    
-  thead {
-    th {
-      @include font-bold;
-      line-height: 20px;
-      @include font-size(16);
+  tr{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-top: $borderline;
+    &:first-of-type{
+      padding-top: 0;
+      border-top: none;
     }
-  }
-
-  tbody {
-    td {
-      padding: 40px 0;
-      border-top: 1px solid $color-line-dark;
-      line-height: 30px;
-      @include font-size(18);
+    @include breakpoint(0 $break-desktop-med) {
+      display: flex;
     }
-
-    tr:first-child {
-      td {
-        border-top: none;
+    .woocommerce-orders-table__header-order-actions{
+      @include breakpoint(0 $break-desktop-med) {
+        display:none;
       }
     }
+    td{
+      @include font-size(18);
+    }
+    td, th{
+      display: flex;
+      gap:0.25em;
+      justify-content: center;
+      width: 25%;
+      padding: 0.75rem 0;
+      text-align: center;
+      &:first-of-type{
+        justify-content: flex-start;
+      }
+      &:last-of-type{
+        justify-content: flex-end;
+      }
+      @include breakpoint($break-desktop-med) {
+        width: 20%;
+      }
+    }
+  }
+  thead{
+    @include font-bold;
+  }
+  /* stylelint-disable */
+  tbody{
+    display: flex;
+    flex-direction: column;
+    tr{
+      td{
+        @include breakpoint(0 $break-desktop-med) {
+          @include font-size(14);
+        }
+        &.woocommerce-orders-table__cell-order-total{
+          flex-direction: column;
 
+        }
+        &.woocommerce-orders-table__cell-order-actions{
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          gap: 1.5rem;
+          &:after{
+            display: block;
+            flex-grow: 1;
+            content: 'Actions';
+            @include font-bold;
+            @include font-size(16px);
+            @include breakpoint($break-desktop-med) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
     a {
       color: $brand-red;
       text-decoration: underline;
     }
   }
+  /* stylelint-enable */
 
   tfoot {
     th {
