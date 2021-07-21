@@ -2,9 +2,6 @@
 
 {% block content %}
 
-    {% set page_builder = post.meta('page_modules') %}
-    {% set product_builder = post.meta('product_modules') %}
-
     {% do action('woocommerce_before_single_product') %}
 
     {% set linkArr = [{
@@ -26,6 +23,7 @@
         <div class="o-row o-row--no-margin">
             <div class="o-grid-container c-product-details__container">
                 <div class="c-product-details__content">
+                    {% set product_builder = post.meta('product_modules') %}
                     {% for acf in product_builder %}
                         {% include './partials/' ~ acf.acf_fc_layout ~ '.twig' %}
                     {% endfor %}
@@ -43,6 +41,7 @@
 
     <div class="product-full-width">
 
+        {% set page_builder = post.meta('page_modules') %}
         {% for acf in page_builder %}
             {% include './partials/' ~ acf.acf_fc_layout ~ '.twig' %}
         {% endfor %}

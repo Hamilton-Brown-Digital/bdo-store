@@ -63,6 +63,7 @@
     @include breakpoint($break-desktop-med){
       display: flex;
       justify-content: flex-end;
+      width: 100%;
       &__image-text{
         width: 50%;
       }

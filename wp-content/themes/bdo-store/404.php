@@ -1,12 +1,4 @@
-<?
-/**
- * The template for displaying 404 pages (not found).
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package wppt
- */
-
+<?php
 
 if ( ! class_exists( 'Timber' ) ) {
 	echo 'Timber not activated. Make sure you activate the plugin in <a href="/wordpress/wp-admin/plugins.php#timber">/wp-admin/plugins.php</a>';
@@ -18,8 +10,8 @@ if ( ! class_exists( 'acf' ) ) {
 	return;
 }
 
-$context = Timber::get_context();
-$templates = array( '404.twig' );
-Timber::render( $templates, $context );
+$context = Timber::context();
+$context['post'] = new Timber\Post();
+Timber::render( 'views/404.twig', $context );
 
 wp_reset_postdata();
