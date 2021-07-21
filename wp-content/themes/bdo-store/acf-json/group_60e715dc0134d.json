@@ -100,6 +100,38 @@
             },
             "width": "",
             "height": ""
+        },
+        {
+            "key": "field_60f83e9241907",
+            "label": "Video Placeholder",
+            "name": "video_placeholder",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60e715dc05cd7",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -119,5 +151,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625757413
+    "modified": 1626881717
 }

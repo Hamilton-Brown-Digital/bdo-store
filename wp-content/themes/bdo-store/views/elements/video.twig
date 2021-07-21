@@ -3,9 +3,15 @@
 {% set videoParams = videoUrl|split('/', 5)[4] %}
 {% set videoId = videoParams|split('?')[0] %}
 
+{% if placeholder %}
+    {% set videoImage = placeholder.url %}
+{% else %}
+    {% set videoImage = '//img.youtube.com/vi/' ~ videoId ~ '/maxresdefault.jpg' %}
+{% endif %}
+
 <div class="e-video">
 
-    <div class="e-video__placeholder js-video-placeholder" style="background-image:url(//img.youtube.com/vi/{{ videoId }}/maxresdefault.jpg);">
+    <div class="e-video__placeholder js-video-placeholder" style="background-image:url({{ videoImage }});">
         <div class="e-video__play"></div>
     </div>
 

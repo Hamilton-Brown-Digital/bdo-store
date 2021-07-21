@@ -5,7 +5,8 @@
         {% if acf.media_type == 'video' %}
 
             {% include "./elements/video.twig"with {
-                video: acf.media_video
+                video: acf.media_video,
+                placeholder: acf.video_placeholder
             } %}
 
         {% else %}

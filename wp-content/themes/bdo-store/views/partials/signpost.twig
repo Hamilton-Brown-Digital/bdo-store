@@ -11,7 +11,8 @@
 
                 {% if media.type == 'video' %}
                     {% include "./elements/video.twig" with {
-                        video: media.video
+                        video: media.video,
+                        placeholder: media.video_placeholder
                     } %}
                 {% else %}
                     {% include "./elements/image.twig" with {
