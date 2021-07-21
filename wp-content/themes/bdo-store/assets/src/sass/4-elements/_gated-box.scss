@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 30px 0;
-  border-bottom: 1px solid $color-line-dark;
+  border-bottom: $borderline;
+}
 
-  h3 {
-    @include font-size(20);
-    font-family: $font-primary;
-    font-weight: $reg;
-    line-height: 30px;
+h3.e-gated-box__title{
+  @include header-small;
+  @include breakpoint($break-desktop-med){
+    margin-bottom: 0;
   }
 }

@@ -1,4 +1,11 @@
 .c-basket {
+  .cart-empty.woocommerce-info{
+    @include header-small;
+    margin-bottom: 1.5rem;
+  }
+  .woocommerce-Button, .woocommerce-button, .button, button, .edit{
+    @include form-submit;
+  }
   th, td{
     /* stylelint-disable */
     font-size:18px !important;

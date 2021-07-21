@@ -480,9 +480,10 @@
 // for text input
 @mixin form-input-text{
   width: 100%;
+  margin-bottom: 1.5rem;
   padding: 0.6em;
   background-color: $white;
-  border: 2px solid $color-line-darker;
+  border: $borderline;
   font-size:16px;
   @include breakpoint($break-desktop-wide) {
     margin-bottom: 1.5rem;
@@ -492,7 +493,7 @@
   width: 100%;
   padding: 0.6em;
   background-color: $white;
-  border: 2px solid $color-line-darker;
+  border: $borderline;
   font-size:16px;
 }
 
@@ -501,7 +502,7 @@
   height: 12em;
   padding: 0.6em;
   background-color: $white;
-  border: 2px solid $color-line-darker;
+  border: $borderline;
   font-size:16px;
   @include breakpoint($break-desktop-wide) {
     margin-bottom: 1.5rem;
@@ -509,14 +510,19 @@
 }
 
 @mixin form-dropdown{
+  position: relative;
   width: 100%;
+  width: 100%;
+  padding: 0;
+  padding:0.8em;
   background-color:$white;
   background-image:url('#{$image-path}/icons/arrow-down.svg');
   background-repeat: no-repeat;
-  background-position: right 0.8em center;
-  border: 2px solid $color-line-darker;
+  background-position: center right 0.6em;
+  border: $borderline;
   color: unset;
   font-size:16px;
+  cursor: pointer;
   @include page-color(border-bottom-color);
   .theme-color--orange &{
     background-image:url('#{$image-path}/icons/arrow-down-orange.svg');
@@ -527,12 +533,6 @@
   .theme-color--green &{
     background-image:url('#{$image-path}/icons/arrow-down-green.svg');
   }
-  select{
-    position: relative;
-    width: 100%;
-    padding:0.8em;
-    cursor: pointer;
-  }
   option{
     display: block;
     font-family: $font-primary;
@@ -542,6 +542,9 @@
 @mixin form-submit{
   @include buttondefaults;
   margin-left: auto;
+  &:after{
+    display: none;
+  }
   &:hover{
     background-color: darken($brand-red, 5%);
   }
