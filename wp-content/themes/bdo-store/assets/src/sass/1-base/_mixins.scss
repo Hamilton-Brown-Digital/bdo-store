@@ -483,7 +483,7 @@
   margin-bottom: 1.5rem;
   padding: 0.6em;
   background-color: $white;
-  border: 2px solid $color-line-darker;
+  border: $borderline;
   font-size:16px;
   @include breakpoint($break-desktop-wide) {
     margin-bottom: 1.5rem;
@@ -493,7 +493,7 @@
   width: 100%;
   padding: 0.6em;
   background-color: $white;
-  border: 2px solid $color-line-darker;
+  border: $borderline;
   font-size:16px;
 }
 
@@ -502,7 +502,7 @@
   height: 12em;
   padding: 0.6em;
   background-color: $white;
-  border: 2px solid $color-line-darker;
+  border: $borderline;
   font-size:16px;
   @include breakpoint($break-desktop-wide) {
     margin-bottom: 1.5rem;
@@ -515,7 +515,7 @@
   background-image:url('#{$image-path}/icons/arrow-down.svg');
   background-repeat: no-repeat;
   background-position: right 0.8em center;
-  border: 2px solid $color-line-darker;
+  border: $borderline;
   color: unset;
   font-size:16px;
   @include page-color(border-bottom-color);

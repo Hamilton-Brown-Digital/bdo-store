@@ -109,13 +109,13 @@
 }
 
 .c-account__message {
-  margin-top: 10px;
+  margin-top: 3rem;
   p {
-    margin-top: 25px;
+    margin-top: 1.5rem;
+    line-height: 1.2;
     &:first-of-type{
       margin-top:0;
     }
-    line-height: 22px;
     strong {
       font-weight: unset;
       @include font-bold;
@@ -168,7 +168,7 @@ mark {
     align-items: center;
     width: 100%;
     padding: 1.5rem 0;
-    border-top: 2px solid $color-line-darker;
+    border-top: $borderline;
     &:first-of-type{
       padding-top: 0;
       border-top: none;
@@ -186,6 +186,7 @@ mark {
     }
     td, th{
       display: flex;
+      gap:0.25em;
       justify-content: center;
       width: 25%;
       padding: 0.75rem 0;
@@ -212,9 +213,10 @@ mark {
       td{
         @include breakpoint(0 $break-desktop-med) {
           @include font-size(14);
-          &.woocommerce-orders-table__cell-order-total{
-            flex-direction: column;
-          }
+        }
+        &.woocommerce-orders-table__cell-order-total{
+          flex-direction: column;
+
         }
         &.woocommerce-orders-table__cell-order-actions{
           display: flex;
