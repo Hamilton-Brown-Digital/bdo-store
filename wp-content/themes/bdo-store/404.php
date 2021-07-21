@@ -18,8 +18,8 @@ if ( ! class_exists( 'acf' ) ) {
 	return;
 }
 
-$context = Timber::get_context();
-$templates = array( '404.twig' );
-Timber::render( $templates, $context );
+$context = Timber::context();
+$context['post'] = new Timber\Post();
+Timber::render( 'views/404.twig', $context );
 
 wp_reset_postdata();
