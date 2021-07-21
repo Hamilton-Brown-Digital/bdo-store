@@ -68,7 +68,11 @@ $custname = $order->get_billing_first_name();
 
 	<?php foreach ( $order->get_items() as $item_id => $item ) :
 		$product = $item->get_product();
-		$productid = $product->get_id();
+		if ( $product->get_parent_id() != 0 ) {
+			$productid = $product->get_parent_id();
+		} else {
+			$productid = $product->get_id();
+		}
 	?>
 	<div class="product-access">
 		<h3 class="product-access--title">
