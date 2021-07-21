@@ -1499,7 +1499,8 @@ ul, ol {
     @media (min-width: 64.063em) {
       .c-hero__container-background {
         display: flex;
-        justify-content: flex-end; }
+        justify-content: flex-end;
+        width: 100%; }
         .c-hero__container-background__image-text {
           width: 50%; } }
   .c-hero__tagline {

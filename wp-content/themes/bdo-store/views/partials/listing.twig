@@ -61,8 +61,14 @@
                         {% endif %}
 
                         {% if type == 'product' %}
+                            {% if card._price is iterable %}
+                                {% set price = card._price[0] %}
+                            {% else %}
+                                {% set price = card._price %}
+                            {% endif %}
+
                             {% set cardItems = cardItems|merge({
-                                price: card._price,
+                                price: price,
                                 terms: card.terms( {query:{taxonomy:'product_cat'}} )|join(', '),
                                 color: card.terms( {query:{taxonomy:'product_cat'}} )[0].colour
                             })%}
