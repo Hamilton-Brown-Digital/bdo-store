@@ -122,10 +122,12 @@
   }
 
   &__basket{
+    display: flex;
+    align-items: baseline;
     align-self: stretch;
     padding: 1.5rem;
     color: $white;
-    @include flex;
+    gap:0.5em;
     @include breakpoint($break-desktop-wide) {
       background-color: $brand-red;
       &:hover{
@@ -139,6 +141,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 20px 20px;
+      transform: translateY(5px);
       @include breakpoint($break-desktop-wide) {
         background-image: url('#{$asset-path}/img/icons/basket-white.svg');
       }
@@ -147,9 +150,11 @@
       display: none;
       @include breakpoint($break-desktop-wide) {
         display:block;
-        padding-left: 1em;
         @include font-bold;
       }
+    }
+    .basket_count{
+      @include font-bold;
     }
   }
   &__hamburger{

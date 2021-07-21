@@ -179,13 +179,13 @@
     }
     &__details{
       display: none;
-      @include breakpoint($break-tablet){
+      @include breakpoint($break-desktop-med){
         display: block;
       }
     }
     &__form{
       display: block;
-      @include breakpoint($break-tablet){
+      @include breakpoint($break-desktop-med){
         display: none;
       }
     }
