@@ -2,15 +2,34 @@
   position: relative;
   z-index: 5;
   width: 100%;
-  margin-bottom: 3rem;
-  overflow: hidden;
   background-color: $brand-red;
   color: $white;
+  @include breakpoint($break-desktop-wide) {
+    position: absolute;
+    top: 2px;
+  }
+  p, ul, ol{
+    margin-bottom: 0;
+  }
+  
   &:before{
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: $brand-red;
     content: '';
-    
   }
   &:after{
+    position: absolute;
+    top: 0;
+    right: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: $brand-red;
     content: '';
   }
   *{
@@ -18,26 +37,10 @@
     @include font-size(16);
   }
   @include page-color(background-color);
-  @include breakpoint($break-desktop) {
-    top: 0;
-  }
   .woocommerce-message,
   .woocommerce-error {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: $site-width;
-    margin: 0 auto;
     padding: 1.5rem;
-  }
-
-  p {
-    margin-top: 3px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    @include breakpoint($break-desktop) {
-      margin-bottom: 0;
-    }
+    text-align: center;
   }
 
   .e-cta-button {
@@ -59,9 +62,6 @@
 
   .woocommerce-error {
     li {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
     }
     p {
       order: 1;
@@ -78,5 +78,43 @@
 
   .cart-empty {
     display: none;
+  }
+}
+
+
+
+
+// If within the my account content column on account page
+.woocommerce-MyAccount-content{
+  position: relative;
+  .woocommerce-notices-wrapper{
+    position: relative;
+    left: 0;
+    width:100%;
+    max-width: 756px;
+    margin-bottom:1.5rem;
+    background: transparent;
+    p, ul, ol{
+      text-align: left;
+    }
+    & *{
+      color:$color-text;
+    }
+    ul{
+      display: grid;
+      padding: 0;
+      @include breakpoint($tablet){
+        grid-template-columns: 1fr 1fr;
+      }
+      li{
+        text-align: left;
+      }
+    }
+    &:before{
+      display: none;
+    }
+    &:after{
+      display: none;
+    }
   }
 }

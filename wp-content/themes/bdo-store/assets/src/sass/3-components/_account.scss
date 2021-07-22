@@ -1,15 +1,17 @@
-.woocommerce{
-  position: relative;
-}
-
-.woocommerce-page{
-  .login-register, .c-account, .woocommerce{
-    min-height: 70vh;
-  }
-}
-
 .c-account {
-  min-height: 70vh;
+  .woocommerce {
+    padding-top: 0;
+    .logged-in &{
+      @include breakpoint($break-desktop-med) {
+        display: flex;
+      }
+    }
+  }
+  .logged-in &{
+    background-color:$white;
+  }
+
+  flex-grow: 1;
   h2, h3, h4{
     margin-bottom:1.5rem;
   }
@@ -46,16 +48,6 @@
 
   .woocommerce-Button, .woocommerce-button, button, .edit{
     @include form-submit;
-  }
-  .woocommerce {
-    .logged-in &{
-      @include breakpoint($break-desktop-med) {
-        display: flex;
-      }
-    }
-  }
-  .logged-in &{
-    background-color:$white;
   }
   // NAVIGATION
   .woocommerce-MyAccount-navigation {
@@ -111,11 +103,11 @@
 
   // CONTENT AREA
   .woocommerce-MyAccount-content {
-    padding: 40px 0;
+    padding: 3rem 0;
     @include breakpoint($break-desktop-med) {
       width: 80%;
       padding:clamp(20px, 8vw, 140px);
-      padding-top:70px;
+      padding-top:3rem;
       padding-right: 0;
     }
   }

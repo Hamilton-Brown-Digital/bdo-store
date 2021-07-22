@@ -425,6 +425,7 @@
   cursor:pointer;
   @include font-size(16);
   @include font-bold;
+  @include page-color('background');
   &:after{
     position: absolute;
     top:0;
