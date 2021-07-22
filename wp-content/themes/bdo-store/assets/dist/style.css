@@ -2279,6 +2279,9 @@ ul, ol {
   .menu-item-has-children {
     width: 33.33%; } }
 
+.woocommerce {
+  position: relative; }
+
 .woocommerce-page .login-register, .woocommerce-page .c-account, .woocommerce-page .woocommerce {
   min-height: 70vh; }
 
@@ -2293,6 +2296,27 @@ ul, ol {
   .c-account p {
     max-width: 800px;
     font-size: 16px; }
+  .c-account__message {
+    margin-top: 3rem; }
+    .c-account__message p {
+      margin-top: 1.5rem;
+      line-height: 1.2; }
+      .c-account__message p:first-of-type {
+        margin-top: 0;
+        font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+        font-size: 1.25rem; }
+        @media (min-width: 40.063em) {
+          .c-account__message p:first-of-type {
+            font-size: 1.25rem; } }
+        @media (min-width: 75em) {
+          .c-account__message p:first-of-type {
+            font-size: 1.5rem; } }
+      .c-account__message p strong {
+        font-weight: unset;
+        font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+      .c-account__message p a {
+        color: #ed1a3b;
+        text-decoration: underline; }
   .c-account .woocommerce-Button, .c-account .woocommerce-button, .c-account button, .c-account .edit {
     position: relative;
     display: inline-flex;
@@ -2420,20 +2444,6 @@ ul, ol {
     @media (min-width: 75em) {
       .c-account .woocommerce-message {
         font-size: 1.5rem; } }
-
-.c-account__message {
-  margin-top: 3rem; }
-  .c-account__message p {
-    margin-top: 1.5rem;
-    line-height: 1.2; }
-    .c-account__message p:first-of-type {
-      margin-top: 0; }
-    .c-account__message p strong {
-      font-weight: unset;
-      font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
-    .c-account__message p a {
-      color: #ed1a3b;
-      text-decoration: underline; }
 
 .woocommerce-order-details__title,
 .woocommerce-column__title,
@@ -2734,7 +2744,7 @@ address {
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 3rem;
-    border-bottom: 2px solid #F2F2F2; }
+    border-bottom: 2px solid #d8d8d8; }
     @media (min-width: 50em) {
       .c-basket .shop_table tbody tr td.actions {
         flex-direction: row;
@@ -2778,7 +2788,7 @@ address {
     font-size: 1rem;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     background-color: transparent;
-    border: solid 3px #707070;
+    border: solid 2px #707070;
     color: #333333; }
     .c-basket .coupon button:after {
       position: absolute;
@@ -2802,10 +2812,15 @@ address {
       .c-basket .coupon button svg {
         width: 16px;
         height: 18px; } }
+    .c-basket .coupon button:hover {
+      background-color: #707070;
+      color: #fff; }
+    .c-basket .coupon button:after {
+      display: none; }
 
 .c-basket .woocommerce-cart-form__cart-item {
   padding-top: 1.5rem;
-  border-top: 2px solid #F2F2F2; }
+  border-top: 2px solid #d8d8d8; }
 
 .c-basket .product-name a {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
@@ -3481,12 +3496,45 @@ address {
         color: #ed1a3b;
         content: counter(item) ". "; }
 
+.c-form .ginput_container input {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.6em;
+  background-color: #fff;
+  border: 2px solid #d8d8d8;
+  font-size: 16px; }
+  @media (min-width: 75em) {
+    .c-form .ginput_container input {
+      margin-bottom: 1.5rem; } }
+
+.c-form .ginput_container textarea {
+  width: 100%;
+  height: 12em;
+  padding: 0.6em;
+  background-color: #fff;
+  border: 2px solid #d8d8d8;
+  font-size: 16px; }
+  @media (min-width: 75em) {
+    .c-form .ginput_container textarea {
+      margin-bottom: 1.5rem; } }
+
 @media (min-width: 40.063em) {
   .c-form .gform_fields {
     display: grid;
     gap: 0 1.5rem;
     border: none;
     grid-template-columns: 1fr 1fr; } }
+
+.c-form .gform_confirmation_message {
+  margin-bottom: 3rem;
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+  font-size: 1.25rem; }
+  @media (min-width: 40.063em) {
+    .c-form .gform_confirmation_message {
+      font-size: 1.25rem; } }
+  @media (min-width: 75em) {
+    .c-form .gform_confirmation_message {
+      font-size: 1.5rem; } }
 
 .c-form .gfield {
   border: none; }
@@ -3495,6 +3543,12 @@ address {
       grid-column-end: span 2; } }
   .c-form .gfield--width-half {
     grid-column-end: span 1; }
+  .c-form .gfield_error input {
+    border: 2px solid #ed1a3b; }
+
+.c-form .validation_message {
+  position: relative;
+  top: -1em; }
 
 .c-form fieldset {
   border: none; }
@@ -3541,28 +3595,6 @@ address {
   width: 100%;
   max-width: 756px; }
 
-.c-form .ginput_container input {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  padding: 0.6em;
-  background-color: #fff;
-  border: 2px solid #d8d8d8;
-  font-size: 16px; }
-  @media (min-width: 75em) {
-    .c-form .ginput_container input {
-      margin-bottom: 1.5rem; } }
-
-.c-form .ginput_container textarea {
-  width: 100%;
-  height: 12em;
-  padding: 0.6em;
-  background-color: #fff;
-  border: 2px solid #d8d8d8;
-  font-size: 16px; }
-  @media (min-width: 75em) {
-    .c-form .ginput_container textarea {
-      margin-bottom: 1.5rem; } }
-
 .c-form .ginput_container_select {
   position: relative;
   width: 100%;
@@ -3604,6 +3636,18 @@ address {
   @media (min-width: 75em) {
     .c-form label {
       font-size: 1.125rem; } }
+
+.c-form .gform_submission_error {
+  margin-bottom: 3rem;
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+  font-size: 1.25rem;
+  color: #ed1a3b; }
+  @media (min-width: 40.063em) {
+    .c-form .gform_submission_error {
+      font-size: 1.25rem; } }
+  @media (min-width: 75em) {
+    .c-form .gform_submission_error {
+      font-size: 1.5rem; } }
 
 .c-form .gform_hidden {
   display: none; }
@@ -3851,7 +3895,18 @@ address {
     color: #333333; }
   .e-cta-button--outline {
     background-color: transparent;
-    border: solid 3px #fff; }
+    border: solid 2px #707070;
+    color: #333333; }
+    .e-cta-button--outline:hover {
+      background-color: #707070;
+      color: #fff; }
+  .e-cta-button--outline--inverse {
+    background-color: transparent;
+    border: solid 3px #fff;
+    color: #fff; }
+    .e-cta-button--outline--inverse:hover {
+      background-color: #fff;
+      color: #333333; }
   .c-hero--product .e-cta-button, .c-hero--product .woocommerce-notices-wrapper .woocommerce-message a, .woocommerce-notices-wrapper .woocommerce-message .c-hero--product a, .c-hero--product .woocommerce-notices-wrapper .woocommerce-error .button, .woocommerce-notices-wrapper .woocommerce-error .c-hero--product .button {
     background-color: transparent;
     border: solid 3px #fff; }
@@ -4166,13 +4221,20 @@ h3.e-gated-box__title {
     font-size: 1rem; }
 
 .woocommerce-notices-wrapper {
-  position: absolute;
-  top: 37px;
-  left: 0;
+  position: relative;
   z-index: 5;
   width: 100%;
-  background-color: #333333;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  background-color: #ed1a3b;
   color: #fff; }
+  .woocommerce-notices-wrapper:before {
+    content: ''; }
+  .woocommerce-notices-wrapper:after {
+    content: ''; }
+  .woocommerce-notices-wrapper * {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1rem; }
   .theme-color--orange .woocommerce-notices-wrapper {
     background-color: #df8639; }
   .theme-color--blue .woocommerce-notices-wrapper {
@@ -4184,20 +4246,14 @@ h3.e-gated-box__title {
       top: 0; } }
   .woocommerce-notices-wrapper .woocommerce-message,
   .woocommerce-notices-wrapper .woocommerce-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1560px;
     margin: 0 auto;
-    padding: 15px 10px; }
-    @media (min-width: 50em) {
-      .woocommerce-notices-wrapper .woocommerce-message,
-      .woocommerce-notices-wrapper .woocommerce-error {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 1565px;
-        padding-right: 0;
-        padding-left: 0; } }
+    padding: 1.5rem; }
   .woocommerce-notices-wrapper p {
     margin-top: 3px;
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-right: 15px;
     margin-bottom: 15px; }
     @media (min-width: 50em) {
@@ -4219,6 +4275,8 @@ h3.e-gated-box__title {
     justify-content: flex-start; }
   .woocommerce-notices-wrapper .woocommerce-error p {
     order: 1; }
+  .woocommerce-notices-wrapper .woocommerce-error strong {
+    margin-right: 0.5em; }
   .woocommerce-notices-wrapper .woocommerce-error .button {
     order: 2;
     background-color: #333333; }
