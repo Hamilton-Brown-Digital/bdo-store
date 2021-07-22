@@ -28,8 +28,10 @@
   }
   
   &--outline{
-    background-color:transparent;
-    border:solid 3px $white;
+    @include button-outline;
+  }
+  &--outline--inverse{
+    @include button-outline-inverse;
   }
   .c-hero--product &{
     background-color:transparent;
