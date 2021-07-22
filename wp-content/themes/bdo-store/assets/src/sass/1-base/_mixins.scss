@@ -458,6 +458,25 @@
   }
 }
 
+@mixin button-outline{
+  background-color:transparent;
+  border:solid 2px $color-line-dark;
+  color:$color-text;
+  &:hover{
+    background-color: $color-line-dark;
+    color:$white;
+  }
+}
+@mixin button-outline-inverse{
+  background-color:transparent;
+  border:solid 3px $white;
+  color:$white;
+  &:hover{
+    background-color: $white;
+    color:$color-text;
+  }
+}
+
 
 // form mixins
 

@@ -1,3 +1,7 @@
+.woocommerce{
+  position: relative;
+}
+
 .woocommerce-page{
   .login-register, .c-account, .woocommerce{
     min-height: 70vh;
@@ -20,11 +24,29 @@
     font-size:16px;
   }
 
+  &__message{
+    margin-top: 3rem;
+    p {
+      margin-top: 1.5rem;
+      line-height: 1.2;
+      &:first-of-type{
+        margin-top:0;
+        @include header-small;
+      }
+      strong {
+        font-weight: unset;
+        @include font-bold;
+      }
+      a {
+        color: $brand-red;
+        text-decoration: underline;
+      }
+    }
+  }
+
   .woocommerce-Button, .woocommerce-button, button, .edit{
     @include form-submit;
   }
-
-
   .woocommerce {
     .logged-in &{
       @include breakpoint($break-desktop-med) {
@@ -32,11 +54,9 @@
       }
     }
   }
-
   .logged-in &{
     background-color:$white;
   }
-
   // NAVIGATION
   .woocommerce-MyAccount-navigation {
     position: relative;
@@ -99,31 +119,10 @@
       padding-right: 0;
     }
   }
-
   .woocommerce-message{
     margin-top:3rem;
     margin-bottom:3rem;
     @include header-small;
-  }
-
-}
-
-.c-account__message {
-  margin-top: 3rem;
-  p {
-    margin-top: 1.5rem;
-    line-height: 1.2;
-    &:first-of-type{
-      margin-top:0;
-    }
-    strong {
-      font-weight: unset;
-      @include font-bold;
-    }
-    a {
-      color: $brand-red;
-      text-decoration: underline;
-    }
   }
 }
 
