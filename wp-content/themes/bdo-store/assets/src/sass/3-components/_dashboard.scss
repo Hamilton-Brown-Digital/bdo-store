@@ -1,0 +1,21 @@
+.c-dashboard{
+  &__list{
+  }
+  &__gated-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    border-top: $borderline;
+    &:first-of-type{
+      border-top: 0;
+    }
+    &__title{
+      @include header-small;
+      @include breakpoint($break-desktop-med){
+        /* stylelint-disable-next-line */
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

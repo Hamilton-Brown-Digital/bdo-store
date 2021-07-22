@@ -1,4 +1,6 @@
 <div class="c-product-box">
+
+    {% do action('woocommerce_before_single_product') %}
     
     {% do action('woocommerce_before_single_product_summary') %}
 

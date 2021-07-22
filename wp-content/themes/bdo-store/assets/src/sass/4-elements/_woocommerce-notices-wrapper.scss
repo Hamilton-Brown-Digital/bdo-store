@@ -1,17 +1,13 @@
-.woocommerce-notices-wrapper{
+@mixin notice-strip{
   position: relative;
   z-index: 5;
-  width: 100%;
+  width: $site-width;
   background-color: $brand-red;
   color: $white;
   @include breakpoint($break-desktop-wide) {
-    position: absolute;
-    top: 2px;
+    position: relative;
+    top: 0;
   }
-  p, ul, ol{
-    margin-bottom: 0;
-  }
-  
   &:before{
     position: absolute;
     top: 0;
@@ -32,26 +28,13 @@
     background-color: $brand-red;
     content: '';
   }
-  *{
-    @include font-bold;
-    @include font-size(16);
-  }
   @include page-color(background-color);
   .woocommerce-message,
   .woocommerce-error {
     padding: 1.5rem;
+    padding-top: 0;
     text-align: center;
   }
-
-  .e-cta-button {
-    width: 100%;
-    background-color: $color-bg-solid;
-    color: $white;
-    @include breakpoint($break-desktop) {
-      width: auto;
-    }
-  }
-
   .woocommerce-message {
     a {
       @extend .e-cta-button;
@@ -59,62 +42,80 @@
       background-color: $color-bg-solid;
     }
   }
-
-  .woocommerce-error {
-    li {
-    }
-    p {
-      order: 1;
-    }
-    strong{
-      margin-right: 0.5em;
-    }
-    .button {
-      order: 2;
-      background-color: $color-bg-solid;
-      @extend .e-cta-button;
+  .woocommerce-error{
+    li{
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before{
+        display: none;
+      }
     }
   }
+}
 
-  .cart-empty {
-    display: none;
+@mixin notice-inline{
+  position: relative;
+  left: 0;
+  width:100%;
+  max-width: 756px;
+  margin-bottom:1.5rem;
+  background: transparent;
+  p, ul, ol{
+    text-align: left;
+  }
+  & *{
+    color:$color-text;
+  }
+  ul{
+    display: inline-grid;
+    grid-gap: 0 1.5rem;
+    padding: 0;
+    @include breakpoint($break-tablet){
+      grid-template-columns: 1fr 1fr;
+    }
+    li{
+      text-align: left;
+      @include listitemdefaults;
+    }
   }
 }
 
 
 
 
-// If within the my account content column on account page
-.woocommerce-MyAccount-content{
-  position: relative;
-  .woocommerce-notices-wrapper{
-    position: relative;
-    left: 0;
-    width:100%;
-    max-width: 756px;
-    margin-bottom:1.5rem;
-    background: transparent;
-    p, ul, ol{
-      text-align: left;
-    }
-    & *{
-      color:$color-text;
-    }
-    ul{
-      display: grid;
-      padding: 0;
-      @include breakpoint($tablet){
-        grid-template-columns: 1fr 1fr;
-      }
-      li{
-        text-align: left;
-      }
-    }
-    &:before{
-      display: none;
-    }
-    &:after{
-      display: none;
-    }
+
+
+.woocommerce-notices-wrapper{
+  p, ul, ol{
+    margin-bottom: 0;
+  }
+  a {
+    @extend .e-cta-button;
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: $color-bg-solid !important;
+  }
+  strong{
+    margin-right: 0.5em;
+  }
+  .button {
+    order: 2;
+    background-color: $color-bg-solid;
+    @extend .e-cta-button;
+  }
+  .cart-empty {
+    display: none;
+  }
+  *{
+    @include font-bold;
+    @include font-size(16);
+  }
+  .c-basket &, .single-product &{
+    @include notice-strip;
+  }
+  .woocommerce-MyAccount-content &{
+    @include notice-inline;
   }
 }

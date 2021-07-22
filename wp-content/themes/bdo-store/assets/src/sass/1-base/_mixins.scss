@@ -77,6 +77,23 @@
   }
 }
 
+@mixin listitemdefaults{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4em;
+  list-style: none;
+  line-height: 1.4;
+  &:before {
+    flex-grow: 0;
+    width: 5px;
+    height: 5px;
+    margin-right: 0.5em;
+    background-color: $color-text-link;
+    content: '';
+  }
+}
+
 
 @mixin text-format {
   h2, h3, h4, h5, p, ul, ol, hr{
@@ -119,20 +136,7 @@
 
   ul {
     li {
-      position: relative;
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.4em;
-      list-style: none;
-      line-height: 1.4;
-      &:before {
-        flex-grow: 0;
-        width: 5px;
-        height: 5px;
-        margin-right: 0.5em;
-        background-color: $color-text-link;
-        content: '';
-      }
+      @include listitemdefaults;
     }
   }
 

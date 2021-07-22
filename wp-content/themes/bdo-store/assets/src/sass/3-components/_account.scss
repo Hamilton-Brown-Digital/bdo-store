@@ -103,9 +103,11 @@
 
   // CONTENT AREA
   .woocommerce-MyAccount-content {
+    position: relative;
     padding: 3rem 0;
     @include breakpoint($break-desktop-med) {
       width: 80%;
+      min-height: 70vh;
       padding:clamp(20px, 8vw, 140px);
       padding-top:3rem;
       padding-right: 0;
