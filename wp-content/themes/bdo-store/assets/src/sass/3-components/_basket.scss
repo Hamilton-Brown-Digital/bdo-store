@@ -48,7 +48,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding-bottom: 3rem;
-        border-bottom: 2px solid $color-line;
+        border-bottom: 2px solid $color-line-darker;
         @include breakpoint($break-desktop) {
           flex-direction: row;
           grid-column-start: 2;
@@ -79,9 +79,10 @@
     }
     button{
       @include buttondefaults;
-      background-color:transparent;
-      border:solid 3px $color-line-dark;
-      color: $color-text;
+      @include button-outline;
+      &:after{
+        display: none;
+      }
     }
   }
 
@@ -90,7 +91,7 @@
   }
   .woocommerce-cart-form__cart-item{
     padding-top: 1.5rem;
-    border-top: 2px solid $color-line;
+    border-top: 2px solid $color-line-darker;
   }
 
   .product-name{

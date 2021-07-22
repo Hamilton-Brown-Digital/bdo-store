@@ -1,5 +1,12 @@
 .c-form {
-
+  .ginput_container{
+    input{
+      @include form-input-text;
+    }
+    textarea{
+      @include form-input-textarea;
+    }
+  }
   .gform_fields{
     @include breakpoint($break-tablet){
       display: grid;
@@ -7,6 +14,10 @@
       border: none;
       grid-template-columns: 1fr 1fr;
     }
+  }
+  .gform_confirmation_message{
+    margin-bottom: 3rem;
+    @include header-small;
   }
   .gfield{
     border: none;
@@ -16,6 +27,16 @@
     &--width-half{
       grid-column-end:span 1;
     }
+    &_error{
+      input{
+        border: 2px solid $brand-red;
+      }
+    }
+  }
+
+  .validation_message{
+    position: relative;
+    top: -1em;
   }
 
   fieldset{
@@ -33,14 +54,6 @@
   &__container{
     @include form-container;
   }
-  .ginput_container{
-    input{
-      @include form-input-text;
-    }
-    textarea{
-      @include form-input-textarea;
-    }
-  }
   .ginput_container_select{
     @include form-dropdown;
     margin-bottom: 1.5rem;
@@ -48,6 +61,11 @@
   }
   label{
     @include form-label;
+  }
+  .gform_submission_error{
+    margin-bottom: 3rem;
+    @include header-small;
+    color: $brand-red;
   }
   .gform_hidden{
     display:none;
