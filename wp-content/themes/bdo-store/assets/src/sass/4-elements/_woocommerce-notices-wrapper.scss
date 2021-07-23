@@ -3,9 +3,36 @@
   top: 0;
   left: 0;
   z-index: 5;
-  width: $site-width;
+  width: 100%;
+  max-width: $site-width;
   background-color: $brand-red;
   color: $white;
+  p, ul, ol{
+    margin-bottom: 0;
+  }
+  a {
+    @extend .e-cta-button;
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: $color-bg-solid !important;
+  }
+  strong{
+    margin-right: 0.5em;
+  }
+  .button {
+    order: 2;
+    background-color: $color-bg-solid;
+    @extend .e-cta-button;
+  }
+  .cart-empty {
+    display: none;
+  }
+  *{
+    @include font-bold;
+    @include font-size(16);
+  }
+
+
   &:before{
     position: absolute;
     top: 0;
@@ -60,7 +87,29 @@
   max-width: 756px;
   background: transparent;
   p, ul, ol{
+    margin-bottom: 0;
     text-align: left;
+  }
+  a {
+    @extend .e-cta-button;
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: $color-bg-solid !important;
+  }
+  strong{
+    margin-right: 0.5em;
+  }
+  .button {
+    order: 2;
+    background-color: $color-bg-solid;
+    @extend .e-cta-button;
+  }
+  .cart-empty {
+    display: none;
+  }
+  *{
+    @include font-bold;
+    @include font-size(16);
   }
   & *{
     color:$color-text;
@@ -86,34 +135,28 @@
 
 
 .woocommerce-notices-wrapper{
-  p, ul, ol{
-    margin-bottom: 0;
-  }
-  a {
-    @extend .e-cta-button;
-    margin-left: 1.5rem;
-    /* stylelint-disable-next-line */
-    background-color: $color-bg-solid !important;
-  }
-  strong{
-    margin-right: 0.5em;
-  }
-  .button {
-    order: 2;
-    background-color: $color-bg-solid;
-    @extend .e-cta-button;
-  }
-  .cart-empty {
-    display: none;
-  }
-  *{
-    @include font-bold;
-    @include font-size(16);
-  }
   .c-basket &, .single-product &{
     @include notice-strip;
   }
   .woocommerce-MyAccount-content &{
     @include notice-inline;
+  }
+  .single-product &{
+    @include notice-strip;
+    position: absolute;
+    top: unset;
+    bottom: -25px;
+    left: 0;
+    transform: translateY(100%);
+  }
+  .single-product.theme-color--green &{
+    max-width: unset;
+    background-color: $brand-emerald;
+    &:before{
+      background-color: $brand-emerald;
+    }
+    &:after{
+      background-color: $brand-emerald;
+    }
   }
 }
