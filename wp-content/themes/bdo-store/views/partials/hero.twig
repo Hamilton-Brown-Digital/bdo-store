@@ -17,6 +17,10 @@
         <div class="o-grid-container c-hero__container">
             <div class="c-hero__main">
 
+                {% if product %}
+                    {% do action('woocommerce_before_single_product') %}
+                {% endif %}
+
                 <div class="c-hero__main__inner">
 
                     <div class="c-hero__main__inner__main">
