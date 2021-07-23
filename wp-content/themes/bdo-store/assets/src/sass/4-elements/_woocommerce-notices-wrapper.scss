@@ -60,7 +60,6 @@
   left: 0;
   width:100%;
   max-width: 756px;
-  margin-bottom:1.5rem;
   background: transparent;
   p, ul, ol{
     text-align: left;
@@ -72,6 +71,7 @@
     display: inline-grid;
     grid-gap: 0 1.5rem;
     padding: 0;
+    padding-bottom: 1.5rem;
     @include breakpoint($break-tablet){
       grid-template-columns: 1fr 1fr;
     }
