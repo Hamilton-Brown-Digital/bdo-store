@@ -1101,6 +1101,12 @@ ul, ol {
 .background--gray {
   background-color: #F2F2F2; }
 
+.woocommerce {
+  position: relative; }
+  .woocommerce-cart .woocommerce {
+    padding-top: clamp(3rem, 5vw, 6rem);
+    padding-bottom: clamp(3rem, 5vw, 6rem); }
+
 .o-row {
   width: 100%;
   margin-bottom: 30px;
@@ -1595,11 +1601,11 @@ ul, ol {
       align-items: center;
       justify-content: center;
       padding-right: 60px; }
-  .theme-color--orange .c-hero__cta .e-cta-button, .theme-color--orange .c-hero__cta .woocommerce-notices-wrapper a, .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .woocommerce-notices-wrapper .button, .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button {
+  .theme-color--orange .c-hero__cta .e-cta-button, .theme-color--orange .c-hero__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button, .theme-color--orange .c-hero__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button, .theme-color--orange .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button {
     background-color: #df8639; }
-  .theme-color--blue .c-hero__cta .e-cta-button, .theme-color--blue .c-hero__cta .woocommerce-notices-wrapper a, .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .woocommerce-notices-wrapper .button, .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button {
+  .theme-color--blue .c-hero__cta .e-cta-button, .theme-color--blue .c-hero__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button, .theme-color--blue .c-hero__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button, .theme-color--blue .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button {
     background-color: #02A5E2; }
-  .theme-color--green .c-hero__cta .e-cta-button, .theme-color--green .c-hero__cta .woocommerce-notices-wrapper a, .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .woocommerce-notices-wrapper .button, .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button {
+  .theme-color--green .c-hero__cta .e-cta-button, .theme-color--green .c-hero__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button, .theme-color--green .c-hero__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button, .theme-color--green .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button {
     background-color: #218f8b; }
   .c-hero__product-cta__details {
     display: none; }
@@ -2065,7 +2071,7 @@ ul, ol {
     .c-price-comparison__col__cta {
       width: 100%;
       margin-bottom: 2rem; }
-      .c-price-comparison__col__cta .e-cta-button, .c-price-comparison__col__cta .woocommerce-notices-wrapper a, .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-notices-wrapper .button, .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper .woocommerce-message a, .c-basket .woocommerce-notices-wrapper .woocommerce-message .c-price-comparison__col__cta a, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper .woocommerce-message a, .single-product .woocommerce-notices-wrapper .woocommerce-message .c-price-comparison__col__cta a {
+      .c-price-comparison__col__cta .e-cta-button, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta .button {
         width: 100%;
         max-width: 260px;
         white-space: nowrap; }
@@ -3830,6 +3836,8 @@ address {
       .c-dashboard__gated-box__title {
         /* stylelint-disable-next-line */
         margin-bottom: 0 !important; } }
+  .c-dashboard__gated-box__status {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
 
 .e-card {
   display: flex;
@@ -3968,7 +3976,7 @@ address {
     border-radius: 50%;
     content: ''; }
 
-.e-cta-button, .woocommerce-notices-wrapper a, .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .woocommerce-message a, .single-product .woocommerce-notices-wrapper .woocommerce-message a {
+.e-cta-button, .c-basket .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .woocommerce-message a, .single-product .woocommerce-notices-wrapper .woocommerce-message a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -3984,13 +3992,13 @@ address {
   cursor: pointer;
   font-size: 1rem;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
-  .theme-color--orange .e-cta-button, .theme-color--orange .woocommerce-notices-wrapper a, .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-notices-wrapper .button, .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .c-basket .woocommerce-notices-wrapper .woocommerce-message a, .c-basket .woocommerce-notices-wrapper .woocommerce-message .theme-color--orange a, .theme-color--orange .single-product .woocommerce-notices-wrapper .woocommerce-message a, .single-product .woocommerce-notices-wrapper .woocommerce-message .theme-color--orange a {
+  .theme-color--orange .e-cta-button, .theme-color--orange .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .button {
     background: #df8639; }
-  .theme-color--blue .e-cta-button, .theme-color--blue .woocommerce-notices-wrapper a, .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .woocommerce-notices-wrapper .button, .woocommerce-notices-wrapper .theme-color--blue .button, .theme-color--blue .c-basket .woocommerce-notices-wrapper .woocommerce-message a, .c-basket .woocommerce-notices-wrapper .woocommerce-message .theme-color--blue a, .theme-color--blue .single-product .woocommerce-notices-wrapper .woocommerce-message a, .single-product .woocommerce-notices-wrapper .woocommerce-message .theme-color--blue a {
+  .theme-color--blue .e-cta-button, .theme-color--blue .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--blue .button, .theme-color--blue .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--blue .button, .theme-color--blue .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue .button {
     background: #02A5E2; }
-  .theme-color--green .e-cta-button, .theme-color--green .woocommerce-notices-wrapper a, .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .woocommerce-notices-wrapper .button, .woocommerce-notices-wrapper .theme-color--green .button, .theme-color--green .c-basket .woocommerce-notices-wrapper .woocommerce-message a, .c-basket .woocommerce-notices-wrapper .woocommerce-message .theme-color--green a, .theme-color--green .single-product .woocommerce-notices-wrapper .woocommerce-message a, .single-product .woocommerce-notices-wrapper .woocommerce-message .theme-color--green a {
+  .theme-color--green .e-cta-button, .theme-color--green .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--green .button, .theme-color--green .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--green .button, .theme-color--green .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green .button {
     background: #218f8b; }
-  .e-cta-button:after, .woocommerce-notices-wrapper a:after, .woocommerce-notices-wrapper .button:after, .c-basket .woocommerce-notices-wrapper .woocommerce-message a:after, .single-product .woocommerce-notices-wrapper .woocommerce-message a:after {
+  .e-cta-button:after, .c-basket .woocommerce-notices-wrapper a:after, .single-product .woocommerce-notices-wrapper a:after, .c-basket .woocommerce-notices-wrapper .button:after, .single-product .woocommerce-notices-wrapper .button:after, .c-basket .woocommerce-notices-wrapper .woocommerce-message a:after, .single-product .woocommerce-notices-wrapper .woocommerce-message a:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -4000,16 +4008,16 @@ address {
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s;
     content: ''; }
-  .e-cta-button:hover:after, .woocommerce-notices-wrapper a:hover:after, .woocommerce-notices-wrapper .button:hover:after, .c-basket .woocommerce-notices-wrapper .woocommerce-message a:hover:after, .single-product .woocommerce-notices-wrapper .woocommerce-message a:hover:after {
+  .e-cta-button:hover:after, .c-basket .woocommerce-notices-wrapper a:hover:after, .single-product .woocommerce-notices-wrapper a:hover:after, .c-basket .woocommerce-notices-wrapper .button:hover:after, .single-product .woocommerce-notices-wrapper .button:hover:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a:hover:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button:hover:after {
     background-color: rgba(0, 0, 0, 0.1); }
-  .e-cta-button span, .woocommerce-notices-wrapper a span, .woocommerce-notices-wrapper .button span, .c-basket .woocommerce-notices-wrapper .woocommerce-message a span, .single-product .woocommerce-notices-wrapper .woocommerce-message a span {
+  .e-cta-button span, .c-basket .woocommerce-notices-wrapper a span, .single-product .woocommerce-notices-wrapper a span, .c-basket .woocommerce-notices-wrapper .button span, .single-product .woocommerce-notices-wrapper .button span, .c-basket .woocommerce-notices-wrapper .woocommerce-message a span, .single-product .woocommerce-notices-wrapper .woocommerce-message a span, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a span, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button span {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     z-index: 1; }
-  .e-cta-button svg path, .woocommerce-notices-wrapper a svg path, .woocommerce-notices-wrapper .button svg path, .c-basket .woocommerce-notices-wrapper .woocommerce-message a svg path, .single-product .woocommerce-notices-wrapper .woocommerce-message a svg path {
+  .e-cta-button svg path, .c-basket .woocommerce-notices-wrapper a svg path, .single-product .woocommerce-notices-wrapper a svg path, .c-basket .woocommerce-notices-wrapper .button svg path, .single-product .woocommerce-notices-wrapper .button svg path, .c-basket .woocommerce-notices-wrapper .woocommerce-message a svg path, .single-product .woocommerce-notices-wrapper .woocommerce-message a svg path, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a svg path, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button svg path {
     transition: all 300ms;
     fill: #fff; }
   @media (min-width: 40.063em) {
-    .e-cta-button svg, .woocommerce-notices-wrapper a svg, .woocommerce-notices-wrapper .button svg, .c-basket .woocommerce-notices-wrapper .woocommerce-message a svg, .single-product .woocommerce-notices-wrapper .woocommerce-message a svg {
+    .e-cta-button svg, .c-basket .woocommerce-notices-wrapper a svg, .single-product .woocommerce-notices-wrapper a svg, .c-basket .woocommerce-notices-wrapper .button svg, .single-product .woocommerce-notices-wrapper .button svg, .c-basket .woocommerce-notices-wrapper .woocommerce-message a svg, .single-product .woocommerce-notices-wrapper .woocommerce-message a svg, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a svg, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button svg {
       width: 16px;
       height: 18px; } }
   .e-cta-button--red {
@@ -4044,7 +4052,7 @@ address {
     .e-cta-button--outline--inverse:hover {
       background-color: #fff;
       color: #333333; }
-  .c-hero--product .e-cta-button, .c-hero--product .woocommerce-notices-wrapper a, .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .woocommerce-notices-wrapper .button, .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .c-basket .woocommerce-notices-wrapper .woocommerce-message a, .c-basket .woocommerce-notices-wrapper .woocommerce-message .c-hero--product a, .c-hero--product .single-product .woocommerce-notices-wrapper .woocommerce-message a, .single-product .woocommerce-notices-wrapper .woocommerce-message .c-hero--product a {
+  .c-hero--product .e-cta-button, .c-hero--product .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-hero--product .button {
     background-color: transparent;
     border: solid 3px #fff; }
   .e-cta-button--disabled {
@@ -4337,38 +4345,31 @@ hr.e-seperator {
     line-height: 20px;
     font-size: 1rem; }
 
-.woocommerce-notices-wrapper p, .woocommerce-notices-wrapper ul, .woocommerce-notices-wrapper ol {
-  margin-bottom: 0; }
-
-.woocommerce-notices-wrapper a {
-  margin-left: 1.5rem;
-  /* stylelint-disable-next-line */
-  background-color: #333333 !important; }
-
-.woocommerce-notices-wrapper strong {
-  margin-right: 0.5em; }
-
-.woocommerce-notices-wrapper .button {
-  order: 2;
-  background-color: #333333; }
-
-.woocommerce-notices-wrapper .cart-empty {
-  display: none; }
-
-.woocommerce-notices-wrapper * {
-  font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1rem; }
-
 .c-basket .woocommerce-notices-wrapper, .single-product .woocommerce-notices-wrapper {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 5;
-  width: 1560px;
+  width: 100%;
+  max-width: 1560px;
   background-color: #ed1a3b;
   color: #fff; }
-  @media (min-width: 75em) {
-    .c-basket .woocommerce-notices-wrapper, .single-product .woocommerce-notices-wrapper {
-      position: relative;
-      top: 0; } }
+  .c-basket .woocommerce-notices-wrapper p, .c-basket .woocommerce-notices-wrapper ul, .c-basket .woocommerce-notices-wrapper ol, .single-product .woocommerce-notices-wrapper p, .single-product .woocommerce-notices-wrapper ul, .single-product .woocommerce-notices-wrapper ol {
+    margin-bottom: 0; }
+  .c-basket .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper a {
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: #333333 !important; }
+  .c-basket .woocommerce-notices-wrapper strong, .single-product .woocommerce-notices-wrapper strong {
+    margin-right: 0.5em; }
+  .c-basket .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .button {
+    order: 2;
+    background-color: #333333; }
+  .c-basket .woocommerce-notices-wrapper .cart-empty, .single-product .woocommerce-notices-wrapper .cart-empty {
+    display: none; }
+  .c-basket .woocommerce-notices-wrapper *, .single-product .woocommerce-notices-wrapper * {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1rem; }
   .c-basket .woocommerce-notices-wrapper:before, .single-product .woocommerce-notices-wrapper:before {
     position: absolute;
     top: 0;
@@ -4417,7 +4418,22 @@ hr.e-seperator {
   max-width: 756px;
   background: transparent; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper p, .woocommerce-MyAccount-content .woocommerce-notices-wrapper ul, .woocommerce-MyAccount-content .woocommerce-notices-wrapper ol {
+    margin-bottom: 0;
     text-align: left; }
+  .woocommerce-MyAccount-content .woocommerce-notices-wrapper a {
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: #333333 !important; }
+  .woocommerce-MyAccount-content .woocommerce-notices-wrapper strong {
+    margin-right: 0.5em; }
+  .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button {
+    order: 2;
+    background-color: #333333; }
+  .woocommerce-MyAccount-content .woocommerce-notices-wrapper .cart-empty {
+    display: none; }
+  .woocommerce-MyAccount-content .woocommerce-notices-wrapper * {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1rem; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper * {
     color: #333333; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper ul {
@@ -4443,6 +4459,84 @@ hr.e-seperator {
         margin-right: 0.5em;
         background-color: #ed1a3b;
         content: ''; }
+
+.single-product .woocommerce-notices-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  max-width: 1560px;
+  background-color: #ed1a3b;
+  color: #fff;
+  position: absolute;
+  top: unset;
+  bottom: -25px;
+  left: 0;
+  transform: translateY(100%); }
+  .single-product .woocommerce-notices-wrapper p, .single-product .woocommerce-notices-wrapper ul, .single-product .woocommerce-notices-wrapper ol {
+    margin-bottom: 0; }
+  .single-product .woocommerce-notices-wrapper a {
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: #333333 !important; }
+  .single-product .woocommerce-notices-wrapper strong {
+    margin-right: 0.5em; }
+  .single-product .woocommerce-notices-wrapper .button {
+    order: 2;
+    background-color: #333333; }
+  .single-product .woocommerce-notices-wrapper .cart-empty {
+    display: none; }
+  .single-product .woocommerce-notices-wrapper * {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1rem; }
+  .single-product .woocommerce-notices-wrapper:before {
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: #ed1a3b;
+    content: ''; }
+  .single-product .woocommerce-notices-wrapper:after {
+    position: absolute;
+    top: 0;
+    right: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: #ed1a3b;
+    content: ''; }
+  .theme-color--orange .single-product .woocommerce-notices-wrapper {
+    background-color: #df8639; }
+  .theme-color--blue .single-product .woocommerce-notices-wrapper {
+    background-color: #02A5E2; }
+  .theme-color--green .single-product .woocommerce-notices-wrapper {
+    background-color: #218f8b; }
+  .single-product .woocommerce-notices-wrapper .woocommerce-message,
+  .single-product .woocommerce-notices-wrapper .woocommerce-error {
+    padding: 1.5rem;
+    padding-top: 0;
+    text-align: center; }
+  .single-product .woocommerce-notices-wrapper .woocommerce-message a {
+    margin-left: 15px;
+    background-color: #333333; }
+  .single-product .woocommerce-notices-wrapper .woocommerce-error li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .single-product .woocommerce-notices-wrapper .woocommerce-error li:before {
+      display: none; }
+
+.single-product.theme-color--green .woocommerce-notices-wrapper {
+  max-width: unset;
+  background-color: #218f8b; }
+  .single-product.theme-color--green .woocommerce-notices-wrapper:before {
+    background-color: #218f8b; }
+  .single-product.theme-color--green .woocommerce-notices-wrapper:after {
+    background-color: #218f8b; }
 
 
 /*# sourceMappingURL=style.css.map*/
