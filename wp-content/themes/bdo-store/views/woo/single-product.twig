@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    {% do action('woocommerce_before_single_product') %}
+    
 
     {% set linkArr = [{
         'title': 'Product details',
@@ -37,6 +37,7 @@
         </div>
     </div>
 
+    
     {% do action('woocommerce_after_single_product') %}
     
 
