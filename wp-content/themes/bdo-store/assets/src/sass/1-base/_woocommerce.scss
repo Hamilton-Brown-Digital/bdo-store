@@ -1,0 +1,9 @@
+// General woocommerce that doesn't belong anywhere else
+
+.woocommerce{
+  position: relative;
+  .woocommerce-cart &{
+    padding-top: $padding-deep;
+    padding-bottom: $padding-deep;
+  }
+}

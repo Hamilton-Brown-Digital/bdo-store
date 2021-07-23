@@ -1,9 +1,13 @@
 <?php
 
+// remove order again button
+remove_action( 'woocommerce_order_details_after_order_table', 'woocommerce_order_again_button' );
+
 // Remove or rename Account pages
 add_filter( 'woocommerce_account_menu_items', 'woo_change_account_page', 9999 );
 function woo_change_account_page( $items ) {
     unset( $items['downloads'] );
+    unset( $items['payment-methods'] );
 
     $items['dashboard'] = 'My products';
     $items['orders'] = 'Order history';

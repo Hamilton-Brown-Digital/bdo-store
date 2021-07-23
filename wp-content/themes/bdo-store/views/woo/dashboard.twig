@@ -17,6 +17,9 @@
     
     <h3 class="c-dashboard__gated-box__title">{{ gate.title }}</h3>
 
+
+    {% if status == 'completed' %}
+
     {% set buttonArgs = {
         title: btnText,
         url: gate.link,
@@ -24,16 +27,15 @@
         size: 'small'
     } %}
 
-    {% if status != 'completed' %}
-        {% set buttonArgs = buttonArgs|merge({
-            title: 'Processing',
-            url: '#',
-            disabled: true,
-            altClass: 'e-cta-button--disabled'
-        })%}
+    {% include "./elements/button.twig" with buttonArgs %}
+
+    {% else %}
+        <span class="c-dashboard__gated-box__status">
+            {{ 'Processing' }}
+        </span>
     {% endif %}
 
-    {% include "./elements/button.twig" with buttonArgs %}
+    
 </div>
 
 {% endfor %}
