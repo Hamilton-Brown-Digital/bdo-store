@@ -7,6 +7,7 @@
         {% set gated_builder = post.meta('gated_modules') %}
 
         {% include 'partials/hero.twig' with {
+            gated: true,
             header: post.title,
             type: 'shallow'
         } %}
@@ -18,10 +19,40 @@
     {% else %}
 
         {% include 'partials/hero.twig' with {
-            product: true,
-            header: 'Sorry, you cannot access this page',
+            gated: true,
+            header: post.title,
             type: 'shallow'
         } %}
+
+
+        <div class="c-content-row padding background--white">
+            
+            <div class="o-row o-row--no-margin o-row--mobile-loose">
+
+                <div class="o-grid-container c-content-row__container--2-1">
+                
+                    <div class="c-content-row__column">
+                        <h2 class="c-content-row__title">You don't currently have access to this product</h2>
+                        <div class="e-content c-content-row__content">
+                            <p>If you'd like to get it touch, <a href="{{site.url}}/contact">contact us</p>
+                        </div>
+                        <div class="c-content-row__link">
+                            {% include "./elements/button.twig"
+                            with  {
+                                title : 'Return to store',
+                                url: site.url
+                            }
+                            %}
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
 
     {% endif %}
 

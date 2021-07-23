@@ -71,7 +71,8 @@ $color-line-darker:#d8d8d8;
 $color-line-dark:#707070;
 
 // standard border
-$borderline: 2px solid $color-line-darker;
+$borderline: 2px solid $color-line;
+$borderline-darker: 2px solid $color-line-darker;
 
 $color-text-link:$brand-red;
 

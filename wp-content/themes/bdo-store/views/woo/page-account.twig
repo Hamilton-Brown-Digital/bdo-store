@@ -12,7 +12,17 @@
     {% if fn('is_page', 'register') %}
 
         {% filter shortcodes %}
-            [wc_reg_form]
+        <div class="c-account background--gray">
+
+            <div class="o-row o-row--no-margin o-row--mobile-loose">
+
+                <div class="o-grid-container">
+                    [wc_reg_form]
+                </div>
+
+            </div>
+
+        </div>
         {% endfilter %}
 
     {% else %}

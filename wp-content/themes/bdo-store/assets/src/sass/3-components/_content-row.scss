@@ -1,4 +1,8 @@
 .c-content-row {
+  &__title{
+    @include header-small;
+    margin-bottom: 1.5rem;
+  }
   &__container{
     @mixin griddefaults{
       display: grid;

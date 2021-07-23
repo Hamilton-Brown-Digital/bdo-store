@@ -1,15 +1,16 @@
-.woocommerce{
-  position: relative;
-}
-
-.woocommerce-page{
-  .login-register, .c-account, .woocommerce{
-    min-height: 70vh;
-  }
-}
-
 .c-account {
-  min-height: 70vh;
+  flex-grow: 1;
+  .woocommerce {
+    padding-top: 0;
+    .logged-in &{
+      @include breakpoint($break-desktop-med) {
+        display: flex;
+      }
+    }
+  }
+  .logged-in &{
+    background-color:$white;
+  }
   h2, h3, h4{
     margin-bottom:1.5rem;
   }
@@ -47,21 +48,11 @@
   .woocommerce-Button, .woocommerce-button, button, .edit{
     @include form-submit;
   }
-  .woocommerce {
-    .logged-in &{
-      @include breakpoint($break-desktop-med) {
-        display: flex;
-      }
-    }
-  }
-  .logged-in &{
-    background-color:$white;
-  }
   // NAVIGATION
   .woocommerce-MyAccount-navigation {
     position: relative;
-    padding-top: 1.5rem;
-    padding-bottom:1.5rem;
+    padding-top: 3rem;
+    padding-bottom:3rem;
     background-color: $color-bg-feint;
     h2 {
       @include header-small(true);
@@ -76,7 +67,7 @@
     }
     @include breakpoint($break-desktop-med) {
       width: 20%;
-      padding: 70px 50px 70px 0;
+      padding-left: 50px;
     }
 
     &:before {
@@ -111,11 +102,16 @@
 
   // CONTENT AREA
   .woocommerce-MyAccount-content {
-    padding: 40px 0;
+    p{
+      margin-bottom: 1.5rem;
+    }
+    position: relative;
+    padding: 3rem 0;
     @include breakpoint($break-desktop-med) {
       width: 80%;
+      min-height: 70vh;
       padding:clamp(20px, 8vw, 140px);
-      padding-top:70px;
+      padding-top:3rem;
       padding-right: 0;
     }
   }
@@ -124,14 +120,82 @@
     margin-bottom:3rem;
     @include header-small;
   }
+
+
+
+
+  // ORDER DETAILS
+  .woocommerce-order-details,
+  .woocommerce-customer-details {
+    max-width: 756px;
+    margin-top: 1.5rem;
+    padding-top: 3rem;
+  }
+
+  .woocommerce-table--order-details{
+    width: 100%;
+    thead, tbody, tfoot, tr, td{
+      display: block;
+    }
+    thead, tbody{
+      border-bottom: $borderline-darker;
+    }
+    tbody, tfoot{
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    tr{
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+    thead{
+      tr{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+  .woocommerce-table__product-name{
+    ul.wc-item-meta li{
+      margin-top: 0.75rem;
+      @include text-tiny;
+    }
+    ul.wc-item-meta li p{
+      @include text-tiny;
+      margin-bottom: 0;
+    }
+  }
+  p.order-again{
+    margin-bottom: 3rem;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ORDER
 .woocommerce-order-details__title,
 .woocommerce-column__title,
 .woocommerce-Address-title {
-  margin-bottom: 20px;
-  line-height: 30px;
+  margin-bottom: 1.5rem;
   @include font-size(26);
 }
 .woocommerce-Addresses{
@@ -143,7 +207,7 @@
 }
 .woocommerce-Address{
   max-width: 756px;
-  margin-top: 30px;
+  margin-top: 1.5rem;
   @include bordered-box--small;
   h3{
     margin-bottom: 0;
@@ -167,7 +231,7 @@ mark {
     align-items: center;
     width: 100%;
     padding: 1.5rem 0;
-    border-top: $borderline;
+    border-top: $borderline-darker;
     &:first-of-type{
       padding-top: 0;
       border-top: none;
@@ -211,7 +275,7 @@ mark {
     tr{
       td{
         @include breakpoint(0 $break-desktop-med) {
-          @include font-size(14);
+          @include text-tiny;
         }
         &.woocommerce-orders-table__cell-order-total{
           flex-direction: column;
@@ -251,19 +315,6 @@ mark {
   }
 }
 
-// ORDER DETAILS
-.woocommerce-order-details,
-.woocommerce-customer-details {
-  margin-top: 30px;
-}
-
-.woocommerce-table {
-  tbody {
-    td {
-      padding: 20px 0;
-    }
-  }
-}
 
 // ADDRESS FIELDS
 address{

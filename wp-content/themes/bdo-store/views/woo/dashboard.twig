@@ -2,8 +2,9 @@
 
 {% if gated %}
 
-{% for gate in gated %}
+<div class="c-dashboard__list">
 
+{% for gate in gated %}
     {% set status = gate['status'] %}
     {% set gate = TimberPost(gate['gate']) %}
 
@@ -12,14 +13,32 @@
         {% set btnText = gate.gated_button_overwrite %}
     {% endif %}
 
-    {% include "./elements/gated-box.twig" with {
-        title: gate.title,
-        button_text: btnText,
-        button_url: gate.link,
-        status: status
+    <div class="c-dashboard__gated-box c-dashboard__gated-box--{{ status }}">
+    
+    <h3 class="c-dashboard__gated-box__title">{{ gate.title }}</h3>
+
+    {% set buttonArgs = {
+        title: btnText,
+        url: gate.link,
+        color: 'red',
+        size: 'small'
     } %}
 
+    {% if status != 'completed' %}
+        {% set buttonArgs = buttonArgs|merge({
+            title: 'Processing',
+            url: '#',
+            disabled: true,
+            altClass: 'e-cta-button--disabled'
+        })%}
+    {% endif %}
+
+    {% include "./elements/button.twig" with buttonArgs %}
+</div>
+
 {% endfor %}
+
+</div>
 
 {% endif %}
 
