@@ -24,7 +24,7 @@
       display: block;
       flex-grow: 1;
       @include font-bold;
-      @include font-size(14);
+      @include text-tiny;
     }
   }
 
@@ -99,7 +99,7 @@
             border-top:8px solid transparent;
             border-bottom:8px solid transparent;
             box-sizing: border-box;
-            @include font-size(14);
+            @include text-tiny;
           }
         }
         

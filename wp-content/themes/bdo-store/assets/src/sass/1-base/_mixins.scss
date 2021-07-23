@@ -77,6 +77,23 @@
   }
 }
 
+@mixin listitemdefaults{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4em;
+  list-style: none;
+  line-height: 1.4;
+  &:before {
+    flex-grow: 0;
+    width: 5px;
+    height: 5px;
+    margin-right: 0.5em;
+    background-color: $color-text-link;
+    content: '';
+  }
+}
+
 
 @mixin text-format {
   h2, h3, h4, h5, p, ul, ol, hr{
@@ -119,20 +136,7 @@
 
   ul {
     li {
-      position: relative;
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.4em;
-      list-style: none;
-      line-height: 1.4;
-      &:before {
-        flex-grow: 0;
-        width: 5px;
-        height: 5px;
-        margin-right: 0.5em;
-        background-color: $color-text-link;
-        content: '';
-      }
+      @include listitemdefaults;
     }
   }
 
@@ -170,7 +174,7 @@
 }
 @mixin text-tiny{
   @include font-size(14);
-  line-height: 1.4;
+  line-height: 1.2;
 }
 @mixin text-small{
   @include font-size(16);
@@ -278,7 +282,7 @@
 @mixin header-tagline{
   color: $brand-red;
   text-transform: uppercase;
-  @include font-size(14);
+  @include text-tiny;
   @include breakpoint($break-tablet){
     @include font-size(16);
   }
@@ -425,6 +429,7 @@
   cursor:pointer;
   @include font-size(16);
   @include font-bold;
+  @include page-color('background');
   &:after{
     position: absolute;
     top:0;
@@ -502,7 +507,7 @@
   margin-bottom: 1.5rem;
   padding: 0.6em;
   background-color: $white;
-  border: $borderline;
+  border: $borderline-darker;
   font-size:16px;
   @include breakpoint($break-desktop-wide) {
     margin-bottom: 1.5rem;
@@ -512,7 +517,7 @@
   width: 100%;
   padding: 0.6em;
   background-color: $white;
-  border: $borderline;
+  border: $borderline-darker;
   font-size:16px;
 }
 
@@ -521,7 +526,7 @@
   height: 12em;
   padding: 0.6em;
   background-color: $white;
-  border: $borderline;
+  border: $borderline-darker;
   font-size:16px;
   @include breakpoint($break-desktop-wide) {
     margin-bottom: 1.5rem;
@@ -538,7 +543,7 @@
   background-image:url('#{$image-path}/icons/arrow-down.svg');
   background-repeat: no-repeat;
   background-position: center right 0.6em;
-  border: $borderline;
+  border: $borderline-darker;
   color: unset;
   font-size:16px;
   cursor: pointer;

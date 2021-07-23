@@ -1,54 +1,40 @@
-.woocommerce-notices-wrapper{
+@mixin notice-strip{
   position: relative;
   z-index: 5;
-  width: 100%;
-  margin-bottom: 3rem;
-  overflow: hidden;
+  width: $site-width;
   background-color: $brand-red;
   color: $white;
-  &:before{
-    content: '';
-    
-  }
-  &:after{
-    content: '';
-  }
-  *{
-    @include font-bold;
-    @include font-size(16);
-  }
-  @include page-color(background-color);
-  @include breakpoint($break-desktop) {
+  @include breakpoint($break-desktop-wide) {
+    position: relative;
     top: 0;
   }
+  &:before{
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: $brand-red;
+    content: '';
+  }
+  &:after{
+    position: absolute;
+    top: 0;
+    right: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: $brand-red;
+    content: '';
+  }
+  @include page-color(background-color);
   .woocommerce-message,
   .woocommerce-error {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: $site-width;
-    margin: 0 auto;
     padding: 1.5rem;
+    padding-top: 0;
+    text-align: center;
   }
-
-  p {
-    margin-top: 3px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    @include breakpoint($break-desktop) {
-      margin-bottom: 0;
-    }
-  }
-
-  .e-cta-button {
-    width: 100%;
-    background-color: $color-bg-solid;
-    color: $white;
-    @include breakpoint($break-desktop) {
-      width: auto;
-    }
-  }
-
   .woocommerce-message {
     a {
       @extend .e-cta-button;
@@ -56,27 +42,80 @@
       background-color: $color-bg-solid;
     }
   }
-
-  .woocommerce-error {
-    li {
+  .woocommerce-error{
+    li{
+      list-style-type: none;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-    }
-    p {
-      order: 1;
-    }
-    strong{
-      margin-right: 0.5em;
-    }
-    .button {
-      order: 2;
-      background-color: $color-bg-solid;
-      @extend .e-cta-button;
+      justify-content: center;
+      &:before{
+        display: none;
+      }
     }
   }
+}
 
+@mixin notice-inline{
+  position: relative;
+  left: 0;
+  width:100%;
+  max-width: 756px;
+  background: transparent;
+  p, ul, ol{
+    text-align: left;
+  }
+  & *{
+    color:$color-text;
+  }
+  ul{
+    display: inline-grid;
+    grid-gap: 0 1.5rem;
+    padding: 0;
+    padding-bottom: 1.5rem;
+    @include breakpoint($break-tablet){
+      grid-template-columns: 1fr 1fr;
+    }
+    li{
+      text-align: left;
+      @include listitemdefaults;
+    }
+  }
+}
+
+
+
+
+
+
+.woocommerce-notices-wrapper{
+  p, ul, ol{
+    margin-bottom: 0;
+  }
+  a {
+    @extend .e-cta-button;
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: $color-bg-solid !important;
+  }
+  strong{
+    margin-right: 0.5em;
+  }
+  .button {
+    order: 2;
+    background-color: $color-bg-solid;
+    @extend .e-cta-button;
+  }
   .cart-empty {
     display: none;
+  }
+  *{
+    @include font-bold;
+    @include font-size(16);
+  }
+  .c-basket &, .single-product &{
+    @include notice-strip;
+  }
+  .woocommerce-MyAccount-content &{
+    @include notice-inline;
   }
 }

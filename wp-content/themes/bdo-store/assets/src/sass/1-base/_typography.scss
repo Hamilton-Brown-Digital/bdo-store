@@ -52,9 +52,9 @@ a{
 }
 
 p {
+  margin-bottom: 0;
   color: inherit;
   font-family: inherit;
-  font-weight: $reg;
   line-height: 1.4;
   @include font-size(16);
   @include breakpoint($break-desktop) {
@@ -63,13 +63,10 @@ p {
 }
 
 ul, ol {
-  margin-bottom: 20px;
+  margin-bottom: 0;
   padding: 0;
-  line-height: 24px;
   @include font-size(16);
-
   @include breakpoint($break-desktop) {
     @include font-size(19);
-    line-height: 28px;
   }
 }

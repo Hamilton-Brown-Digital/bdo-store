@@ -19,7 +19,6 @@ body {
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  background-color: $color-bg-feint;
   color:$color-text;
   font-family: $font-primary;
   font-weight: $reg;
@@ -75,6 +74,8 @@ textarea {
 
 .main {
   position: relative;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   padding-top: 82px;
   @include breakpoint($break-tablet) {
