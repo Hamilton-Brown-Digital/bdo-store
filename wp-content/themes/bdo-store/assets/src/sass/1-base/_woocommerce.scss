@@ -7,3 +7,29 @@
     padding-bottom: $padding-deep;
   }
 }
+
+@mixin variationtable{
+  /* stylelint-disable */
+  display: grid;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+  grid-template-columns:40% 1fr;
+  gap:0.5em 1em;
+  dt, dd, p{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: $font-primary;
+    font-size:14px !important;
+    font-weight: 100 !important;
+    line-height: 1.2 !important;
+  }
+  dt, dd{
+    @include breakpoint($break-desktop) {
+      display: block;  
+    }
+  }
+  dt{
+    padding-right: 0.5em;
+  }
+  /* stylelint-enable */
+}
