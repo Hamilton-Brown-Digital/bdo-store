@@ -1148,7 +1148,6 @@ strong, strong p {
       position: relative;
       display: flex;
       align-items: flex-start;
-      margin-bottom: 0.4em;
       list-style: none;
       line-height: 1.4; }
       .woocommerce-NoticeGroup ul li:before {
@@ -1784,7 +1783,6 @@ strong, strong p {
     position: relative;
     display: flex;
     align-items: flex-start;
-    margin-bottom: 0.4em;
     list-style: none;
     line-height: 1.4; }
     .c-404__main ul li:before {
@@ -2269,7 +2267,6 @@ strong, strong p {
     position: relative;
     display: flex;
     align-items: flex-start;
-    margin-bottom: 0.4em;
     list-style: none;
     line-height: 1.4; }
     .c-content-row__content ul li:before {
@@ -2303,6 +2300,94 @@ strong, strong p {
 
 .c-content-block__link {
   margin-top: 3rem; }
+
+.c-content-block__content h2, .c-content-block__content h3, .c-content-block__content h4, .c-content-block__content h5, .c-content-block__content p, .c-content-block__content ul, .c-content-block__content ol, .c-content-block__content hr {
+  margin-bottom: 1.5rem; }
+
+.c-content-block__content h2 {
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+  font-size: 1.25rem; }
+  @media (min-width: 22.438em) {
+    .c-content-block__content h2 {
+      font-size: 1.5625rem; } }
+  @media (min-width: 40.063em) {
+    .c-content-block__content h2 {
+      font-size: 1.875rem; } }
+  @media (min-width: 50em) {
+    .c-content-block__content h2 {
+      font-size: 2.5rem; } }
+  .c-content-block__content h2:after {
+    content: '';
+    display: block;
+    width: 72px;
+    height: 6px;
+    margin: clamp(1rem, 1.5em, 3rem) 0;
+    padding: 0;
+    background-color: #ed1a3b;
+    border: none; }
+    @media (min-width: 50em) {
+      .c-content-block__content h2:after {
+        width: 220px;
+        height: 8px; } }
+
+.c-content-block__content p {
+  margin-bottom: 1em; }
+
+.c-content-block__content a {
+  color: #ed1a3b;
+  text-decoration: underline; }
+
+.c-content-block__content p, .c-content-block__content a, .c-content-block__content li {
+  font-size: 1.1875rem; }
+
+.c-content-block__content a:active {
+  border-bottom: 1px solid #ed1a3b; }
+
+.c-content-block__content a:focus {
+  border-bottom: 1px solid #ed1a3b; }
+
+.c-content-block__content a:visited {
+  border-bottom: 1px solid #ed1a3b; }
+
+.c-content-block__content hr {
+  border-top-color: #F2F2F2; }
+
+.c-content-block__content ol,
+.c-content-block__content ul {
+  list-style-position: inside; }
+
+.c-content-block__content ul li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  line-height: 1.4; }
+  .c-content-block__content ul li:before {
+    position: relative;
+    top: 0.5em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    margin-right: 1em;
+    background-color: #ed1a3b;
+    content: ''; }
+
+.c-content-block__content ol {
+  list-style: none;
+  counter-reset: li; }
+  .c-content-block__content ol li {
+    counter-increment: item;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4em;
+    list-style: none;
+    line-height: 1.4; }
+    .c-content-block__content ol li:before {
+      margin-right: 10px;
+      color: #ed1a3b;
+      content: counter(item) ". "; }
 
 .c-quote {
   position: relative;
@@ -3759,7 +3844,6 @@ address {
     position: relative;
     display: flex;
     align-items: flex-start;
-    margin-bottom: 0.4em;
     list-style: none;
     line-height: 1.4; }
     .c-signpost__content-main ul li:before {
@@ -3872,7 +3956,6 @@ address {
       position: relative;
       display: flex;
       align-items: flex-start;
-      margin-bottom: 0.4em;
       list-style: none;
       line-height: 1.4; }
       .c-download__main__content ul li:before {
@@ -3971,7 +4054,6 @@ address {
       position: relative;
       display: flex;
       align-items: flex-start;
-      margin-bottom: 0.4em;
       list-style: none;
       line-height: 1.4; }
       .c-download__item__description ul li:before {
@@ -4050,7 +4132,6 @@ address {
     position: relative;
     display: flex;
     align-items: flex-start;
-    margin-bottom: 0.4em;
     list-style: none;
     line-height: 1.4; }
     .c-download__item__additional-content ul li:before {
@@ -4875,7 +4956,6 @@ hr.e-seperator {
       position: relative;
       display: flex;
       align-items: flex-start;
-      margin-bottom: 0.4em;
       list-style: none;
       line-height: 1.4; }
       .woocommerce-MyAccount-content .woocommerce-notices-wrapper ul li:before {
