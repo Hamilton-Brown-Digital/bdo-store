@@ -70,7 +70,3 @@ ul, ol {
     @include font-size(19);
   }
 }
-
-strong, strong p{
-  @include font-bold;
-}
