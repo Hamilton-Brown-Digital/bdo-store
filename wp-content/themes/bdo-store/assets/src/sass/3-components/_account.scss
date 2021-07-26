@@ -128,7 +128,7 @@
   // ORDER DETAILS
   .woocommerce-order-details,
   .woocommerce-customer-details {
-    max-width: 756px;
+    max-width: 800px;
     margin-top: 1.5rem;
     padding-top: 3rem;
   }
@@ -207,7 +207,7 @@
   }
 }
 .woocommerce-Address{
-  max-width: 756px;
+  max-width: 800px;
   margin-top: 1.5rem;
   @include bordered-box--small;
   h3{
@@ -284,9 +284,13 @@ mark {
         }
         &.woocommerce-orders-table__cell-order-actions{
           display: flex;
-          flex-direction: row-reverse;
+          flex-direction: row;
           align-items: center;
-          gap: 1.5rem;
+          .woocommerce-button{
+            height: auto;
+            margin-bottom: 0;
+            padding: 1em 1em;
+          }
           &:after{
             display: block;
             flex-grow: 1;

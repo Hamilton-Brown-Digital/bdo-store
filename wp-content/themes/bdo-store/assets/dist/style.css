@@ -922,6 +922,7 @@ body {
     box-sizing: inherit; }
 
 address {
+  font-size: inherit;
   font-style: inherit; }
 
 figure {
@@ -1034,9 +1035,6 @@ ul, ol {
     ul, ol {
       font-size: 1.1875rem; } }
 
-strong, strong p {
-  font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
-
 .flex {
   display: flex;
   align-items: center;
@@ -1114,7 +1112,7 @@ strong, strong p {
   position: relative;
   left: 0;
   width: 100%;
-  max-width: 756px;
+  max-width: 800px;
   background: transparent; }
   .woocommerce-NoticeGroup p, .woocommerce-NoticeGroup ul, .woocommerce-NoticeGroup ol {
     margin-bottom: 0;
@@ -1160,6 +1158,12 @@ strong, strong p {
         margin-right: 1em;
         background-color: #ed1a3b;
         content: ''; }
+
+address, address p {
+  font-size: 1.1875rem; }
+
+address p {
+  margin-top: 0.5em; }
 
 .o-row {
   width: 100%;
@@ -2714,7 +2718,7 @@ strong, strong p {
         font-size: 1.5rem; } }
   .c-account .woocommerce-order-details,
   .c-account .woocommerce-customer-details {
-    max-width: 756px;
+    max-width: 800px;
     margin-top: 1.5rem;
     padding-top: 3rem; }
   .c-account .woocommerce-table--order-details {
@@ -2759,7 +2763,7 @@ strong, strong p {
     grid-template-columns: 1fr 1fr; } }
 
 .woocommerce-Address {
-  max-width: 756px;
+  max-width: 800px;
   margin-top: 1.5rem;
   padding: 1.5rem;
   border: 2px solid #F2F2F2; }
@@ -2826,9 +2830,12 @@ mark {
       flex-direction: column; }
     .woocommerce-orders-table tbody tr td.woocommerce-orders-table__cell-order-actions {
       display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: 1.5rem; }
+      flex-direction: row;
+      align-items: center; }
+      .woocommerce-orders-table tbody tr td.woocommerce-orders-table__cell-order-actions .woocommerce-button {
+        height: auto;
+        margin-bottom: 0;
+        padding: 1em 1em; }
       .woocommerce-orders-table tbody tr td.woocommerce-orders-table__cell-order-actions:after {
         display: block;
         flex-grow: 1;
@@ -2852,7 +2859,7 @@ address {
 .woocommerce-address-fields,
 .edit-account {
   width: 100%;
-  max-width: 756px; }
+  max-width: 800px; }
   .woocommerce-address-fields label,
   .edit-account label {
     display: block;
@@ -3316,9 +3323,12 @@ address {
         width: 220px;
         height: 8px; } }
 
+.c-checkout strong {
+  font-weight: normal; }
+
 .c-checkout .checkout_coupon {
   width: 100%;
-  max-width: 756px;
+  max-width: 800px;
   margin-bottom: 3rem; }
   .c-checkout .checkout_coupon p {
     margin-bottom: 1.5rem; }
@@ -3383,7 +3393,7 @@ address {
 .c-checkout .woocommerce-error {
   margin-bottom: 1.5rem; }
 
-.c-checkout .woocommerce-billing-fields, .c-checkout .woocommerce-additional-fields {
+.c-checkout .woocommerce-billing-fields, .c-checkout .woocommerce-account-fields, .c-checkout .woocommerce-additional-fields {
   margin-bottom: 3rem; }
 
 .c-checkout .woocommerce-info {
@@ -3391,7 +3401,7 @@ address {
 
 .c-checkout .woocommerce-checkout {
   width: 100%;
-  max-width: 756px; }
+  max-width: 800px; }
   .c-checkout .woocommerce-checkout input {
     width: 100%;
     margin-bottom: 1.5rem;
@@ -3471,7 +3481,6 @@ address {
     width: 100%;
     margin-bottom: 1.5rem;
     padding: 0;
-    padding: 0.8em;
     background-color: #fff;
     background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down.svg");
     background-repeat: no-repeat;
@@ -3492,51 +3501,55 @@ address {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-blue.svg"); }
     .theme-color--green .c-checkout .woocommerce-checkout .select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-green.svg"); }
-    .c-checkout .woocommerce-checkout .select option {
+    .c-checkout .woocommerce-checkout .select select, .c-checkout .woocommerce-checkout .select option {
       display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0.8em;
       font-family: "Proxima Nova Regular", sans-serif; }
   .c-checkout .woocommerce-checkout #billing_country_field {
     padding-bottom: 1.5rem; }
     .c-checkout .woocommerce-checkout #billing_country_field .select2-selection {
       height: auto; }
 
+.c-checkout .shop_table {
+  width: 100%;
+  margin-bottom: 3rem; }
+  .c-checkout .shop_table thead, .c-checkout .shop_table tbody, .c-checkout .shop_table tfoot, .c-checkout .shop_table tr, .c-checkout .shop_table td {
+    display: block; }
+  .c-checkout .shop_table thead, .c-checkout .shop_table tbody {
+    border-bottom: 2px solid #d8d8d8; }
+  .c-checkout .shop_table tbody, .c-checkout .shop_table tfoot {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
+  .c-checkout .shop_table thead {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
+    .c-checkout .shop_table thead th {
+      font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+  .c-checkout .shop_table tr {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 70% 1fr;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem; }
+    .c-checkout .shop_table tr .product-total {
+      text-align: right; }
+    .c-checkout .shop_table tr strong * {
+      font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+    .c-checkout .shop_table tr .woocommerce-Price-amount {
+      display: flex;
+      justify-content: flex-end;
+      font-family: "Proxima Nova Regular", sans-serif, sans-serif; }
+  .c-checkout .shop_table tfoot tr {
+    margin-bottom: 0.75rem; }
+  .c-checkout .shop_table tfoot th {
+    font-family: "Proxima Nova Regular", sans-serif, sans-serif; }
+  .c-checkout .shop_table .cart-subtotal th {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+
 .c-checkout .woocommerce-checkout-review-order {
   font-size: 1.125rem; }
-  .c-checkout .woocommerce-checkout-review-order .shop_table {
-    width: 100%;
-    margin-bottom: 3rem; }
-    .c-checkout .woocommerce-checkout-review-order .shop_table thead, .c-checkout .woocommerce-checkout-review-order .shop_table tbody, .c-checkout .woocommerce-checkout-review-order .shop_table tfoot, .c-checkout .woocommerce-checkout-review-order .shop_table tr, .c-checkout .woocommerce-checkout-review-order .shop_table td {
-      display: block; }
-    .c-checkout .woocommerce-checkout-review-order .shop_table thead, .c-checkout .woocommerce-checkout-review-order .shop_table tbody {
-      border-bottom: 2px solid #d8d8d8; }
-    .c-checkout .woocommerce-checkout-review-order .shop_table tbody, .c-checkout .woocommerce-checkout-review-order .shop_table tfoot {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem; }
-    .c-checkout .woocommerce-checkout-review-order .shop_table thead {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem; }
-      .c-checkout .woocommerce-checkout-review-order .shop_table thead th {
-        font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
-    .c-checkout .woocommerce-checkout-review-order .shop_table tr {
-      display: grid;
-      width: 100%;
-      grid-template-columns: 70% 1fr;
-      -moz-column-gap: 1.5rem;
-           column-gap: 1.5rem; }
-      .c-checkout .woocommerce-checkout-review-order .shop_table tr .product-total {
-        text-align: right; }
-      .c-checkout .woocommerce-checkout-review-order .shop_table tr strong * {
-        font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
-      .c-checkout .woocommerce-checkout-review-order .shop_table tr .woocommerce-Price-amount {
-        display: flex;
-        justify-content: flex-end;
-        font-family: "Proxima Nova Regular", sans-serif, sans-serif; }
-    .c-checkout .woocommerce-checkout-review-order .shop_table tfoot tr {
-      margin-bottom: 0.75rem; }
-    .c-checkout .woocommerce-checkout-review-order .shop_table tfoot th {
-      font-family: "Proxima Nova Regular", sans-serif, sans-serif; }
-    .c-checkout .woocommerce-checkout-review-order .shop_table .cart-subtotal th {
-      font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
   .c-checkout .woocommerce-checkout-review-order .cart_item {
     margin-bottom: 1.5rem; }
     .c-checkout .woocommerce-checkout-review-order .cart_item .product-name {
@@ -3564,6 +3577,71 @@ address {
           display: block; } }
       .c-checkout .woocommerce-checkout-review-order .cart_item .variation dt {
         padding-right: 0.5em; }
+
+.c-checkout .woocommerce-order {
+  max-width: 800px; }
+  .c-checkout .woocommerce-order h2 {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.25rem; }
+    @media (min-width: 22.438em) {
+      .c-checkout .woocommerce-order h2 {
+        font-size: 1.5625rem; } }
+    @media (min-width: 40.063em) {
+      .c-checkout .woocommerce-order h2 {
+        font-size: 1.875rem; } }
+    @media (min-width: 50em) {
+      .c-checkout .woocommerce-order h2 {
+        font-size: 2.5rem; } }
+    .c-checkout .woocommerce-order h2:after {
+      content: '';
+      display: block;
+      width: 72px;
+      height: 6px;
+      margin: clamp(1rem, 1.5em, 3rem) 0;
+      padding: 0;
+      background-color: #ed1a3b;
+      border: none; }
+      @media (min-width: 50em) {
+        .c-checkout .woocommerce-order h2:after {
+          width: 220px;
+          height: 8px; } }
+    .c-checkout .woocommerce-order h2:after {
+      display: block;
+      width: 72px;
+      height: 6px;
+      margin: clamp(1rem, 1.5em, 3rem) 0;
+      padding: 0;
+      background-color: #ed1a3b;
+      border: none;
+      max-width: 86px; }
+      @media (min-width: 50em) {
+        .c-checkout .woocommerce-order h2:after {
+          width: 220px;
+          height: 8px; } }
+  .c-checkout .woocommerce-order p {
+    margin-bottom: 1.5rem; }
+  .c-checkout .woocommerce-order ul li {
+    margin-bottom: 1.5rem; }
+  .c-checkout .woocommerce-order .woocommerce-order-overview {
+    margin-bottom: 1.5rem; }
+  .c-checkout .woocommerce-order .woocommerce-table {
+    /* stylelint-disable */
+    font-size: 1.1875rem;
+    /* stylelint-enable */ }
+    .c-checkout .woocommerce-order .woocommerce-table tfoot tr td {
+      text-align: right; }
+    .c-checkout .woocommerce-order .woocommerce-table tfoot tr:last-of-type td span {
+      font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+    .c-checkout .woocommerce-order .woocommerce-table ul.wc-item-meta li {
+      margin-top: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.2; }
+    .c-checkout .woocommerce-order .woocommerce-table ul.wc-item-meta li p {
+      font-size: 0.875rem;
+      line-height: 1.2;
+      margin-bottom: 0; }
+  .c-checkout .woocommerce-order section:first-of-type {
+    margin-top: 6rem; }
 
 .wc_payment_method {
   /* stylelint-disable */
@@ -3688,12 +3766,15 @@ address {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-auto-rows: auto;
-      gap: 3rem; }
+      grid-gap: 2rem 3rem; }
       .c-product-box .variations tbody tr {
         display: flex;
         flex-direction: column; }
+        .c-product-box .variations tbody tr:only-child {
+          grid-column-start: 1;
+          grid-column-end: 3; }
         .c-product-box .variations tbody tr:last-of-type {
-          grid-column-end: span 2; }
+          grid-column-end: 3; }
     .c-product-box .variations label {
       display: block;
       font-size: 1rem;
@@ -3716,7 +3797,6 @@ address {
       width: 100%;
       margin-bottom: 1.5rem;
       padding: 0;
-      padding: 0.8em;
       background-color: #fff;
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down.svg");
       background-repeat: no-repeat;
@@ -3725,9 +3805,18 @@ address {
       color: unset;
       cursor: pointer;
       font-size: 1rem;
+      display: block;
+      width: 100%;
+      height: 4rem;
+      padding: 0.8em;
+      padding-left: 0;
       background-color: transparent;
       border: none;
-      border-bottom: 2px solid #ed1a3b; }
+      border-bottom: 2px solid #ed1a3b;
+      font-family: "Proxima Nova Regular", sans-serif;
+      line-height: 1.2;
+      white-space: break-spaces;
+      font-size: 0.875rem; }
       .theme-color--orange .c-product-box .variations select {
         border-bottom-color: #df8639; }
       .theme-color--blue .c-product-box .variations select {
@@ -3740,8 +3829,11 @@ address {
         background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-blue.svg"); }
       .theme-color--green .c-product-box .variations select {
         background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-green.svg"); }
-      .c-product-box .variations select option {
+      .c-product-box .variations select select, .c-product-box .variations select option {
         display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0.8em;
         font-family: "Proxima Nova Regular", sans-serif; }
   .c-product-box .single_variation_wrap {
     display: flex;
@@ -4262,7 +4354,7 @@ address {
 
 .c-form__container {
   width: 100%;
-  max-width: 756px; }
+  max-width: 800px; }
 
 .c-form .ginput_container_select {
   position: relative;
@@ -4270,7 +4362,6 @@ address {
   width: 100%;
   margin-bottom: 1.5rem;
   padding: 0;
-  padding: 0.8em;
   background-color: #fff;
   background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down.svg");
   background-repeat: no-repeat;
@@ -4293,8 +4384,11 @@ address {
     background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-blue.svg"); }
   .theme-color--green .c-form .ginput_container_select {
     background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-green.svg"); }
-  .c-form .ginput_container_select option {
+  .c-form .ginput_container_select select, .c-form .ginput_container_select option {
     display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.8em;
     font-family: "Proxima Nova Regular", sans-serif; }
 
 .c-form label {
@@ -4625,7 +4719,7 @@ hr.e-seperator {
       align-items: center;
       justify-content: center;
       width: 100%;
-      max-width: 756px;
+      max-width: 800px;
       margin-right: auto;
       margin-left: auto; } }
 
@@ -4941,7 +5035,7 @@ hr.e-seperator {
   position: relative;
   left: 0;
   width: 100%;
-  max-width: 756px;
+  max-width: 800px;
   background: transparent; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper p, .woocommerce-MyAccount-content .woocommerce-notices-wrapper ul, .woocommerce-MyAccount-content .woocommerce-notices-wrapper ol {
     margin-bottom: 0;

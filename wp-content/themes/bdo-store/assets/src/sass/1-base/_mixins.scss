@@ -497,11 +497,13 @@
 
 // form mixins
 
+
 @mixin form-container{
   width:100%;
-  max-width:756px;
+  max-width:800px;
 }
 
+// form label
 @mixin form-label{
   display: block;
   @include font-size(16);
@@ -522,6 +524,8 @@
   border: $borderline-darker;
   @include font-size(16);
 }
+
+// inline text input
 @mixin form-input-text--inline{
   width: 100%;
   padding: 0.6em;
@@ -530,6 +534,7 @@
   @include font-size(16);
 }
 
+// textara
 @mixin form-input-textarea{
   width: 100%;
   height: 12em;
@@ -540,13 +545,13 @@
   @include font-size(16);
 }
 
+// dropdown
 @mixin form-dropdown{
   position: relative;
   width: 100%;
   width: 100%;
   margin-bottom: 1.5rem;
   padding: 0;
-  padding:0.8em;
   background-color:$white;
   background-image:url('#{$image-path}/icons/arrow-down.svg');
   background-repeat: no-repeat;
@@ -565,12 +570,16 @@
   .theme-color--green &{
     background-image:url('#{$image-path}/icons/arrow-down-green.svg');
   }
-  option{
+  select, option{
     display: block;
+    width: 100%;
+    height: 100%;
+    padding:0.8em;
     font-family: $font-primary;
   }
 }
 
+// submit button
 @mixin form-submit{
   @include buttondefaults;
   margin-left: auto;
@@ -689,7 +698,7 @@
   position: relative;
   left: 0;
   width:100%;
-  max-width: 756px;
+  max-width: 800px;
   background: transparent;
   p, ul, ol{
     margin-bottom: 0;
