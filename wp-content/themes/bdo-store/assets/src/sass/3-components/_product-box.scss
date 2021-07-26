@@ -53,12 +53,16 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-auto-rows: auto;
-      gap: 3rem;
+      grid-gap: 2rem 3rem;
       tr{
         display: flex;
         flex-direction: column;
+        &:only-child{
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
         &:last-of-type{
-          grid-column-end: span 2;
+          grid-column-end: 3;
         }
       }
     }
@@ -76,13 +80,19 @@
     }
     select{
       @include form-dropdown;
+      display: block;
+      width: 100%;
+      height: 4rem;
+      padding:0.8em;
+      padding-left: 0;
       background-color: transparent;
       border: none;
       border-bottom:2px solid $brand-red;
+      font-family: $font-primary;
+      line-height: 1.2;
+      white-space: break-spaces;
+      @include font-size(14);
     }
-  }
-  .single_variation{
-    //margin-bottom: 1.5rem;
   }
   .single_variation_wrap{
     display: flex;

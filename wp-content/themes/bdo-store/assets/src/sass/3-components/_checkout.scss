@@ -1,12 +1,14 @@
 .c-checkout {
-
   h3 {
     @include header-regular(true, true);
     margin-bottom: 1.5rem;
   }
+  strong{
+    font-weight: $reg;
+  }
   .checkout_coupon{
     width: 100%;
-    max-width: 756px;
+    max-width: 800px;
     margin-bottom: 3rem;
     p{
       margin-bottom: 1.5rem;
@@ -22,7 +24,7 @@
   .woocommerce-error{
     margin-bottom: 1.5rem;
   }
-  .woocommerce-billing-fields, .woocommerce-additional-fields{
+  .woocommerce-billing-fields, .woocommerce-account-fields, .woocommerce-additional-fields{
     margin-bottom: 3rem;
   }
   .woocommerce-info{
@@ -30,7 +32,7 @@
   }
   .woocommerce-checkout{
     width: 100%;
-    max-width: 756px;
+    max-width: 800px;
     input{
       @include form-input-text;
     }
@@ -56,59 +58,63 @@
 
 
 
-  .woocommerce-checkout-review-order{
-    @include font-size(18);
-    .shop_table{
-      width: 100%;
-      margin-bottom: 3rem;
-      thead, tbody, tfoot, tr, td{
-        display: block;
-      }
-      thead, tbody{
-        border-bottom:$borderline-darker;
-      }
-      tbody, tfoot{
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-      }
-      thead{
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        th{
-          @include font-bold;
-        }
-      }
-      tr{
-        display: grid;
-        width: 100%;
-        grid-template-columns: 70% 1fr;
-        column-gap: 1.5rem;
-        .product-total{
-          text-align: right;
-        }
-        strong *{
-          @include font-bold;
-        }
-        .woocommerce-Price-amount{
-          display: flex;
-          justify-content: flex-end;
-          @include font-regular;
-        }
-      }
-      tfoot{
-        tr{
-          margin-bottom: 0.75rem;
-        }
-        th{
-          @include font-regular;
-        }
-      }
-      .cart-subtotal{
-        th{
-          @include font-bold;
-        }
+
+  .shop_table{
+    width: 100%;
+    margin-bottom: 3rem;
+    thead, tbody, tfoot, tr, td{
+      display: block;
+    }
+    thead, tbody{
+      border-bottom:$borderline-darker;
+    }
+    tbody, tfoot{
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    thead{
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      th{
+        @include font-bold;
       }
     }
+    tr{
+      display: grid;
+      width: 100%;
+      grid-template-columns: 70% 1fr;
+      column-gap: 1.5rem;
+      .product-total{
+        text-align: right;
+      }
+      strong *{
+        @include font-bold;
+      }
+      .woocommerce-Price-amount{
+        display: flex;
+        justify-content: flex-end;
+        @include font-regular;
+      }
+    }
+    tfoot{
+      tr{
+        margin-bottom: 0.75rem;
+      }
+      th{
+        @include font-regular;
+      }
+    }
+    .cart-subtotal{
+      th{
+        @include font-bold;
+      }
+    }
+  }
+
+
+
+  .woocommerce-checkout-review-order{
+    @include font-size(18);
     .cart_item{
       margin-bottom: 1.5rem;
       .product-name{
@@ -124,7 +130,67 @@
       }
     }
   }
+
+  // Thankyou page
+
+  .woocommerce-order{
+    max-width: 800px;
+    h2{
+      @include header-regular(true, true);
+    }
+    p{
+      margin-bottom: 1.5rem;
+    }
+    ul li{
+      margin-bottom: 1.5rem;
+    }
+    .woocommerce-order-overview{
+      margin-bottom: 1.5rem;
+    }
+    .woocommerce-table{
+      /* stylelint-disable */
+      @include font-size(19);
+      tfoot{
+        tr{
+          td{
+            text-align: right;
+          }
+          &:last-of-type{
+            td{
+              span{
+                @include font-bold;
+              }
+            }
+          }
+        }
+      }
+      /* stylelint-enable */
+      ul.wc-item-meta li{
+        margin-top: 0.75rem;
+        @include text-tiny;
+      }
+      ul.wc-item-meta li p{
+        @include text-tiny;
+        margin-bottom: 0;
+      }
+    }
+    section{
+      &:first-of-type{
+        margin-top: 6rem;
+      }
+    }
+  }
+
 }
+
+
+
+
+
+
+
+
+
 
 
 .wc_payment_method{
