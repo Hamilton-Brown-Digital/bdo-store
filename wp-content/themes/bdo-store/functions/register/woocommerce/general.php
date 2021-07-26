@@ -107,9 +107,9 @@ function handler_function_name($message, $products) {
     // Output success messages
     if ( 'yes' === get_option( 'woocommerce_cart_redirect_after_add' ) ) {
         $return_to = apply_filters( 'woocommerce_continue_shopping_redirect', wc_get_raw_referer() ? wp_validate_redirect( wc_get_raw_referer(), false ) : '/' );
-        $message   = sprintf( '%s <a href="%s" class="e-cta-button">%s</a>', '<p>Successfully added to your basket.</p>',  esc_url( $return_to ), esc_html__( 'Continue shopping', 'woocommerce' ) );
+        $message   = sprintf( '%s <a href="%s" class="button wc-forward">%s</a>', '<p>Successfully added to your basket.</p>',  esc_url( $return_to ), esc_html__( 'Continue shopping', 'woocommerce' ) );
     } else {
-        $message   = sprintf( '%s <a href="%s" class="e-cta-button">%s</a>', '<p>Successfully added to your basket.</p>', esc_url( wc_get_page_permalink( 'cart' ) ), esc_html__( 'View basket', 'woocommerce' ) );
+        $message   = sprintf( '%s <a href="%s" class="button wc-forward">%s</a>', '<p>Successfully added to your basket.</p>', esc_url( wc_get_page_permalink( 'cart' ) ), esc_html__( 'View basket', 'woocommerce' ) );
     }
     return $message;
 }

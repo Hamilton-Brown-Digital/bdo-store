@@ -13,7 +13,27 @@
     left: 0;
     transform: translateY(100%);
   }
-  .single-product.theme-color--green &{
+  .theme-color--orange &{
+    max-width: unset;
+    background-color: $brand-gold;
+    &:before{
+      background-color: $brand-gold;
+    }
+    &:after{
+      background-color: $brand-gold;
+    }
+  }
+  .theme-color--blue &{
+    max-width: unset;
+    background-color: $brand-ocean;
+    &:before{
+      background-color: $brand-ocean;
+    }
+    &:after{
+      background-color: $brand-ocean;
+    }
+  }
+  .theme-color--green &{
     max-width: unset;
     background-color: $brand-emerald;
     &:before{

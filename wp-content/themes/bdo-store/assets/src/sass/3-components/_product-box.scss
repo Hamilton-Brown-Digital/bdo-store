@@ -95,4 +95,8 @@
     @include font-size(30);
     @include font-bold;
   }
+
+  .price{
+    margin-bottom: 1.5rem;
+  }
 }

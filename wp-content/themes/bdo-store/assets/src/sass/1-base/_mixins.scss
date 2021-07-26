@@ -77,6 +77,20 @@
   }
 }
 
+// set colors
+
+@mixin page-color($rule){
+  .theme-color--orange &{
+    #{$rule}: $brand-gold;
+  }
+  .theme-color--blue &{
+    #{$rule}: $brand-ocean;
+  }
+  .theme-color--green &{
+    #{$rule}: $brand-emerald;
+  }
+}
+
 @mixin listitemdefaults{
   position: relative;
   display: flex;
@@ -409,22 +423,6 @@
 
 
 
-// set colors
-
-@mixin page-color($rule){
-  .theme-color--orange &{
-    #{$rule}: $brand-gold;
-  }
-  .theme-color--blue &{
-    #{$rule}: $brand-ocean;
-  }
-  .theme-color--green &{
-    #{$rule}: $brand-emerald;
-  }
-}
-
-
-
 // button
 
 @mixin buttondefaults{
@@ -613,7 +611,30 @@
   width: 100%;
   max-width: $site-width;
   background-color: $brand-red;
+  @include page-color('background-color');
   color: $white;
+  &:before{
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: $brand-red;
+    @include page-color('background-color');
+    content: '';
+  }
+  &:after{
+    position: absolute;
+    top: 0;
+    right: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: $brand-red;
+    @include page-color('background-color');
+    content: '';
+  }
   p, ul, ol{
     margin-bottom: 0;
   }
@@ -638,43 +659,11 @@
     @include font-bold;
     @include font-size(16);
   }
-
-
-  &:before{
-    position: absolute;
-    top: 0;
-    left: -50vw;
-    display: block;
-    width: 50vw;
-    height: 100%;
-    background-color: $brand-red;
-    content: '';
-  }
-  &:after{
-    position: absolute;
-    top: 0;
-    right: -50vw;
-    display: block;
-    width: 50vw;
-    height: 100%;
-    background-color: $brand-red;
-    content: '';
-  }
-  @include page-color(background-color);
   .woocommerce-message,
   .woocommerce-error {
     padding: 1.5rem;
     padding-top: 0;
     text-align: center;
-  }
-  .woocommerce-message {
-    a {
-      @extend .e-cta-button;
-      margin-left: 15px;
-      background-color: $color-bg-solid;
-    }
-  }
-  .woocommerce-error{
     li{
       list-style-type: none;
       display: flex;
@@ -685,7 +674,16 @@
       }
     }
   }
+  .woocommerce-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
+
+
+
+
 
 @mixin notice-inline{
   position: relative;
