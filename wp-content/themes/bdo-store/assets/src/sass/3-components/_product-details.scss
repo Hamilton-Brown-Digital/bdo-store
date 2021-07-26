@@ -9,8 +9,8 @@
   &__product-order{
     position: relative;
     @include breakpoint($break-desktop-med) {
-      top: -590px;
-      height: calc(100% + 590px);
+      top: -630px;
+      height: calc(100% + 630px);
     }
     &__form{
       z-index: 5;
@@ -18,7 +18,7 @@
       margin-bottom:$padding-deep;
       background: $color-bg-3;
       @include breakpoint($break-tablet){
-        height: 565px;
+        height: calc(630px - 25px);
       }
       @include breakpoint($break-desktop-med) {
         position:sticky;

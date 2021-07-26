@@ -62,7 +62,10 @@
           grid-column-end: 3;
         }
         &:last-of-type{
-          grid-column-end: 3;
+          grid-column-end: span 2;
+        }
+        &:nth-child(4){
+          grid-column-end: unset;
         }
       }
     }
@@ -100,13 +103,12 @@
     flex-direction: column;
   }
   .woocommerce-Price-amount{
-    //margin-bottom: 2.5rem;
     text-transform:uppercase;
     @include font-size(30);
     @include font-bold;
   }
 
   .price{
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
