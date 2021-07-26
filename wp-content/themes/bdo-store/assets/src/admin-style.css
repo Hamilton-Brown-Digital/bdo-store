@@ -75,6 +75,5 @@ ul li:before {
   width: 7px;
   height: 7px;
   background-color: #ed1a3b;
-  border-radius: 50%;
   content: '';
 }

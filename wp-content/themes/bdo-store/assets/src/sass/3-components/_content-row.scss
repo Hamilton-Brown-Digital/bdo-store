@@ -39,6 +39,7 @@
   &__content{
     width: 100%;
     max-width:850px;
+    @include text-format;
   }
   &__link{
     margin-top:3rem;

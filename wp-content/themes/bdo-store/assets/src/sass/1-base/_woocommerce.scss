@@ -33,3 +33,9 @@
   }
   /* stylelint-enable */
 }
+
+
+
+.woocommerce-NoticeGroup{
+  @include notice-inline;
+}

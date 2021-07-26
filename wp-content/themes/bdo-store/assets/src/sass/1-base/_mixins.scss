@@ -80,17 +80,35 @@
 @mixin listitemdefaults{
   position: relative;
   display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.4em;
+  list-style: none;
+  line-height: 1.4;
+  &:before {
+    position: relative;
+    top: 0.5em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    margin-right: 1em;
+    background-color: $color-text-link;
+    content: '';
+  }
+}
+
+@mixin ollistitemdefaults{
+  counter-increment: item;
+  position: relative;
+  display: flex;
   align-items: center;
   margin-bottom: 0.4em;
   list-style: none;
   line-height: 1.4;
   &:before {
-    flex-grow: 0;
-    width: 5px;
-    height: 5px;
-    margin-right: 0.5em;
-    background-color: $color-text-link;
-    content: '';
+    margin-right: 10px;
+    color: $color-text-link;
+    content: counter(item) '. ';
   }
 }
 
@@ -143,20 +161,8 @@
   ol {
     list-style: none;
     counter-reset: li;
-    li {
-      counter-increment: item;
-      position: relative;
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.4em;
-      list-style: none;
-      line-height: 1.4;
-      &:before {
-        margin-right: 10px;
-        border-radius: 100%;
-        color: $color-text-link;
-        content: counter(item) '. ';
-      }
+    li{
+      @include ollistitemdefaults;
     }
   }
 }
@@ -245,9 +251,15 @@
 // Regular headings
 @mixin header-regular($underline: false, $stumpyunderline: false){
   @include font-bold;
-  @include font-size(30);
+  @include font-size(20);
+  @include breakpoint($break-mobile){
+    @include font-size(25);
+  }
+  @include breakpoint($break-tablet){
+    @include font-size(30);
+  }
   @include breakpoint($break-desktop){
-    @include font-size(50);
+    @include font-size(40);
   }
   @if $underline {
     &:after{
@@ -586,5 +598,141 @@
   border: 2px solid $color-line;
   .background--gray &{
     border-color:$color-line-darker;
+  }
+}
+
+
+
+
+// woocommerce mixins
+
+@mixin notice-strip{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  max-width: $site-width;
+  background-color: $brand-red;
+  color: $white;
+  p, ul, ol{
+    margin-bottom: 0;
+  }
+  a {
+    @extend .e-cta-button;
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: $color-bg-solid !important;
+  }
+  strong{
+    margin-right: 0.5em;
+  }
+  .button {
+    order: 2;
+    background-color: $color-bg-solid;
+    @extend .e-cta-button;
+  }
+  .cart-empty {
+    display: none;
+  }
+  *{
+    @include font-bold;
+    @include font-size(16);
+  }
+
+
+  &:before{
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: $brand-red;
+    content: '';
+  }
+  &:after{
+    position: absolute;
+    top: 0;
+    right: -50vw;
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: $brand-red;
+    content: '';
+  }
+  @include page-color(background-color);
+  .woocommerce-message,
+  .woocommerce-error {
+    padding: 1.5rem;
+    padding-top: 0;
+    text-align: center;
+  }
+  .woocommerce-message {
+    a {
+      @extend .e-cta-button;
+      margin-left: 15px;
+      background-color: $color-bg-solid;
+    }
+  }
+  .woocommerce-error{
+    li{
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before{
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin notice-inline{
+  position: relative;
+  left: 0;
+  width:100%;
+  max-width: 756px;
+  background: transparent;
+  p, ul, ol{
+    margin-bottom: 0;
+    text-align: left;
+  }
+  a {
+    @extend .e-cta-button;
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: $color-bg-solid !important;
+  }
+  strong{
+    margin-right: 0.5em;
+  }
+  .button {
+    order: 2;
+    background-color: $color-bg-solid;
+    @extend .e-cta-button;
+  }
+  .cart-empty {
+    display: none;
+  }
+  *{
+    @include font-bold;
+    @include font-size(16);
+  }
+  & *{
+    color:$color-text;
+  }
+  ul{
+    display: inline-grid;
+    grid-gap: 0 1.5rem;
+    padding: 0;
+    padding-bottom: 1.5rem;
+    @include breakpoint($break-tablet){
+      grid-template-columns: 1fr 1fr;
+    }
+    li{
+      text-align: left;
+      @include listitemdefaults;
+    }
   }
 }
