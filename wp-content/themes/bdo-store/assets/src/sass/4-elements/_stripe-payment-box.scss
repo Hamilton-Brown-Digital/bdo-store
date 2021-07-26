@@ -1,0 +1,32 @@
+.payment_method_stripe{
+  p{
+    margin-bottom: 1.5rem;
+    @include text-tiny;
+  }
+  .wc-credit-card-form{
+    border: none;
+    .form-row{
+      margin-bottom: 1.5rem;
+    }
+    .form-row-last{
+      margin-bottom: 0;
+    }
+  }
+  .invalid{
+    border: 1px solid $brand-red;
+  }
+  .wc-stripe-error{
+    margin-top: 1.5rem;
+  }
+  .stripe-source-errors{
+    .wc-stripe-error{
+      li{
+        margin-bottom: 0.5em;
+        color: $brand-red;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

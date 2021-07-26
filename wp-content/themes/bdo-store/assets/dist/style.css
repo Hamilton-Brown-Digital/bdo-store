@@ -1110,6 +1110,58 @@ strong, strong p {
     padding-top: clamp(3rem, 5vw, 6rem);
     padding-bottom: clamp(3rem, 5vw, 6rem); }
 
+.woocommerce-NoticeGroup {
+  position: relative;
+  left: 0;
+  width: 100%;
+  max-width: 756px;
+  background: transparent; }
+  .woocommerce-NoticeGroup p, .woocommerce-NoticeGroup ul, .woocommerce-NoticeGroup ol {
+    margin-bottom: 0;
+    text-align: left; }
+  .woocommerce-NoticeGroup a {
+    margin-left: 1.5rem;
+    /* stylelint-disable-next-line */
+    background-color: #333333 !important; }
+  .woocommerce-NoticeGroup strong {
+    margin-right: 0.5em; }
+  .woocommerce-NoticeGroup .button {
+    order: 2;
+    background-color: #333333; }
+  .woocommerce-NoticeGroup .cart-empty {
+    display: none; }
+  .woocommerce-NoticeGroup * {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1rem; }
+  .woocommerce-NoticeGroup * {
+    color: #333333; }
+  .woocommerce-NoticeGroup ul {
+    display: inline-grid;
+    grid-gap: 0 1.5rem;
+    padding: 0;
+    padding-bottom: 1.5rem; }
+    @media (min-width: 40.063em) {
+      .woocommerce-NoticeGroup ul {
+        grid-template-columns: 1fr 1fr; } }
+    .woocommerce-NoticeGroup ul li {
+      text-align: left;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.4em;
+      list-style: none;
+      line-height: 1.4; }
+      .woocommerce-NoticeGroup ul li:before {
+        position: relative;
+        top: 0.5em;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 6px;
+        height: 6px;
+        margin-right: 1em;
+        background-color: #ed1a3b;
+        content: ''; }
+
 .o-row {
   width: 100%;
   margin-bottom: 30px;
@@ -1604,11 +1656,11 @@ strong, strong p {
       align-items: center;
       justify-content: center;
       padding-right: 60px; }
-  .theme-color--orange .c-hero__cta .e-cta-button, .theme-color--orange .c-hero__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button, .theme-color--orange .c-hero__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button, .theme-color--orange .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button {
+  .theme-color--orange .c-hero__cta .e-cta-button, .theme-color--orange .c-hero__cta .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .theme-color--orange .c-hero__cta .button, .theme-color--orange .c-hero__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button, .theme-color--orange .c-hero__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button, .theme-color--orange .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta a, .theme-color--orange .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .c-hero__cta .button {
     background-color: #df8639; }
-  .theme-color--blue .c-hero__cta .e-cta-button, .theme-color--blue .c-hero__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button, .theme-color--blue .c-hero__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button, .theme-color--blue .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button {
+  .theme-color--blue .c-hero__cta .e-cta-button, .theme-color--blue .c-hero__cta .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .theme-color--blue .c-hero__cta .button, .theme-color--blue .c-hero__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button, .theme-color--blue .c-hero__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button, .theme-color--blue .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta a, .theme-color--blue .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue .c-hero__cta .button {
     background-color: #02A5E2; }
-  .theme-color--green .c-hero__cta .e-cta-button, .theme-color--green .c-hero__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button, .theme-color--green .c-hero__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button, .theme-color--green .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button {
+  .theme-color--green .c-hero__cta .e-cta-button, .theme-color--green .c-hero__cta .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .theme-color--green .c-hero__cta .button, .theme-color--green .c-hero__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button, .theme-color--green .c-hero__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button, .theme-color--green .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green .c-hero__cta a, .theme-color--green .c-hero__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green .c-hero__cta .button {
     background-color: #218f8b; }
   .c-hero__product-cta__details {
     display: none; }
@@ -1657,10 +1709,16 @@ strong, strong p {
 
 .c-404__header {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.875rem; }
+  font-size: 1.25rem; }
+  @media (min-width: 22.438em) {
+    .c-404__header {
+      font-size: 1.5625rem; } }
+  @media (min-width: 40.063em) {
+    .c-404__header {
+      font-size: 1.875rem; } }
   @media (min-width: 50em) {
     .c-404__header {
-      font-size: 3.125rem; } }
+      font-size: 2.5rem; } }
   .c-404__header:after {
     content: '';
     display: block;
@@ -1681,10 +1739,16 @@ strong, strong p {
     margin-bottom: 1.5rem; }
   .c-404__main h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.875rem; }
+    font-size: 1.25rem; }
+    @media (min-width: 22.438em) {
+      .c-404__main h2 {
+        font-size: 1.5625rem; } }
+    @media (min-width: 40.063em) {
+      .c-404__main h2 {
+        font-size: 1.875rem; } }
     @media (min-width: 50em) {
       .c-404__main h2 {
-        font-size: 3.125rem; } }
+        font-size: 2.5rem; } }
     .c-404__main h2:after {
       content: '';
       display: block;
@@ -1719,15 +1783,18 @@ strong, strong p {
   .c-404__main ul li {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.4em;
     list-style: none;
     line-height: 1.4; }
     .c-404__main ul li:before {
+      position: relative;
+      top: 0.5em;
       flex-grow: 0;
-      width: 5px;
-      height: 5px;
-      margin-right: 0.5em;
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      margin-right: 1em;
       background-color: #ed1a3b;
       content: ''; }
   .c-404__main ol {
@@ -1743,7 +1810,6 @@ strong, strong p {
       line-height: 1.4; }
       .c-404__main ol li:before {
         margin-right: 10px;
-        border-radius: 100%;
         color: #ed1a3b;
         content: counter(item) ". "; }
 
@@ -1759,12 +1825,18 @@ strong, strong p {
 
 .c-listing__heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   margin-top: 0.3em;
   margin-bottom: 0.8em; }
+  @media (min-width: 22.438em) {
+    .c-listing__heading {
+      font-size: 1.5625rem; } }
+  @media (min-width: 40.063em) {
+    .c-listing__heading {
+      font-size: 1.875rem; } }
   @media (min-width: 50em) {
     .c-listing__heading {
-      font-size: 3.125rem; } }
+      font-size: 2.5rem; } }
 
 .c-listing__count {
   margin-bottom: 15px;
@@ -1831,11 +1903,17 @@ strong, strong p {
 
 .c-accordion__main-heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   margin-bottom: 1.5rem; }
+  @media (min-width: 22.438em) {
+    .c-accordion__main-heading {
+      font-size: 1.5625rem; } }
+  @media (min-width: 40.063em) {
+    .c-accordion__main-heading {
+      font-size: 1.875rem; } }
   @media (min-width: 50em) {
     .c-accordion__main-heading {
-      font-size: 3.125rem; } }
+      font-size: 2.5rem; } }
 
 .c-accordion__container {
   display: grid;
@@ -2074,7 +2152,7 @@ strong, strong p {
     .c-price-comparison__col__cta {
       width: 100%;
       margin-bottom: 2rem; }
-      .c-price-comparison__col__cta .e-cta-button, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta .button {
+      .c-price-comparison__col__cta .e-cta-button, .c-price-comparison__col__cta .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta .button {
         width: 100%;
         max-width: 260px;
         white-space: nowrap; }
@@ -2142,6 +2220,83 @@ strong, strong p {
 .c-content-row__content {
   width: 100%;
   max-width: 850px; }
+  .c-content-row__content h2, .c-content-row__content h3, .c-content-row__content h4, .c-content-row__content h5, .c-content-row__content p, .c-content-row__content ul, .c-content-row__content ol, .c-content-row__content hr {
+    margin-bottom: 1.5rem; }
+  .c-content-row__content h2 {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.25rem; }
+    @media (min-width: 22.438em) {
+      .c-content-row__content h2 {
+        font-size: 1.5625rem; } }
+    @media (min-width: 40.063em) {
+      .c-content-row__content h2 {
+        font-size: 1.875rem; } }
+    @media (min-width: 50em) {
+      .c-content-row__content h2 {
+        font-size: 2.5rem; } }
+    .c-content-row__content h2:after {
+      content: '';
+      display: block;
+      width: 72px;
+      height: 6px;
+      margin: clamp(1rem, 1.5em, 3rem) 0;
+      padding: 0;
+      background-color: #ed1a3b;
+      border: none; }
+      @media (min-width: 50em) {
+        .c-content-row__content h2:after {
+          width: 220px;
+          height: 8px; } }
+  .c-content-row__content p {
+    margin-bottom: 1em; }
+  .c-content-row__content a {
+    color: #ed1a3b;
+    text-decoration: underline; }
+  .c-content-row__content p, .c-content-row__content a, .c-content-row__content li {
+    font-size: 1.1875rem; }
+  .c-content-row__content a:active {
+    border-bottom: 1px solid #ed1a3b; }
+  .c-content-row__content a:focus {
+    border-bottom: 1px solid #ed1a3b; }
+  .c-content-row__content a:visited {
+    border-bottom: 1px solid #ed1a3b; }
+  .c-content-row__content hr {
+    border-top-color: #F2F2F2; }
+  .c-content-row__content ol,
+  .c-content-row__content ul {
+    list-style-position: inside; }
+  .c-content-row__content ul li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.4em;
+    list-style: none;
+    line-height: 1.4; }
+    .c-content-row__content ul li:before {
+      position: relative;
+      top: 0.5em;
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      margin-right: 1em;
+      background-color: #ed1a3b;
+      content: ''; }
+  .c-content-row__content ol {
+    list-style: none;
+    counter-reset: li; }
+    .c-content-row__content ol li {
+      counter-increment: item;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.4em;
+      list-style: none;
+      line-height: 1.4; }
+      .c-content-row__content ol li:before {
+        margin-right: 10px;
+        color: #ed1a3b;
+        content: counter(item) ". "; }
 
 .c-content-row__link {
   margin-top: 3rem; }
@@ -2907,6 +3062,9 @@ address {
     .c-basket .coupon button:after {
       display: none; }
 
+.c-basket .checkout_coupon {
+  margin-bottom: 3rem; }
+
 .c-basket .woocommerce-cart-form__cart-item {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -3037,20 +3195,117 @@ address {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   font-size: 1.25rem;
   margin-bottom: 1.5rem; }
+  @media (min-width: 22.438em) {
+    .c-checkout h3 {
+      font-size: 1.5625rem; } }
   @media (min-width: 40.063em) {
     .c-checkout h3 {
-      font-size: 1.25rem; } }
-  @media (min-width: 75em) {
+      font-size: 1.875rem; } }
+  @media (min-width: 50em) {
     .c-checkout h3 {
-      font-size: 1.5rem; } }
+      font-size: 2.5rem; } }
+  .c-checkout h3:after {
+    content: '';
+    display: block;
+    width: 72px;
+    height: 6px;
+    margin: clamp(1rem, 1.5em, 3rem) 0;
+    padding: 0;
+    background-color: #ed1a3b;
+    border: none; }
+    @media (min-width: 50em) {
+      .c-checkout h3:after {
+        width: 220px;
+        height: 8px; } }
+  .c-checkout h3:after {
+    display: block;
+    width: 72px;
+    height: 6px;
+    margin: clamp(1rem, 1.5em, 3rem) 0;
+    padding: 0;
+    background-color: #ed1a3b;
+    border: none;
+    max-width: 86px; }
+    @media (min-width: 50em) {
+      .c-checkout h3:after {
+        width: 220px;
+        height: 8px; } }
+
+.c-checkout .checkout_coupon {
+  width: 100%;
+  max-width: 756px;
+  margin-bottom: 3rem; }
+  .c-checkout .checkout_coupon p {
+    margin-bottom: 1.5rem; }
+  .c-checkout .checkout_coupon input.input-text {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.6em;
+    background-color: #fff;
+    border: 2px solid #d8d8d8;
+    font-size: 1rem;
+    margin-bottom: 0; }
+  .c-checkout .checkout_coupon .button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 2em;
+    background-color: #ed1a3b;
+    border-radius: 2px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    margin-left: auto; }
+    .theme-color--orange .c-checkout .checkout_coupon .button {
+      background: #df8639; }
+    .theme-color--blue .c-checkout .checkout_coupon .button {
+      background: #02A5E2; }
+    .theme-color--green .c-checkout .checkout_coupon .button {
+      background: #218f8b; }
+    .c-checkout .checkout_coupon .button:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 0.3s;
+      content: ''; }
+    .c-checkout .checkout_coupon .button:hover:after {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .c-checkout .checkout_coupon .button span {
+      font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+      z-index: 1; }
+    .c-checkout .checkout_coupon .button svg path {
+      transition: all 300ms;
+      fill: #fff; }
+    @media (min-width: 40.063em) {
+      .c-checkout .checkout_coupon .button svg {
+        width: 16px;
+        height: 18px; } }
+    .c-checkout .checkout_coupon .button:after {
+      display: none; }
+    .c-checkout .checkout_coupon .button:hover {
+      background-color: #dc1131; }
+
+.c-checkout .woocommerce-error {
+  margin-bottom: 1.5rem; }
 
 .c-checkout .woocommerce-billing-fields, .c-checkout .woocommerce-additional-fields {
   margin-bottom: 3rem; }
 
 .c-checkout .woocommerce-info {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 3rem; }
 
 .c-checkout .woocommerce-checkout {
+  width: 100%;
   max-width: 756px; }
   .c-checkout .woocommerce-checkout input {
     width: 100%;
@@ -3249,9 +3504,11 @@ address {
     line-height: 1; }
   .wc_payment_method .payment_box {
     width: 100%; }
+  .wc_payment_method.payment_method_stripe input.input-radio {
+    transform: translateY(40%); }
   .wc_payment_method.payment_method_stripe label {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     margin-bottom: 0; }
     .wc_payment_method.payment_method_stripe label img {
       display: block; }
@@ -3433,11 +3690,17 @@ address {
 
 .c-signpost__heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   margin-bottom: 1.5rem; }
+  @media (min-width: 22.438em) {
+    .c-signpost__heading {
+      font-size: 1.5625rem; } }
+  @media (min-width: 40.063em) {
+    .c-signpost__heading {
+      font-size: 1.875rem; } }
   @media (min-width: 50em) {
     .c-signpost__heading {
-      font-size: 3.125rem; } }
+      font-size: 2.5rem; } }
 
 .c-signpost__intro {
   font-size: 1.5rem;
@@ -3451,10 +3714,16 @@ address {
     margin-bottom: 1.5rem; }
   .c-signpost__content-main h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.875rem; }
+    font-size: 1.25rem; }
+    @media (min-width: 22.438em) {
+      .c-signpost__content-main h2 {
+        font-size: 1.5625rem; } }
+    @media (min-width: 40.063em) {
+      .c-signpost__content-main h2 {
+        font-size: 1.875rem; } }
     @media (min-width: 50em) {
       .c-signpost__content-main h2 {
-        font-size: 3.125rem; } }
+        font-size: 2.5rem; } }
     .c-signpost__content-main h2:after {
       content: '';
       display: block;
@@ -3489,15 +3758,18 @@ address {
   .c-signpost__content-main ul li {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.4em;
     list-style: none;
     line-height: 1.4; }
     .c-signpost__content-main ul li:before {
+      position: relative;
+      top: 0.5em;
       flex-grow: 0;
-      width: 5px;
-      height: 5px;
-      margin-right: 0.5em;
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      margin-right: 1em;
       background-color: #ed1a3b;
       content: ''; }
   .c-signpost__content-main ol {
@@ -3513,7 +3785,6 @@ address {
       line-height: 1.4; }
       .c-signpost__content-main ol li:before {
         margin-right: 10px;
-        border-radius: 100%;
         color: #ed1a3b;
         content: counter(item) ". "; }
 
@@ -3556,10 +3827,16 @@ address {
       margin-bottom: 1.5rem; }
     .c-download__main__content h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.875rem; }
+      font-size: 1.25rem; }
+      @media (min-width: 22.438em) {
+        .c-download__main__content h2 {
+          font-size: 1.5625rem; } }
+      @media (min-width: 40.063em) {
+        .c-download__main__content h2 {
+          font-size: 1.875rem; } }
       @media (min-width: 50em) {
         .c-download__main__content h2 {
-          font-size: 3.125rem; } }
+          font-size: 2.5rem; } }
       .c-download__main__content h2:after {
         content: '';
         display: block;
@@ -3594,15 +3871,18 @@ address {
     .c-download__main__content ul li {
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 0.4em;
       list-style: none;
       line-height: 1.4; }
       .c-download__main__content ul li:before {
+        position: relative;
+        top: 0.5em;
         flex-grow: 0;
-        width: 5px;
-        height: 5px;
-        margin-right: 0.5em;
+        flex-shrink: 0;
+        width: 6px;
+        height: 6px;
+        margin-right: 1em;
         background-color: #ed1a3b;
         content: ''; }
     .c-download__main__content ol {
@@ -3618,7 +3898,6 @@ address {
         line-height: 1.4; }
         .c-download__main__content ol li:before {
           margin-right: 10px;
-          border-radius: 100%;
           color: #ed1a3b;
           content: counter(item) ". "; }
 
@@ -3647,10 +3926,16 @@ address {
       margin-bottom: 1.5rem; }
     .c-download__item__description h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.875rem; }
+      font-size: 1.25rem; }
+      @media (min-width: 22.438em) {
+        .c-download__item__description h2 {
+          font-size: 1.5625rem; } }
+      @media (min-width: 40.063em) {
+        .c-download__item__description h2 {
+          font-size: 1.875rem; } }
       @media (min-width: 50em) {
         .c-download__item__description h2 {
-          font-size: 3.125rem; } }
+          font-size: 2.5rem; } }
       .c-download__item__description h2:after {
         content: '';
         display: block;
@@ -3685,15 +3970,18 @@ address {
     .c-download__item__description ul li {
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 0.4em;
       list-style: none;
       line-height: 1.4; }
       .c-download__item__description ul li:before {
+        position: relative;
+        top: 0.5em;
         flex-grow: 0;
-        width: 5px;
-        height: 5px;
-        margin-right: 0.5em;
+        flex-shrink: 0;
+        width: 6px;
+        height: 6px;
+        margin-right: 1em;
         background-color: #ed1a3b;
         content: ''; }
     .c-download__item__description ol {
@@ -3709,7 +3997,6 @@ address {
         line-height: 1.4; }
         .c-download__item__description ol li:before {
           margin-right: 10px;
-          border-radius: 100%;
           color: #ed1a3b;
           content: counter(item) ". "; }
   .c-download__item__cta {
@@ -3718,10 +4005,16 @@ address {
     margin-bottom: 1.5rem; }
   .c-download__item__additional-content h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.875rem; }
+    font-size: 1.25rem; }
+    @media (min-width: 22.438em) {
+      .c-download__item__additional-content h2 {
+        font-size: 1.5625rem; } }
+    @media (min-width: 40.063em) {
+      .c-download__item__additional-content h2 {
+        font-size: 1.875rem; } }
     @media (min-width: 50em) {
       .c-download__item__additional-content h2 {
-        font-size: 3.125rem; } }
+        font-size: 2.5rem; } }
     .c-download__item__additional-content h2:after {
       content: '';
       display: block;
@@ -3756,15 +4049,18 @@ address {
   .c-download__item__additional-content ul li {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.4em;
     list-style: none;
     line-height: 1.4; }
     .c-download__item__additional-content ul li:before {
+      position: relative;
+      top: 0.5em;
       flex-grow: 0;
-      width: 5px;
-      height: 5px;
-      margin-right: 0.5em;
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      margin-right: 1em;
       background-color: #ed1a3b;
       content: ''; }
   .c-download__item__additional-content ol {
@@ -3780,7 +4076,6 @@ address {
       line-height: 1.4; }
       .c-download__item__additional-content ol li:before {
         margin-right: 10px;
-        border-radius: 100%;
         color: #ed1a3b;
         content: counter(item) ". "; }
 
@@ -3842,10 +4137,16 @@ address {
 
 .c-form__title {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.875rem; }
+  font-size: 1.25rem; }
+  @media (min-width: 22.438em) {
+    .c-form__title {
+      font-size: 1.5625rem; } }
+  @media (min-width: 40.063em) {
+    .c-form__title {
+      font-size: 1.875rem; } }
   @media (min-width: 50em) {
     .c-form__title {
-      font-size: 3.125rem; } }
+      font-size: 2.5rem; } }
   .c-form__title:after {
     content: '';
     display: block;
@@ -4104,56 +4405,7 @@ address {
   .e-card--green .e-card__tagline {
     color: #218f8b; }
 
-.e-content h2 {
-  font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.875rem; }
-  @media (min-width: 50em) {
-    .e-content h2 {
-      font-size: 3.125rem; } }
-  .e-content h2:after {
-    content: '';
-    display: block;
-    width: 72px;
-    height: 6px;
-    margin: clamp(1rem, 1.5em, 3rem) 0;
-    padding: 0;
-    background-color: #ed1a3b;
-    border: none; }
-    @media (min-width: 50em) {
-      .e-content h2:after {
-        width: 220px;
-        height: 8px; } }
-
-.e-content h3 {
-  margin-bottom: 20px; }
-
-.e-content h4 {
-  margin-bottom: 15px; }
-
-.e-content p {
-  margin-bottom: 1em; }
-
-.e-content a {
-  color: #ed1a3b;
-  text-decoration: underline; }
-
-.e-content ol {
-  margin-left: 20px; }
-
-.e-content ul li {
-  position: relative;
-  padding-left: 20px; }
-  .e-content ul li:before {
-    position: absolute;
-    top: 9px;
-    left: 0;
-    width: 7px;
-    height: 7px;
-    background-color: #ed1a3b;
-    border-radius: 50%;
-    content: ''; }
-
-.e-cta-button, .c-basket .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .woocommerce-message a, .single-product .woocommerce-notices-wrapper .woocommerce-message a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button {
+.e-cta-button, .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .button, .c-basket .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .woocommerce-message a, .single-product .woocommerce-notices-wrapper .woocommerce-message a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -4169,13 +4421,13 @@ address {
   cursor: pointer;
   font-size: 1rem;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
-  .theme-color--orange .e-cta-button, .theme-color--orange .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .button {
+  .theme-color--orange .e-cta-button, .theme-color--orange .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .theme-color--orange a, .theme-color--orange .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .theme-color--orange .button, .theme-color--orange .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .button {
     background: #df8639; }
-  .theme-color--blue .e-cta-button, .theme-color--blue .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--blue .button, .theme-color--blue .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--blue .button, .theme-color--blue .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue .button {
+  .theme-color--blue .e-cta-button, .theme-color--blue .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .theme-color--blue a, .theme-color--blue .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .theme-color--blue .button, .theme-color--blue .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--blue .button, .theme-color--blue .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--blue .button, .theme-color--blue .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue a, .theme-color--blue .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--blue .button {
     background: #02A5E2; }
-  .theme-color--green .e-cta-button, .theme-color--green .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--green .button, .theme-color--green .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--green .button, .theme-color--green .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green .button {
+  .theme-color--green .e-cta-button, .theme-color--green .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .theme-color--green a, .theme-color--green .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .theme-color--green .button, .theme-color--green .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--green .button, .theme-color--green .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--green .button, .theme-color--green .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green a, .theme-color--green .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--green .button {
     background: #218f8b; }
-  .e-cta-button:after, .c-basket .woocommerce-notices-wrapper a:after, .single-product .woocommerce-notices-wrapper a:after, .c-basket .woocommerce-notices-wrapper .button:after, .single-product .woocommerce-notices-wrapper .button:after, .c-basket .woocommerce-notices-wrapper .woocommerce-message a:after, .single-product .woocommerce-notices-wrapper .woocommerce-message a:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button:after {
+  .e-cta-button:after, .woocommerce-NoticeGroup a:after, .woocommerce-NoticeGroup .button:after, .c-basket .woocommerce-notices-wrapper a:after, .single-product .woocommerce-notices-wrapper a:after, .c-basket .woocommerce-notices-wrapper .button:after, .single-product .woocommerce-notices-wrapper .button:after, .c-basket .woocommerce-notices-wrapper .woocommerce-message a:after, .single-product .woocommerce-notices-wrapper .woocommerce-message a:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -4185,16 +4437,16 @@ address {
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s;
     content: ''; }
-  .e-cta-button:hover:after, .c-basket .woocommerce-notices-wrapper a:hover:after, .single-product .woocommerce-notices-wrapper a:hover:after, .c-basket .woocommerce-notices-wrapper .button:hover:after, .single-product .woocommerce-notices-wrapper .button:hover:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a:hover:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button:hover:after {
+  .e-cta-button:hover:after, .woocommerce-NoticeGroup a:hover:after, .woocommerce-NoticeGroup .button:hover:after, .c-basket .woocommerce-notices-wrapper a:hover:after, .single-product .woocommerce-notices-wrapper a:hover:after, .c-basket .woocommerce-notices-wrapper .button:hover:after, .single-product .woocommerce-notices-wrapper .button:hover:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a:hover:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button:hover:after {
     background-color: rgba(0, 0, 0, 0.1); }
-  .e-cta-button span, .c-basket .woocommerce-notices-wrapper a span, .single-product .woocommerce-notices-wrapper a span, .c-basket .woocommerce-notices-wrapper .button span, .single-product .woocommerce-notices-wrapper .button span, .c-basket .woocommerce-notices-wrapper .woocommerce-message a span, .single-product .woocommerce-notices-wrapper .woocommerce-message a span, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a span, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button span {
+  .e-cta-button span, .woocommerce-NoticeGroup a span, .woocommerce-NoticeGroup .button span, .c-basket .woocommerce-notices-wrapper a span, .single-product .woocommerce-notices-wrapper a span, .c-basket .woocommerce-notices-wrapper .button span, .single-product .woocommerce-notices-wrapper .button span, .c-basket .woocommerce-notices-wrapper .woocommerce-message a span, .single-product .woocommerce-notices-wrapper .woocommerce-message a span, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a span, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button span {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     z-index: 1; }
-  .e-cta-button svg path, .c-basket .woocommerce-notices-wrapper a svg path, .single-product .woocommerce-notices-wrapper a svg path, .c-basket .woocommerce-notices-wrapper .button svg path, .single-product .woocommerce-notices-wrapper .button svg path, .c-basket .woocommerce-notices-wrapper .woocommerce-message a svg path, .single-product .woocommerce-notices-wrapper .woocommerce-message a svg path, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a svg path, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button svg path {
+  .e-cta-button svg path, .woocommerce-NoticeGroup a svg path, .woocommerce-NoticeGroup .button svg path, .c-basket .woocommerce-notices-wrapper a svg path, .single-product .woocommerce-notices-wrapper a svg path, .c-basket .woocommerce-notices-wrapper .button svg path, .single-product .woocommerce-notices-wrapper .button svg path, .c-basket .woocommerce-notices-wrapper .woocommerce-message a svg path, .single-product .woocommerce-notices-wrapper .woocommerce-message a svg path, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a svg path, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button svg path {
     transition: all 300ms;
     fill: #fff; }
   @media (min-width: 40.063em) {
-    .e-cta-button svg, .c-basket .woocommerce-notices-wrapper a svg, .single-product .woocommerce-notices-wrapper a svg, .c-basket .woocommerce-notices-wrapper .button svg, .single-product .woocommerce-notices-wrapper .button svg, .c-basket .woocommerce-notices-wrapper .woocommerce-message a svg, .single-product .woocommerce-notices-wrapper .woocommerce-message a svg, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a svg, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button svg {
+    .e-cta-button svg, .woocommerce-NoticeGroup a svg, .woocommerce-NoticeGroup .button svg, .c-basket .woocommerce-notices-wrapper a svg, .single-product .woocommerce-notices-wrapper a svg, .c-basket .woocommerce-notices-wrapper .button svg, .single-product .woocommerce-notices-wrapper .button svg, .c-basket .woocommerce-notices-wrapper .woocommerce-message a svg, .single-product .woocommerce-notices-wrapper .woocommerce-message a svg, .woocommerce-MyAccount-content .woocommerce-notices-wrapper a svg, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button svg {
       width: 16px;
       height: 18px; } }
   .e-cta-button--red {
@@ -4229,7 +4481,7 @@ address {
     .e-cta-button--outline--inverse:hover {
       background-color: #fff;
       color: #333333; }
-  .c-hero--product .e-cta-button, .c-hero--product .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-hero--product .button {
+  .c-hero--product .e-cta-button, .c-hero--product .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .c-hero--product a, .c-hero--product .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .c-hero--product .button, .c-hero--product .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-hero--product .button {
     background-color: transparent;
     border: solid 3px #fff; }
   .e-cta-button--disabled {
@@ -4622,15 +4874,18 @@ hr.e-seperator {
       text-align: left;
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 0.4em;
       list-style: none;
       line-height: 1.4; }
       .woocommerce-MyAccount-content .woocommerce-notices-wrapper ul li:before {
+        position: relative;
+        top: 0.5em;
         flex-grow: 0;
-        width: 5px;
-        height: 5px;
-        margin-right: 0.5em;
+        flex-shrink: 0;
+        width: 6px;
+        height: 6px;
+        margin-right: 1em;
         background-color: #ed1a3b;
         content: ''; }
 
@@ -4711,6 +4966,30 @@ hr.e-seperator {
     background-color: #218f8b; }
   .single-product.theme-color--green .woocommerce-notices-wrapper:after {
     background-color: #218f8b; }
+
+.payment_method_stripe p {
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.2; }
+
+.payment_method_stripe .wc-credit-card-form {
+  border: none; }
+  .payment_method_stripe .wc-credit-card-form .form-row {
+    margin-bottom: 1.5rem; }
+  .payment_method_stripe .wc-credit-card-form .form-row-last {
+    margin-bottom: 0; }
+
+.payment_method_stripe .invalid {
+  border: 1px solid #ed1a3b; }
+
+.payment_method_stripe .wc-stripe-error {
+  margin-top: 1.5rem; }
+
+.payment_method_stripe .stripe-source-errors .wc-stripe-error li {
+  margin-bottom: 0.5em;
+  color: #ed1a3b; }
+  .payment_method_stripe .stripe-source-errors .wc-stripe-error li:last-of-type {
+    margin-bottom: 0; }
 
 
 /*# sourceMappingURL=style.css.map*/
