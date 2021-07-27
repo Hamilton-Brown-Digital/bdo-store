@@ -501,8 +501,6 @@
 
 
 // form mixins
-
-
 @mixin form-container{
   width:100%;
   max-width:800px;
@@ -623,7 +621,7 @@
   max-width: $site-width;
   background-color: $brand-red;
   @include page-color('background-color');
-  color: $white;
+  color:$white;
   &:before{
     position: absolute;
     top: 0;
@@ -632,8 +630,8 @@
     width: 50vw;
     height: 100%;
     background-color: $brand-red;
-    @include page-color('background-color');
     content: '';
+    @include page-color('background-color');
   }
   &:after{
     position: absolute;
@@ -643,11 +641,12 @@
     width: 50vw;
     height: 100%;
     background-color: $brand-red;
-    @include page-color('background-color');
     content: '';
+    @include page-color('background-color');
   }
   p, ul, ol{
     margin-bottom: 0;
+    color:$white;
   }
   a {
     @extend .e-cta-button;
@@ -675,10 +674,10 @@
     padding: 1.5rem;
     text-align: center;
     li{
-      list-style-type: none;
       display: flex;
       align-items: center;
       justify-content: center;
+      list-style-type: none;
       &:before{
         display: none;
       }

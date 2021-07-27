@@ -2,8 +2,12 @@
   .c-basket &, .single-product &{
     @include notice-strip;
   }
-  .woocommerce-account &{
-    @include notice-strip;
+
+  .customer-login &{
+    @include notice-inline;
+    ul.woocommerce-error{
+      grid-template-columns:1fr;
+    }
   }
   .woocommerce-MyAccount-content &{
     @include notice-inline;

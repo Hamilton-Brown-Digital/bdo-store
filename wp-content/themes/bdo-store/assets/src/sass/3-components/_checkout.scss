@@ -22,12 +22,6 @@
       @include form-submit;
     }
   }
-  .crafty_billing.address-field{
-    button{
-      position: relative;
-      top: -2.5rem;
-    }
-  }
 
   .woocommerce-error{
     margin-bottom: 1.5rem;
@@ -55,16 +49,6 @@
     }
     .select{
       @include form-dropdown;
-    }
-    #billing_cp_button{
-      /* stylelint-disable-next-line */
-      font-size:1.6rem !important;
-    }
-    #billing_country_field{
-      padding-bottom: 1.5rem;
-      .select2-selection{
-        height: auto;
-      }
     }
   }
 
