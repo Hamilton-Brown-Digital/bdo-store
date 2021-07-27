@@ -24,7 +24,7 @@
       display: block;
       flex-grow: 1;
       @include font-bold;
-      @include text-tiny;
+      @include text-small;
     }
   }
 

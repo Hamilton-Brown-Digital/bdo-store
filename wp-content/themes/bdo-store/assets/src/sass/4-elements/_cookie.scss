@@ -20,7 +20,7 @@
     margin-bottom: 15px;
     @include font-bold;
     line-height: 30px;
-    @include font-size(20);
+    @include text-large;
   }
 
   &__text {

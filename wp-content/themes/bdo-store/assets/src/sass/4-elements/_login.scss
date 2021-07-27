@@ -37,12 +37,12 @@
   background-color: $white;
   color: rgba($black, 0.4);
   @include font-bold;
-  @include font-size(20);
+  @include text-large;
   line-height: 20px;
   text-decoration: none;
   @include breakpoint($break-desktop-wide) {
-    @include font-size(30);
     padding: 44px 20px 24px;
+    font-size:3rem;
     line-height: 30px;
   }
   &:hover{

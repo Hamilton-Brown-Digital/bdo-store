@@ -8,7 +8,7 @@
     }
     &--items-2{
       @include tabledefaults;
-      max-width:calculateRem(1150);
+      max-width:1150px;
       margin: 0 auto;
       grid-template-columns: 1fr;
       @include breakpoint($break-tablet) {
@@ -18,7 +18,7 @@
     }
     &--items-3{
       @include tabledefaults;
-      max-width:calculateRem(1150);
+      max-width:1150px;
       margin: 0 auto;
       @include breakpoint($break-tablet $break-desktop-med){
         grid-template-columns: 1fr 1fr;
@@ -58,9 +58,9 @@
       background-color: $white;
     }
     &__title{
-      @include font-size(24);
-      @include page-color('color');
       margin-bottom: 2rem;
+      font-size:2.4rem;
+      @include page-color('color');
     }
     &__price{
       display: flex;
@@ -75,8 +75,8 @@
       }
       &__price{
         @include font-bold;
-        @include font-size(24);
         display: block;
+        font-size:2.4rem;
         white-space: nowrap;
       }
       &__prefix{

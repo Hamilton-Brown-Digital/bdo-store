@@ -104,8 +104,8 @@
     flex-direction: column;
   }
   .woocommerce-Price-amount{
+    font-size:3rem;
     text-transform:uppercase;
-    @include font-size(30);
     @include font-bold;
   }
 

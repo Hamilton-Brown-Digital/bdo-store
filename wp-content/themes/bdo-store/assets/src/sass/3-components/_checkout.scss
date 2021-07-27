@@ -1,7 +1,8 @@
 .c-checkout {
   h3 {
     @include header-regular(true, true);
-    margin-bottom: 1.5rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
   }
   strong{
     font-weight: $reg;
@@ -21,6 +22,13 @@
       @include form-submit;
     }
   }
+  .crafty_billing.address-field{
+    button{
+      position: relative;
+      top: -2.5rem;
+    }
+  }
+
   .woocommerce-error{
     margin-bottom: 1.5rem;
   }
@@ -47,6 +55,10 @@
     }
     .select{
       @include form-dropdown;
+    }
+    #billing_cp_button{
+      /* stylelint-disable-next-line */
+      font-size:1.6rem !important;
     }
     #billing_country_field{
       padding-bottom: 1.5rem;
