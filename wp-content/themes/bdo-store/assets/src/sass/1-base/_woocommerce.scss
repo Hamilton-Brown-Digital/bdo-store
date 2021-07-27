@@ -46,3 +46,14 @@ address, address p{
 address p{
   margin-top: 0.5em;
 }
+
+.form-row{
+  margin-bottom: 1.5rem;
+}
+
+.crafty_billing.address-field{
+  button{
+    position: relative;
+    top: -2rem;
+  }
+}

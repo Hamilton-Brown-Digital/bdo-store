@@ -144,3 +144,20 @@ function email_subject_passed_pending ( $subject, $order ) {
     }
     return $subject;
 }
+
+
+// renaming statuses to more customer-friendly on the front-end
+
+function statusrename($status){
+    $customerstatus = 'Processing';
+    if($status == 'completed'){
+        $customerstatus = 'Completed';
+    } elseif($status == 'refunded') {
+        $customerstatus = 'Refunded';
+    } elseif($status == 'cancelled') {
+        $customerstatus = 'Cancelled';
+    } elseif($status == 'failed') {
+        $customerstatus = 'Failed';
+    }
+    return $customerstatus;
+}
