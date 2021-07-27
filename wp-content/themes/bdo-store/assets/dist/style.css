@@ -3694,8 +3694,8 @@ address {
   position: relative; }
   @media (min-width: 64.063em) {
     .c-product-details__product-order {
-      top: -590px;
-      height: calc(100% + 590px); } }
+      top: -630px;
+      height: calc(100% + 630px); } }
   .c-product-details__product-order__form {
     z-index: 5;
     height: auto;
@@ -3703,7 +3703,7 @@ address {
     background: #F2F2F2; }
     @media (min-width: 40.063em) {
       .c-product-details__product-order__form {
-        height: 565px; } }
+        height: calc(630px - 25px); } }
     @media (min-width: 64.063em) {
       .c-product-details__product-order__form {
         position: -webkit-sticky;
@@ -3774,7 +3774,9 @@ address {
           grid-column-start: 1;
           grid-column-end: 3; }
         .c-product-box .variations tbody tr:last-of-type {
-          grid-column-end: 3; }
+          grid-column-end: span 2; }
+        .c-product-box .variations tbody tr:nth-child(4) {
+          grid-column-end: unset; }
     .c-product-box .variations label {
       display: block;
       font-size: 1rem;
@@ -3843,7 +3845,7 @@ address {
     font-size: 1.875rem;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
   .c-product-box .price {
-    margin-bottom: 1.5rem; }
+    padding-bottom: 1.5rem; }
 
 @media (min-width: 50em) {
   .c-signpost__grid {
