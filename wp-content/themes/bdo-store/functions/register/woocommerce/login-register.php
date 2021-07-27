@@ -8,7 +8,7 @@ function woo_separate_registration_form() {
     }
 
     if ( is_user_logged_in() ) {
-        header('Location: /account/');
+        header('Location: /account/welcome');
     }
     ob_start();
 

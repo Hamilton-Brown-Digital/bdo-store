@@ -1,5 +1,24 @@
 <?php
 
+
+
+
+  add_action( 'init', 'my_account_new_endpoints' );
+  function my_account_new_endpoints() {
+      add_rewrite_endpoint( 'welcome', EP_ROOT | EP_PAGES );
+  }
+
+  /**
+  * Get new endpoint content
+  */
+
+  // welcome
+ add_action( 'woocommerce_account_welcome_endpoint', 'welcome_endpoint_content' );
+ function welcome_endpoint_content() {
+    get_template_part( 'woocommerce/myaccount/welcome' );
+ }
+
+
 // remove order again button
 remove_action( 'woocommerce_order_details_after_order_table', 'woocommerce_order_again_button' );
 
@@ -30,3 +49,6 @@ function action_woocommerce_save_account_details( $user_id ) {
     }
 }
 add_action( 'woocommerce_save_account_details', 'action_woocommerce_save_account_details', 10, 1 );
+
+
+
