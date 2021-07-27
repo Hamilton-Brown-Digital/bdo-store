@@ -89,7 +89,7 @@
         /* stylelint-disable */
         a {
           display: block;
-          @include font-size(18);
+          @include text-regular;
           @include font-bold;
           padding: 0 1em;
           @include breakpoint($break-desktop-wide) {

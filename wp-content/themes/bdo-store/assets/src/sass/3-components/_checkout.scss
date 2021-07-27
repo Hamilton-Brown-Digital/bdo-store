@@ -114,7 +114,7 @@
 
 
   .woocommerce-checkout-review-order{
-    @include font-size(18);
+    @include text-regular;
     .cart_item{
       margin-bottom: 1.5rem;
       .product-name{
@@ -149,7 +149,7 @@
     }
     .woocommerce-table{
       /* stylelint-disable */
-      @include font-size(19);
+      @include text-regular;
       tfoot{
         tr{
           td{
@@ -210,7 +210,7 @@
     align-items: center;
     width: unset !important;
     margin-bottom: 0 !important;
-    @include font-size(18);
+    @include text-regular;
     line-height:1;
   }
   .payment_box{

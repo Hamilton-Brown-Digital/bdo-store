@@ -141,7 +141,7 @@
     text-decoration: underline;
   }
   p, a, li{
-    @include font-size(19);
+    @include text-regular;
   }
 
   a:active {
@@ -200,6 +200,10 @@
 }
 @mixin text-small{
   @include font-size(16);
+  line-height: 1.4;
+}
+@mixin text-regular{
+  @include font-size(18);
   line-height: 1.4;
 }
 @mixin text-side-nav{
@@ -312,7 +316,7 @@
   text-transform: uppercase;
   @include text-tiny;
   @include breakpoint($break-tablet){
-    @include font-size(16);
+    @include text-small;
   }
 }
 
@@ -439,7 +443,7 @@
   text-decoration: none;
   white-space: nowrap;
   cursor:pointer;
-  @include font-size(16);
+  @include text-small;
   @include font-bold;
   @include page-color('background');
   &:after{
@@ -506,12 +510,12 @@
 // form label
 @mixin form-label{
   display: block;
-  @include font-size(16);
+  @include text-small;
   width: 100%;
   margin-bottom:0.5em;
   @include font-bold;
   @include breakpoint($break-desktop-wide) {
-    @include font-size(18);
+    @include text-regular;
   }
 }
 
@@ -521,7 +525,7 @@
   padding: 0.6em;
   background-color: $white;
   border: $borderline-darker;
-  @include font-size(16);
+  @include text-small;
 }
 
 // inline text input
@@ -530,7 +534,7 @@
   padding: 0.6em;
   background-color: $white;
   border: $borderline-darker;
-  @include font-size(16);
+  @include text-small;
 }
 
 // textara
@@ -540,7 +544,7 @@
   padding: 0.6em;
   background-color: $white;
   border: $borderline-darker;
-  @include font-size(16);
+  @include text-small;
 }
 
 // dropdown
@@ -556,7 +560,7 @@
   border: $borderline-darker;
   color: unset;
   cursor: pointer;
-  @include font-size(16);
+  @include text-small;
   @include page-color(border-bottom-color);
   .theme-color--orange &{
     background-image:url('#{$image-path}/icons/arrow-down-orange.svg');
@@ -663,7 +667,7 @@
   }
   *{
     @include font-bold;
-    @include font-size(16);
+    @include text-small;
   }
   .woocommerce-message,
   .woocommerce-error {
@@ -719,7 +723,7 @@
   }
   *{
     @include font-bold;
-    @include font-size(16);
+    @include text-small;
   }
   & *{
     color:$color-text;

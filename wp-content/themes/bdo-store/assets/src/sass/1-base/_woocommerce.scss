@@ -41,7 +41,7 @@
 }
 
 address, address p{
-  @include font-size(19);
+  @include text-regular;
 }
 address p{
   margin-top: 0.5em;

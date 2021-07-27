@@ -83,7 +83,7 @@
         display: block;
         height: 1em;
         white-space: nowrap;
-        @include font-size(18);
+        @include text-regular;
       }
       &__suffix{
         display: block;

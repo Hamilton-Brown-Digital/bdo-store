@@ -19,6 +19,7 @@
     color: $white;
     text-align: left;
     @include font-bold;
+    @include text-regular;
     @include page-color('background-color');
     &:after{
       position: absolute;
@@ -40,7 +41,7 @@
   &__help {
     margin-top: 30px;
     p {
-      @include font-size(16);
+      @include text-small;
     }
   }
   .variations{
@@ -94,7 +95,7 @@
       font-family: $font-primary;
       line-height: 1.2;
       white-space: break-spaces;
-      @include font-size(14);
+      @include text-tiny;
     }
   }
   .single_variation_wrap{

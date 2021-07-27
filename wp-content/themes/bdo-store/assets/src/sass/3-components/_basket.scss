@@ -58,7 +58,7 @@
       td{
         display: flex;
         flex-direction: column;
-        @include font-size(18);
+        @include text-regular;
         &:last-of-type{
           align-items: center;
         }

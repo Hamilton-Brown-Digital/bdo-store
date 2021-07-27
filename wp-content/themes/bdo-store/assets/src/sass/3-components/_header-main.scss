@@ -78,9 +78,10 @@
       a {
         display: block;
         padding: 1rem $edgepadding-mobile-loose;
-        @include font-bold;
-        line-height: 24px;
+        font-size: 1.6rem;
         @include font-size(16);
+        line-height: 24px;
+        @include font-bold;
 
         @include breakpoint($break-desktop-wide) {
           position: relative;
@@ -151,10 +152,12 @@
       @include breakpoint($break-desktop-wide) {
         display:block;
         @include font-bold;
+        @include text-tiny;
       }
     }
     .basket_count{
       @include font-bold;
+      @include text-tiny;
     }
   }
   &__hamburger{

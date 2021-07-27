@@ -241,7 +241,7 @@ mark {
       }
     }
     td{
-      @include font-size(18);
+      @include text-regular;
     }
     td, th{
       display: flex;
@@ -310,7 +310,7 @@ mark {
     th {
       @include font-bold;
       line-height: 20px;
-      @include font-size(16);
+      @include text-small;
     }
   }
 }
@@ -346,7 +346,7 @@ address{
     display: block;
     margin-bottom: 20px;
     line-height: 20px;
-    @include font-size(16);
+    @include text-small;
   }
 
   legend {

@@ -1,10 +1,14 @@
+// gravity form
+
 .c-form {
   .ginput_container{
     input{
       @include form-input-text;
+      margin-bottom: 1.5rem;
     }
     textarea{
       @include form-input-textarea;
+      margin-bottom: 1.5rem;
     }
   }
   .gform_fields{

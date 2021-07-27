@@ -64,7 +64,7 @@
     &__list{
       &__item{
         @include font-bold;
-        @include font-size(16);
+        @include text-small;
       }
     }
   }
@@ -75,7 +75,7 @@
       flex-direction: column;
       flex-shrink: 1;
       justify-content: flex-start;
-      @include font-size(16);
+      @include text-small;
       @include breakpoint($break-desktop-wider){
         flex-direction: row;
         align-items: center;

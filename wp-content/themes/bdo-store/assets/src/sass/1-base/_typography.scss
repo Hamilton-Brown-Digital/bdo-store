@@ -23,14 +23,14 @@ h2 {
 }
 
 h3 {
-  @include font-size(18);
+  @include text-regular;
   @include breakpoint($break-desktop) {
     @include font-size(26);
   }
 }
 
 h4 {
-  @include font-size(16);
+  @include text-small;
   @include breakpoint($break-desktop) {
     @include font-size(22);
   }
@@ -56,17 +56,17 @@ p {
   color: inherit;
   font-family: inherit;
   line-height: 1.4;
-  @include font-size(16);
+  @include text-small;
   @include breakpoint($break-desktop) {
-    @include font-size(19);
+    @include text-regular;
   }
 }
 
 ul, ol {
   margin-bottom: 0;
   padding: 0;
-  @include font-size(16);
+  @include text-small;
   @include breakpoint($break-desktop) {
-    @include font-size(19);
+    @include text-regular;
   }
 }

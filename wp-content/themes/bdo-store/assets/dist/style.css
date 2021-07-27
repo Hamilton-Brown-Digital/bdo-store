@@ -892,6 +892,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 62.5%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-synthesis: none;
@@ -902,7 +903,6 @@ html {
   overflow-y: unset; }
 
 body {
-  font-size: 3.90625%rem;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -910,7 +910,7 @@ body {
   margin: 0;
   color: #333333;
   font-family: "Proxima Nova Regular", sans-serif;
-  font-weight: normal;
+  font-size: 18px;
   text-align: left;
   overflow-x: hidden; }
   body.single-product {
@@ -994,13 +994,15 @@ h2 {
       font-size: 3rem; } }
 
 h3 {
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     h3 {
       font-size: 1.625rem; } }
 
 h4 {
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     h4 {
       font-size: 1.375rem; } }
@@ -1022,18 +1024,22 @@ p {
   color: inherit;
   font-family: inherit;
   line-height: 1.4;
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     p {
-      font-size: 1.1875rem; } }
+      font-size: 1.125rem;
+      line-height: 1.4; } }
 
 ul, ol {
   margin-bottom: 0;
   padding: 0;
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     ul, ol {
-      font-size: 1.1875rem; } }
+      font-size: 1.125rem;
+      line-height: 1.4; } }
 
 .flex {
   display: flex;
@@ -1130,7 +1136,8 @@ ul, ol {
     display: none; }
   .woocommerce-NoticeGroup * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .woocommerce-NoticeGroup * {
     color: #333333; }
   .woocommerce-NoticeGroup ul {
@@ -1160,7 +1167,8 @@ ul, ol {
         content: ''; }
 
 address, address p {
-  font-size: 1.1875rem; }
+  font-size: 1.125rem;
+  line-height: 1.4; }
 
 address p {
   margin-top: 0.5em; }
@@ -1333,6 +1341,7 @@ address p {
       .c-header-utility__menu ul li a {
         display: block;
         font-size: 1.125rem;
+        line-height: 1.4;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
         padding: 0 1em; }
         @media (min-width: 75em) {
@@ -1414,9 +1423,10 @@ address p {
   .c-header-main__menu li a {
     display: block;
     padding: 1rem 30px;
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 24px;
-    font-size: 1rem; }
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     @media (min-width: 75em) {
       .c-header-main__menu li a {
         position: relative;
@@ -1478,9 +1488,13 @@ address p {
     @media (min-width: 75em) {
       .c-header-main__basket__label {
         display: block;
-        font-family: "Proxima Nova Bold", sans-serif, sans-serif; } }
+        font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+        font-size: 0.875rem;
+        line-height: 1.2; } }
   .c-header-main__basket .basket_count {
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.2; }
 
 @media (min-width: 75em) {
   .c-header-main__hamburger {
@@ -1778,7 +1792,8 @@ address p {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-404__main p, .c-404__main a, .c-404__main li {
-    font-size: 1.1875rem; }
+    font-size: 1.125rem;
+    line-height: 1.4; }
   .c-404__main a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-404__main a:focus {
@@ -1830,7 +1845,8 @@ address p {
   line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-listing__subhead {
-      font-size: 1rem; } }
+      font-size: 1rem;
+      line-height: 1.4; } }
 
 .c-listing__heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
@@ -1851,7 +1867,8 @@ address p {
   margin-bottom: 15px;
   font-family: "Proxima Nova Bold", sans-serif;
   line-height: 24px;
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     .c-listing__count {
       margin-bottom: 30px; } }
@@ -1908,7 +1925,8 @@ address p {
   line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-accordion__subhead {
-      font-size: 1rem; } }
+      font-size: 1rem;
+      line-height: 1.4; } }
 
 .c-accordion__main-heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
@@ -2153,7 +2171,8 @@ address p {
         display: block;
         height: 1em;
         white-space: nowrap;
-        font-size: 1.125rem; }
+        font-size: 1.125rem;
+        line-height: 1.4; }
       .c-price-comparison__col__price__suffix {
         display: block;
         height: 1em;
@@ -2262,7 +2281,8 @@ address p {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-content-row__content p, .c-content-row__content a, .c-content-row__content li {
-    font-size: 1.1875rem; }
+    font-size: 1.125rem;
+    line-height: 1.4; }
   .c-content-row__content a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-content-row__content a:focus {
@@ -2349,7 +2369,8 @@ address p {
   text-decoration: underline; }
 
 .c-content-block__content p, .c-content-block__content a, .c-content-block__content li {
-  font-size: 1.1875rem; }
+  font-size: 1.125rem;
+  line-height: 1.4; }
 
 .c-content-block__content a:active {
   border-bottom: 1px solid #ed1a3b; }
@@ -2508,13 +2529,15 @@ address p {
     min-height: 80px; }
     .c-footer__menu__list__item {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1rem; }
+      font-size: 1rem;
+      line-height: 1.4; }
   .c-footer__copyright__notice {
     display: flex;
     flex-direction: column;
     flex-shrink: 1;
     justify-content: flex-start;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
     @media (min-width: 83.75em) {
       .c-footer__copyright__notice {
         flex-direction: row;
@@ -2530,11 +2553,13 @@ address p {
 
 .c-sitemap {
   font-size: 1rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   line-height: 22px; }
   @media (min-width: 75em) {
     .c-sitemap {
       font-size: 1.125rem;
+      line-height: 1.4;
       line-height: 24px; } }
 
 @media (min-width: 75em) {
@@ -2606,6 +2631,7 @@ address p {
     white-space: nowrap;
     cursor: pointer;
     font-size: 1rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-account .woocommerce-Button, .theme-color--orange .c-account .woocommerce-button, .theme-color--orange .c-account button, .theme-color--orange .c-account .edit {
@@ -2807,7 +2833,8 @@ mark {
       .woocommerce-orders-table tr .woocommerce-orders-table__header-order-actions {
         display: none; } }
     .woocommerce-orders-table tr td {
-      font-size: 1.125rem; }
+      font-size: 1.125rem;
+      line-height: 1.4; }
     .woocommerce-orders-table tr td, .woocommerce-orders-table tr th {
       display: flex;
       gap: 0.25em;
@@ -2856,7 +2883,8 @@ mark {
   .woocommerce-orders-table tfoot th {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     line-height: 20px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
 
 address {
   line-height: 1.4; }
@@ -2869,13 +2897,15 @@ address {
   .edit-account label {
     display: block;
     font-size: 1rem;
+    line-height: 1.4;
     width: 100%;
     margin-bottom: 0.5em;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     @media (min-width: 75em) {
       .woocommerce-address-fields label,
       .edit-account label {
-        font-size: 1.125rem; } }
+        font-size: 1.125rem;
+        line-height: 1.4; } }
   .woocommerce-address-fields input[type='text'], .woocommerce-address-fields input[type='tel'], .woocommerce-address-fields input[type='email'], .woocommerce-address-fields input[type='password'],
   .edit-account input[type='text'],
   .edit-account input[type='tel'],
@@ -2885,7 +2915,8 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .woocommerce-address-fields .select2-container .select2-selection--single,
   .edit-account .select2-container .select2-selection--single {
     height: 50px;
@@ -2900,7 +2931,8 @@ address {
     display: block;
     margin-bottom: 20px;
     line-height: 20px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .woocommerce-address-fields legend,
   .edit-account legend {
     display: none; }
@@ -2934,6 +2966,7 @@ address {
   white-space: nowrap;
   cursor: pointer;
   font-size: 1rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-left: auto; }
   .theme-color--orange .c-basket .woocommerce-Button, .theme-color--orange .c-basket .woocommerce-button, .theme-color--orange .c-basket .button, .theme-color--orange .c-basket button, .theme-color--orange .c-basket .edit {
@@ -2992,6 +3025,7 @@ address {
   white-space: nowrap;
   cursor: pointer;
   font-size: 1rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-left: auto; }
   .theme-color--orange .c-basket button {
@@ -3062,7 +3096,8 @@ address {
     .c-basket .shop_table tbody tr td {
       display: flex;
       flex-direction: column;
-      font-size: 1.125rem; }
+      font-size: 1.125rem;
+      line-height: 1.4; }
       .c-basket .shop_table tbody tr td:last-of-type {
         align-items: center; }
       .c-basket .shop_table tbody tr td:first-of-type {
@@ -3104,7 +3139,8 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .c-basket .coupon button {
     position: relative;
     display: inline-flex;
@@ -3120,6 +3156,7 @@ address {
     white-space: nowrap;
     cursor: pointer;
     font-size: 1rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     background-color: transparent;
     border: solid 2px #707070;
@@ -3252,6 +3289,7 @@ address {
     white-space: nowrap;
     cursor: pointer;
     font-size: 1rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-basket .wc-proceed-to-checkout a {
@@ -3342,6 +3380,7 @@ address {
     background-color: #fff;
     border: 2px solid #d8d8d8;
     font-size: 1rem;
+    line-height: 1.4;
     margin-bottom: 0; }
   .c-checkout .checkout_coupon .button {
     position: relative;
@@ -3358,6 +3397,7 @@ address {
     white-space: nowrap;
     cursor: pointer;
     font-size: 1rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-checkout .checkout_coupon .button {
@@ -3410,23 +3450,27 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .c-checkout .woocommerce-checkout label {
     display: block;
     font-size: 1rem;
+    line-height: 1.4;
     width: 100%;
     margin-bottom: 0.5em;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     @media (min-width: 75em) {
       .c-checkout .woocommerce-checkout label {
-        font-size: 1.125rem; } }
+        font-size: 1.125rem;
+        line-height: 1.4; } }
   .c-checkout .woocommerce-checkout textarea {
     width: 100%;
     height: 12em;
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .c-checkout .woocommerce-checkout .button {
     position: relative;
     display: inline-flex;
@@ -3442,6 +3486,7 @@ address {
     white-space: nowrap;
     cursor: pointer;
     font-size: 1rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-checkout .woocommerce-checkout .button {
@@ -3488,7 +3533,8 @@ address {
     border: 2px solid #d8d8d8;
     color: unset;
     cursor: pointer;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
     .theme-color--orange .c-checkout .woocommerce-checkout .select {
       border-bottom-color: #df8639; }
     .theme-color--blue .c-checkout .woocommerce-checkout .select {
@@ -3549,7 +3595,8 @@ address {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
 
 .c-checkout .woocommerce-checkout-review-order {
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  line-height: 1.4; }
   .c-checkout .woocommerce-checkout-review-order .cart_item {
     margin-bottom: 1.5rem; }
     .c-checkout .woocommerce-checkout-review-order .cart_item .product-name {
@@ -3626,7 +3673,8 @@ address {
     margin-bottom: 1.5rem; }
   .c-checkout .woocommerce-order .woocommerce-table {
     /* stylelint-disable */
-    font-size: 1.1875rem;
+    font-size: 1.125rem;
+    line-height: 1.4;
     /* stylelint-enable */ }
     .c-checkout .woocommerce-order .woocommerce-table tfoot tr td {
       text-align: right; }
@@ -3664,6 +3712,7 @@ address {
     width: unset !important;
     margin-bottom: 0 !important;
     font-size: 1.125rem;
+    line-height: 1.4;
     line-height: 1; }
   .wc_payment_method .payment_box {
     width: 100%; }
@@ -3733,7 +3782,9 @@ address {
     border-radius: 2px;
     color: #fff;
     text-align: left;
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.4; }
     .theme-color--orange .c-product-box .single_add_to_cart_button {
       background-color: #df8639; }
     .theme-color--blue .c-product-box .single_add_to_cart_button {
@@ -3755,7 +3806,8 @@ address {
   .c-product-box__help {
     margin-top: 30px; }
     .c-product-box__help p {
-      font-size: 1rem; }
+      font-size: 1rem;
+      line-height: 1.4; }
   .c-product-box .variations {
     display: block;
     width: 100%;
@@ -3780,12 +3832,14 @@ address {
     .c-product-box .variations label {
       display: block;
       font-size: 1rem;
+      line-height: 1.4;
       width: 100%;
       margin-bottom: 0.5em;
       font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
       @media (min-width: 75em) {
         .c-product-box .variations label {
-          font-size: 1.125rem; } }
+          font-size: 1.125rem;
+          line-height: 1.4; } }
     .c-product-box .variations .value {
       position: relative; }
       .c-product-box .variations .value .reset_variations {
@@ -3806,6 +3860,7 @@ address {
       color: unset;
       cursor: pointer;
       font-size: 1rem;
+      line-height: 1.4;
       display: block;
       width: 100%;
       height: 4rem;
@@ -3817,7 +3872,8 @@ address {
       font-family: "Proxima Nova Regular", sans-serif;
       line-height: 1.2;
       white-space: break-spaces;
-      font-size: 0.875rem; }
+      font-size: 0.875rem;
+      line-height: 1.2; }
       .theme-color--orange .c-product-box .variations select {
         border-bottom-color: #df8639; }
       .theme-color--blue .c-product-box .variations select {
@@ -3866,7 +3922,8 @@ address {
   line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-signpost__tagline {
-      font-size: 1rem; } }
+      font-size: 1rem;
+      line-height: 1.4; } }
 
 .c-signpost__heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
@@ -3923,7 +3980,8 @@ address {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-signpost__content-main p, .c-signpost__content-main a, .c-signpost__content-main li {
-    font-size: 1.1875rem; }
+    font-size: 1.125rem;
+    line-height: 1.4; }
   .c-signpost__content-main a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-signpost__content-main a:focus {
@@ -4035,7 +4093,8 @@ address {
       color: #ed1a3b;
       text-decoration: underline; }
     .c-download__main__content p, .c-download__main__content a, .c-download__main__content li {
-      font-size: 1.1875rem; }
+      font-size: 1.125rem;
+      line-height: 1.4; }
     .c-download__main__content a:active {
       border-bottom: 1px solid #ed1a3b; }
     .c-download__main__content a:focus {
@@ -4133,7 +4192,8 @@ address {
       color: #ed1a3b;
       text-decoration: underline; }
     .c-download__item__description p, .c-download__item__description a, .c-download__item__description li {
-      font-size: 1.1875rem; }
+      font-size: 1.125rem;
+      line-height: 1.4; }
     .c-download__item__description a:active {
       border-bottom: 1px solid #ed1a3b; }
     .c-download__item__description a:focus {
@@ -4211,7 +4271,8 @@ address {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-download__item__additional-content p, .c-download__item__additional-content a, .c-download__item__additional-content li {
-    font-size: 1.1875rem; }
+    font-size: 1.125rem;
+    line-height: 1.4; }
   .c-download__item__additional-content a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-download__item__additional-content a:focus {
@@ -4260,7 +4321,9 @@ address {
   padding: 0.6em;
   background-color: #fff;
   border: 2px solid #d8d8d8;
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem; }
 
 .c-form .ginput_container textarea {
   width: 100%;
@@ -4268,7 +4331,9 @@ address {
   padding: 0.6em;
   background-color: #fff;
   border: 2px solid #d8d8d8;
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem; }
 
 @media (min-width: 40.063em) {
   .c-form .gform_fields {
@@ -4368,6 +4433,7 @@ address {
   color: unset;
   cursor: pointer;
   font-size: 1rem;
+  line-height: 1.4;
   margin-bottom: 1.5rem;
   background-color: #fff; }
   .theme-color--orange .c-form .ginput_container_select {
@@ -4392,12 +4458,14 @@ address {
 .c-form label {
   display: block;
   font-size: 1rem;
+  line-height: 1.4;
   width: 100%;
   margin-bottom: 0.5em;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
   @media (min-width: 75em) {
     .c-form label {
-      font-size: 1.125rem; } }
+      font-size: 1.125rem;
+      line-height: 1.4; } }
 
 .c-form .gform_submission_error {
   margin-bottom: 3rem;
@@ -4433,6 +4501,7 @@ address {
   white-space: nowrap;
   cursor: pointer;
   font-size: 1rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-left: auto; }
   .theme-color--orange .c-form .gform_button {
@@ -4538,6 +4607,8 @@ address {
         align-items: center;
         justify-content: flex-end; } }
   .e-card__tagline {
+    font-size: 1rem;
+    line-height: 1.4;
     margin-bottom: 1.5rem;
     color: #ed1a3b; }
   .e-card__title {
@@ -4558,10 +4629,14 @@ address {
       display: none; }
   .e-card__price {
     flex-grow: 1; }
+    .e-card__price__prefix, .e-card__price__suffix {
+      font-size: 1rem;
+      line-height: 1.4; }
     .e-card__price__price {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       color: #ed1a3b;
-      font-size: 1.125rem; }
+      font-size: 1.125rem;
+      line-height: 1.4; }
   .e-card__count {
     flex-grow: 1;
     text-transform: uppercase;
@@ -4595,6 +4670,7 @@ address {
   white-space: nowrap;
   cursor: pointer;
   font-size: 1rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
   .theme-color--orange .e-cta-button, .theme-color--orange .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .theme-color--orange a, .theme-color--orange .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .theme-color--orange .button, .theme-color--orange .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .woocommerce-account .woocommerce-notices-wrapper a, .woocommerce-account .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-account .woocommerce-notices-wrapper .button, .woocommerce-account .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .button {
     background: #df8639; }
@@ -4793,12 +4869,14 @@ hr.e-seperator {
   .customer-login__content label {
     display: block;
     font-size: 1rem;
+    line-height: 1.4;
     width: 100%;
     margin-bottom: 0.5em;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     @media (min-width: 75em) {
       .customer-login__content label {
-        font-size: 1.125rem; } }
+        font-size: 1.125rem;
+        line-height: 1.4; } }
   .customer-login__content .woocommerce-form__label-for-checkbox {
     margin-bottom: 0; }
   .customer-login__content input[type='text'], .customer-login__content input[type='email'], .customer-login__content input[type='password'] {
@@ -4806,7 +4884,8 @@ hr.e-seperator {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .customer-login__content .woocommerce-form-login__rememberme {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-bottom: 1.5rem; }
@@ -4830,6 +4909,7 @@ hr.e-seperator {
     white-space: nowrap;
     cursor: pointer;
     font-size: 1rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     width: auto; }
     .theme-color--orange .customer-login__content .woocommerce-button, .theme-color--orange .customer-login__content .woocommerce-Button {
@@ -4946,7 +5026,8 @@ hr.e-seperator {
   .e-cookie__text {
     margin-bottom: 20px;
     line-height: 20px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
 
 .c-basket .woocommerce-notices-wrapper, .single-product .woocommerce-notices-wrapper {
   position: absolute;
@@ -5008,7 +5089,8 @@ hr.e-seperator {
     display: none; }
   .c-basket .woocommerce-notices-wrapper *, .single-product .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .c-basket .woocommerce-notices-wrapper .woocommerce-message,
   .c-basket .woocommerce-notices-wrapper .woocommerce-error, .single-product .woocommerce-notices-wrapper .woocommerce-message,
   .single-product .woocommerce-notices-wrapper .woocommerce-error {
@@ -5090,7 +5172,8 @@ hr.e-seperator {
     display: none; }
   .woocommerce-account .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .woocommerce-account .woocommerce-notices-wrapper .woocommerce-message,
   .woocommerce-account .woocommerce-notices-wrapper .woocommerce-error {
     padding: 1.5rem;
@@ -5131,7 +5214,8 @@ hr.e-seperator {
     display: none; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper * {
     color: #333333; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper ul {
@@ -5226,7 +5310,8 @@ hr.e-seperator {
     display: none; }
   .single-product .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
   .single-product .woocommerce-notices-wrapper .woocommerce-message,
   .single-product .woocommerce-notices-wrapper .woocommerce-error {
     padding: 1.5rem;

@@ -48,6 +48,7 @@
     }
   }
   &__tagline{
+    @include text-small;
     margin-bottom: 1.5rem;
     color: $brand-red;
   }
@@ -64,10 +65,13 @@
   }
   &__price{
     flex-grow: 1;
+    &__prefix, &__suffix{
+      @include text-small;
+    }
     &__price{
       @include font-bold;
       color: $brand-red;
-      @include font-size(18);
+      @include text-regular;
     }
   }
   &__count{

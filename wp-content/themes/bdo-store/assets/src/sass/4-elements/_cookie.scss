@@ -26,6 +26,6 @@
   &__text {
     margin-bottom: 20px;
     line-height: 20px;
-    @include font-size(16);
+    @include text-small;
   }
 }
