@@ -2,6 +2,9 @@
   .c-basket &, .single-product &{
     @include notice-strip;
   }
+  .woocommerce-account &{
+    @include notice-strip;
+  }
   .woocommerce-MyAccount-content &{
     @include notice-inline;
   }
@@ -11,6 +14,7 @@
     top: unset;
     bottom: -25px;
     left: 0;
+    padding-top: 0;
     transform: translateY(100%);
   }
   .theme-color--orange &{

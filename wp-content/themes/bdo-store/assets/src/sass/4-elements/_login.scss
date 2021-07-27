@@ -15,6 +15,11 @@
 
 .login-register {
   @include loginboxdefaults;
+  
+}
+
+.customer-login{
+  overflow:auto;
 }
 
 .customer-login__tabs {
