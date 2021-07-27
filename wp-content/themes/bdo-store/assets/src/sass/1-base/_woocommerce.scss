@@ -41,7 +41,7 @@
 }
 
 address, address p{
-  @include font-size(19);
+  @include text-regular;
 }
 address p{
   margin-top: 0.5em;
@@ -49,11 +49,4 @@ address p{
 
 .form-row{
   margin-bottom: 1.5rem;
-}
-
-.crafty_billing.address-field{
-  button{
-    position: relative;
-    top: -2rem;
-  }
 }

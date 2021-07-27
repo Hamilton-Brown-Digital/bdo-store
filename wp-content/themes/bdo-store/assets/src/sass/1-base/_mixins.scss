@@ -53,11 +53,6 @@
   @return #{$remSize}rem;
 }
 
-// USAGE: @include font-size(12);
-@mixin font-size($size) {
-  font-size: calculateRem($size);
-}
-
 // USAGE: @include stagger-transition-delay(10, 0.5s, 0.1s);
 @mixin stagger-transition-delay($i, $initial-delay, $stagger-delay) {
   @while $i > 0 {
@@ -141,7 +136,7 @@
     text-decoration: underline;
   }
   p, a, li{
-    @include font-size(19);
+    @include text-regular;
   }
 
   a:active {
@@ -195,19 +190,29 @@
   font-family:$font-bold, $font-secondary;
 }
 @mixin text-tiny{
-  @include font-size(14);
+  font-size:1.4rem;
   line-height: 1.2;
 }
 @mixin text-small{
-  @include font-size(16);
+  font-size:1.6rem;
   line-height: 1.4;
 }
+@mixin text-regular{
+  font-size:1.8rem;
+  line-height: 1.4;
+}
+@mixin text-large{
+  font-size:2rem;
+  line-height: 1.2;
+}
+
+
 @mixin text-side-nav{
-  @include font-size(20);
   display: block;
   padding:0.5rem;
   padding-left: 0;
   color:$color-text;
+  font-size:2rem;
   line-height: 1.4;
   text-decoration: none;
   &:hover{
@@ -243,16 +248,16 @@
 // Huge section headings
 @mixin header-section($underline: false){
   @include font-bold;
-  @include font-size(20);
+  @include text-large;
   margin-top: 0;
   @include breakpoint($break-mobile){
-    @include font-size(30);
+    font-size:3rem;
   }
   @include breakpoint($break-tablet){
-    @include font-size(40);
+    font-size:4rem;
   }
   @include breakpoint($break-desktop){
-    @include font-size(60);
+    font-size:6rem;
   }
   @if $underline {
     &:after{
@@ -264,15 +269,15 @@
 // Regular headings
 @mixin header-regular($underline: false, $stumpyunderline: false){
   @include font-bold;
-  @include font-size(20);
+  @include text-large;
   @include breakpoint($break-mobile){
-    @include font-size(25);
+    font-size:2.5rem;
   }
   @include breakpoint($break-tablet){
-    @include font-size(30);
+    font-size:3rem;
   }
   @include breakpoint($break-desktop){
-    @include font-size(40);
+    font-size:4rem;
   }
   @if $underline {
     &:after{
@@ -291,12 +296,12 @@
 // Small headings
 @mixin header-small($underline: false){
   @include font-bold;
-  @include font-size(20);
+  @include text-large;
   @include breakpoint($break-tablet){
-    @include font-size(20);
+    @include text-large;
   }
   @include breakpoint($break-desktop-wide){
-    @include font-size(24);
+    font-size:2.4rem;
   }
   @if $underline {
     &:after{
@@ -312,13 +317,13 @@
   text-transform: uppercase;
   @include text-tiny;
   @include breakpoint($break-tablet){
-    @include font-size(16);
+    @include text-small;
   }
 }
 
 // intros
 @mixin intro-text{
-  @include font-size(24);
+  font-size:2.4rem;
   line-height: 1.2;
   @include font-bold;
 }
@@ -439,7 +444,7 @@
   text-decoration: none;
   white-space: nowrap;
   cursor:pointer;
-  @include font-size(16);
+  @include text-small;
   @include font-bold;
   @include page-color('background');
   &:after{
@@ -506,12 +511,12 @@
 // form label
 @mixin form-label{
   display: block;
-  @include font-size(16);
+  @include text-small;
   width: 100%;
   margin-bottom:0.5em;
   @include font-bold;
   @include breakpoint($break-desktop-wide) {
-    @include font-size(18);
+    @include text-regular;
   }
 }
 
@@ -521,7 +526,7 @@
   padding: 0.6em;
   background-color: $white;
   border: $borderline-darker;
-  @include font-size(16);
+  @include text-small;
 }
 
 // inline text input
@@ -530,7 +535,7 @@
   padding: 0.6em;
   background-color: $white;
   border: $borderline-darker;
-  @include font-size(16);
+  @include text-small;
 }
 
 // textara
@@ -540,7 +545,7 @@
   padding: 0.6em;
   background-color: $white;
   border: $borderline-darker;
-  @include font-size(16);
+  @include text-small;
 }
 
 // dropdown
@@ -556,7 +561,7 @@
   border: $borderline-darker;
   color: unset;
   cursor: pointer;
-  @include font-size(16);
+  @include text-small;
   @include page-color(border-bottom-color);
   .theme-color--orange &{
     background-image:url('#{$image-path}/icons/arrow-down-orange.svg');
@@ -663,7 +668,7 @@
   }
   *{
     @include font-bold;
-    @include font-size(16);
+    @include text-small;
   }
   .woocommerce-message,
   .woocommerce-error {
@@ -719,7 +724,7 @@
   }
   *{
     @include font-bold;
-    @include font-size(16);
+    @include text-small;
   }
   & *{
     color:$color-text;

@@ -3,7 +3,7 @@
   &__title{
     margin-bottom: 1em;
     @include font-bold;
-    @include font-size(20);
+    @include text-large;
   }
   &__list{
     display: grid;

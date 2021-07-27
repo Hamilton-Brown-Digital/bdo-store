@@ -22,3 +22,13 @@ function store_mall_wc_empty_cart_redirect_url() {
 
 // REMOVE VARIATION STUFF FROM NAME
 add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
+
+
+function custom_override_checkout_fields($fields)
+ {
+$fields['billing']['billing_address_1']['label'] = 'Road name';
+ unset($fields['billing']['billing_address_2']);
+ return $fields;
+ }
+
+ add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');

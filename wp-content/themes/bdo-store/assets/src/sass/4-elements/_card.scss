@@ -28,7 +28,7 @@
   }
   &__main{
     flex-grow: 1;
-    padding:1.5rem;
+    padding:3rem;
     @include breakpoint($break-desktop-wide) {
       padding-bottom: 6rem;
     }
@@ -37,7 +37,7 @@
   &__footer{
     display: flex;
     flex-direction: column;
-    padding:1.5rem;
+    padding:3rem;
     padding-top: 0;
     white-space: nowrap;
     gap:1.5rem;
@@ -48,13 +48,13 @@
     }
   }
   &__tagline{
+    @include text-small;
     margin-bottom: 1.5rem;
     color: $brand-red;
   }
   &__title{
     @include header-small;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
   }
   &__excerpt{
     @include text-small;
@@ -64,17 +64,20 @@
   }
   &__price{
     flex-grow: 1;
+    &__prefix, &__suffix{
+      @include text-small;
+    }
     &__price{
       @include font-bold;
       color: $brand-red;
-      @include font-size(18);
+      @include text-regular;
     }
   }
   &__count{
     flex-grow: 1;
     text-transform: uppercase;
     @include font-bold;
-    @include font-size(15);
+    @include text-small;
   }
   &--blue{
     .e-card__main{

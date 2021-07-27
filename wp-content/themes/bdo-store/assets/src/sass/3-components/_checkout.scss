@@ -1,7 +1,8 @@
 .c-checkout {
   h3 {
     @include header-regular(true, true);
-    margin-bottom: 1.5rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
   }
   strong{
     font-weight: $reg;
@@ -21,6 +22,13 @@
       @include form-submit;
     }
   }
+  .crafty_billing.address-field{
+    button{
+      position: relative;
+      top: -2.5rem;
+    }
+  }
+
   .woocommerce-error{
     margin-bottom: 1.5rem;
   }
@@ -47,6 +55,10 @@
     }
     .select{
       @include form-dropdown;
+    }
+    #billing_cp_button{
+      /* stylelint-disable-next-line */
+      font-size:1.6rem !important;
     }
     #billing_country_field{
       padding-bottom: 1.5rem;
@@ -114,7 +126,7 @@
 
 
   .woocommerce-checkout-review-order{
-    @include font-size(18);
+    @include text-regular;
     .cart_item{
       margin-bottom: 1.5rem;
       .product-name{
@@ -149,7 +161,7 @@
     }
     .woocommerce-table{
       /* stylelint-disable */
-      @include font-size(19);
+      @include text-regular;
       tfoot{
         tr{
           td{
@@ -210,7 +222,7 @@
     align-items: center;
     width: unset !important;
     margin-bottom: 0 !important;
-    @include font-size(18);
+    @include text-regular;
     line-height:1;
   }
   .payment_box{

@@ -15,10 +15,10 @@
     margin-bottom:1.5rem;
   }
   h2{
-    @include font-size(32);
+    font-size:3.2rem;
   }
   h3{
-    @include font-size(26);
+    font-size:2.6rem;
   }
   p{
     max-width: 800px;
@@ -50,7 +50,7 @@
   // NAVIGATION
   .woocommerce-MyAccount-navigation {
     position: relative;
-    padding-top: 3rem;
+    padding-top: 6rem;
     padding-bottom:3rem;
     background-color: $color-bg-feint;
     h2 {
@@ -107,7 +107,7 @@
       width: 80%;
       min-height: 70vh;
       padding:clamp(20px, 8vw, 140px);
-      padding-top:3rem;
+      padding-top:6rem;
       padding-right: 0;
     }
   }
@@ -192,7 +192,7 @@
 .woocommerce-column__title,
 .woocommerce-Address-title {
   margin-bottom: 1.5rem;
-  @include font-size(26);
+  font-size:2.6rem;
 }
 .woocommerce-Addresses{
   @include breakpoint($break-desktop) {
@@ -241,7 +241,7 @@ mark {
       }
     }
     td{
-      @include font-size(18);
+      @include text-regular;
     }
     td, th{
       display: flex;
@@ -291,7 +291,7 @@ mark {
             flex-grow: 1;
             content: 'Actions';
             @include font-bold;
-            @include font-size(16px);
+            @include text-small;
             @include breakpoint($break-desktop-med) {
               display: none;
             }
@@ -310,7 +310,7 @@ mark {
     th {
       @include font-bold;
       line-height: 20px;
-      @include font-size(16);
+      @include text-small;
     }
   }
 }
@@ -346,7 +346,7 @@ address{
     display: block;
     margin-bottom: 20px;
     line-height: 20px;
-    @include font-size(16);
+    @include text-small;
   }
 
   legend {

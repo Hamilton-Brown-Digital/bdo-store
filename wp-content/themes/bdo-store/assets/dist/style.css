@@ -892,6 +892,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 62.5%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-synthesis: none;
@@ -902,7 +903,6 @@ html {
   overflow-y: unset; }
 
 body {
-  font-size: 3.90625%rem;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -910,7 +910,7 @@ body {
   margin: 0;
   color: #333333;
   font-family: "Proxima Nova Regular", sans-serif;
-  font-weight: normal;
+  font-size: 18px;
   text-align: left;
   overflow-x: hidden; }
   body.single-product {
@@ -982,28 +982,30 @@ h4 {
   line-height: 1; }
 
 h1 {
-  font-size: 2.5rem; }
+  font-size: 4rem; }
   @media (min-width: 50em) {
     h1 {
-      font-size: 4rem; } }
+      font-size: 6.4rem; } }
 
 h2 {
-  font-size: 2rem; }
+  font-size: 3.2rem; }
   @media (min-width: 50em) {
     h2 {
-      font-size: 3rem; } }
+      font-size: 4.8rem; } }
 
 h3 {
-  font-size: 1.125rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     h3 {
-      font-size: 1.625rem; } }
+      font-size: 2.6rem; } }
 
 h4 {
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     h4 {
-      font-size: 1.375rem; } }
+      font-size: 2.2rem; } }
 
 a {
   outline: none;
@@ -1022,18 +1024,22 @@ p {
   color: inherit;
   font-family: inherit;
   line-height: 1.4;
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     p {
-      font-size: 1.1875rem; } }
+      font-size: 1.8rem;
+      line-height: 1.4; } }
 
 ul, ol {
   margin-bottom: 0;
   padding: 0;
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     ul, ol {
-      font-size: 1.1875rem; } }
+      font-size: 1.8rem;
+      line-height: 1.4; } }
 
 .flex {
   display: flex;
@@ -1130,7 +1136,8 @@ ul, ol {
     display: none; }
   .woocommerce-NoticeGroup * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .woocommerce-NoticeGroup * {
     color: #333333; }
   .woocommerce-NoticeGroup ul {
@@ -1160,17 +1167,14 @@ ul, ol {
         content: ''; }
 
 address, address p {
-  font-size: 1.1875rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
 
 address p {
   margin-top: 0.5em; }
 
 .form-row {
   margin-bottom: 1.5rem; }
-
-.crafty_billing.address-field button {
-  position: relative;
-  top: -2rem; }
 
 .o-row {
   width: 100%;
@@ -1270,8 +1274,8 @@ address p {
         display: block;
         flex-grow: 1;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-        font-size: 0.875rem;
-        line-height: 1.2; } }
+        font-size: 1.6rem;
+        line-height: 1.4; } }
   .c-header-utility__search {
     padding: 0;
     padding-bottom: 2.5rem; }
@@ -1332,7 +1336,8 @@ address p {
           height: 100%; } }
       .c-header-utility__menu ul li a {
         display: block;
-        font-size: 1.125rem;
+        font-size: 1.8rem;
+        line-height: 1.4;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
         padding: 0 1em; }
         @media (min-width: 75em) {
@@ -1343,7 +1348,7 @@ address p {
             border-top: 8px solid transparent;
             border-bottom: 8px solid transparent;
             box-sizing: border-box;
-            font-size: 0.875rem;
+            font-size: 1.4rem;
             line-height: 1.2; } }
       .c-header-utility__menu ul li.current-menu-item a {
         border-top-color: #ed1a3b; }
@@ -1415,8 +1420,8 @@ address p {
     display: block;
     padding: 1rem 30px;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    line-height: 24px;
-    font-size: 1rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
     @media (min-width: 75em) {
       .c-header-main__menu li a {
         position: relative;
@@ -1452,16 +1457,19 @@ address p {
 
 .c-header-main__basket {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   align-self: stretch;
-  padding: 1.5rem;
-  color: #fff;
-  gap: 0.5em; }
+  padding: 1.5rem 3rem;
+  color: #fff; }
   @media (min-width: 75em) {
     .c-header-main__basket {
       background-color: #ed1a3b; }
       .c-header-main__basket:hover {
         background-color: #dc1131; } }
+  .c-header-main__basket__inner {
+    gap: 0.5em;
+    display: flex;
+    align-items: baseline; }
   .c-header-main__basket__icon {
     width: 20px;
     height: 20px;
@@ -1478,9 +1486,13 @@ address p {
     @media (min-width: 75em) {
       .c-header-main__basket__label {
         display: block;
-        font-family: "Proxima Nova Bold", sans-serif, sans-serif; } }
+        font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.4; } }
   .c-header-main__basket .basket_count {
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.4; }
 
 @media (min-width: 75em) {
   .c-header-main__hamburger {
@@ -1689,12 +1701,12 @@ address p {
   background: #F2F2F2; }
   .c-hero-carousel .swiper-pagination {
     position: absolute;
-    bottom: -4rem;
+    bottom: 0;
     left: 50%;
     display: flex;
     justify-content: center;
     width: 320px;
-    transform: translateX(-50%);
+    transform: translate(-50%, 100%);
     gap: 8px; }
   .c-hero-carousel .swiper-pagination-bullet {
     display: block;
@@ -1719,16 +1731,17 @@ address p {
 
 .c-404__header {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 22.438em) {
     .c-404__header {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-404__header {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-404__header {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
   .c-404__header:after {
     content: '';
     display: block;
@@ -1749,16 +1762,17 @@ address p {
     margin-bottom: 1.5rem; }
   .c-404__main h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-404__main h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-404__main h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-404__main h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-404__main h2:after {
       content: '';
       display: block;
@@ -1778,7 +1792,8 @@ address p {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-404__main p, .c-404__main a, .c-404__main li {
-    font-size: 1.1875rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
   .c-404__main a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-404__main a:focus {
@@ -1826,32 +1841,35 @@ address p {
   margin-bottom: 1.5rem;
   color: #ed1a3b;
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-listing__subhead {
-      font-size: 1rem; } }
+      font-size: 1.6rem;
+      line-height: 1.4; } }
 
 .c-listing__heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-top: 0.3em;
   margin-bottom: 0.8em; }
   @media (min-width: 22.438em) {
     .c-listing__heading {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-listing__heading {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-listing__heading {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
 
 .c-listing__count {
   margin-bottom: 15px;
   font-family: "Proxima Nova Bold", sans-serif;
   line-height: 24px;
-  font-size: 1.125rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     .c-listing__count {
       margin-bottom: 30px; } }
@@ -1904,25 +1922,27 @@ address p {
   margin-bottom: 1.5rem;
   color: #ed1a3b;
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-accordion__subhead {
-      font-size: 1rem; } }
+      font-size: 1.6rem;
+      line-height: 1.4; } }
 
 .c-accordion__main-heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem; }
   @media (min-width: 22.438em) {
     .c-accordion__main-heading {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-accordion__main-heading {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-accordion__main-heading {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
 
 .c-accordion__container {
   display: grid;
@@ -1939,11 +1959,11 @@ address p {
     padding-left: 30px; } }
 
 .c-accordion__menu__item a {
-  font-size: 1.25rem;
   display: block;
   padding: 0.5rem;
   padding-left: 0;
   color: #333333;
+  font-size: 2rem;
   line-height: 1.4;
   text-decoration: none; }
   .c-accordion__menu__item a:hover {
@@ -1956,14 +1976,16 @@ address p {
   margin-top: 70px; }
   .c-accordion__block__title {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem;
+    font-size: 2rem;
+    line-height: 1.2;
     margin-bottom: 1.5rem; }
     @media (min-width: 40.063em) {
       .c-accordion__block__title {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .c-accordion__block__title {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
     @media (min-width: 0) and (max-width: 40.063em) {
       .c-accordion__block__title {
         padding-right: 30px;
@@ -2011,13 +2033,15 @@ address p {
       transition: all 200ms; }
     .c-accordion__item__title__title {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.25rem; }
+      font-size: 2rem;
+      line-height: 1.2; }
       @media (min-width: 40.063em) {
         .c-accordion__item__title__title {
-          font-size: 1.25rem; } }
+          font-size: 2rem;
+          line-height: 1.2; } }
       @media (min-width: 75em) {
         .c-accordion__item__title__title {
-          font-size: 1.5rem; } }
+          font-size: 2.4rem; } }
   .c-accordion__item__content {
     max-height: 0;
     overflow: hidden;
@@ -2074,7 +2098,7 @@ address p {
       display: grid;
       grid-gap: clamp(0.5rem, 3vw, 3rem);
       grid-template-columns: 1fr;
-      max-width: 71.875rem;
+      max-width: 1150px;
       margin: 0 auto;
       grid-template-columns: 1fr; }
       @media (min-width: 40.063em) {
@@ -2085,7 +2109,7 @@ address p {
       display: grid;
       grid-gap: clamp(0.5rem, 3vw, 3rem);
       grid-template-columns: 1fr;
-      max-width: 71.875rem;
+      max-width: 1150px;
       margin: 0 auto; }
       @media (min-width: 40.063em) and (max-width: 64.063em) {
         .c-price-comparison__table--items-3 {
@@ -2125,8 +2149,8 @@ address p {
     .background--gray .c-price-comparison__col {
       background-color: #fff; }
     .c-price-comparison__col__title {
-      font-size: 1.5rem;
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      font-size: 2.4rem; }
       .theme-color--orange .c-price-comparison__col__title {
         color: #df8639; }
       .theme-color--blue .c-price-comparison__col__title {
@@ -2146,14 +2170,15 @@ address p {
           justify-content: center; } }
       .c-price-comparison__col__price__price {
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-        font-size: 1.5rem;
         display: block;
+        font-size: 2.4rem;
         white-space: nowrap; }
       .c-price-comparison__col__price__prefix {
         display: block;
         height: 1em;
         white-space: nowrap;
-        font-size: 1.125rem; }
+        font-size: 1.8rem;
+        line-height: 1.4; }
       .c-price-comparison__col__price__suffix {
         display: block;
         height: 1em;
@@ -2171,7 +2196,8 @@ address p {
   .c-featurelist__title {
     margin-bottom: 1em;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
   .c-featurelist__list {
     display: grid; }
     .c-featurelist__list__item {
@@ -2189,14 +2215,16 @@ address p {
 
 .c-content-row__title {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem; }
   @media (min-width: 40.063em) {
     .c-content-row__title {
-      font-size: 1.25rem; } }
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
     .c-content-row__title {
-      font-size: 1.5rem; } }
+      font-size: 2.4rem; } }
 
 .c-content-row__container--1-1 {
   display: grid;
@@ -2233,16 +2261,17 @@ address p {
     margin-bottom: 1.5rem; }
   .c-content-row__content h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-content-row__content h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-content-row__content h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-content-row__content h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-content-row__content h2:after {
       content: '';
       display: block;
@@ -2262,7 +2291,8 @@ address p {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-content-row__content p, .c-content-row__content a, .c-content-row__content li {
-    font-size: 1.1875rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
   .c-content-row__content a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-content-row__content a:focus {
@@ -2317,16 +2347,17 @@ address p {
 
 .c-content-block__content h2 {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 22.438em) {
     .c-content-block__content h2 {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-content-block__content h2 {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-content-block__content h2 {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
   .c-content-block__content h2:after {
     content: '';
     display: block;
@@ -2349,7 +2380,8 @@ address p {
   text-decoration: underline; }
 
 .c-content-block__content p, .c-content-block__content a, .c-content-block__content li {
-  font-size: 1.1875rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
 
 .c-content-block__content a:active {
   border-bottom: 1px solid #ed1a3b; }
@@ -2508,13 +2540,15 @@ address p {
     min-height: 80px; }
     .c-footer__menu__list__item {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1rem; }
+      font-size: 1.6rem;
+      line-height: 1.4; }
   .c-footer__copyright__notice {
     display: flex;
     flex-direction: column;
     flex-shrink: 1;
     justify-content: flex-start;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
     @media (min-width: 83.75em) {
       .c-footer__copyright__notice {
         flex-direction: row;
@@ -2529,12 +2563,14 @@ address p {
           display: block; } }
 
 .c-sitemap {
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   line-height: 22px; }
   @media (min-width: 75em) {
     .c-sitemap {
-      font-size: 1.125rem;
+      font-size: 1.8rem;
+      line-height: 1.4;
       line-height: 24px; } }
 
 @media (min-width: 75em) {
@@ -2565,9 +2601,9 @@ address p {
   .c-account h2, .c-account h3, .c-account h4 {
     margin-bottom: 1.5rem; }
   .c-account h2 {
-    font-size: 2rem; }
+    font-size: 3.2rem; }
   .c-account h3 {
-    font-size: 1.625rem; }
+    font-size: 2.6rem; }
   .c-account p {
     max-width: 800px; }
   .c-account__message {
@@ -2578,13 +2614,15 @@ address p {
       .c-account__message p:first-of-type {
         margin-top: 0;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-        font-size: 1.25rem; }
+        font-size: 2rem;
+        line-height: 1.2; }
         @media (min-width: 40.063em) {
           .c-account__message p:first-of-type {
-            font-size: 1.25rem; } }
+            font-size: 2rem;
+            line-height: 1.2; } }
         @media (min-width: 75em) {
           .c-account__message p:first-of-type {
-            font-size: 1.5rem; } }
+            font-size: 2.4rem; } }
       .c-account__message p strong {
         font-weight: unset;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
@@ -2605,7 +2643,8 @@ address p {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-account .woocommerce-Button, .theme-color--orange .c-account .woocommerce-button, .theme-color--orange .c-account button, .theme-color--orange .c-account .edit {
@@ -2642,18 +2681,20 @@ address p {
       background-color: #dc1131; }
   .c-account .woocommerce-MyAccount-navigation {
     position: relative;
-    padding-top: 3rem;
+    padding-top: 6rem;
     padding-bottom: 3rem;
     background-color: #F2F2F2; }
     .c-account .woocommerce-MyAccount-navigation h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.25rem; }
+      font-size: 2rem;
+      line-height: 1.2; }
       @media (min-width: 40.063em) {
         .c-account .woocommerce-MyAccount-navigation h2 {
-          font-size: 1.25rem; } }
+          font-size: 2rem;
+          line-height: 1.2; } }
       @media (min-width: 75em) {
         .c-account .woocommerce-MyAccount-navigation h2 {
-          font-size: 1.5rem; } }
+          font-size: 2.4rem; } }
       .c-account .woocommerce-MyAccount-navigation h2:after {
         content: '';
         display: block;
@@ -2664,11 +2705,11 @@ address p {
         background-color: #ed1a3b;
         border: none; }
     .c-account .woocommerce-MyAccount-navigation a {
-      font-size: 1.25rem;
       display: block;
       padding: 0.5rem;
       padding-left: 0;
       color: #333333;
+      font-size: 2rem;
       line-height: 1.4;
       text-decoration: none; }
       .c-account .woocommerce-MyAccount-navigation a:hover {
@@ -2708,19 +2749,21 @@ address p {
         width: 80%;
         min-height: 70vh;
         padding: clamp(20px, 8vw, 140px);
-        padding-top: 3rem;
+        padding-top: 6rem;
         padding-right: 0; } }
   .c-account .woocommerce-message {
     margin-top: 3rem;
     margin-bottom: 3rem;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 40.063em) {
       .c-account .woocommerce-message {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .c-account .woocommerce-message {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
   .c-account .woocommerce-order-details,
   .c-account .woocommerce-customer-details {
     max-width: 800px;
@@ -2746,10 +2789,10 @@ address p {
       padding-bottom: 1.5rem; }
   .c-account .woocommerce-table__product-name ul.wc-item-meta li {
     margin-top: 0.75rem;
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     line-height: 1.2; }
   .c-account .woocommerce-table__product-name ul.wc-item-meta li p {
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     line-height: 1.2;
     margin-bottom: 0; }
   .c-account p.order-again {
@@ -2759,7 +2802,7 @@ address p {
 .woocommerce-column__title,
 .woocommerce-Address-title {
   margin-bottom: 1.5rem;
-  font-size: 1.625rem; }
+  font-size: 2.6rem; }
 
 @media (min-width: 50em) {
   .woocommerce-Addresses {
@@ -2807,7 +2850,8 @@ mark {
       .woocommerce-orders-table tr .woocommerce-orders-table__header-order-actions {
         display: none; } }
     .woocommerce-orders-table tr td {
-      font-size: 1.125rem; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
     .woocommerce-orders-table tr td, .woocommerce-orders-table tr th {
       display: flex;
       gap: 0.25em;
@@ -2829,7 +2873,7 @@ mark {
     flex-direction: column; }
     @media (min-width: 0) and (max-width: 64.063em) {
       .woocommerce-orders-table tbody tr td {
-        font-size: 0.875rem;
+        font-size: 1.4rem;
         line-height: 1.2; } }
     .woocommerce-orders-table tbody tr td.woocommerce-orders-table__cell-order-total {
       flex-direction: column; }
@@ -2846,7 +2890,8 @@ mark {
         flex-grow: 1;
         content: 'Actions';
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-        font-size: 1pxrem; }
+        font-size: 1.6rem;
+        line-height: 1.4; }
         @media (min-width: 64.063em) {
           .woocommerce-orders-table tbody tr td.woocommerce-orders-table__cell-order-actions:after {
             display: none; } }
@@ -2856,7 +2901,8 @@ mark {
   .woocommerce-orders-table tfoot th {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     line-height: 20px;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
 
 address {
   line-height: 1.4; }
@@ -2868,14 +2914,16 @@ address {
   .woocommerce-address-fields label,
   .edit-account label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     width: 100%;
     margin-bottom: 0.5em;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     @media (min-width: 75em) {
       .woocommerce-address-fields label,
       .edit-account label {
-        font-size: 1.125rem; } }
+        font-size: 1.8rem;
+        line-height: 1.4; } }
   .woocommerce-address-fields input[type='text'], .woocommerce-address-fields input[type='tel'], .woocommerce-address-fields input[type='email'], .woocommerce-address-fields input[type='password'],
   .edit-account input[type='text'],
   .edit-account input[type='tel'],
@@ -2885,7 +2933,8 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .woocommerce-address-fields .select2-container .select2-selection--single,
   .edit-account .select2-container .select2-selection--single {
     height: 50px;
@@ -2900,7 +2949,8 @@ address {
     display: block;
     margin-bottom: 20px;
     line-height: 20px;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .woocommerce-address-fields legend,
   .edit-account legend {
     display: none; }
@@ -2910,14 +2960,16 @@ address {
 
 .c-basket .cart-empty.woocommerce-info {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem; }
   @media (min-width: 40.063em) {
     .c-basket .cart-empty.woocommerce-info {
-      font-size: 1.25rem; } }
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
     .c-basket .cart-empty.woocommerce-info {
-      font-size: 1.5rem; } }
+      font-size: 2.4rem; } }
 
 .c-basket .woocommerce-Button, .c-basket .woocommerce-button, .c-basket .button, .c-basket button, .c-basket .edit {
   position: relative;
@@ -2933,7 +2985,8 @@ address {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-left: auto; }
   .theme-color--orange .c-basket .woocommerce-Button, .theme-color--orange .c-basket .woocommerce-button, .theme-color--orange .c-basket .button, .theme-color--orange .c-basket button, .theme-color--orange .c-basket .edit {
@@ -2991,7 +3044,8 @@ address {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-left: auto; }
   .theme-color--orange .c-basket button {
@@ -3062,7 +3116,8 @@ address {
     .c-basket .shop_table tbody tr td {
       display: flex;
       flex-direction: column;
-      font-size: 1.125rem; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
       .c-basket .shop_table tbody tr td:last-of-type {
         align-items: center; }
       .c-basket .shop_table tbody tr td:first-of-type {
@@ -3104,7 +3159,8 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .c-basket .coupon button {
     position: relative;
     display: inline-flex;
@@ -3119,7 +3175,8 @@ address {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     background-color: transparent;
     border: solid 2px #707070;
@@ -3169,16 +3226,18 @@ address {
 .c-basket .product-name a {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   color: #333333;
   text-decoration: none; }
   @media (min-width: 40.063em) {
     .c-basket .product-name a {
-      font-size: 1.25rem; } }
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
     .c-basket .product-name a {
-      font-size: 1.5rem; } }
+      font-size: 2.4rem; } }
   .c-basket .product-name a:hover {
     color: #ed1a3b; }
 
@@ -3251,7 +3310,8 @@ address {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-basket .wc-proceed-to-checkout a {
@@ -3289,17 +3349,19 @@ address {
 
 .c-checkout h3 {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem; }
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-top: 6rem;
+  margin-bottom: 3rem; }
   @media (min-width: 22.438em) {
     .c-checkout h3 {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-checkout h3 {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-checkout h3 {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
   .c-checkout h3:after {
     content: '';
     display: block;
@@ -3341,7 +3403,8 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     margin-bottom: 0; }
   .c-checkout .checkout_coupon .button {
     position: relative;
@@ -3357,7 +3420,8 @@ address {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-checkout .checkout_coupon .button {
@@ -3393,6 +3457,10 @@ address {
     .c-checkout .checkout_coupon .button:hover {
       background-color: #dc1131; }
 
+.c-checkout .crafty_billing.address-field button {
+  position: relative;
+  top: -2.5rem; }
+
 .c-checkout .woocommerce-error {
   margin-bottom: 1.5rem; }
 
@@ -3410,23 +3478,27 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .c-checkout .woocommerce-checkout label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     width: 100%;
     margin-bottom: 0.5em;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     @media (min-width: 75em) {
       .c-checkout .woocommerce-checkout label {
-        font-size: 1.125rem; } }
+        font-size: 1.8rem;
+        line-height: 1.4; } }
   .c-checkout .woocommerce-checkout textarea {
     width: 100%;
     height: 12em;
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .c-checkout .woocommerce-checkout .button {
     position: relative;
     display: inline-flex;
@@ -3441,7 +3513,8 @@ address {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-checkout .woocommerce-checkout .button {
@@ -3488,7 +3561,8 @@ address {
     border: 2px solid #d8d8d8;
     color: unset;
     cursor: pointer;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
     .theme-color--orange .c-checkout .woocommerce-checkout .select {
       border-bottom-color: #df8639; }
     .theme-color--blue .c-checkout .woocommerce-checkout .select {
@@ -3507,6 +3581,9 @@ address {
       height: 100%;
       padding: 0.8em;
       font-family: "Proxima Nova Regular", sans-serif; }
+  .c-checkout .woocommerce-checkout #billing_cp_button {
+    /* stylelint-disable-next-line */
+    font-size: 1.6rem !important; }
   .c-checkout .woocommerce-checkout #billing_country_field {
     padding-bottom: 1.5rem; }
     .c-checkout .woocommerce-checkout #billing_country_field .select2-selection {
@@ -3549,7 +3626,8 @@ address {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
 
 .c-checkout .woocommerce-checkout-review-order {
-  font-size: 1.125rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
   .c-checkout .woocommerce-checkout-review-order .cart_item {
     margin-bottom: 1.5rem; }
     .c-checkout .woocommerce-checkout-review-order .cart_item .product-name {
@@ -3582,16 +3660,17 @@ address {
   max-width: 800px; }
   .c-checkout .woocommerce-order h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-checkout .woocommerce-order h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-checkout .woocommerce-order h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-checkout .woocommerce-order h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-checkout .woocommerce-order h2:after {
       content: '';
       display: block;
@@ -3626,7 +3705,8 @@ address {
     margin-bottom: 1.5rem; }
   .c-checkout .woocommerce-order .woocommerce-table {
     /* stylelint-disable */
-    font-size: 1.1875rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
     /* stylelint-enable */ }
     .c-checkout .woocommerce-order .woocommerce-table tfoot tr td {
       text-align: right; }
@@ -3634,10 +3714,10 @@ address {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     .c-checkout .woocommerce-order .woocommerce-table ul.wc-item-meta li {
       margin-top: 0.75rem;
-      font-size: 0.875rem;
+      font-size: 1.4rem;
       line-height: 1.2; }
     .c-checkout .woocommerce-order .woocommerce-table ul.wc-item-meta li p {
-      font-size: 0.875rem;
+      font-size: 1.4rem;
       line-height: 1.2;
       margin-bottom: 0; }
   .c-checkout .woocommerce-order section:first-of-type {
@@ -3663,7 +3743,8 @@ address {
     align-items: center;
     width: unset !important;
     margin-bottom: 0 !important;
-    font-size: 1.125rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
     line-height: 1; }
   .wc_payment_method .payment_box {
     width: 100%; }
@@ -3681,7 +3762,7 @@ address {
 .woocommerce-terms-and-conditions-wrapper {
   padding: 3rem 0; }
   .woocommerce-terms-and-conditions-wrapper p {
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     line-height: 1.2; }
 
 @media (min-width: 64.063em) {
@@ -3733,7 +3814,9 @@ address {
     border-radius: 2px;
     color: #fff;
     text-align: left;
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.4; }
     .theme-color--orange .c-product-box .single_add_to_cart_button {
       background-color: #df8639; }
     .theme-color--blue .c-product-box .single_add_to_cart_button {
@@ -3755,7 +3838,8 @@ address {
   .c-product-box__help {
     margin-top: 30px; }
     .c-product-box__help p {
-      font-size: 1rem; }
+      font-size: 1.6rem;
+      line-height: 1.4; }
   .c-product-box .variations {
     display: block;
     width: 100%;
@@ -3779,13 +3863,15 @@ address {
           grid-column-end: unset; }
     .c-product-box .variations label {
       display: block;
-      font-size: 1rem;
+      font-size: 1.6rem;
+      line-height: 1.4;
       width: 100%;
       margin-bottom: 0.5em;
       font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
       @media (min-width: 75em) {
         .c-product-box .variations label {
-          font-size: 1.125rem; } }
+          font-size: 1.8rem;
+          line-height: 1.4; } }
     .c-product-box .variations .value {
       position: relative; }
       .c-product-box .variations .value .reset_variations {
@@ -3805,7 +3891,8 @@ address {
       border: 2px solid #d8d8d8;
       color: unset;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 1.6rem;
+      line-height: 1.4;
       display: block;
       width: 100%;
       height: 4rem;
@@ -3817,7 +3904,8 @@ address {
       font-family: "Proxima Nova Regular", sans-serif;
       line-height: 1.2;
       white-space: break-spaces;
-      font-size: 0.875rem; }
+      font-size: 1.4rem;
+      line-height: 1.2; }
       .theme-color--orange .c-product-box .variations select {
         border-bottom-color: #df8639; }
       .theme-color--blue .c-product-box .variations select {
@@ -3841,8 +3929,8 @@ address {
     gap: 1.5rem;
     flex-direction: column; }
   .c-product-box .woocommerce-Price-amount {
+    font-size: 3rem;
     text-transform: uppercase;
-    font-size: 1.875rem;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
   .c-product-box .price {
     padding-bottom: 1.5rem; }
@@ -3862,28 +3950,30 @@ address {
   margin-bottom: 1.5rem;
   color: #ed1a3b;
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-signpost__tagline {
-      font-size: 1rem; } }
+      font-size: 1.6rem;
+      line-height: 1.4; } }
 
 .c-signpost__heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem; }
   @media (min-width: 22.438em) {
     .c-signpost__heading {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-signpost__heading {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-signpost__heading {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
 
 .c-signpost__intro {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-bottom: 1.5rem; }
@@ -3894,16 +3984,17 @@ address {
     margin-bottom: 1.5rem; }
   .c-signpost__content-main h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-signpost__content-main h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-signpost__content-main h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-signpost__content-main h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-signpost__content-main h2:after {
       content: '';
       display: block;
@@ -3923,7 +4014,8 @@ address {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-signpost__content-main p, .c-signpost__content-main a, .c-signpost__content-main li {
-    font-size: 1.1875rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
   .c-signpost__content-main a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-signpost__content-main a:focus {
@@ -3974,11 +4066,12 @@ address {
   margin: 20px 0 -35px;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   line-height: 30px;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 75em) {
     .c-search__count {
-      font-size: 1.5rem;
-      margin: 80px 0 -65px; } }
+      margin: 80px 0 -65px;
+      font-size: 2.4rem; } }
 
 .c-iframe__window {
   width: 100%;
@@ -3996,7 +4089,7 @@ address {
 .c-download__main {
   grid-column-end: span 3; }
   .c-download__main__intro {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     line-height: 1.2;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-bottom: 1.5rem; }
@@ -4006,16 +4099,17 @@ address {
       margin-bottom: 1.5rem; }
     .c-download__main__content h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.25rem; }
+      font-size: 2rem;
+      line-height: 1.2; }
       @media (min-width: 22.438em) {
         .c-download__main__content h2 {
-          font-size: 1.5625rem; } }
+          font-size: 2.5rem; } }
       @media (min-width: 40.063em) {
         .c-download__main__content h2 {
-          font-size: 1.875rem; } }
+          font-size: 3rem; } }
       @media (min-width: 50em) {
         .c-download__main__content h2 {
-          font-size: 2.5rem; } }
+          font-size: 4rem; } }
       .c-download__main__content h2:after {
         content: '';
         display: block;
@@ -4035,7 +4129,8 @@ address {
       color: #ed1a3b;
       text-decoration: underline; }
     .c-download__main__content p, .c-download__main__content a, .c-download__main__content li {
-      font-size: 1.1875rem; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
     .c-download__main__content a:active {
       border-bottom: 1px solid #ed1a3b; }
     .c-download__main__content a:focus {
@@ -4090,30 +4185,33 @@ address {
     border-color: #d8d8d8; }
   .c-download__item__title {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem;
+    font-size: 2rem;
+    line-height: 1.2;
     margin-bottom: 1.5rem; }
     @media (min-width: 40.063em) {
       .c-download__item__title {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .c-download__item__title {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
   .c-download__item__description {
     margin-bottom: 1.5rem; }
     .c-download__item__description h2, .c-download__item__description h3, .c-download__item__description h4, .c-download__item__description h5, .c-download__item__description p, .c-download__item__description ul, .c-download__item__description ol, .c-download__item__description hr {
       margin-bottom: 1.5rem; }
     .c-download__item__description h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.25rem; }
+      font-size: 2rem;
+      line-height: 1.2; }
       @media (min-width: 22.438em) {
         .c-download__item__description h2 {
-          font-size: 1.5625rem; } }
+          font-size: 2.5rem; } }
       @media (min-width: 40.063em) {
         .c-download__item__description h2 {
-          font-size: 1.875rem; } }
+          font-size: 3rem; } }
       @media (min-width: 50em) {
         .c-download__item__description h2 {
-          font-size: 2.5rem; } }
+          font-size: 4rem; } }
       .c-download__item__description h2:after {
         content: '';
         display: block;
@@ -4133,7 +4231,8 @@ address {
       color: #ed1a3b;
       text-decoration: underline; }
     .c-download__item__description p, .c-download__item__description a, .c-download__item__description li {
-      font-size: 1.1875rem; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
     .c-download__item__description a:active {
       border-bottom: 1px solid #ed1a3b; }
     .c-download__item__description a:focus {
@@ -4182,16 +4281,17 @@ address {
     margin-bottom: 1.5rem; }
   .c-download__item__additional-content h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-download__item__additional-content h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-download__item__additional-content h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-download__item__additional-content h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-download__item__additional-content h2:after {
       content: '';
       display: block;
@@ -4211,7 +4311,8 @@ address {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-download__item__additional-content p, .c-download__item__additional-content a, .c-download__item__additional-content li {
-    font-size: 1.1875rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
   .c-download__item__additional-content a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-download__item__additional-content a:focus {
@@ -4260,7 +4361,9 @@ address {
   padding: 0.6em;
   background-color: #fff;
   border: 2px solid #d8d8d8;
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem; }
 
 .c-form .ginput_container textarea {
   width: 100%;
@@ -4268,7 +4371,9 @@ address {
   padding: 0.6em;
   background-color: #fff;
   border: 2px solid #d8d8d8;
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem; }
 
 @media (min-width: 40.063em) {
   .c-form .gform_fields {
@@ -4280,13 +4385,15 @@ address {
 .c-form .gform_confirmation_message {
   margin-bottom: 3rem;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-form .gform_confirmation_message {
-      font-size: 1.25rem; } }
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
     .c-form .gform_confirmation_message {
-      font-size: 1.5rem; } }
+      font-size: 2.4rem; } }
 
 .c-form .gfield {
   border: none; }
@@ -4311,16 +4418,17 @@ address {
 
 .c-form__title {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 22.438em) {
     .c-form__title {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-form__title {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-form__title {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
   .c-form__title:after {
     content: '';
     display: block;
@@ -4367,7 +4475,8 @@ address {
   border: 2px solid #d8d8d8;
   color: unset;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   margin-bottom: 1.5rem;
   background-color: #fff; }
   .theme-color--orange .c-form .ginput_container_select {
@@ -4391,25 +4500,29 @@ address {
 
 .c-form label {
   display: block;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   width: 100%;
   margin-bottom: 0.5em;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
   @media (min-width: 75em) {
     .c-form label {
-      font-size: 1.125rem; } }
+      font-size: 1.8rem;
+      line-height: 1.4; } }
 
 .c-form .gform_submission_error {
   margin-bottom: 3rem;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   color: #ed1a3b; }
   @media (min-width: 40.063em) {
     .c-form .gform_submission_error {
-      font-size: 1.25rem; } }
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
     .c-form .gform_submission_error {
-      font-size: 1.5rem; } }
+      font-size: 2.4rem; } }
 
 .c-form .gform_hidden {
   display: none; }
@@ -4432,7 +4545,8 @@ address {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-left: auto; }
   .theme-color--orange .c-form .gform_button {
@@ -4478,13 +4592,15 @@ address {
     border-top: 0; }
   .c-dashboard__gated-box__title {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 40.063em) {
       .c-dashboard__gated-box__title {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .c-dashboard__gated-box__title {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
     @media (min-width: 64.063em) {
       .c-dashboard__gated-box__title {
         /* stylelint-disable-next-line */
@@ -4520,7 +4636,7 @@ address {
          object-position: center; }
   .e-card__main {
     flex-grow: 1;
-    padding: 1.5rem;
+    padding: 3rem;
     border-top: 8px solid #ed1a3b; }
     @media (min-width: 75em) {
       .e-card__main {
@@ -4528,7 +4644,7 @@ address {
   .e-card__footer {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 3rem;
     padding-top: 0;
     white-space: nowrap;
     gap: 1.5rem; }
@@ -4538,35 +4654,43 @@ address {
         align-items: center;
         justify-content: flex-end; } }
   .e-card__tagline {
+    font-size: 1.6rem;
+    line-height: 1.4;
     margin-bottom: 1.5rem;
     color: #ed1a3b; }
   .e-card__title {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.2; }
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem; }
     @media (min-width: 40.063em) {
       .e-card__title {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .e-card__title {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
   .e-card__excerpt {
-    font-size: 1rem;
+    font-size: 1.6rem;
     line-height: 1.4; }
     .c-listing__grid--4cols .e-card__excerpt {
       display: none; }
   .e-card__price {
     flex-grow: 1; }
+    .e-card__price__prefix, .e-card__price__suffix {
+      font-size: 1.6rem;
+      line-height: 1.4; }
     .e-card__price__price {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       color: #ed1a3b;
-      font-size: 1.125rem; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
   .e-card__count {
     flex-grow: 1;
     text-transform: uppercase;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 0.9375rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .e-card--blue .e-card__main {
     border-top-color: #02A5E2; }
   .e-card--blue .e-card__tagline {
@@ -4594,7 +4718,8 @@ address {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
   .theme-color--orange .e-cta-button, .theme-color--orange .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .theme-color--orange a, .theme-color--orange .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .theme-color--orange .button, .theme-color--orange .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .woocommerce-account .woocommerce-notices-wrapper a, .woocommerce-account .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-account .woocommerce-notices-wrapper .button, .woocommerce-account .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .button {
     background: #df8639; }
@@ -4738,13 +4863,14 @@ hr.e-seperator {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.4);
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   line-height: 20px;
   text-decoration: none; }
   @media (min-width: 75em) {
     .customer-login__tab {
-      font-size: 1.875rem;
       padding: 44px 20px 24px;
+      font-size: 3rem;
       line-height: 30px; } }
   .customer-login__tab:hover {
     color: #000; }
@@ -4792,13 +4918,15 @@ hr.e-seperator {
       justify-self: flex-end; }
   .customer-login__content label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     width: 100%;
     margin-bottom: 0.5em;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     @media (min-width: 75em) {
       .customer-login__content label {
-        font-size: 1.125rem; } }
+        font-size: 1.8rem;
+        line-height: 1.4; } }
   .customer-login__content .woocommerce-form__label-for-checkbox {
     margin-bottom: 0; }
   .customer-login__content input[type='text'], .customer-login__content input[type='email'], .customer-login__content input[type='password'] {
@@ -4806,7 +4934,8 @@ hr.e-seperator {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .customer-login__content .woocommerce-form-login__rememberme {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-bottom: 1.5rem; }
@@ -4829,7 +4958,8 @@ hr.e-seperator {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     width: auto; }
     .theme-color--orange .customer-login__content .woocommerce-button, .theme-color--orange .customer-login__content .woocommerce-Button {
@@ -4866,12 +4996,12 @@ hr.e-seperator {
     margin-left: auto; }
   .customer-login__content .woocommerce-LostPassword {
     margin-top: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
     line-height: 1.4; }
   .customer-login__content .woocommerce-privacy-policy-text {
     margin-bottom: 1.5rem; }
     .customer-login__content .woocommerce-privacy-policy-text p {
-      font-size: 1rem;
+      font-size: 1.6rem;
       line-height: 1.4; }
 
 .e-video {
@@ -4942,11 +5072,13 @@ hr.e-seperator {
     margin-bottom: 15px;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     line-height: 30px;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
   .e-cookie__text {
     margin-bottom: 20px;
     line-height: 20px;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
 
 .c-basket .woocommerce-notices-wrapper, .single-product .woocommerce-notices-wrapper {
   position: absolute;
@@ -5008,7 +5140,8 @@ hr.e-seperator {
     display: none; }
   .c-basket .woocommerce-notices-wrapper *, .single-product .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .c-basket .woocommerce-notices-wrapper .woocommerce-message,
   .c-basket .woocommerce-notices-wrapper .woocommerce-error, .single-product .woocommerce-notices-wrapper .woocommerce-message,
   .single-product .woocommerce-notices-wrapper .woocommerce-error {
@@ -5090,7 +5223,8 @@ hr.e-seperator {
     display: none; }
   .woocommerce-account .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .woocommerce-account .woocommerce-notices-wrapper .woocommerce-message,
   .woocommerce-account .woocommerce-notices-wrapper .woocommerce-error {
     padding: 1.5rem;
@@ -5131,7 +5265,8 @@ hr.e-seperator {
     display: none; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper * {
     color: #333333; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper ul {
@@ -5226,7 +5361,8 @@ hr.e-seperator {
     display: none; }
   .single-product .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .single-product .woocommerce-notices-wrapper .woocommerce-message,
   .single-product .woocommerce-notices-wrapper .woocommerce-error {
     padding: 1.5rem;
@@ -5271,7 +5407,7 @@ hr.e-seperator {
 
 .payment_method_stripe p {
   margin-bottom: 1.5rem;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   line-height: 1.2; }
 
 .payment_method_stripe .wc-credit-card-form {
