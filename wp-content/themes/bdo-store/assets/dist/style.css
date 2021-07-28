@@ -3900,6 +3900,7 @@ address {
       display: block;
       width: 100%;
       height: 4rem;
+      padding: 0.8em;
       background-color: transparent;
       border: none;
       border-bottom: 2px solid #ed1a3b;
