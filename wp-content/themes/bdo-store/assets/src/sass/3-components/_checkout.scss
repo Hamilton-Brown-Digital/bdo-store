@@ -47,15 +47,30 @@
     .button {
       @include form-submit;
     }
-    .select{
+    select{
       @include form-dropdown;
+      padding: 0.8rem;
     }
     fieldset {
       @include fieldset;
     }
   }
-
-
+  .woocommerce-billing-fields__field-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    .form-row{
+      &-first{
+        width: calc(50% - 1rem);
+      }
+      &-last{
+        width: calc(50% - 1rem);
+      }
+      &-wide{
+        width: 100%;
+      }
+    }
+  }
 
 
   .shop_table{

@@ -97,3 +97,13 @@ textarea {
 ul li{
   list-style: none;
 }
+
+form{
+  input, textarea, select{
+    &:focus, &:focus-visible{
+      /* stylelint-disable-next-line */
+      border-color: $color-line-dark !important;
+      outline: none !important; 
+    }
+  }
+}

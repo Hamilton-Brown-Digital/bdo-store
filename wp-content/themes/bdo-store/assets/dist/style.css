@@ -972,6 +972,11 @@ textarea {
 ul li {
   list-style: none; }
 
+form input:focus, form input:focus-visible, form textarea:focus, form textarea:focus-visible, form select:focus, form select:focus-visible {
+  /* stylelint-disable-next-line */
+  border-color: #707070 !important;
+  outline: none !important; }
+
 h1,
 h2,
 h3,
@@ -1040,6 +1045,14 @@ ul, ol {
     ul, ol {
       font-size: 1.8rem;
       line-height: 1.4; } }
+
+::-moz-selection {
+  background-color: #02A5E2;
+  color: #fff; }
+
+::selection {
+  background-color: #02A5E2;
+  color: #fff; }
 
 .flex {
   display: flex;
@@ -1176,19 +1189,56 @@ address p {
 .form-row {
   margin-bottom: 1.5rem; }
 
+/* stylelint-disable */
+.crafty_billing label {
+  height: 2em; }
+
+.crafty_billing* {
+  float: none !important; }
+
+.crafty_billing.form-row-first {
+  flex-grow: 1;
+  width: unset !important; }
+
+.crafty_billing.form-row-last {
+  width: unset !important; }
+
 .crafty_billing.address-field button {
   position: relative;
   top: -2.5rem; }
 
 #billing_cp_button {
-  /* stylelint-disable-next-line */
+  top: unset !important;
+  float: none !important;
   font-size: 1.6rem !important; }
 
-#billing_country_field {
+#billing_country {
   padding-bottom: 1.5rem; }
-  #billing_country_field .select2-selection {
-    height: auto; }
 
+.select2-selection {
+  height: auto !important;
+  border: 2px solid #d8d8d8 !important;
+  border-radius: 0 !important;
+  font-size: 1.6rem !important; }
+
+.select2-dropdown {
+  border: 2px solid #d8d8d8 !important; }
+
+.select2-search {
+  padding: 0.6em !important;
+  font-size: 1.6rem !important; }
+  .select2-search__field {
+    border: 2px solid #d8d8d8 !important; }
+
+.select2-results__options {
+  font-size: 1.6rem !important; }
+  .select2-results__options li {
+    padding: 0.6em !important; }
+
+.select2-results__option--highlighted {
+  background-color: #02A5E2 !important; }
+
+/* stylelint-enable */
 .o-row {
   width: 100%;
   margin-bottom: 30px;
@@ -3553,7 +3603,7 @@ address {
       display: none; }
     .c-checkout .woocommerce-checkout .button:hover {
       background-color: #dc1131; }
-  .c-checkout .woocommerce-checkout .select {
+  .c-checkout .woocommerce-checkout select {
     position: relative;
     width: 100%;
     width: 100%;
@@ -3566,20 +3616,21 @@ address {
     color: unset;
     cursor: pointer;
     font-size: 1.6rem;
-    line-height: 1.4; }
-    .theme-color--orange .c-checkout .woocommerce-checkout .select {
+    line-height: 1.4;
+    padding: 0.8rem; }
+    .theme-color--orange .c-checkout .woocommerce-checkout select {
       border-bottom-color: #df8639; }
-    .theme-color--blue .c-checkout .woocommerce-checkout .select {
+    .theme-color--blue .c-checkout .woocommerce-checkout select {
       border-bottom-color: #02A5E2; }
-    .theme-color--green .c-checkout .woocommerce-checkout .select {
+    .theme-color--green .c-checkout .woocommerce-checkout select {
       border-bottom-color: #218f8b; }
-    .theme-color--orange .c-checkout .woocommerce-checkout .select {
+    .theme-color--orange .c-checkout .woocommerce-checkout select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-orange.svg"); }
-    .theme-color--blue .c-checkout .woocommerce-checkout .select {
+    .theme-color--blue .c-checkout .woocommerce-checkout select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-blue.svg"); }
-    .theme-color--green .c-checkout .woocommerce-checkout .select {
+    .theme-color--green .c-checkout .woocommerce-checkout select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-green.svg"); }
-    .c-checkout .woocommerce-checkout .select select, .c-checkout .woocommerce-checkout .select option {
+    .c-checkout .woocommerce-checkout select select, .c-checkout .woocommerce-checkout select option {
       display: block;
       width: 100%;
       height: 100%;
@@ -3591,6 +3642,17 @@ address {
     padding: 3rem;
     background-color: #F2F2F2;
     border: none; }
+
+.c-checkout .woocommerce-billing-fields__field-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; }
+  .c-checkout .woocommerce-billing-fields__field-wrapper .form-row-first {
+    width: calc(50% - 1rem); }
+  .c-checkout .woocommerce-billing-fields__field-wrapper .form-row-last {
+    width: calc(50% - 1rem); }
+  .c-checkout .woocommerce-billing-fields__field-wrapper .form-row-wide {
+    width: 100%; }
 
 .c-checkout .shop_table {
   width: 100%;
