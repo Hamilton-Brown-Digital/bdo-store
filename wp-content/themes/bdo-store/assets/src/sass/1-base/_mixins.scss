@@ -593,6 +593,15 @@
   }
 }
 
+// fieldset
+@mixin fieldset{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  background-color: $color-bg-feint;
+  border: none;
+}
+
 
 @mixin bordered-box{
   padding:3rem;

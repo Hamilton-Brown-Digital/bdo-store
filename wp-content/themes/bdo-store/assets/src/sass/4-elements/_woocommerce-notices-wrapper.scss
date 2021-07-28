@@ -3,7 +3,7 @@
     @include notice-strip;
   }
   .woocommerce-account &{
-    @include notice-strip;
+    @include notice-inline;
   }
   .woocommerce-MyAccount-content &{
     @include notice-inline;
