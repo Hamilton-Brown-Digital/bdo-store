@@ -77,8 +77,20 @@ class CustomTimber extends TimberSite
       }
     } ) );
 
+    $twig->addFunction( new Timber\Twig_Function( 'count_variable_fields', function () {
+      global $product;
+      if ( $product->is_type( 'variable' ) ) {
+          $variations = $product->get_available_variations();
+          $count      = count( $variations[0]['attributes'] );
+          return $count;
+      }
+    } ) );
+
     return $twig;
   }
+
+
+
 }
 
 new CustomTimber();

@@ -18,6 +18,9 @@
       margin-bottom: 30px;
     }
   }
+  &__card{
+    background: $gold;
+  }
   @mixin griddefaults{
     display: grid;
     grid-template-columns: 1fr;

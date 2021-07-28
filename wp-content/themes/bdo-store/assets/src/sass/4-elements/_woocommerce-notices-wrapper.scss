@@ -12,9 +12,9 @@
     @include notice-strip;
     position: absolute;
     top: unset;
-    bottom: -25px;
+    bottom: 0;
     left: 0;
-    padding-top: 0;
+    background: $gold;
     transform: translateY(100%);
   }
   .theme-color--orange &{
