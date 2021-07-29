@@ -1286,6 +1286,8 @@ address p {
   margin-left: auto; }
   .o-grid-container--full-width {
     max-width: unset; }
+  .o-grid-container--narrow {
+    max-width: 1000px; }
 
 .c-header {
   position: fixed;
@@ -2224,7 +2226,8 @@ address p {
     .background--gray .c-price-comparison__col {
       background-color: #fff; }
     .c-price-comparison__col__title {
-      margin-bottom: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
       font-size: 2.4rem; }
       .theme-color--orange .c-price-comparison__col__title {
         color: #df8639; }
@@ -2235,7 +2238,7 @@ address p {
     .c-price-comparison__col__price {
       display: flex;
       flex-direction: column;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       line-height: 1;
       grid-gap: 0.2em; }
       @media (min-width: 1560px) {
@@ -2260,7 +2263,7 @@ address p {
         white-space: nowrap; }
     .c-price-comparison__col__cta {
       width: 100%;
-      margin-bottom: 2rem; }
+      margin-bottom: 3rem; }
       .c-price-comparison__col__cta .e-cta-button, .c-price-comparison__col__cta .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .woocommerce-account .woocommerce-notices-wrapper a, .woocommerce-account .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-account .woocommerce-notices-wrapper .button, .woocommerce-account .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta .button {
         width: 100%;
         max-width: 260px;
@@ -2269,7 +2272,7 @@ address p {
 .c-featurelist {
   text-align: left; }
   .c-featurelist__title {
-    margin-bottom: 1em;
+    margin-bottom: 1.5rem;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     font-size: 2rem;
     line-height: 1.2; }
@@ -2822,6 +2825,7 @@ address p {
     @media (min-width: 64.063em) {
       .c-account .woocommerce-MyAccount-content {
         width: 80%;
+        max-width: 1000px;
         min-height: 70vh;
         padding: clamp(20px, 8vw, 140px);
         padding-top: 6rem;
@@ -2982,40 +2986,41 @@ mark {
 address {
   line-height: 1.4; }
 
-.woocommerce-address-fields, .edit-account {
+.woocommerce-address-fields label, .edit-account label {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.4;
   width: 100%;
-  max-width: 800px; }
-  .woocommerce-address-fields label, .edit-account label {
-    display: block;
-    font-size: 1.6rem;
-    line-height: 1.4;
-    width: 100%;
-    margin-bottom: 0.5em;
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
-    @media (min-width: 75em) {
-      .woocommerce-address-fields label, .edit-account label {
-        font-size: 1.8rem;
-        line-height: 1.4; } }
-  .woocommerce-address-fields input[type='text'], .woocommerce-address-fields input[type='tel'], .woocommerce-address-fields input[type='email'], .woocommerce-address-fields input[type='password'], .edit-account input[type='text'], .edit-account input[type='tel'], .edit-account input[type='email'], .edit-account input[type='password'] {
-    width: 100%;
-    padding: 0.6em;
-    background-color: #fff;
-    border: 2px solid #d8d8d8;
-    font-size: 1.6rem;
-    line-height: 1.4; }
-  .woocommerce-address-fields span em, .edit-account span em {
-    position: relative;
-    display: block;
-    font-size: 1.6rem;
-    line-height: 1.4; }
-  .woocommerce-address-fields legend, .edit-account legend {
-    display: none; }
-  .woocommerce-address-fields fieldset, .edit-account fieldset {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    padding: 3rem;
-    background-color: #F2F2F2;
-    border: none; }
+  margin-bottom: 0.5em;
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+  @media (min-width: 75em) {
+    .woocommerce-address-fields label, .edit-account label {
+      font-size: 1.8rem;
+      line-height: 1.4; } }
+
+.woocommerce-address-fields input[type='text'], .woocommerce-address-fields input[type='tel'], .woocommerce-address-fields input[type='email'], .woocommerce-address-fields input[type='password'], .edit-account input[type='text'], .edit-account input[type='tel'], .edit-account input[type='email'], .edit-account input[type='password'] {
+  width: 100%;
+  padding: 0.6em;
+  background-color: #fff;
+  border: 2px solid #d8d8d8;
+  font-size: 1.6rem;
+  line-height: 1.4; }
+
+.woocommerce-address-fields span em, .edit-account span em {
+  position: relative;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.4; }
+
+.woocommerce-address-fields legend, .edit-account legend {
+  display: none; }
+
+.woocommerce-address-fields fieldset, .edit-account fieldset {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  background-color: #F2F2F2;
+  border: none; }
 
 .c-basket .cart-empty.woocommerce-info {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
@@ -3177,18 +3182,8 @@ address {
       flex-direction: column;
       font-size: 1.8rem;
       line-height: 1.4; }
-      .c-basket .shop_table tbody tr td:last-of-type {
-        align-items: center; }
       .c-basket .shop_table tbody tr td:first-of-type {
         align-items: flex-start; }
-    .c-basket .shop_table tbody tr td.product-remove {
-      flex-direction: row;
-      align-items: flex-start; }
-      @media (min-width: 55em) {
-        .c-basket .shop_table tbody tr td.product-remove {
-          justify-content: flex-end;
-          grid-column-start: 3;
-          grid-column-end: 5; } }
     .c-basket .shop_table tbody tr td.actions {
       display: flex;
       flex-direction: column;
@@ -3201,6 +3196,15 @@ address {
         .c-basket .shop_table tbody tr td.actions {
           grid-column-start: 2;
           grid-column-end: 5; } }
+  .c-basket .shop_table .product-remove {
+    flex-direction: row;
+    align-items: flex-start; }
+    @media (min-width: 55em) {
+      .c-basket .shop_table .product-remove {
+        justify-content: flex-end;
+        grid-column-end: span 2; } }
+  .c-basket .shop_table .product-price {
+    text-align: right; }
 
 .c-basket .coupon {
   display: flex;
@@ -3290,13 +3294,15 @@ address {
   margin-bottom: 1.5rem;
   color: #333333;
   text-decoration: none; }
+  @media (min-width: 22.438em) {
+    .c-basket .product-name a {
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-basket .product-name a {
-      font-size: 2rem;
-      line-height: 1.2; } }
-  @media (min-width: 75em) {
+      font-size: 3rem; } }
+  @media (min-width: 50em) {
     .c-basket .product-name a {
-      font-size: 2.4rem; } }
+      font-size: 4rem; } }
   .c-basket .product-name a:hover {
     color: #ed1a3b; }
 
@@ -3841,8 +3847,8 @@ address {
   position: relative; }
   @media (min-width: 64.063em) {
     .c-product-details__product-order {
-      top: -510px;
-      height: calc(100% + 510px); } }
+      top: -530px;
+      height: calc(100% + 530px); } }
   .c-product-details__product-order__form {
     z-index: 5;
     height: auto;
@@ -3850,7 +3856,7 @@ address {
     background: #F2F2F2; }
     @media (min-width: 40.063em) {
       .c-product-details__product-order__form {
-        height: calc(510px - 25px); } }
+        height: calc(530px - 25px); } }
     @media (min-width: 64.063em) {
       .c-product-details__product-order__form {
         position: -webkit-sticky;
@@ -4522,10 +4528,6 @@ address {
 
 .c-form__description {
   margin-bottom: 3rem; }
-
-.c-form__container {
-  width: 100%;
-  max-width: 800px; }
 
 .c-form .ginput_container_select {
   position: relative;

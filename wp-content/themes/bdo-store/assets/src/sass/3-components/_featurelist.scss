@@ -1,7 +1,7 @@
 .c-featurelist{
   text-align: left;
   &__title{
-    margin-bottom: 1em;
+    margin-bottom: 1.5rem;
     @include font-bold;
     @include text-large;
   }

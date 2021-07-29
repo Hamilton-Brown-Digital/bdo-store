@@ -58,9 +58,6 @@
   &__description{
     margin-bottom: 3rem;
   }
-  &__container{
-    @include form-container;
-  }
   .ginput_container_select{
     @include form-dropdown;
     margin-bottom: 1.5rem;
