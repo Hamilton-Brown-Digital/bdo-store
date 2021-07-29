@@ -5196,7 +5196,8 @@ hr.e-seperator {
     .theme-color--green .c-basket .woocommerce-notices-wrapper:after, .theme-color--green .single-product .woocommerce-notices-wrapper:after {
       background-color: #218f8b; }
   .c-basket .woocommerce-notices-wrapper p, .c-basket .woocommerce-notices-wrapper ul, .c-basket .woocommerce-notices-wrapper ol, .single-product .woocommerce-notices-wrapper p, .single-product .woocommerce-notices-wrapper ul, .single-product .woocommerce-notices-wrapper ol {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    color: #fff; }
   .c-basket .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper a {
     margin-left: 1.5rem;
     /* stylelint-disable-next-line */
@@ -5220,10 +5221,10 @@ hr.e-seperator {
     .c-basket .woocommerce-notices-wrapper .woocommerce-message li,
     .c-basket .woocommerce-notices-wrapper .woocommerce-error li, .single-product .woocommerce-notices-wrapper .woocommerce-message li,
     .single-product .woocommerce-notices-wrapper .woocommerce-error li {
-      list-style-type: none;
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      list-style-type: none; }
       .c-basket .woocommerce-notices-wrapper .woocommerce-message li:before,
       .c-basket .woocommerce-notices-wrapper .woocommerce-error li:before, .single-product .woocommerce-notices-wrapper .woocommerce-message li:before,
       .single-product .woocommerce-notices-wrapper .woocommerce-error li:before {
@@ -5389,7 +5390,8 @@ hr.e-seperator {
     .theme-color--green .single-product .woocommerce-notices-wrapper:after {
       background-color: #218f8b; }
   .single-product .woocommerce-notices-wrapper p, .single-product .woocommerce-notices-wrapper ul, .single-product .woocommerce-notices-wrapper ol {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    color: #fff; }
   .single-product .woocommerce-notices-wrapper a {
     margin-left: 1.5rem;
     /* stylelint-disable-next-line */
@@ -5411,10 +5413,10 @@ hr.e-seperator {
     text-align: center; }
     .single-product .woocommerce-notices-wrapper .woocommerce-message li,
     .single-product .woocommerce-notices-wrapper .woocommerce-error li {
-      list-style-type: none;
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      list-style-type: none; }
       .single-product .woocommerce-notices-wrapper .woocommerce-message li:before,
       .single-product .woocommerce-notices-wrapper .woocommerce-error li:before {
         display: none; }
