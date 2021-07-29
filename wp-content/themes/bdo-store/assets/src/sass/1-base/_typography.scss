@@ -70,3 +70,8 @@ ul, ol {
     @include text-regular;
   }
 }
+
+::selection {
+  background-color: $brand-ocean;
+  color:$white;
+}

@@ -51,6 +51,24 @@ address p{
   margin-bottom: 1.5rem;
 }
 
+/* stylelint-disable */
+.crafty_billing{
+  label{
+    height: 2em;
+  }
+  &*{
+    float:none !important;
+  }
+  &.form-row{
+    &-first{
+      flex-grow: 1;
+      width: unset !important;
+    }
+    &-last{
+      width: unset !important;
+    }
+  }
+}
 
 .crafty_billing.address-field{
   button{
@@ -58,14 +76,47 @@ address p{
     top: -2.5rem;
   }
 }
-
 #billing_cp_button{
-  /* stylelint-disable-next-line */
+  top: unset !important;
+  float: none !important;
   font-size:1.6rem !important;
 }
-#billing_country_field{
+#billing_country{
   padding-bottom: 1.5rem;
-  .select2-selection{
-    height: auto;
+}
+
+// country selector
+
+.select2{
+  &-selection{
+    height: auto !important;
+    border: $borderline-darker !important;
+    border-radius: 0 !important;
+    font-size: 1.6rem !important;
+  }
+  &-container{
+  }
+  &-dropdown{
+    border: $borderline-darker !important;
+  }
+  &-search{
+    padding: 0.6em !important;
+    font-size: 1.6rem !important;
+    &__field{
+      border: $borderline-darker !important;
+    }
+  }
+  &-results{
+    &__options{
+      font-size: 1.6rem !important;
+      li{
+        padding: 0.6em !important;
+      }
+    }
+    &__option--highlighted{
+      background-color: $brand-ocean !important;
+    }
   }
 }
+
+/* stylelint-enable */

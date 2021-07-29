@@ -2,12 +2,8 @@
   .c-basket &, .single-product &{
     @include notice-strip;
   }
-
-  .customer-login &{
+  .woocommerce-account &{
     @include notice-inline;
-    ul.woocommerce-error{
-      grid-template-columns:1fr;
-    }
   }
   .woocommerce-MyAccount-content &{
     @include notice-inline;
@@ -16,9 +12,9 @@
     @include notice-strip;
     position: absolute;
     top: unset;
-    bottom: -25px;
+    bottom: 0;
     left: 0;
-    padding-top: 0;
+    background: $gold;
     transform: translateY(100%);
   }
   .theme-color--orange &{

@@ -17,8 +17,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
-}
-?>
+} ?>
 
 <div class="customer-login" id="customer_login">
 
@@ -31,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="customer-login__content customer-login__content--login">
 
-		<?php do_action( 'woocommerce_before_customer_login_form' ); ?>
+			<?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<!-- LOGIN FORM -->
 			<form class="woocommerce-form woocommerce-form-login login" method="post">

@@ -17,3 +17,5 @@
     include 'woocommerce/status.php';
 
     include 'woocommerce/cart.php';
+
+    include 'woocommerce/checkout.php';
