@@ -79,8 +79,7 @@
         display: block;
         padding: 1rem $edgepadding-mobile-loose;
         @include font-bold;
-        line-height: 24px;
-        @include font-size(16);
+        @include text-regular;
 
         @include breakpoint($break-desktop-wide) {
           position: relative;
@@ -123,16 +122,20 @@
 
   &__basket{
     display: flex;
-    align-items: baseline;
+    align-items: center;
     align-self: stretch;
-    padding: 1.5rem;
+    padding: 1.5rem 3rem;
     color: $white;
-    gap:0.5em;
     @include breakpoint($break-desktop-wide) {
       background-color: $brand-red;
       &:hover{
         background-color: darken($brand-red, 5%);
       }
+    }
+    &__inner{
+      gap:0.5em;
+      display: flex;
+      align-items: baseline;
     }
     &__icon{
       width: 20px;
@@ -151,10 +154,12 @@
       @include breakpoint($break-desktop-wide) {
         display:block;
         @include font-bold;
+        @include text-small;
       }
     }
     .basket_count{
       @include font-bold;
+      @include text-small;
     }
   }
   &__hamburger{

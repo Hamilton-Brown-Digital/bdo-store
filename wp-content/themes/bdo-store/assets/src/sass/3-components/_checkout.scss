@@ -1,7 +1,8 @@
 .c-checkout {
   h3 {
     @include header-regular(true, true);
-    margin-bottom: 1.5rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
   }
   strong{
     font-weight: $reg;
@@ -21,6 +22,7 @@
       @include form-submit;
     }
   }
+
   .woocommerce-error{
     margin-bottom: 1.5rem;
   }
@@ -45,18 +47,30 @@
     .button {
       @include form-submit;
     }
-    .select{
+    select{
       @include form-dropdown;
+      padding: 0.8rem;
     }
-    #billing_country_field{
-      padding-bottom: 1.5rem;
-      .select2-selection{
-        height: auto;
+    fieldset {
+      @include fieldset;
+    }
+  }
+  .woocommerce-billing-fields__field-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    .form-row{
+      &-first{
+        width: calc(50% - 1rem);
+      }
+      &-last{
+        width: calc(50% - 1rem);
+      }
+      &-wide{
+        width: 100%;
       }
     }
   }
-
-
 
 
   .shop_table{
@@ -114,7 +128,7 @@
 
 
   .woocommerce-checkout-review-order{
-    @include font-size(18);
+    @include text-regular;
     .cart_item{
       margin-bottom: 1.5rem;
       .product-name{
@@ -149,7 +163,7 @@
     }
     .woocommerce-table{
       /* stylelint-disable */
-      @include font-size(19);
+      @include text-regular;
       tfoot{
         tr{
           td{
@@ -210,7 +224,7 @@
     align-items: center;
     width: unset !important;
     margin-bottom: 0 !important;
-    @include font-size(18);
+    @include text-regular;
     line-height:1;
   }
   .payment_box{

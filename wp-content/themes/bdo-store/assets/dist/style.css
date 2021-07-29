@@ -892,6 +892,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 62.5%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-synthesis: none;
@@ -902,7 +903,6 @@ html {
   overflow-y: unset; }
 
 body {
-  font-size: 3.90625%rem;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -910,7 +910,7 @@ body {
   margin: 0;
   color: #333333;
   font-family: "Proxima Nova Regular", sans-serif;
-  font-weight: normal;
+  font-size: 18px;
   text-align: left;
   overflow-x: hidden; }
   body.single-product {
@@ -972,6 +972,12 @@ textarea {
 ul li {
   list-style: none; }
 
+form input:focus, form input:focus-visible, form textarea:focus, form textarea:focus-visible, form select:focus, form select:focus-visible {
+  /* stylelint-disable-next-line */
+  border-color: #707070 !important;
+  /* stylelint-disable-next-line */
+  outline: none !important; }
+
 h1,
 h2,
 h3,
@@ -982,28 +988,30 @@ h4 {
   line-height: 1; }
 
 h1 {
-  font-size: 2.5rem; }
+  font-size: 4rem; }
   @media (min-width: 50em) {
     h1 {
-      font-size: 4rem; } }
+      font-size: 6.4rem; } }
 
 h2 {
-  font-size: 2rem; }
+  font-size: 3.2rem; }
   @media (min-width: 50em) {
     h2 {
-      font-size: 3rem; } }
+      font-size: 4.8rem; } }
 
 h3 {
-  font-size: 1.125rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     h3 {
-      font-size: 1.625rem; } }
+      font-size: 2.6rem; } }
 
 h4 {
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     h4 {
-      font-size: 1.375rem; } }
+      font-size: 2.2rem; } }
 
 a {
   outline: none;
@@ -1022,18 +1030,30 @@ p {
   color: inherit;
   font-family: inherit;
   line-height: 1.4;
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     p {
-      font-size: 1.1875rem; } }
+      font-size: 1.8rem;
+      line-height: 1.4; } }
 
 ul, ol {
   margin-bottom: 0;
   padding: 0;
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     ul, ol {
-      font-size: 1.1875rem; } }
+      font-size: 1.8rem;
+      line-height: 1.4; } }
+
+::-moz-selection {
+  background-color: #02A5E2;
+  color: #fff; }
+
+::selection {
+  background-color: #02A5E2;
+  color: #fff; }
 
 .flex {
   display: flex;
@@ -1130,7 +1150,8 @@ ul, ol {
     display: none; }
   .woocommerce-NoticeGroup * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .woocommerce-NoticeGroup * {
     color: #333333; }
   .woocommerce-NoticeGroup ul {
@@ -1160,7 +1181,8 @@ ul, ol {
         content: ''; }
 
 address, address p {
-  font-size: 1.1875rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
 
 address p {
   margin-top: 0.5em; }
@@ -1168,10 +1190,56 @@ address p {
 .form-row {
   margin-bottom: 1.5rem; }
 
+/* stylelint-disable */
+.crafty_billing label {
+  height: 2em; }
+
+.crafty_billing* {
+  float: none !important; }
+
+.crafty_billing.form-row-first {
+  flex-grow: 1;
+  width: unset !important; }
+
+.crafty_billing.form-row-last {
+  width: unset !important; }
+
 .crafty_billing.address-field button {
   position: relative;
-  top: -2rem; }
+  top: -2.5rem; }
 
+#billing_cp_button {
+  top: unset !important;
+  float: none !important;
+  font-size: 1.6rem !important; }
+
+#billing_country {
+  padding-bottom: 1.5rem; }
+
+.select2-selection {
+  height: auto !important;
+  border: 2px solid #d8d8d8 !important;
+  border-radius: 0 !important;
+  font-size: 1.6rem !important; }
+
+.select2-dropdown {
+  border: 2px solid #d8d8d8 !important; }
+
+.select2-search {
+  padding: 0.6em !important;
+  font-size: 1.6rem !important; }
+  .select2-search__field {
+    border: 2px solid #d8d8d8 !important; }
+
+.select2-results__options {
+  font-size: 1.6rem !important; }
+  .select2-results__options li {
+    padding: 0.6em !important; }
+
+.select2-results__option--highlighted {
+  background-color: #02A5E2 !important; }
+
+/* stylelint-enable */
 .o-row {
   width: 100%;
   margin-bottom: 30px;
@@ -1218,6 +1286,8 @@ address p {
   margin-left: auto; }
   .o-grid-container--full-width {
     max-width: unset; }
+  .o-grid-container--narrow {
+    max-width: 1000px; }
 
 .c-header {
   position: fixed;
@@ -1270,8 +1340,8 @@ address p {
         display: block;
         flex-grow: 1;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-        font-size: 0.875rem;
-        line-height: 1.2; } }
+        font-size: 1.6rem;
+        line-height: 1.4; } }
   .c-header-utility__search {
     padding: 0;
     padding-bottom: 2.5rem; }
@@ -1332,7 +1402,8 @@ address p {
           height: 100%; } }
       .c-header-utility__menu ul li a {
         display: block;
-        font-size: 1.125rem;
+        font-size: 1.8rem;
+        line-height: 1.4;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
         padding: 0 1em; }
         @media (min-width: 75em) {
@@ -1343,7 +1414,7 @@ address p {
             border-top: 8px solid transparent;
             border-bottom: 8px solid transparent;
             box-sizing: border-box;
-            font-size: 0.875rem;
+            font-size: 1.4rem;
             line-height: 1.2; } }
       .c-header-utility__menu ul li.current-menu-item a {
         border-top-color: #ed1a3b; }
@@ -1415,8 +1486,8 @@ address p {
     display: block;
     padding: 1rem 30px;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    line-height: 24px;
-    font-size: 1rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
     @media (min-width: 75em) {
       .c-header-main__menu li a {
         position: relative;
@@ -1452,16 +1523,19 @@ address p {
 
 .c-header-main__basket {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   align-self: stretch;
-  padding: 1.5rem;
-  color: #fff;
-  gap: 0.5em; }
+  padding: 1.5rem 3rem;
+  color: #fff; }
   @media (min-width: 75em) {
     .c-header-main__basket {
       background-color: #ed1a3b; }
       .c-header-main__basket:hover {
         background-color: #dc1131; } }
+  .c-header-main__basket__inner {
+    gap: 0.5em;
+    display: flex;
+    align-items: baseline; }
   .c-header-main__basket__icon {
     width: 20px;
     height: 20px;
@@ -1478,9 +1552,13 @@ address p {
     @media (min-width: 75em) {
       .c-header-main__basket__label {
         display: block;
-        font-family: "Proxima Nova Bold", sans-serif, sans-serif; } }
+        font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.4; } }
   .c-header-main__basket .basket_count {
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.4; }
 
 @media (min-width: 75em) {
   .c-header-main__hamburger {
@@ -1515,6 +1593,10 @@ address p {
     height: calc(80vh - 82px);
     min-height: 600px;
     z-index: 2; }
+    @media (min-width: 1000px) and (max-height: 800px) {
+      .c-hero__container {
+        height: calc(70vh - 82px);
+        min-height: 500px; } }
     @media (min-width: 64.063em) {
       .c-hero__container {
         max-height: 750px;
@@ -1535,7 +1617,7 @@ address p {
       max-height: 480px; }
     .c-hero--product .c-hero__container {
       display: grid;
-      grid-gap: clamp(0.5rem, 3vw, 3rem); }
+      grid-gap: clamp(0.5rem, 3vw, 4.5rem); }
       @media (min-width: 64.063em) {
         .c-hero--product .c-hero__container {
           grid-template-columns: 1fr 630px; } }
@@ -1550,6 +1632,10 @@ address p {
     top: 0;
     left: 0;
     display: none; }
+    @media (min-width: 1000px) and (max-height: 800px) {
+      .c-hero__container-background {
+        height: calc(70vh - 82px);
+        min-height: 500px; } }
     @media (min-width: 64.063em) {
       .c-hero__container-background {
         max-height: 750px;
@@ -1689,12 +1775,12 @@ address p {
   background: #F2F2F2; }
   .c-hero-carousel .swiper-pagination {
     position: absolute;
-    bottom: -4rem;
+    bottom: 0;
     left: 50%;
     display: flex;
     justify-content: center;
     width: 320px;
-    transform: translateX(-50%);
+    transform: translate(-50%, 100%);
     gap: 8px; }
   .c-hero-carousel .swiper-pagination-bullet {
     display: block;
@@ -1719,16 +1805,17 @@ address p {
 
 .c-404__header {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 22.438em) {
     .c-404__header {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-404__header {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-404__header {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
   .c-404__header:after {
     content: '';
     display: block;
@@ -1749,16 +1836,17 @@ address p {
     margin-bottom: 1.5rem; }
   .c-404__main h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-404__main h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-404__main h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-404__main h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-404__main h2:after {
       content: '';
       display: block;
@@ -1778,7 +1866,8 @@ address p {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-404__main p, .c-404__main a, .c-404__main li {
-    font-size: 1.1875rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
   .c-404__main a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-404__main a:focus {
@@ -1826,41 +1915,47 @@ address p {
   margin-bottom: 1.5rem;
   color: #ed1a3b;
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-listing__subhead {
-      font-size: 1rem; } }
+      font-size: 1.6rem;
+      line-height: 1.4; } }
 
 .c-listing__heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-top: 0.3em;
   margin-bottom: 0.8em; }
   @media (min-width: 22.438em) {
     .c-listing__heading {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-listing__heading {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-listing__heading {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
 
 .c-listing__count {
   margin-bottom: 15px;
   font-family: "Proxima Nova Bold", sans-serif;
   line-height: 24px;
-  font-size: 1.125rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
   @media (min-width: 50em) {
     .c-listing__count {
       margin-bottom: 30px; } }
+
+.c-listing__card {
+  background: #f2d00e; }
 
 .c-listing__grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: clamp(0.5rem, 3vw, 3rem);
+  grid-gap: clamp(0.5rem, 3vw, 4.5rem);
   /* stylelint-disable */
   /* stylelint-enable */ }
   @media (min-width: 50em) {
@@ -1870,7 +1965,7 @@ address p {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-gap: clamp(0.5rem, 3vw, 3rem); }
+    grid-gap: clamp(0.5rem, 3vw, 4.5rem); }
     @media (min-width: 40.063em) {
       .c-listing__grid--2cols {
         grid-template-columns: 1fr 1fr; } }
@@ -1878,7 +1973,7 @@ address p {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-gap: clamp(0.5rem, 3vw, 3rem); }
+    grid-gap: clamp(0.5rem, 3vw, 4.5rem); }
     @media (min-width: 40.063em) {
       .c-listing__grid--3cols {
         grid-template-columns: 1fr 1fr; } }
@@ -1892,7 +1987,7 @@ address p {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-gap: clamp(0.5rem, 3vw, 3rem); }
+    grid-gap: clamp(0.5rem, 3vw, 4.5rem); }
     @media (min-width: 40.063em) {
       .c-listing__grid--4cols {
         grid-template-columns: 1fr 1fr; } }
@@ -1904,31 +1999,33 @@ address p {
   margin-bottom: 1.5rem;
   color: #ed1a3b;
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-accordion__subhead {
-      font-size: 1rem; } }
+      font-size: 1.6rem;
+      line-height: 1.4; } }
 
 .c-accordion__main-heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem; }
   @media (min-width: 22.438em) {
     .c-accordion__main-heading {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-accordion__main-heading {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-accordion__main-heading {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
 
 .c-accordion__container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: clamp(0.5rem, 3vw, 3rem); }
+  grid-gap: clamp(0.5rem, 3vw, 4.5rem); }
   @media (min-width: 64.063em) {
     .c-accordion__container {
       grid-template-columns: 1fr 1fr 1fr; } }
@@ -1939,11 +2036,11 @@ address p {
     padding-left: 30px; } }
 
 .c-accordion__menu__item a {
-  font-size: 1.25rem;
   display: block;
   padding: 0.5rem;
   padding-left: 0;
   color: #333333;
+  font-size: 2rem;
   line-height: 1.4;
   text-decoration: none; }
   .c-accordion__menu__item a:hover {
@@ -1956,14 +2053,16 @@ address p {
   margin-top: 70px; }
   .c-accordion__block__title {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem;
+    font-size: 2rem;
+    line-height: 1.2;
     margin-bottom: 1.5rem; }
     @media (min-width: 40.063em) {
       .c-accordion__block__title {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .c-accordion__block__title {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
     @media (min-width: 0) and (max-width: 40.063em) {
       .c-accordion__block__title {
         padding-right: 30px;
@@ -2011,13 +2110,15 @@ address p {
       transition: all 200ms; }
     .c-accordion__item__title__title {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.25rem; }
+      font-size: 2rem;
+      line-height: 1.2; }
       @media (min-width: 40.063em) {
         .c-accordion__item__title__title {
-          font-size: 1.25rem; } }
+          font-size: 2rem;
+          line-height: 1.2; } }
       @media (min-width: 75em) {
         .c-accordion__item__title__title {
-          font-size: 1.5rem; } }
+          font-size: 2.4rem; } }
   .c-accordion__item__content {
     max-height: 0;
     overflow: hidden;
@@ -2072,9 +2173,9 @@ address p {
     /* stylelint-disable */ }
     .c-price-comparison__table--items-2 {
       display: grid;
-      grid-gap: clamp(0.5rem, 3vw, 3rem);
+      grid-gap: clamp(0.5rem, 3vw, 4.5rem);
       grid-template-columns: 1fr;
-      max-width: 71.875rem;
+      max-width: 1150px;
       margin: 0 auto;
       grid-template-columns: 1fr; }
       @media (min-width: 40.063em) {
@@ -2083,9 +2184,9 @@ address p {
           grid-template-columns: 1fr 1fr; } }
     .c-price-comparison__table--items-3 {
       display: grid;
-      grid-gap: clamp(0.5rem, 3vw, 3rem);
+      grid-gap: clamp(0.5rem, 3vw, 4.5rem);
       grid-template-columns: 1fr;
-      max-width: 71.875rem;
+      max-width: 1150px;
       margin: 0 auto; }
       @media (min-width: 40.063em) and (max-width: 64.063em) {
         .c-price-comparison__table--items-3 {
@@ -2100,7 +2201,7 @@ address p {
           grid-template-columns: 1fr 1fr 1fr; } }
     .c-price-comparison__table--items-4 {
       display: grid;
-      grid-gap: clamp(0.5rem, 3vw, 3rem);
+      grid-gap: clamp(0.5rem, 3vw, 4.5rem);
       grid-template-columns: 1fr; }
       @media (min-width: 40.063em) {
         .c-price-comparison__table--items-4 {
@@ -2125,8 +2226,9 @@ address p {
     .background--gray .c-price-comparison__col {
       background-color: #fff; }
     .c-price-comparison__col__title {
-      font-size: 1.5rem;
-      margin-bottom: 2rem; }
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      font-size: 2.4rem; }
       .theme-color--orange .c-price-comparison__col__title {
         color: #df8639; }
       .theme-color--blue .c-price-comparison__col__title {
@@ -2136,7 +2238,7 @@ address p {
     .c-price-comparison__col__price {
       display: flex;
       flex-direction: column;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       line-height: 1;
       grid-gap: 0.2em; }
       @media (min-width: 1560px) {
@@ -2146,21 +2248,22 @@ address p {
           justify-content: center; } }
       .c-price-comparison__col__price__price {
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-        font-size: 1.5rem;
         display: block;
+        font-size: 2.4rem;
         white-space: nowrap; }
       .c-price-comparison__col__price__prefix {
         display: block;
         height: 1em;
         white-space: nowrap;
-        font-size: 1.125rem; }
+        font-size: 1.8rem;
+        line-height: 1.4; }
       .c-price-comparison__col__price__suffix {
         display: block;
         height: 1em;
         white-space: nowrap; }
     .c-price-comparison__col__cta {
       width: 100%;
-      margin-bottom: 2rem; }
+      margin-bottom: 3rem; }
       .c-price-comparison__col__cta .e-cta-button, .c-price-comparison__col__cta .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .woocommerce-account .woocommerce-notices-wrapper a, .woocommerce-account .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-account .woocommerce-notices-wrapper .button, .woocommerce-account .woocommerce-notices-wrapper .c-price-comparison__col__cta .button, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta a, .c-price-comparison__col__cta .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-price-comparison__col__cta .button {
         width: 100%;
         max-width: 260px;
@@ -2169,9 +2272,10 @@ address p {
 .c-featurelist {
   text-align: left; }
   .c-featurelist__title {
-    margin-bottom: 1em;
+    margin-bottom: 1.5rem;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
   .c-featurelist__list {
     display: grid; }
     .c-featurelist__list__item {
@@ -2189,19 +2293,21 @@ address p {
 
 .c-content-row__title {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem; }
   @media (min-width: 40.063em) {
     .c-content-row__title {
-      font-size: 1.25rem; } }
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
     .c-content-row__title {
-      font-size: 1.5rem; } }
+      font-size: 2.4rem; } }
 
 .c-content-row__container--1-1 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: clamp(0.5rem, 3vw, 3rem); }
+  grid-gap: clamp(0.5rem, 3vw, 4.5rem); }
   @media (min-width: 50em) {
     .c-content-row__container--1-1 {
       grid-template-columns: 1fr 1fr; } }
@@ -2209,7 +2315,7 @@ address p {
 .c-content-row__container--2-1 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: clamp(0.5rem, 3vw, 3rem); }
+  grid-gap: clamp(0.5rem, 3vw, 4.5rem); }
   @media (min-width: 50em) {
     .c-content-row__container--2-1 {
       grid-template-columns: 1fr 1fr 1fr; }
@@ -2219,7 +2325,7 @@ address p {
 .c-content-row__container--1-2 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: clamp(0.5rem, 3vw, 3rem); }
+  grid-gap: clamp(0.5rem, 3vw, 4.5rem); }
   @media (min-width: 50em) {
     .c-content-row__container--1-2 {
       grid-template-columns: 1fr 1fr 1fr; }
@@ -2233,16 +2339,17 @@ address p {
     margin-bottom: 1.5rem; }
   .c-content-row__content h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-content-row__content h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-content-row__content h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-content-row__content h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-content-row__content h2:after {
       content: '';
       display: block;
@@ -2262,7 +2369,8 @@ address p {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-content-row__content p, .c-content-row__content a, .c-content-row__content li {
-    font-size: 1.1875rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
   .c-content-row__content a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-content-row__content a:focus {
@@ -2317,16 +2425,17 @@ address p {
 
 .c-content-block__content h2 {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 22.438em) {
     .c-content-block__content h2 {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-content-block__content h2 {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-content-block__content h2 {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
   .c-content-block__content h2:after {
     content: '';
     display: block;
@@ -2349,7 +2458,8 @@ address p {
   text-decoration: underline; }
 
 .c-content-block__content p, .c-content-block__content a, .c-content-block__content li {
-  font-size: 1.1875rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
 
 .c-content-block__content a:active {
   border-bottom: 1px solid #ed1a3b; }
@@ -2508,13 +2618,15 @@ address p {
     min-height: 80px; }
     .c-footer__menu__list__item {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1rem; }
+      font-size: 1.6rem;
+      line-height: 1.4; }
   .c-footer__copyright__notice {
     display: flex;
     flex-direction: column;
     flex-shrink: 1;
     justify-content: flex-start;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
     @media (min-width: 83.75em) {
       .c-footer__copyright__notice {
         flex-direction: row;
@@ -2529,12 +2641,14 @@ address p {
           display: block; } }
 
 .c-sitemap {
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   line-height: 22px; }
   @media (min-width: 75em) {
     .c-sitemap {
-      font-size: 1.125rem;
+      font-size: 1.8rem;
+      line-height: 1.4;
       line-height: 24px; } }
 
 @media (min-width: 75em) {
@@ -2565,9 +2679,9 @@ address p {
   .c-account h2, .c-account h3, .c-account h4 {
     margin-bottom: 1.5rem; }
   .c-account h2 {
-    font-size: 2rem; }
+    font-size: 3.2rem; }
   .c-account h3 {
-    font-size: 1.625rem; }
+    font-size: 2.6rem; }
   .c-account p {
     max-width: 800px; }
   .c-account__message {
@@ -2578,13 +2692,15 @@ address p {
       .c-account__message p:first-of-type {
         margin-top: 0;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-        font-size: 1.25rem; }
+        font-size: 2rem;
+        line-height: 1.2; }
         @media (min-width: 40.063em) {
           .c-account__message p:first-of-type {
-            font-size: 1.25rem; } }
+            font-size: 2rem;
+            line-height: 1.2; } }
         @media (min-width: 75em) {
           .c-account__message p:first-of-type {
-            font-size: 1.5rem; } }
+            font-size: 2.4rem; } }
       .c-account__message p strong {
         font-weight: unset;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
@@ -2605,7 +2721,8 @@ address p {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-account .woocommerce-Button, .theme-color--orange .c-account .woocommerce-button, .theme-color--orange .c-account button, .theme-color--orange .c-account .edit {
@@ -2642,18 +2759,20 @@ address p {
       background-color: #dc1131; }
   .c-account .woocommerce-MyAccount-navigation {
     position: relative;
-    padding-top: 3rem;
+    padding-top: 6rem;
     padding-bottom: 3rem;
     background-color: #F2F2F2; }
     .c-account .woocommerce-MyAccount-navigation h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.25rem; }
+      font-size: 2rem;
+      line-height: 1.2; }
       @media (min-width: 40.063em) {
         .c-account .woocommerce-MyAccount-navigation h2 {
-          font-size: 1.25rem; } }
+          font-size: 2rem;
+          line-height: 1.2; } }
       @media (min-width: 75em) {
         .c-account .woocommerce-MyAccount-navigation h2 {
-          font-size: 1.5rem; } }
+          font-size: 2.4rem; } }
       .c-account .woocommerce-MyAccount-navigation h2:after {
         content: '';
         display: block;
@@ -2664,11 +2783,11 @@ address p {
         background-color: #ed1a3b;
         border: none; }
     .c-account .woocommerce-MyAccount-navigation a {
-      font-size: 1.25rem;
       display: block;
       padding: 0.5rem;
       padding-left: 0;
       color: #333333;
+      font-size: 2rem;
       line-height: 1.4;
       text-decoration: none; }
       .c-account .woocommerce-MyAccount-navigation a:hover {
@@ -2706,21 +2825,24 @@ address p {
     @media (min-width: 64.063em) {
       .c-account .woocommerce-MyAccount-content {
         width: 80%;
+        max-width: 1000px;
         min-height: 70vh;
         padding: clamp(20px, 8vw, 140px);
-        padding-top: 3rem;
+        padding-top: 6rem;
         padding-right: 0; } }
   .c-account .woocommerce-message {
     margin-top: 3rem;
     margin-bottom: 3rem;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 40.063em) {
       .c-account .woocommerce-message {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .c-account .woocommerce-message {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
   .c-account .woocommerce-order-details,
   .c-account .woocommerce-customer-details {
     max-width: 800px;
@@ -2746,10 +2868,10 @@ address p {
       padding-bottom: 1.5rem; }
   .c-account .woocommerce-table__product-name ul.wc-item-meta li {
     margin-top: 0.75rem;
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     line-height: 1.2; }
   .c-account .woocommerce-table__product-name ul.wc-item-meta li p {
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     line-height: 1.2;
     margin-bottom: 0; }
   .c-account p.order-again {
@@ -2759,7 +2881,7 @@ address p {
 .woocommerce-column__title,
 .woocommerce-Address-title {
   margin-bottom: 1.5rem;
-  font-size: 1.625rem; }
+  font-size: 2.6rem; }
 
 @media (min-width: 50em) {
   .woocommerce-Addresses {
@@ -2807,7 +2929,8 @@ mark {
       .woocommerce-orders-table tr .woocommerce-orders-table__header-order-actions {
         display: none; } }
     .woocommerce-orders-table tr td {
-      font-size: 1.125rem; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
     .woocommerce-orders-table tr td, .woocommerce-orders-table tr th {
       display: flex;
       gap: 0.25em;
@@ -2829,7 +2952,7 @@ mark {
     flex-direction: column; }
     @media (min-width: 0) and (max-width: 64.063em) {
       .woocommerce-orders-table tbody tr td {
-        font-size: 0.875rem;
+        font-size: 1.4rem;
         line-height: 1.2; } }
     .woocommerce-orders-table tbody tr td.woocommerce-orders-table__cell-order-total {
       flex-direction: column; }
@@ -2846,7 +2969,8 @@ mark {
         flex-grow: 1;
         content: 'Actions';
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-        font-size: 1pxrem; }
+        font-size: 1.6rem;
+        line-height: 1.4; }
         @media (min-width: 64.063em) {
           .woocommerce-orders-table tbody tr td.woocommerce-orders-table__cell-order-actions:after {
             display: none; } }
@@ -2856,68 +2980,60 @@ mark {
   .woocommerce-orders-table tfoot th {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     line-height: 20px;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
 
 address {
   line-height: 1.4; }
 
-.woocommerce-address-fields,
-.edit-account {
+.woocommerce-address-fields label, .edit-account label {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.4;
   width: 100%;
-  max-width: 800px; }
-  .woocommerce-address-fields label,
-  .edit-account label {
-    display: block;
-    font-size: 1rem;
-    width: 100%;
-    margin-bottom: 0.5em;
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
-    @media (min-width: 75em) {
-      .woocommerce-address-fields label,
-      .edit-account label {
-        font-size: 1.125rem; } }
-  .woocommerce-address-fields input[type='text'], .woocommerce-address-fields input[type='tel'], .woocommerce-address-fields input[type='email'], .woocommerce-address-fields input[type='password'],
-  .edit-account input[type='text'],
-  .edit-account input[type='tel'],
-  .edit-account input[type='email'],
-  .edit-account input[type='password'] {
-    width: 100%;
-    padding: 0.6em;
-    background-color: #fff;
-    border: 2px solid #d8d8d8;
-    font-size: 1rem; }
-  .woocommerce-address-fields .select2-container .select2-selection--single,
-  .edit-account .select2-container .select2-selection--single {
-    height: 50px;
-    margin-bottom: 20px; }
-  .woocommerce-address-fields .select2-container--default .select2-selection--single .select2-selection__rendered,
-  .edit-account .select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 50px; }
-  .woocommerce-address-fields span em,
-  .edit-account span em {
-    position: relative;
-    top: -0.5em;
-    display: block;
-    margin-bottom: 20px;
-    line-height: 20px;
-    font-size: 1rem; }
-  .woocommerce-address-fields legend,
-  .edit-account legend {
-    display: none; }
-  .woocommerce-address-fields fieldset,
-  .edit-account fieldset {
-    border: none; }
+  margin-bottom: 0.5em;
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+  @media (min-width: 75em) {
+    .woocommerce-address-fields label, .edit-account label {
+      font-size: 1.8rem;
+      line-height: 1.4; } }
+
+.woocommerce-address-fields input[type='text'], .woocommerce-address-fields input[type='tel'], .woocommerce-address-fields input[type='email'], .woocommerce-address-fields input[type='password'], .edit-account input[type='text'], .edit-account input[type='tel'], .edit-account input[type='email'], .edit-account input[type='password'] {
+  width: 100%;
+  padding: 0.6em;
+  background-color: #fff;
+  border: 2px solid #d8d8d8;
+  font-size: 1.6rem;
+  line-height: 1.4; }
+
+.woocommerce-address-fields span em, .edit-account span em {
+  position: relative;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.4; }
+
+.woocommerce-address-fields legend, .edit-account legend {
+  display: none; }
+
+.woocommerce-address-fields fieldset, .edit-account fieldset {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  background-color: #F2F2F2;
+  border: none; }
 
 .c-basket .cart-empty.woocommerce-info {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem; }
   @media (min-width: 40.063em) {
     .c-basket .cart-empty.woocommerce-info {
-      font-size: 1.25rem; } }
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
     .c-basket .cart-empty.woocommerce-info {
-      font-size: 1.5rem; } }
+      font-size: 2.4rem; } }
 
 .c-basket .woocommerce-Button, .c-basket .woocommerce-button, .c-basket .button, .c-basket button, .c-basket .edit {
   position: relative;
@@ -2933,7 +3049,8 @@ address {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-left: auto; }
   .theme-color--orange .c-basket .woocommerce-Button, .theme-color--orange .c-basket .woocommerce-button, .theme-color--orange .c-basket .button, .theme-color--orange .c-basket button, .theme-color--orange .c-basket .edit {
@@ -2991,7 +3108,8 @@ address {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-left: auto; }
   .theme-color--orange .c-basket button {
@@ -3062,19 +3180,10 @@ address {
     .c-basket .shop_table tbody tr td {
       display: flex;
       flex-direction: column;
-      font-size: 1.125rem; }
-      .c-basket .shop_table tbody tr td:last-of-type {
-        align-items: center; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
       .c-basket .shop_table tbody tr td:first-of-type {
         align-items: flex-start; }
-    .c-basket .shop_table tbody tr td.product-remove {
-      flex-direction: row;
-      align-items: flex-start; }
-      @media (min-width: 55em) {
-        .c-basket .shop_table tbody tr td.product-remove {
-          justify-content: flex-end;
-          grid-column-start: 3;
-          grid-column-end: 5; } }
     .c-basket .shop_table tbody tr td.actions {
       display: flex;
       flex-direction: column;
@@ -3087,6 +3196,15 @@ address {
         .c-basket .shop_table tbody tr td.actions {
           grid-column-start: 2;
           grid-column-end: 5; } }
+  .c-basket .shop_table .product-remove {
+    flex-direction: row;
+    align-items: flex-start; }
+    @media (min-width: 55em) {
+      .c-basket .shop_table .product-remove {
+        justify-content: flex-end;
+        grid-column-end: span 2; } }
+  .c-basket .shop_table .product-price {
+    text-align: right; }
 
 .c-basket .coupon {
   display: flex;
@@ -3104,7 +3222,8 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .c-basket .coupon button {
     position: relative;
     display: inline-flex;
@@ -3119,7 +3238,8 @@ address {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     background-color: transparent;
     border: solid 2px #707070;
@@ -3169,16 +3289,20 @@ address {
 .c-basket .product-name a {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   color: #333333;
   text-decoration: none; }
+  @media (min-width: 22.438em) {
+    .c-basket .product-name a {
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-basket .product-name a {
-      font-size: 1.25rem; } }
-  @media (min-width: 75em) {
+      font-size: 3rem; } }
+  @media (min-width: 50em) {
     .c-basket .product-name a {
-      font-size: 1.5rem; } }
+      font-size: 4rem; } }
   .c-basket .product-name a:hover {
     color: #ed1a3b; }
 
@@ -3251,7 +3375,8 @@ address {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-basket .wc-proceed-to-checkout a {
@@ -3289,17 +3414,19 @@ address {
 
 .c-checkout h3 {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem; }
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-top: 6rem;
+  margin-bottom: 3rem; }
   @media (min-width: 22.438em) {
     .c-checkout h3 {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-checkout h3 {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-checkout h3 {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
   .c-checkout h3:after {
     content: '';
     display: block;
@@ -3341,7 +3468,8 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     margin-bottom: 0; }
   .c-checkout .checkout_coupon .button {
     position: relative;
@@ -3357,7 +3485,8 @@ address {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-checkout .checkout_coupon .button {
@@ -3410,23 +3539,27 @@ address {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .c-checkout .woocommerce-checkout label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     width: 100%;
     margin-bottom: 0.5em;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     @media (min-width: 75em) {
       .c-checkout .woocommerce-checkout label {
-        font-size: 1.125rem; } }
+        font-size: 1.8rem;
+        line-height: 1.4; } }
   .c-checkout .woocommerce-checkout textarea {
     width: 100%;
     height: 12em;
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .c-checkout .woocommerce-checkout .button {
     position: relative;
     display: inline-flex;
@@ -3441,7 +3574,8 @@ address {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-left: auto; }
     .theme-color--orange .c-checkout .woocommerce-checkout .button {
@@ -3476,7 +3610,7 @@ address {
       display: none; }
     .c-checkout .woocommerce-checkout .button:hover {
       background-color: #dc1131; }
-  .c-checkout .woocommerce-checkout .select {
+  .c-checkout .woocommerce-checkout select {
     position: relative;
     width: 100%;
     width: 100%;
@@ -3484,33 +3618,48 @@ address {
     background-color: #fff;
     background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down.svg");
     background-repeat: no-repeat;
-    background-position: center right 0.6em;
+    background-position: center right 0.8em;
     border: 2px solid #d8d8d8;
     color: unset;
     cursor: pointer;
-    font-size: 1rem; }
-    .theme-color--orange .c-checkout .woocommerce-checkout .select {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    padding: 0.8rem; }
+    .theme-color--orange .c-checkout .woocommerce-checkout select {
       border-bottom-color: #df8639; }
-    .theme-color--blue .c-checkout .woocommerce-checkout .select {
+    .theme-color--blue .c-checkout .woocommerce-checkout select {
       border-bottom-color: #02A5E2; }
-    .theme-color--green .c-checkout .woocommerce-checkout .select {
+    .theme-color--green .c-checkout .woocommerce-checkout select {
       border-bottom-color: #218f8b; }
-    .theme-color--orange .c-checkout .woocommerce-checkout .select {
+    .theme-color--orange .c-checkout .woocommerce-checkout select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-orange.svg"); }
-    .theme-color--blue .c-checkout .woocommerce-checkout .select {
+    .theme-color--blue .c-checkout .woocommerce-checkout select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-blue.svg"); }
-    .theme-color--green .c-checkout .woocommerce-checkout .select {
+    .theme-color--green .c-checkout .woocommerce-checkout select {
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-green.svg"); }
-    .c-checkout .woocommerce-checkout .select select, .c-checkout .woocommerce-checkout .select option {
+    .c-checkout .woocommerce-checkout select select, .c-checkout .woocommerce-checkout select option {
       display: block;
       width: 100%;
       height: 100%;
       padding: 0.8em;
       font-family: "Proxima Nova Regular", sans-serif; }
-  .c-checkout .woocommerce-checkout #billing_country_field {
-    padding-bottom: 1.5rem; }
-    .c-checkout .woocommerce-checkout #billing_country_field .select2-selection {
-      height: auto; }
+  .c-checkout .woocommerce-checkout fieldset {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    background-color: #F2F2F2;
+    border: none; }
+
+.c-checkout .woocommerce-billing-fields__field-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; }
+  .c-checkout .woocommerce-billing-fields__field-wrapper .form-row-first {
+    width: calc(50% - 1rem); }
+  .c-checkout .woocommerce-billing-fields__field-wrapper .form-row-last {
+    width: calc(50% - 1rem); }
+  .c-checkout .woocommerce-billing-fields__field-wrapper .form-row-wide {
+    width: 100%; }
 
 .c-checkout .shop_table {
   width: 100%;
@@ -3549,7 +3698,8 @@ address {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
 
 .c-checkout .woocommerce-checkout-review-order {
-  font-size: 1.125rem; }
+  font-size: 1.8rem;
+  line-height: 1.4; }
   .c-checkout .woocommerce-checkout-review-order .cart_item {
     margin-bottom: 1.5rem; }
     .c-checkout .woocommerce-checkout-review-order .cart_item .product-name {
@@ -3582,16 +3732,17 @@ address {
   max-width: 800px; }
   .c-checkout .woocommerce-order h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-checkout .woocommerce-order h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-checkout .woocommerce-order h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-checkout .woocommerce-order h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-checkout .woocommerce-order h2:after {
       content: '';
       display: block;
@@ -3626,7 +3777,8 @@ address {
     margin-bottom: 1.5rem; }
   .c-checkout .woocommerce-order .woocommerce-table {
     /* stylelint-disable */
-    font-size: 1.1875rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
     /* stylelint-enable */ }
     .c-checkout .woocommerce-order .woocommerce-table tfoot tr td {
       text-align: right; }
@@ -3634,10 +3786,10 @@ address {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     .c-checkout .woocommerce-order .woocommerce-table ul.wc-item-meta li {
       margin-top: 0.75rem;
-      font-size: 0.875rem;
+      font-size: 1.4rem;
       line-height: 1.2; }
     .c-checkout .woocommerce-order .woocommerce-table ul.wc-item-meta li p {
-      font-size: 0.875rem;
+      font-size: 1.4rem;
       line-height: 1.2;
       margin-bottom: 0; }
   .c-checkout .woocommerce-order section:first-of-type {
@@ -3663,7 +3815,8 @@ address {
     align-items: center;
     width: unset !important;
     margin-bottom: 0 !important;
-    font-size: 1.125rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
     line-height: 1; }
   .wc_payment_method .payment_box {
     width: 100%; }
@@ -3681,7 +3834,7 @@ address {
 .woocommerce-terms-and-conditions-wrapper {
   padding: 3rem 0; }
   .woocommerce-terms-and-conditions-wrapper p {
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     line-height: 1.2; }
 
 @media (min-width: 64.063em) {
@@ -3694,8 +3847,8 @@ address {
   position: relative; }
   @media (min-width: 64.063em) {
     .c-product-details__product-order {
-      top: -630px;
-      height: calc(100% + 630px); } }
+      top: -530px;
+      height: calc(100% + 530px); } }
   .c-product-details__product-order__form {
     z-index: 5;
     height: auto;
@@ -3703,7 +3856,7 @@ address {
     background: #F2F2F2; }
     @media (min-width: 40.063em) {
       .c-product-details__product-order__form {
-        height: calc(630px - 25px); } }
+        height: calc(530px - 25px); } }
     @media (min-width: 64.063em) {
       .c-product-details__product-order__form {
         position: -webkit-sticky;
@@ -3715,7 +3868,7 @@ address {
   padding-bottom: 6rem; }
 
 .c-product-box {
-  padding: 4rem; }
+  padding: 6rem; }
   .c-product-box .gform_body {
     margin-bottom: 2.5rem; }
   .c-product-box .single_add_to_cart_button {
@@ -3733,7 +3886,9 @@ address {
     border-radius: 2px;
     color: #fff;
     text-align: left;
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.4; }
     .theme-color--orange .c-product-box .single_add_to_cart_button {
       background-color: #df8639; }
     .theme-color--blue .c-product-box .single_add_to_cart_button {
@@ -3755,45 +3910,41 @@ address {
   .c-product-box__help {
     margin-top: 30px; }
     .c-product-box__help p {
-      font-size: 1rem; }
-  .c-product-box .variations {
-    display: block;
-    width: 100%;
-    margin: 0;
-    margin-bottom: 1.5rem;
-    padding: 0; }
-    .c-product-box .variations tbody {
+      font-size: 1.6rem;
+      line-height: 1.4; }
+  .c-product-box table.variations {
+    width: 100%; }
+    .c-product-box table.variations tbody {
+      display: block;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: auto;
-      grid-gap: 2rem 3rem; }
-      .c-product-box .variations tbody tr {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 1.5rem;
+      padding: 0;
+      grid-gap: 2rem 3rem;
+      grid-template-columns: 1fr 1fr; }
+      .c-product-box table.variations tbody tr {
         display: flex;
         flex-direction: column; }
-        .c-product-box .variations tbody tr:only-child {
-          grid-column-start: 1;
-          grid-column-end: 3; }
-        .c-product-box .variations tbody tr:last-of-type {
-          grid-column-end: span 2; }
-        .c-product-box .variations tbody tr:nth-child(4) {
-          grid-column-end: unset; }
-    .c-product-box .variations label {
+    .c-product-box table.variations label {
       display: block;
-      font-size: 1rem;
+      font-size: 1.6rem;
+      line-height: 1.4;
       width: 100%;
       margin-bottom: 0.5em;
       font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
       @media (min-width: 75em) {
-        .c-product-box .variations label {
-          font-size: 1.125rem; } }
-    .c-product-box .variations .value {
+        .c-product-box table.variations label {
+          font-size: 1.8rem;
+          line-height: 1.4; } }
+    .c-product-box table.variations .value {
       position: relative; }
-      .c-product-box .variations .value .reset_variations {
+      .c-product-box table.variations .value .reset_variations {
         position: absolute;
         right: 0;
-        bottom: -1.5rem;
+        bottom: -3rem;
         display: inline-block; }
-    .c-product-box .variations select {
+    .c-product-box table.variations select {
       position: relative;
       width: 100%;
       width: 100%;
@@ -3801,58 +3952,65 @@ address {
       background-color: #fff;
       background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down.svg");
       background-repeat: no-repeat;
-      background-position: center right 0.6em;
+      background-position: center right 0.8em;
       border: 2px solid #d8d8d8;
       color: unset;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 1.6rem;
+      line-height: 1.4;
       display: block;
       width: 100%;
       height: 4rem;
       padding: 0.8em;
-      padding-left: 0;
       background-color: transparent;
       border: none;
       border-bottom: 2px solid #ed1a3b;
       font-family: "Proxima Nova Regular", sans-serif;
       line-height: 1.2;
       white-space: break-spaces;
-      font-size: 0.875rem; }
-      .theme-color--orange .c-product-box .variations select {
+      font-size: 1.4rem;
+      line-height: 1.2; }
+      .theme-color--orange .c-product-box table.variations select {
         border-bottom-color: #df8639; }
-      .theme-color--blue .c-product-box .variations select {
+      .theme-color--blue .c-product-box table.variations select {
         border-bottom-color: #02A5E2; }
-      .theme-color--green .c-product-box .variations select {
+      .theme-color--green .c-product-box table.variations select {
         border-bottom-color: #218f8b; }
-      .theme-color--orange .c-product-box .variations select {
+      .theme-color--orange .c-product-box table.variations select {
         background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-orange.svg"); }
-      .theme-color--blue .c-product-box .variations select {
+      .theme-color--blue .c-product-box table.variations select {
         background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-blue.svg"); }
-      .theme-color--green .c-product-box .variations select {
+      .theme-color--green .c-product-box table.variations select {
         background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down-green.svg"); }
-      .c-product-box .variations select select, .c-product-box .variations select option {
+      .c-product-box table.variations select select, .c-product-box table.variations select option {
         display: block;
         width: 100%;
         height: 100%;
         padding: 0.8em;
         font-family: "Proxima Nova Regular", sans-serif; }
+  .c-product-box.variationsnum--3 tbody tr:nth-of-type(3) {
+    grid-column-end: span 2; }
+  .c-product-box.variationsnum--2 tbody tr {
+    grid-column-end: span 2; }
+  .c-product-box.variationsnum--1 tbody tr {
+    grid-column-end: span 2; }
   .c-product-box .single_variation_wrap {
     display: flex;
     gap: 1.5rem;
     flex-direction: column; }
   .c-product-box .woocommerce-Price-amount {
+    display: inline-block;
+    padding: 1.5rem 0;
+    font-size: 3rem;
     text-transform: uppercase;
-    font-size: 1.875rem;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
-  .c-product-box .price {
-    padding-bottom: 1.5rem; }
 
 @media (min-width: 50em) {
   .c-signpost__grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-gap: clamp(0.5rem, 3vw, 3rem);
+    grid-gap: clamp(0.5rem, 3vw, 4.5rem);
     grid-template-columns: 1fr 1fr; } }
 
 .c-signpost__media {
@@ -3862,28 +4020,30 @@ address {
   margin-bottom: 1.5rem;
   color: #ed1a3b;
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-signpost__tagline {
-      font-size: 1rem; } }
+      font-size: 1.6rem;
+      line-height: 1.4; } }
 
 .c-signpost__heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem; }
   @media (min-width: 22.438em) {
     .c-signpost__heading {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-signpost__heading {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-signpost__heading {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
 
 .c-signpost__intro {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-bottom: 1.5rem; }
@@ -3894,16 +4054,17 @@ address {
     margin-bottom: 1.5rem; }
   .c-signpost__content-main h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-signpost__content-main h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-signpost__content-main h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-signpost__content-main h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-signpost__content-main h2:after {
       content: '';
       display: block;
@@ -3923,7 +4084,8 @@ address {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-signpost__content-main p, .c-signpost__content-main a, .c-signpost__content-main li {
-    font-size: 1.1875rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
   .c-signpost__content-main a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-signpost__content-main a:focus {
@@ -3974,11 +4136,12 @@ address {
   margin: 20px 0 -35px;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   line-height: 30px;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 75em) {
     .c-search__count {
-      font-size: 1.5rem;
-      margin: 80px 0 -65px; } }
+      margin: 80px 0 -65px;
+      font-size: 2.4rem; } }
 
 .c-iframe__window {
   width: 100%;
@@ -3988,7 +4151,7 @@ address {
 .c-download__container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: clamp(0.5rem, 3vw, 3rem); }
+  grid-gap: clamp(0.5rem, 3vw, 4.5rem); }
   @media (min-width: 64.063em) {
     .c-download__container {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr; } }
@@ -3996,7 +4159,7 @@ address {
 .c-download__main {
   grid-column-end: span 3; }
   .c-download__main__intro {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     line-height: 1.2;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-bottom: 1.5rem; }
@@ -4006,16 +4169,17 @@ address {
       margin-bottom: 1.5rem; }
     .c-download__main__content h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.25rem; }
+      font-size: 2rem;
+      line-height: 1.2; }
       @media (min-width: 22.438em) {
         .c-download__main__content h2 {
-          font-size: 1.5625rem; } }
+          font-size: 2.5rem; } }
       @media (min-width: 40.063em) {
         .c-download__main__content h2 {
-          font-size: 1.875rem; } }
+          font-size: 3rem; } }
       @media (min-width: 50em) {
         .c-download__main__content h2 {
-          font-size: 2.5rem; } }
+          font-size: 4rem; } }
       .c-download__main__content h2:after {
         content: '';
         display: block;
@@ -4035,7 +4199,8 @@ address {
       color: #ed1a3b;
       text-decoration: underline; }
     .c-download__main__content p, .c-download__main__content a, .c-download__main__content li {
-      font-size: 1.1875rem; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
     .c-download__main__content a:active {
       border-bottom: 1px solid #ed1a3b; }
     .c-download__main__content a:focus {
@@ -4090,30 +4255,33 @@ address {
     border-color: #d8d8d8; }
   .c-download__item__title {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem;
+    font-size: 2rem;
+    line-height: 1.2;
     margin-bottom: 1.5rem; }
     @media (min-width: 40.063em) {
       .c-download__item__title {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .c-download__item__title {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
   .c-download__item__description {
     margin-bottom: 1.5rem; }
     .c-download__item__description h2, .c-download__item__description h3, .c-download__item__description h4, .c-download__item__description h5, .c-download__item__description p, .c-download__item__description ul, .c-download__item__description ol, .c-download__item__description hr {
       margin-bottom: 1.5rem; }
     .c-download__item__description h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.25rem; }
+      font-size: 2rem;
+      line-height: 1.2; }
       @media (min-width: 22.438em) {
         .c-download__item__description h2 {
-          font-size: 1.5625rem; } }
+          font-size: 2.5rem; } }
       @media (min-width: 40.063em) {
         .c-download__item__description h2 {
-          font-size: 1.875rem; } }
+          font-size: 3rem; } }
       @media (min-width: 50em) {
         .c-download__item__description h2 {
-          font-size: 2.5rem; } }
+          font-size: 4rem; } }
       .c-download__item__description h2:after {
         content: '';
         display: block;
@@ -4133,7 +4301,8 @@ address {
       color: #ed1a3b;
       text-decoration: underline; }
     .c-download__item__description p, .c-download__item__description a, .c-download__item__description li {
-      font-size: 1.1875rem; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
     .c-download__item__description a:active {
       border-bottom: 1px solid #ed1a3b; }
     .c-download__item__description a:focus {
@@ -4182,16 +4351,17 @@ address {
     margin-bottom: 1.5rem; }
   .c-download__item__additional-content h2 {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-download__item__additional-content h2 {
-        font-size: 1.5625rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-download__item__additional-content h2 {
-        font-size: 1.875rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-download__item__additional-content h2 {
-        font-size: 2.5rem; } }
+        font-size: 4rem; } }
     .c-download__item__additional-content h2:after {
       content: '';
       display: block;
@@ -4211,7 +4381,8 @@ address {
     color: #ed1a3b;
     text-decoration: underline; }
   .c-download__item__additional-content p, .c-download__item__additional-content a, .c-download__item__additional-content li {
-    font-size: 1.1875rem; }
+    font-size: 1.8rem;
+    line-height: 1.4; }
   .c-download__item__additional-content a:active {
     border-bottom: 1px solid #ed1a3b; }
   .c-download__item__additional-content a:focus {
@@ -4260,7 +4431,9 @@ address {
   padding: 0.6em;
   background-color: #fff;
   border: 2px solid #d8d8d8;
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem; }
 
 .c-form .ginput_container textarea {
   width: 100%;
@@ -4268,7 +4441,9 @@ address {
   padding: 0.6em;
   background-color: #fff;
   border: 2px solid #d8d8d8;
-  font-size: 1rem; }
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem; }
 
 @media (min-width: 40.063em) {
   .c-form .gform_fields {
@@ -4280,13 +4455,15 @@ address {
 .c-form .gform_confirmation_message {
   margin-bottom: 3rem;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 40.063em) {
     .c-form .gform_confirmation_message {
-      font-size: 1.25rem; } }
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
     .c-form .gform_confirmation_message {
-      font-size: 1.5rem; } }
+      font-size: 2.4rem; } }
 
 .c-form .gfield {
   border: none; }
@@ -4311,16 +4488,17 @@ address {
 
 .c-form__title {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 2rem;
+  line-height: 1.2; }
   @media (min-width: 22.438em) {
     .c-form__title {
-      font-size: 1.5625rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-form__title {
-      font-size: 1.875rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-form__title {
-      font-size: 2.5rem; } }
+      font-size: 4rem; } }
   .c-form__title:after {
     content: '';
     display: block;
@@ -4351,10 +4529,6 @@ address {
 .c-form__description {
   margin-bottom: 3rem; }
 
-.c-form__container {
-  width: 100%;
-  max-width: 800px; }
-
 .c-form .ginput_container_select {
   position: relative;
   width: 100%;
@@ -4363,11 +4537,12 @@ address {
   background-color: #fff;
   background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/arrow-down.svg");
   background-repeat: no-repeat;
-  background-position: center right 0.6em;
+  background-position: center right 0.8em;
   border: 2px solid #d8d8d8;
   color: unset;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   margin-bottom: 1.5rem;
   background-color: #fff; }
   .theme-color--orange .c-form .ginput_container_select {
@@ -4391,25 +4566,29 @@ address {
 
 .c-form label {
   display: block;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   width: 100%;
   margin-bottom: 0.5em;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
   @media (min-width: 75em) {
     .c-form label {
-      font-size: 1.125rem; } }
+      font-size: 1.8rem;
+      line-height: 1.4; } }
 
 .c-form .gform_submission_error {
   margin-bottom: 3rem;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   color: #ed1a3b; }
   @media (min-width: 40.063em) {
     .c-form .gform_submission_error {
-      font-size: 1.25rem; } }
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
     .c-form .gform_submission_error {
-      font-size: 1.5rem; } }
+      font-size: 2.4rem; } }
 
 .c-form .gform_hidden {
   display: none; }
@@ -4432,7 +4611,8 @@ address {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   margin-left: auto; }
   .theme-color--orange .c-form .gform_button {
@@ -4478,13 +4658,15 @@ address {
     border-top: 0; }
   .c-dashboard__gated-box__title {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
     @media (min-width: 40.063em) {
       .c-dashboard__gated-box__title {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .c-dashboard__gated-box__title {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
     @media (min-width: 64.063em) {
       .c-dashboard__gated-box__title {
         /* stylelint-disable-next-line */
@@ -4495,6 +4677,7 @@ address {
 .e-card {
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 100%;
   background-color: #fff; }
   .background--white .e-card {
@@ -4520,7 +4703,7 @@ address {
          object-position: center; }
   .e-card__main {
     flex-grow: 1;
-    padding: 1.5rem;
+    padding: 3rem;
     border-top: 8px solid #ed1a3b; }
     @media (min-width: 75em) {
       .e-card__main {
@@ -4528,7 +4711,7 @@ address {
   .e-card__footer {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 3rem;
     padding-top: 0;
     white-space: nowrap;
     gap: 1.5rem; }
@@ -4536,37 +4719,48 @@ address {
       .e-card__footer {
         flex-direction: row;
         align-items: center;
-        justify-content: flex-end; } }
+        justify-content: flex-end; }
+        .c-listing__grid--4cols .e-card__footer {
+          flex-direction: column;
+          align-items: flex-start; } }
   .e-card__tagline {
+    font-size: 1.6rem;
+    line-height: 1.4;
     margin-bottom: 1.5rem;
     color: #ed1a3b; }
   .e-card__title {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.2; }
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem; }
     @media (min-width: 40.063em) {
       .e-card__title {
-        font-size: 1.25rem; } }
+        font-size: 2rem;
+        line-height: 1.2; } }
     @media (min-width: 75em) {
       .e-card__title {
-        font-size: 1.5rem; } }
+        font-size: 2.4rem; } }
   .e-card__excerpt {
-    font-size: 1rem;
+    font-size: 1.6rem;
     line-height: 1.4; }
     .c-listing__grid--4cols .e-card__excerpt {
       display: none; }
   .e-card__price {
     flex-grow: 1; }
+    .e-card__price__prefix, .e-card__price__suffix {
+      font-size: 1.6rem;
+      line-height: 1.4; }
     .e-card__price__price {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       color: #ed1a3b;
-      font-size: 1.125rem; }
+      font-size: 1.8rem;
+      line-height: 1.4; }
   .e-card__count {
     flex-grow: 1;
     text-transform: uppercase;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 0.9375rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .e-card--blue .e-card__main {
     border-top-color: #02A5E2; }
   .e-card--blue .e-card__tagline {
@@ -4594,7 +4788,8 @@ address {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
   .theme-color--orange .e-cta-button, .theme-color--orange .woocommerce-NoticeGroup a, .woocommerce-NoticeGroup .theme-color--orange a, .theme-color--orange .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .theme-color--orange .button, .theme-color--orange .c-basket .woocommerce-notices-wrapper a, .c-basket .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .woocommerce-account .woocommerce-notices-wrapper a, .woocommerce-account .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-account .woocommerce-notices-wrapper .button, .woocommerce-account .woocommerce-notices-wrapper .theme-color--orange .button, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper a, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange a, .theme-color--orange .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .theme-color--orange .button {
     background: #df8639; }
@@ -4738,13 +4933,14 @@ hr.e-seperator {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.4);
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
   line-height: 20px;
   text-decoration: none; }
   @media (min-width: 75em) {
     .customer-login__tab {
-      font-size: 1.875rem;
       padding: 44px 20px 24px;
+      font-size: 3rem;
       line-height: 30px; } }
   .customer-login__tab:hover {
     color: #000; }
@@ -4792,13 +4988,15 @@ hr.e-seperator {
       justify-self: flex-end; }
   .customer-login__content label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     width: 100%;
     margin-bottom: 0.5em;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
     @media (min-width: 75em) {
       .customer-login__content label {
-        font-size: 1.125rem; } }
+        font-size: 1.8rem;
+        line-height: 1.4; } }
   .customer-login__content .woocommerce-form__label-for-checkbox {
     margin-bottom: 0; }
   .customer-login__content input[type='text'], .customer-login__content input[type='email'], .customer-login__content input[type='password'] {
@@ -4806,7 +5004,8 @@ hr.e-seperator {
     padding: 0.6em;
     background-color: #fff;
     border: 2px solid #d8d8d8;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .customer-login__content .woocommerce-form-login__rememberme {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     margin-bottom: 1.5rem; }
@@ -4829,7 +5028,8 @@ hr.e-seperator {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     width: auto; }
     .theme-color--orange .customer-login__content .woocommerce-button, .theme-color--orange .customer-login__content .woocommerce-Button {
@@ -4866,12 +5066,12 @@ hr.e-seperator {
     margin-left: auto; }
   .customer-login__content .woocommerce-LostPassword {
     margin-top: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
     line-height: 1.4; }
   .customer-login__content .woocommerce-privacy-policy-text {
     margin-bottom: 1.5rem; }
     .customer-login__content .woocommerce-privacy-policy-text p {
-      font-size: 1rem;
+      font-size: 1.6rem;
       line-height: 1.4; }
 
 .e-video {
@@ -4942,11 +5142,13 @@ hr.e-seperator {
     margin-bottom: 15px;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     line-height: 30px;
-    font-size: 1.25rem; }
+    font-size: 2rem;
+    line-height: 1.2; }
   .e-cookie__text {
     margin-bottom: 20px;
     line-height: 20px;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
 
 .c-basket .woocommerce-notices-wrapper, .single-product .woocommerce-notices-wrapper {
   position: absolute;
@@ -5008,7 +5210,8 @@ hr.e-seperator {
     display: none; }
   .c-basket .woocommerce-notices-wrapper *, .single-product .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .c-basket .woocommerce-notices-wrapper .woocommerce-message,
   .c-basket .woocommerce-notices-wrapper .woocommerce-error, .single-product .woocommerce-notices-wrapper .woocommerce-message,
   .single-product .woocommerce-notices-wrapper .woocommerce-error {
@@ -5031,52 +5234,14 @@ hr.e-seperator {
     justify-content: center; }
 
 .woocommerce-account .woocommerce-notices-wrapper {
-  position: absolute;
-  top: 0;
+  position: relative;
   left: 0;
-  z-index: 5;
   width: 100%;
-  max-width: 1560px;
-  background-color: #ed1a3b;
-  color: #fff; }
-  .theme-color--orange .woocommerce-account .woocommerce-notices-wrapper {
-    background-color: #df8639; }
-  .theme-color--blue .woocommerce-account .woocommerce-notices-wrapper {
-    background-color: #02A5E2; }
-  .theme-color--green .woocommerce-account .woocommerce-notices-wrapper {
-    background-color: #218f8b; }
-  .woocommerce-account .woocommerce-notices-wrapper:before {
-    position: absolute;
-    top: 0;
-    left: -50vw;
-    display: block;
-    width: 50vw;
-    height: 100%;
-    background-color: #ed1a3b;
-    content: ''; }
-    .theme-color--orange .woocommerce-account .woocommerce-notices-wrapper:before {
-      background-color: #df8639; }
-    .theme-color--blue .woocommerce-account .woocommerce-notices-wrapper:before {
-      background-color: #02A5E2; }
-    .theme-color--green .woocommerce-account .woocommerce-notices-wrapper:before {
-      background-color: #218f8b; }
-  .woocommerce-account .woocommerce-notices-wrapper:after {
-    position: absolute;
-    top: 0;
-    right: -50vw;
-    display: block;
-    width: 50vw;
-    height: 100%;
-    background-color: #ed1a3b;
-    content: ''; }
-    .theme-color--orange .woocommerce-account .woocommerce-notices-wrapper:after {
-      background-color: #df8639; }
-    .theme-color--blue .woocommerce-account .woocommerce-notices-wrapper:after {
-      background-color: #02A5E2; }
-    .theme-color--green .woocommerce-account .woocommerce-notices-wrapper:after {
-      background-color: #218f8b; }
+  max-width: 800px;
+  background: transparent; }
   .woocommerce-account .woocommerce-notices-wrapper p, .woocommerce-account .woocommerce-notices-wrapper ul, .woocommerce-account .woocommerce-notices-wrapper ol {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: left; }
   .woocommerce-account .woocommerce-notices-wrapper a {
     margin-left: 1.5rem;
     /* stylelint-disable-next-line */
@@ -5090,24 +5255,35 @@ hr.e-seperator {
     display: none; }
   .woocommerce-account .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
-  .woocommerce-account .woocommerce-notices-wrapper .woocommerce-message,
-  .woocommerce-account .woocommerce-notices-wrapper .woocommerce-error {
-    padding: 1.5rem;
-    text-align: center; }
-    .woocommerce-account .woocommerce-notices-wrapper .woocommerce-message li,
-    .woocommerce-account .woocommerce-notices-wrapper .woocommerce-error li {
-      list-style-type: none;
+    font-size: 1.6rem;
+    line-height: 1.4; }
+  .woocommerce-account .woocommerce-notices-wrapper * {
+    color: #333333; }
+  .woocommerce-account .woocommerce-notices-wrapper ul {
+    display: inline-grid;
+    grid-gap: 0 1.5rem;
+    padding: 0;
+    padding-bottom: 1.5rem; }
+    @media (min-width: 40.063em) {
+      .woocommerce-account .woocommerce-notices-wrapper ul {
+        grid-template-columns: 1fr 1fr; } }
+    .woocommerce-account .woocommerce-notices-wrapper ul li {
+      text-align: left;
+      position: relative;
       display: flex;
-      align-items: center;
-      justify-content: center; }
-      .woocommerce-account .woocommerce-notices-wrapper .woocommerce-message li:before,
-      .woocommerce-account .woocommerce-notices-wrapper .woocommerce-error li:before {
-        display: none; }
-  .woocommerce-account .woocommerce-notices-wrapper .woocommerce-message {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+      align-items: flex-start;
+      list-style: none;
+      line-height: 1.4; }
+      .woocommerce-account .woocommerce-notices-wrapper ul li:before {
+        position: relative;
+        top: 0.5em;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 6px;
+        height: 6px;
+        margin-right: 1em;
+        background-color: #ed1a3b;
+        content: ''; }
 
 .woocommerce-MyAccount-content .woocommerce-notices-wrapper {
   position: relative;
@@ -5131,7 +5307,8 @@ hr.e-seperator {
     display: none; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper * {
     color: #333333; }
   .woocommerce-MyAccount-content .woocommerce-notices-wrapper ul {
@@ -5171,9 +5348,9 @@ hr.e-seperator {
   color: #fff;
   position: absolute;
   top: unset;
-  bottom: -25px;
+  bottom: 0;
   left: 0;
-  padding-top: 0;
+  background: #f2d00e;
   transform: translateY(100%); }
   .theme-color--orange .single-product .woocommerce-notices-wrapper {
     background-color: #df8639; }
@@ -5226,7 +5403,8 @@ hr.e-seperator {
     display: none; }
   .single-product .woocommerce-notices-wrapper * {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .single-product .woocommerce-notices-wrapper .woocommerce-message,
   .single-product .woocommerce-notices-wrapper .woocommerce-error {
     padding: 1.5rem;
@@ -5271,7 +5449,7 @@ hr.e-seperator {
 
 .payment_method_stripe p {
   margin-bottom: 1.5rem;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   line-height: 1.2; }
 
 .payment_method_stripe .wc-credit-card-form {

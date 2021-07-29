@@ -41,7 +41,7 @@
 }
 
 address, address p{
-  @include font-size(19);
+  @include text-regular;
 }
 address p{
   margin-top: 0.5em;
@@ -51,9 +51,72 @@ address p{
   margin-bottom: 1.5rem;
 }
 
+/* stylelint-disable */
+.crafty_billing{
+  label{
+    height: 2em;
+  }
+  &*{
+    float:none !important;
+  }
+  &.form-row{
+    &-first{
+      flex-grow: 1;
+      width: unset !important;
+    }
+    &-last{
+      width: unset !important;
+    }
+  }
+}
+
 .crafty_billing.address-field{
   button{
     position: relative;
-    top: -2rem;
+    top: -2.5rem;
   }
 }
+#billing_cp_button{
+  top: unset !important;
+  float: none !important;
+  font-size:1.6rem !important;
+}
+#billing_country{
+  padding-bottom: 1.5rem;
+}
+
+// country selector
+
+.select2{
+  &-selection{
+    height: auto !important;
+    border: $borderline-darker !important;
+    border-radius: 0 !important;
+    font-size: 1.6rem !important;
+  }
+  &-container{
+  }
+  &-dropdown{
+    border: $borderline-darker !important;
+  }
+  &-search{
+    padding: 0.6em !important;
+    font-size: 1.6rem !important;
+    &__field{
+      border: $borderline-darker !important;
+    }
+  }
+  &-results{
+    &__options{
+      font-size: 1.6rem !important;
+      li{
+        padding: 0.6em !important;
+      }
+    }
+    &__option--highlighted{
+      background-color: $brand-ocean !important;
+    }
+  }
+}
+
+/* stylelint-enable */

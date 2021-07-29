@@ -1,8 +1,12 @@
-<div class="c-product-box">
+{% set variationsnum = count_variable_fields() %}
+
+
+<div class="c-product-box variationsnum--{{variationsnum}}">
 
     {% do action('woocommerce_before_single_product') %}
     
     {% do action('woocommerce_before_single_product_summary') %}
+
 
     {% do action('woocommerce_single_product_summary') %}
 

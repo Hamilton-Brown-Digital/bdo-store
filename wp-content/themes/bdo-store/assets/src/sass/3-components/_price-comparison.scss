@@ -8,7 +8,7 @@
     }
     &--items-2{
       @include tabledefaults;
-      max-width:calculateRem(1150);
+      max-width:1150px;
       margin: 0 auto;
       grid-template-columns: 1fr;
       @include breakpoint($break-tablet) {
@@ -18,7 +18,7 @@
     }
     &--items-3{
       @include tabledefaults;
-      max-width:calculateRem(1150);
+      max-width:1150px;
       margin: 0 auto;
       @include breakpoint($break-tablet $break-desktop-med){
         grid-template-columns: 1fr 1fr;
@@ -58,14 +58,15 @@
       background-color: $white;
     }
     &__title{
-      @include font-size(24);
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      font-size:2.4rem;
       @include page-color('color');
-      margin-bottom: 2rem;
     }
     &__price{
       display: flex;
       flex-direction: column;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       line-height: 1;
       grid-gap:0.2em;
       @include breakpoint($break-site-width) {
@@ -75,15 +76,15 @@
       }
       &__price{
         @include font-bold;
-        @include font-size(24);
         display: block;
+        font-size:2.4rem;
         white-space: nowrap;
       }
       &__prefix{
         display: block;
         height: 1em;
         white-space: nowrap;
-        @include font-size(18);
+        @include text-regular;
       }
       &__suffix{
         display: block;
@@ -93,7 +94,7 @@
     }
     &__cta{
       width: 100%;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       .e-cta-button{
         width: 100%;
         max-width: 260px;

@@ -1,9 +1,9 @@
 .c-featurelist{
   text-align: left;
   &__title{
-    margin-bottom: 1em;
+    margin-bottom: 1.5rem;
     @include font-bold;
-    @include font-size(20);
+    @include text-large;
   }
   &__list{
     display: grid;

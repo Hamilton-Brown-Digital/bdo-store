@@ -33,7 +33,7 @@ $break-site-width-margins:$site-width-margins;
 $break-tablet-under: 0 $break-tablet;
 $break-desktop-under: 0 $break-desktop;
 
-$grid-gap: clamp(0.5rem, 3vw, 3rem);
+$grid-gap: clamp(0.5rem, 3vw, 4.5rem);
 
 $white: #fff;
 $black: #000;
@@ -69,6 +69,7 @@ $color-line:#F2F2F2;
 $color-line-darker:#d8d8d8;
 // for dark background
 $color-line-dark:#707070;
+$color-line-off-black:#333333;
 
 // standard border
 $borderline: 2px solid $color-line;

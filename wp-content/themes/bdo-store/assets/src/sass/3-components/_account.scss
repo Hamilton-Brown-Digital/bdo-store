@@ -15,10 +15,10 @@
     margin-bottom:1.5rem;
   }
   h2{
-    @include font-size(32);
+    font-size:3.2rem;
   }
   h3{
-    @include font-size(26);
+    font-size:2.6rem;
   }
   p{
     max-width: 800px;
@@ -50,7 +50,7 @@
   // NAVIGATION
   .woocommerce-MyAccount-navigation {
     position: relative;
-    padding-top: 3rem;
+    padding-top: 6rem;
     padding-bottom:3rem;
     background-color: $color-bg-feint;
     h2 {
@@ -105,9 +105,10 @@
     padding: 3rem 0;
     @include breakpoint($break-desktop-med) {
       width: 80%;
+      max-width: 1000px;
       min-height: 70vh;
       padding:clamp(20px, 8vw, 140px);
-      padding-top:3rem;
+      padding-top:6rem;
       padding-right: 0;
     }
   }
@@ -192,7 +193,7 @@
 .woocommerce-column__title,
 .woocommerce-Address-title {
   margin-bottom: 1.5rem;
-  @include font-size(26);
+  font-size:2.6rem;
 }
 .woocommerce-Addresses{
   @include breakpoint($break-desktop) {
@@ -241,7 +242,7 @@ mark {
       }
     }
     td{
-      @include font-size(18);
+      @include text-regular;
     }
     td, th{
       display: flex;
@@ -291,7 +292,7 @@ mark {
             flex-grow: 1;
             content: 'Actions';
             @include font-bold;
-            @include font-size(16px);
+            @include text-small;
             @include breakpoint($break-desktop-med) {
               display: none;
             }
@@ -310,50 +311,33 @@ mark {
     th {
       @include font-bold;
       line-height: 20px;
-      @include font-size(16);
+      @include text-small;
     }
   }
 }
 
 
 // ADDRESS FIELDS
+
 address{
   line-height: 1.4;
 }
-.woocommerce-address-fields,
-.edit-account {
-  @include form-container;
+.woocommerce-address-fields, .edit-account {
   label {
     @include form-label;
   }
-
   input[type='text'], input[type='tel'], input[type='email'], input[type='password'] {
     @include form-input-text;
   }
-
-  .select2-container .select2-selection--single {
-    height: 50px;
-    margin-bottom: 20px;
-  }
-
-  .select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 50px;
-  }
-
   span em {
     position: relative;
-    top: -0.5em;
     display: block;
-    margin-bottom: 20px;
-    line-height: 20px;
-    @include font-size(16);
+    @include text-small;
   }
-
   legend {
     display: none;
   }
-
   fieldset {
-    border: none;
+    @include fieldset;
   }
 }

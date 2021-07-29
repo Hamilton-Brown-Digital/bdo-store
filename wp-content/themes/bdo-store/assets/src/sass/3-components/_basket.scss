@@ -58,21 +58,9 @@
       td{
         display: flex;
         flex-direction: column;
-        @include font-size(18);
-        &:last-of-type{
-          align-items: center;
-        }
+        @include text-regular;
         &:first-of-type{
           align-items:flex-start;
-        }
-      }
-      td.product-remove{
-        flex-direction: row;
-        align-items: flex-start;
-        @include breakpoint($break-desktop-mini) {
-          justify-content: flex-end;
-          grid-column-start: 3;
-          grid-column-end: 5;
         }
       }
       td.actions{
@@ -88,6 +76,17 @@
           grid-column-end: 5;
         }
       }
+    }
+    .product-remove{
+      flex-direction: row;
+      align-items: flex-start;
+      @include breakpoint($break-desktop-mini) {
+        justify-content: flex-end;
+        grid-column-end: span 2;
+      }
+    }
+    .product-price{
+      text-align: right;
     }
   }
   .coupon{
@@ -117,10 +116,6 @@
   .checkout_coupon{
     margin-bottom: 3rem;
   }
-
-  .woocommerce-Price-amount{
-
-  }
   .woocommerce-cart-form__cart-item{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -130,7 +125,7 @@
   .product-name{
     a{
       @include font-bold;
-      @include header-small;
+      @include header-regular;
       margin-bottom: 1.5rem;
       color: $color-text;
       text-decoration: none;
