@@ -76,4 +76,7 @@ $edgepadding-desktop:40px;
   &--full-width{
     max-width: unset;
   }
+  &--narrow{
+    max-width: 1000px;
+  }
 }
