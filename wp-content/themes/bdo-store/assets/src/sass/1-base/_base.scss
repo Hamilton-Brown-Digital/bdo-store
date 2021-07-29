@@ -103,6 +103,7 @@ form{
     &:focus, &:focus-visible{
       /* stylelint-disable-next-line */
       border-color: $color-line-dark !important;
+      /* stylelint-disable-next-line */
       outline: none !important; 
     }
   }

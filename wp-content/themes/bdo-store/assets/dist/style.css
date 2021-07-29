@@ -975,6 +975,7 @@ ul li {
 form input:focus, form input:focus-visible, form textarea:focus, form textarea:focus-visible, form select:focus, form select:focus-visible {
   /* stylelint-disable-next-line */
   border-color: #707070 !important;
+  /* stylelint-disable-next-line */
   outline: none !important; }
 
 h1,
