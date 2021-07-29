@@ -59,20 +59,8 @@
         display: flex;
         flex-direction: column;
         @include text-regular;
-        &:last-of-type{
-          align-items: center;
-        }
         &:first-of-type{
           align-items:flex-start;
-        }
-      }
-      td.product-remove{
-        flex-direction: row;
-        align-items: flex-start;
-        @include breakpoint($break-desktop-mini) {
-          justify-content: flex-end;
-          grid-column-start: 3;
-          grid-column-end: 5;
         }
       }
       td.actions{
@@ -88,6 +76,17 @@
           grid-column-end: 5;
         }
       }
+    }
+    .product-remove{
+      flex-direction: row;
+      align-items: flex-start;
+      @include breakpoint($break-desktop-mini) {
+        justify-content: flex-end;
+        grid-column-end: span 2;
+      }
+    }
+    .product-price{
+      text-align: right;
     }
   }
   .coupon{
@@ -126,7 +125,7 @@
   .product-name{
     a{
       @include font-bold;
-      @include header-small;
+      @include header-regular;
       margin-bottom: 1.5rem;
       color: $color-text;
       text-decoration: none;

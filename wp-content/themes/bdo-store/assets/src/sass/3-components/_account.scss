@@ -105,6 +105,7 @@
     padding: 3rem 0;
     @include breakpoint($break-desktop-med) {
       width: 80%;
+      max-width: 1000px;
       min-height: 70vh;
       padding:clamp(20px, 8vw, 140px);
       padding-top:6rem;
@@ -322,7 +323,6 @@ address{
   line-height: 1.4;
 }
 .woocommerce-address-fields, .edit-account {
-  @include form-container;
   label {
     @include form-label;
   }
