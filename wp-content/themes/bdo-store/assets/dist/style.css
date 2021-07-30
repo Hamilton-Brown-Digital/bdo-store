@@ -4436,6 +4436,55 @@ address {
         color: #ed1a3b;
         content: counter(item) ". "; }
 
+.c-form__title {
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+  font-size: 2rem;
+  line-height: 1.2; }
+  @media (min-width: 22.438em) {
+    .c-form__title {
+      font-size: 2.5rem; } }
+  @media (min-width: 40.063em) {
+    .c-form__title {
+      font-size: 3rem; } }
+  @media (min-width: 50em) {
+    .c-form__title {
+      font-size: 4rem; } }
+  .c-form__title:after {
+    content: '';
+    display: block;
+    width: 72px;
+    height: 6px;
+    margin: clamp(1rem, 1.5em, 3rem) 0;
+    padding: 0;
+    background-color: #ed1a3b;
+    border: none; }
+    @media (min-width: 50em) {
+      .c-form__title:after {
+        width: 220px;
+        height: 8px; } }
+  .c-form__title:after {
+    display: block;
+    width: 72px;
+    height: 6px;
+    margin: clamp(1rem, 1.5em, 3rem) 0;
+    padding: 0;
+    background-color: #ed1a3b;
+    border: none;
+    max-width: 86px; }
+    @media (min-width: 50em) {
+      .c-form__title:after {
+        width: 220px;
+        height: 8px; } }
+
+.c-form__description {
+  margin-bottom: 3rem; }
+
+.c-form__after-text {
+  margin-top: 1.5rem; }
+
+.c-form__note span {
+  color: #ed1a3b; }
+
 .c-form .ginput_container input {
   width: 100%;
   padding: 0.6em;
@@ -4495,49 +4544,6 @@ address {
   border: none; }
   .c-form fieldset legend {
     display: none; }
-
-.c-form__title {
-  font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  font-size: 2rem;
-  line-height: 1.2; }
-  @media (min-width: 22.438em) {
-    .c-form__title {
-      font-size: 2.5rem; } }
-  @media (min-width: 40.063em) {
-    .c-form__title {
-      font-size: 3rem; } }
-  @media (min-width: 50em) {
-    .c-form__title {
-      font-size: 4rem; } }
-  .c-form__title:after {
-    content: '';
-    display: block;
-    width: 72px;
-    height: 6px;
-    margin: clamp(1rem, 1.5em, 3rem) 0;
-    padding: 0;
-    background-color: #ed1a3b;
-    border: none; }
-    @media (min-width: 50em) {
-      .c-form__title:after {
-        width: 220px;
-        height: 8px; } }
-  .c-form__title:after {
-    display: block;
-    width: 72px;
-    height: 6px;
-    margin: clamp(1rem, 1.5em, 3rem) 0;
-    padding: 0;
-    background-color: #ed1a3b;
-    border: none;
-    max-width: 86px; }
-    @media (min-width: 50em) {
-      .c-form__title:after {
-        width: 220px;
-        height: 8px; } }
-
-.c-form__description {
-  margin-bottom: 3rem; }
 
 .c-form .ginput_container_select {
   position: relative;
