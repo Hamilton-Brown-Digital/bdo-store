@@ -326,9 +326,6 @@ address{
   label {
     @include form-label;
   }
-  input[type='text'], input[type='tel'], input[type='email'], input[type='password'] {
-    @include form-input-text;
-  }
   span em {
     position: relative;
     display: block;
@@ -336,8 +333,5 @@ address{
   }
   legend {
     display: none;
-  }
-  fieldset {
-    @include fieldset;
   }
 }
