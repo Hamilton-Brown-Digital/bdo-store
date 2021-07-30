@@ -572,6 +572,11 @@
   }
 }
 
+// submit form radio
+@mixin form-radio{
+  width: auto;
+}
+
 // submit button
 @mixin form-submit{
   @include buttondefaults;

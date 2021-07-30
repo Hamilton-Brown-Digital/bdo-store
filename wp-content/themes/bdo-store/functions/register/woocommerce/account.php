@@ -8,10 +8,6 @@
       add_rewrite_endpoint( 'welcome', EP_ROOT | EP_PAGES );
   }
 
-  /**
-  * Get new endpoint content
-  */
-
   // welcome
  add_action( 'woocommerce_account_welcome_endpoint', 'welcome_endpoint_content' );
  function welcome_endpoint_content() {

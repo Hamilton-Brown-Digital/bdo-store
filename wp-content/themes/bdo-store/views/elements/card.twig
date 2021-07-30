@@ -15,7 +15,7 @@
 
     <div class="e-card__main">
 
-        {% if terms %}
+        {% if terms and fn('is_front_page') %}
         <div class="e-card__tagline">
             {{ terms }}
         </div>
