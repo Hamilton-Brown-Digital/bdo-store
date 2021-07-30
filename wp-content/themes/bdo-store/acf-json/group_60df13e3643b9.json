@@ -77,6 +77,25 @@
             "return_format": "post_object",
             "allow_null": 0,
             "multiple": 0
+        },
+        {
+            "key": "field_6103d8d90100c",
+            "label": "After text",
+            "name": "form_after_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
         }
     ],
     "location": [
@@ -96,5 +115,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1626695046
+    "modified": 1627642346
 }
