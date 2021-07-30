@@ -8,24 +8,24 @@
   }
   z-index: 5;
   display: none;
-  width:300px;
-  padding: 1.5rem;
+  width:320px;
+  padding: 3rem;
   background-color: $color-bg-1;
-  border-radius: 3px;
   color: $white;
   &.show {
     display: block;
   }
   &__header {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     @include font-bold;
-    line-height: 30px;
     @include text-large;
   }
 
   &__text {
-    margin-bottom: 20px;
-    line-height: 20px;
+    margin-bottom: 1.5rem;
     @include text-small;
+    a{
+      text-decoration: underline;
+    }
   }
 }
