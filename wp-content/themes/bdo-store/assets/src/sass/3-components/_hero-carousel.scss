@@ -1,7 +1,7 @@
 .c-hero-carousel{
   position: relative;
-  padding-bottom: $padding-std;
-  background:$color-bg-feint;
+  padding-bottom: 0;
+  border-bottom:6rem solid $color-bg-feint;
   .swiper-pagination{
     position: absolute;
     bottom: 0;

@@ -59,6 +59,7 @@
         justify-content: flex-start;
         padding: 0;
         @include flex;
+        border-left: 1px solid $color-line;
       }
     }
 
@@ -67,12 +68,6 @@
         display: block;
         height: $elemheight;
         border-right: 1px solid $color-line;
-      }
-
-      &:last-of-type {
-        @include breakpoint($break-desktop-wide) {
-          border-right: none;
-        }
       }
 
       a {

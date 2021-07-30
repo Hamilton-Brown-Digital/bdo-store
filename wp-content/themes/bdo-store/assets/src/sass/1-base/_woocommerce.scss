@@ -6,6 +6,63 @@
     padding-top: $padding-deep;
     padding-bottom: $padding-deep;
   }
+  form.checkout, .woocommerce-MyAccount-content form{
+
+    // for checkout
+    .woocommerce-billing-fields__field-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      column-gap:2rem;
+    }
+
+    // for addresses field
+    .woocommerce-address-fields__field-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      column-gap:2rem;
+    }
+    .form-row{
+      width: 100%;
+      margin-bottom: 3rem;
+      &-first{
+        width: calc(50% - 1rem);
+      }
+      &-last{
+        width: calc(50% - 1rem);
+      }
+      &-wide{
+        width: 100%;
+      }
+    }
+    #billing_address_1_field{
+      margin-bottom: 1rem;
+    }
+
+    input[type='text'], input[type='tel'], input[type='email'], input[type='password'] {
+      @include form-input-text;
+    }
+    input[type='radio'] {
+      @include form-radio;
+    }
+    label{
+      @include form-label;
+    }
+    textarea {
+      @include form-input-textarea;
+    }
+    .button {
+      @include form-submit;
+    }
+    select{
+      @include form-dropdown;
+      padding: 0.8rem;
+    }
+    fieldset {
+      @include fieldset;
+    }
+  }
 }
 
 @mixin variationtable{
@@ -34,7 +91,9 @@
   /* stylelint-enable */
 }
 
-
+.returning-customer{
+  margin-bottom: 1.5rem;
+}
 
 .woocommerce-NoticeGroup{
   @include notice-inline;
@@ -47,15 +106,8 @@ address p{
   margin-top: 0.5em;
 }
 
-.form-row{
-  margin-bottom: 1.5rem;
-}
-
 /* stylelint-disable */
 .crafty_billing{
-  label{
-    height: 2em;
-  }
   &*{
     float:none !important;
   }
@@ -118,5 +170,6 @@ address p{
     }
   }
 }
+
 
 /* stylelint-enable */
