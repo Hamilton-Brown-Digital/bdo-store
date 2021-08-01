@@ -42,9 +42,11 @@
 
   .woocommerce-error{
     margin-bottom: 1.5rem;
+    @include font-bold;
   }
   .woocommerce-info{
     margin-bottom: 3rem;
+    @include font-bold;
   }
   .woocommerce-checkout{
     width: 100%;
@@ -157,6 +159,11 @@
       }
     }
     .cart-subtotal{
+      th{
+        @include font-bold;
+      }
+    }
+    .order-total{
       th{
         @include font-bold;
       }

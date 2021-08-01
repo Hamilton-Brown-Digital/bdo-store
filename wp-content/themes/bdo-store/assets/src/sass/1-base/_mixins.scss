@@ -483,10 +483,10 @@
 
 @mixin button-outline{
   background-color:transparent;
-  border:solid 2px $color-line-dark;
+  border:solid 2px $color-line-solid;
   color:$color-text;
   &:hover{
-    background-color: $color-line-dark;
+    background-color: $color-line-solid;
     color:$white;
   }
 }
@@ -501,9 +501,9 @@
 }
 
 @mixin box-borders{
-  border: 2px solid $color-line-darker;
+  border: 2px solid $color-line-dark;
   .background--gray &{
-    border-color:$color-line-darker;
+    border-color:$color-line-dark;
   }
 }
 
@@ -606,12 +606,7 @@
 
 // fieldset
 @mixin fieldset{
-  width: 100%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding: 3rem;
-  background-color: $color-bg-feint;
-  border: none;
+  @include bordered-box;
   legend{
     display: none;
   }

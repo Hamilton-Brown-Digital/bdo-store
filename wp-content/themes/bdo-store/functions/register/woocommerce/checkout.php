@@ -57,7 +57,7 @@ add_action( 'woocommerce_after_checkout_billing_form', 'custom_checkout_fields' 
 // Validate field messages
 function custom_field_validate() {
     if (!$_POST['custom_existing_audit_client']) { 
-        wc_add_notice(__('Please let us know if you are an existing BDO Audit client') , 'error'); 
+        wc_add_notice(__('Please let us know if you are an existing BDO Audit client') , 'error');
     }
     if (!$_POST['custom_vat_number']) { 
         wc_add_notice(__('Please enter your VAT number') , 'error'); 

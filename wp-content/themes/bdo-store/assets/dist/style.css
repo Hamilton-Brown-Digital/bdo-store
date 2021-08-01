@@ -1302,16 +1302,17 @@ ul, ol {
       padding: 0.8em;
       font-family: "Proxima Nova Regular", sans-serif; }
   .woocommerce form.woocommerce-form fieldset, .woocommerce form.checkout fieldset, .woocommerce .woocommerce-MyAccount-content form fieldset {
-    width: 100%;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     padding: 3rem;
-    background-color: #F2F2F2;
-    border: none; }
+    border: 2px solid #d8d8d8;
+    width: 100%;
+    margin-bottom: 3rem; }
+    .background--gray .woocommerce form.woocommerce-form fieldset, .background--gray .woocommerce form.checkout fieldset, .background--gray .woocommerce .woocommerce-MyAccount-content form fieldset {
+      border-color: #d8d8d8; }
     .woocommerce form.woocommerce-form fieldset legend, .woocommerce form.checkout fieldset legend, .woocommerce .woocommerce-MyAccount-content form fieldset legend {
       display: none; }
-  .woocommerce form.woocommerce-form .woocommerce-invalid-required-field input, .woocommerce form.woocommerce-form .woocommerce-invalid-required-field textarea, .woocommerce form.woocommerce-form .woocommerce-invalid .validate-required input, .woocommerce form.woocommerce-form .woocommerce-invalid .validate-required textarea, .woocommerce form.checkout .woocommerce-invalid-required-field input, .woocommerce form.checkout .woocommerce-invalid-required-field textarea, .woocommerce form.checkout .woocommerce-invalid .validate-required input, .woocommerce form.checkout .woocommerce-invalid .validate-required textarea, .woocommerce .woocommerce-MyAccount-content form .woocommerce-invalid-required-field input, .woocommerce .woocommerce-MyAccount-content form .woocommerce-invalid-required-field textarea, .woocommerce .woocommerce-MyAccount-content form .woocommerce-invalid .validate-required input, .woocommerce .woocommerce-MyAccount-content form .woocommerce-invalid .validate-required textarea {
-    border: 2px solid #ed1a3b; }
+  .woocommerce form.woocommerce-form .woocommerce-invalid-required-field input, .woocommerce form.woocommerce-form .woocommerce-invalid-required-field textarea, .woocommerce form.woocommerce-form .woocommerce-invalid input, .woocommerce form.woocommerce-form .woocommerce-invalid textarea, .woocommerce form.checkout .woocommerce-invalid-required-field input, .woocommerce form.checkout .woocommerce-invalid-required-field textarea, .woocommerce form.checkout .woocommerce-invalid input, .woocommerce form.checkout .woocommerce-invalid textarea, .woocommerce .woocommerce-MyAccount-content form .woocommerce-invalid-required-field input, .woocommerce .woocommerce-MyAccount-content form .woocommerce-invalid-required-field textarea, .woocommerce .woocommerce-MyAccount-content form .woocommerce-invalid input, .woocommerce .woocommerce-MyAccount-content form .woocommerce-invalid textarea {
+    /* stylelint-disable-next-line */
+    border: 2px solid #ed1a3b !important; }
   .woocommerce form.woocommerce-form .password-input .woocommerce-password-strength, .woocommerce form.checkout .password-input .woocommerce-password-strength, .woocommerce .woocommerce-MyAccount-content form .password-input .woocommerce-password-strength {
     display: block;
     margin-top: 1.5rem;
@@ -2859,8 +2860,6 @@ address p {
     @media (min-width: 64.063em) {
       .logged-in .c-account .woocommerce {
         display: flex; } }
-  .logged-in .c-account {
-    background-color: #fff; }
   .c-account h2, .c-account h3, .c-account h4 {
     margin-bottom: 1.5rem; }
   .c-account h2 {
@@ -2947,7 +2946,7 @@ address p {
     position: relative;
     padding-top: 6rem;
     padding-bottom: 3rem;
-    background-color: #F2F2F2; }
+    background-color: #fff; }
     .c-account .woocommerce-MyAccount-navigation h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       font-size: 2rem;
@@ -2990,7 +2989,7 @@ address p {
       left: -100vw;
       width: 100vw;
       height: 100%;
-      background-color: #F2F2F2;
+      background-color: #fff;
       content: ''; }
     .c-account .woocommerce-MyAccount-navigation:after {
       position: absolute;
@@ -3565,6 +3564,9 @@ mark {
     .c-basket .wc-proceed-to-checkout a:hover {
       background-color: #dc1131; }
 
+.c-basket .order-total {
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+
 .c-checkout h3 {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   font-size: 2rem;
@@ -3695,10 +3697,12 @@ mark {
     display: block !important; }
 
 .c-checkout .woocommerce-error {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
 
 .c-checkout .woocommerce-info {
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
 
 .c-checkout .woocommerce-checkout {
   width: 100%;
@@ -3787,6 +3791,8 @@ mark {
   .c-checkout .shop_table tfoot th {
     font-family: "Proxima Nova Regular", sans-serif, sans-serif; }
   .c-checkout .shop_table .cart-subtotal th {
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+  .c-checkout .shop_table .order-total th {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
 
 .c-checkout .woocommerce-checkout-review-order {

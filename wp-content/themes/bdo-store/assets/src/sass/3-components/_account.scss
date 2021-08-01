@@ -9,7 +9,6 @@
     }
   }
   .logged-in &{
-    background-color:$white;
   }
   h2, h3, h4{
     margin-bottom:1.5rem;
@@ -52,7 +51,7 @@
     position: relative;
     padding-top: 6rem;
     padding-bottom:3rem;
-    background-color: $color-bg-feint;
+    background-color:$white;
     h2 {
       @include header-small(true);
     }
@@ -75,7 +74,7 @@
       left: -100vw;
       width: 100vw;
       height: 100%;
-      background-color: $color-line;
+      background-color:$white;
       content: '';
     }
     &:after {
