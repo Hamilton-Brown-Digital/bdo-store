@@ -435,6 +435,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: auto;
   height: 44px;
   padding: 0 2em;
   background-color: $brand-red;
@@ -499,6 +500,13 @@
   }
 }
 
+@mixin box-borders{
+  border: 2px solid $color-line-darker;
+  .background--gray &{
+    border-color:$color-line-darker;
+  }
+}
+
 // form label
 @mixin form-label{
   display: block;
@@ -516,16 +524,23 @@
   width: 100%;
   padding: 0.6em;
   background-color: $white;
-  border: $borderline-darker;
+  @include box-borders;
   @include text-small;
 }
+
+// form invalid
+
+@mixin invalid-field{
+  border: 2px solid $brand-red;
+}
+
 
 // inline text input
 @mixin form-input-text--inline{
   width: 100%;
   padding: 0.6em;
   background-color: $white;
-  border: $borderline-darker;
+  @include box-borders;
   @include text-small;
 }
 
@@ -535,7 +550,7 @@
   height: 12em;
   padding: 0.6em;
   background-color: $white;
-  border: $borderline-darker;
+  @include box-borders;
   @include text-small;
 }
 
@@ -549,7 +564,7 @@
   background-image:url('#{$image-path}/icons/arrow-down.svg');
   background-repeat: no-repeat;
   background-position: center right 0.8em;
-  border: $borderline-darker;
+  @include box-borders;
   color: unset;
   cursor: pointer;
   @include text-small;
@@ -591,27 +606,25 @@
 
 // fieldset
 @mixin fieldset{
+  width: 100%;
   margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 3rem;
   background-color: $color-bg-feint;
   border: none;
+  legend{
+    display: none;
+  }
 }
 
 
 @mixin bordered-box{
   padding:3rem;
-  border: 2px solid $color-line;
-  .background--gray &{
-    border-color:$color-line-darker;
-  }
+  @include box-borders;
 }
 @mixin bordered-box--small{
   padding:1.5rem;
-  border: 2px solid $color-line;
-  .background--gray &{
-    border-color:$color-line-darker;
-  }
+  @include box-borders;
 }
 
 
@@ -736,13 +749,8 @@
     color:$color-text;
   }
   ul{
-    display: inline-grid;
-    grid-gap: 0 1.5rem;
     padding: 0;
     padding-bottom: 1.5rem;
-    @include breakpoint($break-tablet){
-      grid-template-columns: 1fr 1fr;
-    }
     li{
       text-align: left;
       @include listitemdefaults;

@@ -315,23 +315,3 @@ mark {
     }
   }
 }
-
-
-// ADDRESS FIELDS
-
-address{
-  line-height: 1.4;
-}
-.woocommerce-address-fields, .edit-account {
-  label {
-    @include form-label;
-  }
-  span em {
-    position: relative;
-    display: block;
-    @include text-small;
-  }
-  legend {
-    display: none;
-  }
-}

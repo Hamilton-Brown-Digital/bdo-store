@@ -8,6 +8,7 @@
     font-weight: $reg;
   }
   .checkout_coupon{
+    @include bordered-box;
     width: 100%;
     max-width: 800px;
     margin-bottom: 3rem;
@@ -24,13 +25,23 @@
   }
 
   .woocommerce-form-login-toggle{
-    display: none;
+    // display: none;
+  }
+
+  .woocommerce-form-login{
+    @include bordered-box;
+    margin-bottom: 3rem;
+    p{
+      margin-bottom: 3rem;
+    }
+    .woocommerce-button{
+      /* stylelint-disable-next-line */
+      display: block !important;
+    }
   }
 
   .woocommerce-error{
     margin-bottom: 1.5rem;
-  }
-  .woocommerce-billing-fields, .woocommerce-account-fields, .woocommerce-additional-fields{
   }
   .woocommerce-info{
     margin-bottom: 3rem;

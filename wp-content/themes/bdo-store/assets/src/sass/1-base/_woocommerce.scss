@@ -1,12 +1,25 @@
 // General woocommerce that doesn't belong anywhere else
 
 .woocommerce{
+  .clear{
+    display: none;
+  }
   position: relative;
   .woocommerce-cart &{
     padding-top: $padding-deep;
     padding-bottom: $padding-deep;
   }
-  form.checkout, .woocommerce-MyAccount-content form{
+  form.woocommerce-form, form.checkout, .woocommerce-MyAccount-content form{
+
+    //CONTAINERS
+
+    // for edit account on account page
+    &.edit-account{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      column-gap:2rem;
+    }
 
     // for checkout
     .woocommerce-billing-fields__field-wrapper{
@@ -16,13 +29,18 @@
       column-gap:2rem;
     }
 
-    // for addresses field
-    .woocommerce-address-fields__field-wrapper{
+    // for login panel on checkout page
+    &.woocommerce-form-login{
       display: flex;
       flex-wrap: wrap;
       max-width: 800px;
       column-gap:2rem;
     }
+
+    // FIELDS
+
+    // form row
+
     .form-row{
       width: 100%;
       margin-bottom: 3rem;
@@ -36,6 +54,35 @@
         width: 100%;
       }
     }
+
+    // addresses field
+
+    address{
+      line-height: 1.4;
+    }
+
+    .woocommerce-address-fields, .edit-account {
+      label {
+        @include form-label;
+      }
+      span em {
+        position: relative;
+        display: block;
+        @include text-small;
+      }
+      legend {
+        display: none;
+      }
+    }
+
+    .woocommerce-form-login__rememberme{
+      position: absolute;
+      display: flex;
+      align-items: baseline;
+      width: auto;
+      margin-bottom: 0;
+    }
+
     #billing_address_1_field{
       margin-bottom: 1rem;
     }
@@ -62,6 +109,26 @@
     fieldset {
       @include fieldset;
     }
+
+    .woocommerce-invalid-required-field, .woocommerce-invalid .validate-required{
+      input, textarea{
+        @include invalid-field;
+      }
+    }
+
+    .password-input{
+      .woocommerce-password-strength{
+        display: block;
+        margin-top: 1.5rem;
+        @include text-regular;
+      }
+      small{
+        @include text-tiny;
+        display: block;
+        margin-top: 1rem;
+      }
+    }
+
   }
 }
 

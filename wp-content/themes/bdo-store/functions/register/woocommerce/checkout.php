@@ -1,14 +1,14 @@
 <?php
 
-// Before checkout
-function before_checkout(){
-    if (! is_user_logged_in()){
-        echo '<p class="returning-customer">Returning customer? <a href=" ' . get_site_url() . '/account/ ">click here to login</a></p>';
-    } else {
-        return;
-    }
-}
-add_action('woocommerce_before_checkout_form', 'before_checkout', 5);
+// // Before checkout
+// function before_checkout(){
+//     if (! is_user_logged_in()){
+//         echo '<p class="returning-customer">Returning customer? <a href=" ' . get_site_url() . '/account/ ">click here to login</a></p>';
+//     } else {
+//         return;
+//     }
+// }
+// add_action('woocommerce_before_checkout_form', 'before_checkout', 5);
 
 
 // remove company field
@@ -86,5 +86,6 @@ function custom_field_display_on_order_screen($order){
     echo'<p><strong>Vat number:</strong><br />' . get_post_meta( $order->ID, 'vat_number', true ) . '</p>';
 }
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'custom_field_display_on_order_screen', 10, 1 );
+
 
 ?>
