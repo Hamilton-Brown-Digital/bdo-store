@@ -61,12 +61,16 @@
                         {% endif %}
 
                         {% if type == 'product' %}
+                            {% if card.hero_more_content != 'none' %}
+                                    {% set cardItems = cardItems|merge({
+                                        image: TimberImage( card.get_thumbnail.id )
+                                    })%}
+                                {% endif %}
                             {% if card._price is iterable %}
                                 {% set price = card._price[0] %}
                             {% else %}
                                 {% set price = card._price %}
                             {% endif %}
-
                             {% set cardItems = cardItems|merge({
                                 price: price,
                                 terms: card.terms( {query:{taxonomy:'product_cat'}} )|join(', '),

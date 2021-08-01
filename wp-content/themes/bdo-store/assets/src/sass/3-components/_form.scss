@@ -48,10 +48,10 @@
     }
     &_error{
       input{
-        border: 2px solid $brand-red;
+        @include invalid-field;
       }
       textarea{
-        border: 2px solid $brand-red;
+        @include invalid-field;
       }
     }
   }

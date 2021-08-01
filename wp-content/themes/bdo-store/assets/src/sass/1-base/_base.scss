@@ -106,7 +106,7 @@ form{
   input, textarea, select{
     &:focus, &:focus-visible{
       /* stylelint-disable-next-line */
-      border-color: $color-line-dark !important;
+      border-color: $color-line-solid !important;
       /* stylelint-disable-next-line */
       outline: none !important; 
     }

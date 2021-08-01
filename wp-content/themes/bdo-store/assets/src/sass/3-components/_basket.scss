@@ -178,5 +178,8 @@
       @include form-submit;
     }
   }
+  .order-total{
+    @include font-bold;
+  }
 
 }

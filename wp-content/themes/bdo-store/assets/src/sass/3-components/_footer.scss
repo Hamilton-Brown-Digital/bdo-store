@@ -20,7 +20,7 @@
       padding-top:0.5rem;
       padding-bottom: 0;
       padding-left: 1.5rem;
-      border-left: 1px solid $color-line-dark;
+      border-left: 1px solid $color-line-solid;
     }
     @include breakpoint($break-desktop-wider){
       margin-left: 5%;
