@@ -151,10 +151,22 @@
       tr{
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
+        th{
+          @include font-bold;
+        }
+      }
+    }
+    tfoot{
+      th{
+        @include font-bold;
       }
     }
   }
   .woocommerce-table__product-name{
+    a{
+      @include font-bold;
+      text-decoration: none;
+    }
     ul.wc-item-meta li{
       margin-top: 0.75rem;
       @include text-tiny;

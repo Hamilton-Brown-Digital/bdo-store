@@ -1,7 +1,4 @@
 .woocommerce-notices-wrapper{
-  .c-basket &, .single-product &{
-    @include notice-strip;
-  }
   .woocommerce-account &{
     @include notice-inline;
   }
@@ -14,8 +11,13 @@
     top: unset;
     bottom: 0;
     left: 0;
-    background: $gold;
     transform: translateY(100%);
+  }
+  .c-basket &{
+    @include notice-strip;
+    .woocommerce-message, .woocommerce-error {
+      padding-top: 0;
+    }
   }
   .theme-color--orange &{
     max-width: unset;

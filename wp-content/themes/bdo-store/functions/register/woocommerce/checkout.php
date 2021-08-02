@@ -14,6 +14,7 @@
 // remove company field
 function wc_edit_checkout_fields( $fields ) {
     unset( $fields['billing']['billing_company'] );
+    unset( $fields['account_last_name'] );
     return $fields;
 }
 add_filter( 'woocommerce_checkout_fields', 'wc_edit_checkout_fields' );
@@ -21,14 +22,16 @@ add_filter( 'woocommerce_checkout_fields', 'wc_edit_checkout_fields' );
 
 
 // Remove label and placeholder from address field 2
-add_filter( 'woocommerce_default_address_fields', 'custom_default_address_fields' );
 function custom_default_address_fields( $address_fields ) {
-    if ( is_checkout() ) {
-        $address_fields['address_2']['label'] = '';
-        $address_fields['address_2']['placeholder'] = '';
-    }
+    $address_fields['address_2']['label'] = '';
+    $address_fields['address_2']['placeholder'] = '';
+    $address_fields['postcode']['label'] = 'Postcode';
     return $address_fields;
+    
 }
+add_filter( 'woocommerce_default_address_fields', 'custom_default_address_fields' );
+
+
 
 
 // Add in required fields
@@ -38,7 +41,7 @@ function custom_checkout_fields( $checkout ) {
         'class' => array( 'row-wide', 'update_totals_on_change', 'woocommerce-checkout__existing-client' ),
         'options' => array('Yes' => 'Yes', 'No' => 'No', 'Don&rsquo;t know' => 'Don&rsquo;t know', ),
         'label'  => __('Are you an existing BDO Audit client? (If you are unsure please select don&rsquo;t know and we will check for you)'),
-        'required' => true,
+        'required' => true
     ),
     $checkout->get_value('custom_existing_audit_client'));
     
@@ -47,7 +50,7 @@ function custom_checkout_fields( $checkout ) {
         'class' => array('row-wide', 'update_totals_on_change', 'woocommerce-checkout__existing-client'),
         'label'  => __('VAT number'),
         'placeholder' => __('VAT number'),
-        'required' => true,
+        'required' => true
     ),
     $checkout->get_value('custom_vat_number'));
 }
@@ -88,4 +91,12 @@ function custom_field_display_on_order_screen($order){
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'custom_field_display_on_order_screen', 10, 1 );
 
 
+
+
+
+
+
+
 ?>
+
+
