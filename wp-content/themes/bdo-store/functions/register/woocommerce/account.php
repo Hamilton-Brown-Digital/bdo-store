@@ -1,34 +1,30 @@
 <?php
 
-
-
-
-  add_action( 'init', 'my_account_new_endpoints' );
   function my_account_new_endpoints() {
       add_rewrite_endpoint( 'welcome', EP_ROOT | EP_PAGES );
   }
+  add_action( 'init', 'my_account_new_endpoints' );
 
   // welcome
- add_action( 'woocommerce_account_welcome_endpoint', 'welcome_endpoint_content' );
  function welcome_endpoint_content() {
     get_template_part( 'woocommerce/myaccount/welcome' );
  }
+ add_action( 'woocommerce_account_welcome_endpoint', 'welcome_endpoint_content' );
 
 
 // remove order again button
 remove_action( 'woocommerce_order_details_after_order_table', 'woocommerce_order_again_button' );
 
 // Remove or rename Account pages
-add_filter( 'woocommerce_account_menu_items', 'woo_change_account_page', 9999 );
 function woo_change_account_page( $items ) {
     unset( $items['downloads'] );
     unset( $items['payment-methods'] );
-
     $items['dashboard'] = 'My products';
     $items['orders'] = 'Order history';
 
     return $items;
 }
+add_filter( 'woocommerce_account_menu_items', 'woo_change_account_page', 9999 );
 
 // Validate - my account
 function action_woocommerce_save_account_details_errors( $args ){
@@ -45,6 +41,3 @@ function action_woocommerce_save_account_details( $user_id ) {
     }
 }
 add_action( 'woocommerce_save_account_details', 'action_woocommerce_save_account_details', 10, 1 );
-
-
-

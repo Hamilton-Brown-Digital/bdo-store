@@ -1,6 +1,11 @@
-// General woocommerce that doesn't belong anywhere else
+// woocommerce that doesn't belong anywhere else
 
 .woocommerce{
+
+  .woocommerce-Price-amount{
+    @include font-bold;
+  }
+
   .clear{
     display: none;
   }
@@ -112,8 +117,8 @@
       margin-bottom: 3rem;
     }
 
-    .woocommerce-invalid-required-field, .woocommerce-invalid{
-      input, textarea{
+    .woocommerce-invalid-required-field, .woocommerce-invalid, .validate-invalid{
+      input{
         /* stylelint-disable-next-line */
         border: 2px solid $brand-red !important;
       }
@@ -157,6 +162,7 @@
   }
   dt{
     padding-right: 0.5em;
+    @include font-bold;
   }
   /* stylelint-enable */
 }
