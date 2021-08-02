@@ -88,18 +88,16 @@
 
 @mixin listitemdefaults{
   position: relative;
-  display: flex;
-  align-items: flex-start;
+  display: block;
+  padding-left: 1.2em;
   list-style: none;
   line-height: 1.4;
   &:before {
-    position: relative;
+    position: absolute;
     top: 0.5em;
-    flex-grow: 0;
-    flex-shrink: 0;
+    left: 0;
     width: 6px;
     height: 6px;
-    margin-right: 1em;
     background-color: $color-text-link;
     content: '';
   }
@@ -108,17 +106,19 @@
 @mixin ollistitemdefaults{
   counter-increment: item;
   position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.4em;
+  display: block;
+  padding-left: 1.5em;
   list-style: none;
   line-height: 1.4;
   &:before {
-    margin-right: 10px;
-    color: $color-text-link;
+    position: absolute;
+    left: 0;
+    color: $brand-red;
     content: counter(item) '. ';
   }
 }
+
+
 
 
 @mixin text-format {
@@ -686,7 +686,7 @@
   }
   .woocommerce-message,
   .woocommerce-error {
-    padding: 1.5rem;
+    padding: 25px;
     text-align: center;
     li{
       display: flex;
@@ -718,15 +718,6 @@
   p, ul, ol{
     margin-bottom: 0;
     text-align: left;
-  }
-  a {
-    @extend .e-cta-button;
-    margin-left: 1.5rem;
-    /* stylelint-disable-next-line */
-    background-color: $color-bg-solid !important;
-  }
-  strong{
-    margin-right: 0.5em;
   }
   .button {
     order: 2;
