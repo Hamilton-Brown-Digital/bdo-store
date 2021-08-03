@@ -13,7 +13,6 @@
 
 // remove company field
 function wc_edit_checkout_fields( $fields ) {
-    unset( $fields['billing']['billing_company'] );
     unset( $fields['account_last_name'] );
     return $fields;
 }
