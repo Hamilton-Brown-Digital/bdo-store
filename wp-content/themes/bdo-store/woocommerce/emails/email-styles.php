@@ -225,4 +225,14 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+.button{
+	text-decoration:none;
+	color:white;
+	background:red;
+	padding:12px 22px;
+	border-radius:2px;
+	font-family:'proximanovabold', sans-serif;
+}
+
 <?php

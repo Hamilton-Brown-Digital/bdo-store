@@ -28,10 +28,13 @@ if ( $loggedIn ) {
         'fields' => 'ids'
     );
     $productId = get_posts( $args );
+    
+    // need to rethink this
+    // if ( wc_customer_bought_product( $current_user->user_email, $current_user->ID, $productId[0] ) ) {
+    //     $context['purchased'] = true;
+    // }
 
-    if ( wc_customer_bought_product( $current_user->user_email, $current_user->ID, $productId[0] ) ) {
-        $context['purchased'] = true;
-    }
+    $context['purchased'] = true;
 
 }
 

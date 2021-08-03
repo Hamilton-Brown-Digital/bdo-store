@@ -1,6 +1,6 @@
 {
     "key": "group_60d1e46b33a3d",
-    "title": "Theme Options",
+    "title": "Store options",
     "fields": [
         {
             "key": "field_60d1e784699cb",
@@ -172,8 +172,8 @@
             "delay": 0
         },
         {
-            "key": "field_60eedc7f2e32c",
-            "label": "Status Emails",
+            "key": "field_61095345842da",
+            "label": "Account page",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -188,11 +188,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_60eedc9a2e32d",
-            "label": "On Hold",
-            "name": "email_on_hold",
+            "key": "field_61095384842db",
+            "label": "Before table",
+            "name": "before_table",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Intro paragraph before table.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -203,15 +203,15 @@
             "default_value": "",
             "tabs": "visual",
             "toolbar": "full",
-            "media_upload": 0,
+            "media_upload": 1,
             "delay": 0
         },
         {
-            "key": "field_60eedcc52e32e",
-            "label": "Processing",
-            "name": "email_processing",
+            "key": "field_61095423842dc",
+            "label": "After table",
+            "name": "after_table",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Paragraph after table.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -222,102 +222,7 @@
             "default_value": "",
             "tabs": "visual",
             "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_60eedcc72e32f",
-            "label": "Passed Pending",
-            "name": "email_passed_pending",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "visual",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_60eedcc92e330",
-            "label": "Failed",
-            "name": "email_failed",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "visual",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_60eedcca2e331",
-            "label": "Failed Refund",
-            "name": "email_failed_refund",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "visual",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_60eedccb2e332",
-            "label": "Passed Stripe",
-            "name": "email_passed_stripe",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "visual",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_60eedccd2e333",
-            "label": "Invoice Payment Made",
-            "name": "email_inv_payment_made",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "visual",
-            "toolbar": "full",
-            "media_upload": 0,
+            "media_upload": 1,
             "delay": 0
         }
     ],
@@ -326,7 +231,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "theme-options"
+                "value": "store-options"
             }
         ]
     ],
@@ -338,5 +243,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1626266918
+    "modified": 1628012276
 }

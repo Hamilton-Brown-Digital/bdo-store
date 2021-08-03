@@ -26,7 +26,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
 		<title><?php echo get_bloginfo( 'name', 'display' ); ?></title>
 		<style type="text/css">
-			@import url('<?php echo get_site_url(); ?>/wp-content/themes/bdo-store/assets/src/emails/uaf.css');
+			@font-face {
+				font-family: 'proximanovareg';
+				font-style: normal;
+				font-weight: normal;
+				src: url('<?php echo get_site_url(); ?>/wp-content/themes/bdo-store/assets/src/fonts/proximanovareg.woff2') format('woff2'),
+					url('<?php echo get_site_url(); ?>/wp-content/themes/bdo-store/assets/src/fonts/proximanovareg.woff') format('woff');
+				}
+			@font-face {
+				font-family: 'proximanovabold';
+				font-style: normal;
+				font-weight: normal;
+				src: url('<?php echo get_site_url(); ?>/wp-content/themes/bdo-store/assets/src/fonts/proximanovabold.woff2') format('woff2'),
+					url('<?php echo get_site_url(); ?>/wp-content/themes/bdo-store/assets/src/fonts/proximanovabold.woff') format('woff');
+			}
 			body{
 				font-family:'proximanovareg',sans-serif;
 			}

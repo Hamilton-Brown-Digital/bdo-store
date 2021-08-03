@@ -34,33 +34,33 @@ $custname = $order->get_billing_first_name();
 
 <?php if ( $order->get_status() == 'on-hold' ) : ?>
 
-	<?php echo get_field('email_on_hold', 'options'); ?>
+	<?php echo get_field('email_on_hold', 'options')['email_on_hold_content']; ?>
 
 <?php elseif ( $order->get_status() == 'processing' ) : ?>
 
-	<?php echo get_field('email_processing', 'options'); ?>
+	<?php echo get_field('email_processing', 'options')['email_processing_content']; ?>
 
 <?php elseif ( $order->get_status() == 'passed-pending' ) : ?>
 
-	<?php echo get_field('email_passed_pending', 'options'); ?>
+	<?php echo get_field('email_passed_pending', 'options')['email_passed_pending_content']; ?>
 
 <?php elseif ( $order->get_status() == 'failed' ) : ?>
 
-	<?php echo get_field('email_failed', 'options'); ?>
+	<?php echo get_field('email_failed', 'options')['email_failed_content']; ?>
 
 <?php elseif ( $order->get_status() == 'failed-refund' ) : ?>
 
-	<?php echo get_field('email_failed_refund', 'options'); ?>
+	<?php echo get_field('email_failed_refund', 'options')['email_failed_refund_content']; ?>
 
 <?php elseif ( $order->get_status() == 'passed-stripe' or  $order->get_status() == 'inv-payment-made' ) : ?>
 
 	<?php if ($order->get_status() == 'passed-stripe') : ?>
 
-		<?php echo get_field('email_passed_stripe', 'options'); ?><br>
+		<?php echo get_field('email_passed_stripe', 'options')['email_passed_stripe_content']; ?><br>
 
 	<?php elseif ($order->get_status() == 'inv-payment-made') : ?>
 
-		<?php echo get_field('email_inv_payment_made', 'options'); ?><br>
+		<?php echo get_field('email_inv_payment_made', 'options')['email_inv_payment_made_content']; ?><br>
 
 	<?php endif; ?>
 
@@ -80,11 +80,19 @@ $custname = $order->get_billing_first_name();
 		</h3>
 
 		<?php echo get_field('email_content', $productid); ?>
-
-		<a target="_blank" class="btn btn-flat btn-accent" href="<?php echo get_permalink( get_field('gated_page', $productid) ); ?>">View product</a>
 	</div>
 
 <?php endforeach; ?>
+
+<?php
+	$ordercount = count($order->get_items());
+?>
+
+<br><br>
+<a target="_blank" class="button" href="<?php echo get_site_url() . '/account/' ?>">
+	<?php echo ($ordercount > 1) ? 'View products' : 'View product' ?>
+</a>
+<br><br>
 
 <?php endif; ?>
 

@@ -1,5 +1,15 @@
 {% do action('woocommerce_account_dashboard') %}
 
+<div class="c-dashboard">
+
+<h2 class="c-account__page-title">
+    My products
+</h2>
+
+<div class="c-dashboard__before-table">
+{{ options.before_table }}
+</div>
+
 {% if gated %}
 
 <div class="c-dashboard__list">
@@ -17,8 +27,7 @@
     
     <h3 class="c-dashboard__gated-box__title">{{ gate.title }}</h3>
 
-
-    {% if status == 'completed' %}
+    {% if status == 'completed' or status == 'passed-stripe' or status == 'inv-payment-made'  %}
 
     {% set buttonArgs = {
         title: btnText,
@@ -44,6 +53,14 @@
 
 {% endif %}
 
+
+<div class="c-dashboard__after-table">
+{{ options.after_table }}
+</div>
+
 <div class="c-account__message">
     <p>{{ options.store_need_help }}</p>
+</div>
+
+
 </div>

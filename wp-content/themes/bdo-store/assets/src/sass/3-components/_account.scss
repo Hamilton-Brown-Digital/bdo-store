@@ -8,8 +8,10 @@
       }
     }
   }
-  .logged-in &{
+  &__page-title{
+    @include header-section(true);
   }
+
   h2, h3, h4{
     margin-bottom:1.5rem;
   }
@@ -215,7 +217,7 @@
 }
 .woocommerce-Address{
   max-width: 800px;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
   @include bordered-box--small;
   h3{
     margin-bottom: 0;
@@ -230,7 +232,10 @@
 mark {
   background-color: $color-line;
 }
-.woocommerce-orders-table {
+
+
+
+.woocommerce-orders-table{
   position:relative;
   width: 100%;
   tr{
@@ -240,17 +245,8 @@ mark {
     width: 100%;
     padding: 1.5rem 0;
     border-top: $borderline-darker;
-    &:first-of-type{
-      padding-top: 0;
-      border-top: none;
-    }
     @include breakpoint(0 $break-desktop-med) {
       display: flex;
-    }
-    .woocommerce-orders-table__header-order-actions{
-      @include breakpoint(0 $break-desktop-med) {
-        display:none;
-      }
     }
     td{
       @include text-regular;
@@ -275,6 +271,9 @@ mark {
   }
   thead{
     @include font-bold;
+    tr{
+      border-top: none;
+    }
   }
   /* stylelint-disable */
   tbody{
@@ -285,44 +284,49 @@ mark {
         @include breakpoint(0 $break-desktop-med) {
           @include text-tiny;
         }
-        &.woocommerce-orders-table__cell-order-total{
-          flex-direction: column;
-
-        }
-        &.woocommerce-orders-table__cell-order-actions{
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          .woocommerce-button{
-            height: auto;
-            margin-bottom: 0;
-            padding: 1em 1em;
-          }
-          &:after{
-            display: block;
-            flex-grow: 1;
-            content: 'Actions';
-            @include font-bold;
-            @include text-small;
-            @include breakpoint($break-desktop-med) {
-              display: none;
-            }
-          }
-        }
       }
-    }
-    a {
-      color: $brand-red;
-      text-decoration: underline;
     }
   }
   /* stylelint-enable */
-
   tfoot {
     th {
       @include font-bold;
       line-height: 20px;
       @include text-small;
     }
+  }
+  &__header-order-actions{
+    @include breakpoint(0 $break-desktop-med) {
+      display:none;
+    }
+  }
+  &__cell-order-number{
+    a{
+      @include font-bold;
+      text-decoration: none;
+    }
+  }
+  &__cell-order-actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .woocommerce-button{
+      height: auto;
+      margin-bottom: 0;
+      padding: 1em 1em;
+    }
+    &:after{
+      display: block;
+      flex-grow: 1;
+      content: 'Actions';
+      @include font-bold;
+      @include text-small;
+      @include breakpoint($break-desktop-med) {
+        display: none;
+      }
+    }
+  }
+  &__cell-order-total{
+    flex-direction: column;
   }
 }

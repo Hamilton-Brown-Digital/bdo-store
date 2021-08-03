@@ -1,6 +1,6 @@
 .c-checkout {
   h3 {
-    @include header-regular(true, true);
+    @include header-regular(true);
     margin-top: 6rem;
     margin-bottom: 3rem;
   }
@@ -153,9 +153,9 @@
     tfoot{
       tr{
         margin-bottom: 0.75rem;
-      }
-      th{
-        @include font-regular;
+        th{
+          @include font-bold;
+        }
       }
     }
     .cart-subtotal{
@@ -195,7 +195,7 @@
   .woocommerce-order{
     max-width: 800px;
     h2{
-      @include header-regular(true, true);
+      @include header-regular(true);
     }
     p{
       margin-bottom: 1.5rem;
@@ -209,6 +209,12 @@
     .woocommerce-table{
       /* stylelint-disable */
       @include text-regular;
+      &__product-name{
+        a{
+          @include font-bold;
+          text-decoration: none;
+        }
+      }
       tfoot{
         tr{
           td{

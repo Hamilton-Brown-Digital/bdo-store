@@ -54,7 +54,7 @@ function remove_shop_manager_menus() {
         remove_menu_page( 'options-general.php' );                      //Settings
         remove_menu_page( 'gf_edit_forms' );                            //Gravity Forms
         remove_menu_page( 'edit.php?post_type=gated' );                 //Gated
-        remove_menu_page( 'theme-options' );                            //Theme Options
+        remove_menu_page( 'store-options' );                            //Theme Options
         remove_menu_page( 'wpseo_dashboard' );                          //Yoast
         remove_menu_page( 'edit.php?post_type=acf-field-group' );       //ACF
 

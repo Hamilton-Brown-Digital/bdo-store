@@ -11,9 +11,10 @@
 // add_action('woocommerce_before_checkout_form', 'before_checkout', 5);
 
 
-// remove company field
+// Edit fields
 function wc_edit_checkout_fields( $fields ) {
     unset( $fields['account_last_name'] );
+    $fields['billing']['billing_company']['required'] = true;
     return $fields;
 }
 add_filter( 'woocommerce_checkout_fields', 'wc_edit_checkout_fields' );
