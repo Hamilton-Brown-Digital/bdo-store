@@ -14,10 +14,8 @@
     transform: translateY(100%);
   }
   .c-basket &{
-    @include notice-strip;
-    .woocommerce-message, .woocommerce-error {
-      padding-top: 0;
-    }
+    @include notice-inline;
+    
   }
   .theme-color--orange &{
     max-width: unset;

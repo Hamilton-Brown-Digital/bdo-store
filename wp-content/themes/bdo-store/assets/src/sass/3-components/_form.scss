@@ -3,7 +3,7 @@
 .c-form {
 
   &__title{
-    @include header-regular(true, true);
+    @include header-regular(true);
   }
   &__description{
     margin-bottom: 3rem;

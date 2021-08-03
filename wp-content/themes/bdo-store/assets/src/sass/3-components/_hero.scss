@@ -58,6 +58,9 @@
         grid-template-columns: 1fr 630px;
       }
     }
+    .c-hero--shallow &{
+      width: 100%;
+    }
   }
   &__container-background{
     @include container-defaults;
@@ -77,7 +80,6 @@
   &__tagline{
     margin-bottom: 1.5rem;
     @include page-color('color');
-
     a {
       color: $white;
       text-decoration: none;
@@ -102,6 +104,9 @@
       flex-grow: unset;
       width: 50%;
       .c-hero--product &{
+        width: 100%;
+      }
+      .c-hero--shallow &{
         width: 100%;
       }
     }

@@ -34,3 +34,13 @@ function update_permalinks() {
 }
 
 add_action( 'after_switch_theme', 'update_permalinks' );
+
+
+/**
+ * @desc stop validation messages on login
+*/
+
+function no_wordpress_errors(){
+  return 'Login incorrect';
+}
+add_filter( 'login_errors', 'no_wordpress_errors' );

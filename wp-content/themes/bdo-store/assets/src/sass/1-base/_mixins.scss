@@ -126,7 +126,7 @@
     margin-bottom:1.5rem;
   }
   h2{
-    @include header-regular($underline: true);
+    @include header-regular(true);
   }
   p{
     margin-bottom: 1em;
@@ -224,16 +224,12 @@
 
 @mixin underline{
   display: block;
-  width: 72px;
+  width: 86px;
   height: 6px;
   margin: clamp(1rem, 1.5em, 3rem) 0;
   padding:0;
   background-color:$brand-red;
   border:none;
-  @include breakpoint($break-desktop){
-    width: 220px;
-    height: 8px;
-  }
 }
 @mixin underline-small{
   display: block;
@@ -267,7 +263,7 @@
   }
 }
 // Regular headings
-@mixin header-regular($underline: false, $stumpyunderline: false){
+@mixin header-regular($underline: false){
   @include font-bold;
   @include text-large;
   @include breakpoint($break-mobile){
@@ -283,12 +279,6 @@
     &:after{
       content: '';
       @include underline;
-    }
-  }
-  @if $stumpyunderline{
-    &:after{
-      @include underline;
-      max-width: 86px;
     }
   }
 }

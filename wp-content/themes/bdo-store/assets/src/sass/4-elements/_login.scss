@@ -15,7 +15,9 @@
 
 .login-register {
   @include loginboxdefaults;
-  
+  .woocommerce-message{
+    margin-bottom: 1.5rem;
+  }
 }
 
 .customer-login{
@@ -111,13 +113,16 @@
     @include form-input-text;
   }
 
-  .woocommerce-form-login__rememberme {
-    @include font-bold;
-    span {
-      padding-left:0.5em;
-    }
-    @include breakpoint($break-tablet) {
-      margin-bottom:0;
+  .woocommerce-form-login{
+    &__rememberme{
+      position: absolute;
+      display: flex;
+      align-items: baseline;
+      width: auto;
+      margin-bottom: 0;
+      span{
+        margin-left: 0.5em;
+      }
     }
   }
 

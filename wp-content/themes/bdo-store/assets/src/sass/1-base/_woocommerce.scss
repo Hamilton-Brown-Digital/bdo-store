@@ -14,7 +14,7 @@
     padding-top: $padding-deep;
     padding-bottom: $padding-deep;
   }
-  form.woocommerce-form, form.checkout, .woocommerce-MyAccount-content form{
+  form.woocommerce-form, form.checkout, .woocommerce-MyAccount-content form, .woocommerce-ResetPassword{
 
     //CONTAINERS
 
@@ -49,6 +49,28 @@
         span{
           margin-left: 1em;
         }
+      }
+    }
+
+    // reset password
+    &.woocommerce-ResetPassword{
+      .woocommerce-lost-password &{
+        padding-top: 4.5rem;
+        p{
+          &:first-of-type{
+            margin-bottom: 3rem;
+            @include intro-text;
+          }
+        }
+      }
+      max-width: 800px;
+      p{
+        &:first-of-type{
+          margin-bottom: 3rem;
+        }
+      }
+      .woocommerce-form-row{
+        width: 100%;
       }
     }
 
