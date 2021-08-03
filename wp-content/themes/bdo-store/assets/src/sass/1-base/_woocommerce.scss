@@ -40,6 +40,16 @@
       flex-wrap: wrap;
       max-width: 800px;
       column-gap:2rem;
+      &__rememberme{
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        width: auto;
+        margin-bottom: 0;
+        span{
+          margin-left: 1em;
+        }
+      }
     }
 
     // FIELDS
@@ -78,14 +88,6 @@
       legend {
         display: none;
       }
-    }
-
-    .woocommerce-form-login__rememberme{
-      position: absolute;
-      display: flex;
-      align-items: baseline;
-      width: auto;
-      margin-bottom: 0;
     }
 
     #billing_address_1_field{
