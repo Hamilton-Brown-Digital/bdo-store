@@ -1152,6 +1152,14 @@ ul, ol {
     max-width: 800px;
     -moz-column-gap: 2rem;
          column-gap: 2rem; }
+    .woocommerce form.woocommerce-form.woocommerce-form-login__rememberme, .woocommerce form.checkout.woocommerce-form-login__rememberme, .woocommerce .woocommerce-MyAccount-content form.woocommerce-form-login__rememberme {
+      position: absolute;
+      display: flex;
+      align-items: baseline;
+      width: auto;
+      margin-bottom: 0; }
+      .woocommerce form.woocommerce-form.woocommerce-form-login__rememberme span, .woocommerce form.checkout.woocommerce-form-login__rememberme span, .woocommerce .woocommerce-MyAccount-content form.woocommerce-form-login__rememberme span {
+        margin-left: 1em; }
   .woocommerce form.woocommerce-form .form-row, .woocommerce form.checkout .form-row, .woocommerce .woocommerce-MyAccount-content form .form-row {
     width: 100%;
     margin-bottom: 3rem; }
@@ -1181,12 +1189,6 @@ ul, ol {
     line-height: 1.4; }
   .woocommerce form.woocommerce-form .woocommerce-address-fields legend, .woocommerce form.woocommerce-form .edit-account legend, .woocommerce form.checkout .woocommerce-address-fields legend, .woocommerce form.checkout .edit-account legend, .woocommerce .woocommerce-MyAccount-content form .woocommerce-address-fields legend, .woocommerce .woocommerce-MyAccount-content form .edit-account legend {
     display: none; }
-  .woocommerce form.woocommerce-form .woocommerce-form-login__rememberme, .woocommerce form.checkout .woocommerce-form-login__rememberme, .woocommerce .woocommerce-MyAccount-content form .woocommerce-form-login__rememberme {
-    position: absolute;
-    display: flex;
-    align-items: baseline;
-    width: auto;
-    margin-bottom: 0; }
   .woocommerce form.woocommerce-form #billing_address_1_field, .woocommerce form.checkout #billing_address_1_field, .woocommerce .woocommerce-MyAccount-content form #billing_address_1_field {
     margin-bottom: 1rem; }
   .woocommerce form.woocommerce-form input[type='text'], .woocommerce form.woocommerce-form input[type='tel'], .woocommerce form.woocommerce-form input[type='email'], .woocommerce form.woocommerce-form input[type='password'], .woocommerce form.checkout input[type='text'], .woocommerce form.checkout input[type='tel'], .woocommerce form.checkout input[type='email'], .woocommerce form.checkout input[type='password'], .woocommerce .woocommerce-MyAccount-content form input[type='text'], .woocommerce .woocommerce-MyAccount-content form input[type='tel'], .woocommerce .woocommerce-MyAccount-content form input[type='email'], .woocommerce .woocommerce-MyAccount-content form input[type='password'] {
