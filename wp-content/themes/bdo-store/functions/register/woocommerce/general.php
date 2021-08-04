@@ -61,6 +61,7 @@ function remove_shop_manager_menus() {
         remove_menu_page( 'edit.php?post_type=product' );               //Product
         remove_menu_page('wc-admin&path=/analytics/overview');          //Analytics
         remove_menu_page('woocommerce-marketing');                      //Marketing
+        remove_menu_page('ai1wm_export');                               //All In One WP Migration
 
         remove_submenu_page('woocommerce', 'wc-admin');                 //Woo Home
         remove_submenu_page('woocommerce', 'coupons-moved');            //Woo Coupons
