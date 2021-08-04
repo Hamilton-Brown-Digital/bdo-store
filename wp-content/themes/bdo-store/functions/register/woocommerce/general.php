@@ -57,7 +57,7 @@ function remove_shop_manager_menus() {
         remove_menu_page( 'store-options' );                            //Theme Options
         remove_menu_page( 'wpseo_dashboard' );                          //Yoast
         remove_menu_page( 'edit.php?post_type=acf-field-group' );       //ACF
-
+        remove_menu_page( 'customer-emails' );                          // Customer emails
         remove_menu_page( 'edit.php?post_type=product' );               //Product
         remove_menu_page('wc-admin&path=/analytics/overview');          //Analytics
         remove_menu_page('woocommerce-marketing');                      //Marketing
