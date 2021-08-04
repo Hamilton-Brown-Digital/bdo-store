@@ -28,13 +28,29 @@ if ( $loggedIn ) {
         'fields' => 'ids'
     );
     $productId = get_posts( $args );
-    
-    // need to rethink this
-    // if ( wc_customer_bought_product( $current_user->user_email, $current_user->ID, $productId[0] ) ) {
-    //     $context['purchased'] = true;
-    // }
 
-    $context['purchased'] = true;
+
+
+
+
+    function has_bought() {
+        // Get all customer orders
+        $customer_orders = get_posts( array(
+            'numberposts' => 1,
+            'meta_key'    => '_customer_user',
+            'meta_value'  => get_current_user_id(),
+            'post_type'   => 'shop_order',
+            'post_status' => array('passed-stripe','inv-payment-made'),
+            'fields'      => 'ids', // Return Ids "completed"
+        ) );
+        return count($customer_orders) > 0 ? true : false;
+    }
+    
+    if (has_bought()){
+        $context['purchased'] = true;
+    } else {
+        $context['purchased'] = false;
+    }
 
 }
 

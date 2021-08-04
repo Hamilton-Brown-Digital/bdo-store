@@ -90,7 +90,7 @@ $custname = $order->get_billing_first_name();
 
 <br><br>
 <a target="_blank" class="button" href="<?php echo get_site_url() . '/account/' ?>">
-	<?php echo ($ordercount > 1) ? 'View products' : 'View product' ?>
+	<?php echo ($ordercount > 1) ? 'Access products' : 'Access product' ?>
 </a>
 <br><br>
 

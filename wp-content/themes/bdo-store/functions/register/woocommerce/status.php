@@ -119,43 +119,45 @@ function order_status_email_notification ( $order_id, $order ) {
         $email_obj->trigger( $order_id );
 }
 
-$subject_on_hold = get_field('email_on_hold', 'options')['email_on_hold_subject'];
-$subject_processing = get_field('email_processing', 'options')['email_processing_subject'];
-$subject_passed_pending = get_field('email_passed_pending', 'options')['email_passed_pending_subject'];
-$subject_failed = get_field('email_failed', 'options')['email_failed_subject'];
-$subject_failed_refund = get_field('email_failed_refund', 'options')['email_failed_refund_subject'];
-$subject_passed_stripe = get_field('email_passed_stripe', 'options')['email_passed_stripe_subject'];
-$subject_invoice_payment_made = get_field('email_inv_payment_made', 'options')['email_inv_payment_made_subject'];
+
 
 add_filter( 'woocommerce_email_subject_customer_processing_order', 'email_subject_passed_pending', 10, 2 );
 function email_subject_passed_pending ( $subject, $order ) {
+    $subject_on_hold = get_field('email_on_hold', 'options')['email_on_hold_subject'];
+    $subject_processing = get_field('email_processing', 'options')['email_processing_subject'];
+    $subject_passed_pending = get_field('email_passed_pending', 'options')['email_passed_pending_subject'];
+    $subject_failed = get_field('email_failed', 'options')['email_failed_subject'];
+    $subject_failed_refund = get_field('email_failed_refund', 'options')['email_failed_refund_subject'];
+    $subject_passed_stripe = get_field('email_passed_stripe', 'options')['email_passed_stripe_subject'];
+    $subject_invoice_payment_made = get_field('email_inv_payment_made', 'options')['email_inv_payment_made_subject'];
+
     // 1. Pending / Conflict check, purchase not made yet (invoice)
     if( $order->has_status( 'on-hold' ) ) {
-        $subject = __('Thank you for your order at BDO Store – Your order is pending', 'woocommerce');
+        $subject = __($subject_on_hold, 'woocommerce');
     }
     // 2. Pending / Conflict check, purchase made (stripe)
     if( $order->has_status( 'processing' ) ) {
-        $subject = __('Thank you for your order at BDO Store – Your order is pending', 'woocommerce');
+        $subject = __($subject_processing, 'woocommerce'); 
     }
     // 3. Cleared, confirmation & notification of BDO invoice (invoice)
     if( $order->has_status( 'passed-pending' ) ) {
-        $subject = __('BDO Store – No conflicts found', 'woocommerce');
+        $subject = __($subject_passed_pending, 'woocommerce');
     }
     // 4. Conflict of interest found no further action needed (invoice)
     if( $order->has_status( 'failed' ) ) {
-        $subject = __('BDO Store – Conflict of interest found', 'woocommerce');
+        $subject = __($subject_failed, 'woocommerce');
     }
     // 5. Conflict of interest found We will process refund (stripe)
     if( $order->has_status( 'failed-refund' ) ) {
-        $subject = __('BDO Store – conflict of interest found', 'woocommerce');
+        $subject = __($subject_failed_refund, 'woocommerce');
     }
     // 6. Conflict of interest cleared, confirmation & notification of BDO invoice (stripe)
     if( $order->has_status( 'passed-stripe' ) ) {
-        $subject = __('BDO Store – Your order is confirmed', 'woocommerce');
+        $subject = __($subject_passed_stripe, 'woocommerce');
     }
     // 7. Thankyou for your payment (invoice)
     if( $order->has_status( 'inv-payment-made' ) ) {
-        $subject = __('BDO Store – Thank you for your payment', 'woocommerce');
+        $subject = __($subject_invoice_payment_made, 'woocommerce');
     }
     return $subject;
 }
