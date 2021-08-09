@@ -41,7 +41,7 @@ defined( 'ABSPATH' ) || exit;
 
             <h2>Thank you for your order</h2>
 
-            <p>You’re almost there. We just need to check that we don’t have a conflict of interest. It’s something we have to do to comply with the rules on independence, quality and risk. These checks will take up to three working days. Once complete, you will receive an email confirming your purchase and we will also send you an invoice.</p>
+            <p>You’re almost there. We just need to check that we don’t have a conflict of interest. It’s something we have to do to comply with the rules on independence, quality and risk. These checks will take up to <em>three working days</em>. Once complete, you will receive an email confirming your purchase and we will also send you an invoice.</p>
 
             <p>If you have any questions, please contact us using <a href="<?php echo get_site_url() ?>/contact-us/">this form</a>.</p>
 
