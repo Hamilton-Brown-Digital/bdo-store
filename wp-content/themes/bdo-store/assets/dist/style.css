@@ -1550,7 +1550,7 @@ address p {
         line-height: 1.4; } }
   .c-header-utility__search {
     padding: 0;
-    padding-bottom: 2.5rem; }
+    padding-bottom: 3.75rem; }
     @media (min-width: 75em) {
       .c-header-utility__search {
         padding: 0; } }
@@ -1592,7 +1592,7 @@ address p {
       height: 100%; } }
   .c-header-utility__menu ul {
     margin: 0;
-    padding: 1.5rem 0;
+    padding: 3rem 0;
     text-transform: uppercase; }
     @media (min-width: 75em) {
       .c-header-utility__menu ul {
@@ -1611,7 +1611,7 @@ address p {
           height: 100%; } }
       .c-header-utility__menu ul li a {
         display: block;
-        padding: 1rem 30px;
+        padding: 0.75rem 0;
         font-family: "Proxima Nova Bold", sans-serif, sans-serif;
         font-size: 1.8rem;
         line-height: 1.4; }
@@ -1629,10 +1629,6 @@ address p {
         border-top-color: #ed1a3b; }
 
 @media (min-width: 75em) {
-  .c-header-main__menu-wrap {
-    order: 2; } }
-
-@media (min-width: 75em) {
   .c-header-main {
     order: 2; } }
 
@@ -1647,6 +1643,12 @@ address p {
     .c-header-main__container {
       padding: 0; } }
 
+.c-header-main__menu-wrap {
+  background-color: #F2F2F2; }
+  @media (min-width: 75em) {
+    .c-header-main__menu-wrap {
+      order: 2; } }
+
 .c-header-main__logo {
   flex-shrink: 0;
   margin-right: auto; }
@@ -1658,81 +1660,88 @@ address p {
       .c-header-main__logo__image {
         max-width: 175px; } }
 
-.c-header-main__menu {
-  background-color: #F2F2F2; }
+@media (min-width: 75em) {
+  .c-header-main__menu {
+    display: flex;
+    flex-grow: 1;
+    order: 2;
+    margin-bottom: -82px;
+    padding-left: 235px;
+    background-color: #fff; } }
+
+@media (min-width: 75em) {
+  .c-header-main__menu nav {
+    width: calc(100% - 172px); } }
+
+.c-header-main__menu ul {
+  margin: 0;
+  padding: 3rem 0;
+  text-transform: uppercase; }
   @media (min-width: 75em) {
-    .c-header-main__menu {
+    .c-header-main__menu ul {
+      align-self: stretch;
+      justify-content: flex-start;
+      padding: 0;
       display: flex;
-      flex-grow: 1;
-      order: 2;
-      margin-bottom: -82px;
-      padding-left: 235px;
-      background-color: #fff; } }
-  @media (min-width: 75em) {
-    .c-header-main__menu nav {
-      width: calc(100% - 172px); } }
-  .c-header-main__menu ul {
-    margin: 0;
-    padding: 1.5rem 0;
-    text-transform: uppercase; }
-    @media (min-width: 75em) {
-      .c-header-main__menu ul {
-        align-self: stretch;
-        justify-content: flex-start;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        border-left: 1px solid #F2F2F2; } }
-  @media (min-width: 75em) {
-    .c-header-main__menu li {
-      display: block;
-      height: 82px;
-      border-right: 1px solid #F2F2F2; } }
-  .c-header-main__menu li a {
+      align-items: center;
+      justify-content: flex-start;
+      border-left: 1px solid #F2F2F2; } }
+
+@media (min-width: 75em) {
+  .c-header-main__menu li {
     display: block;
-    padding: 1rem 30px;
-    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    font-size: 1.8rem;
-    line-height: 1.4; }
-    @media (min-width: 75em) {
-      .c-header-main__menu li a {
-        position: relative;
-        display: flex;
-        align-items: center;
-        height: 82px;
-        padding: 0 48px;
-        text-align: center; } }
+    height: 82px;
+    border-right: 1px solid #F2F2F2; } }
+
+.c-header-main__menu li a {
+  display: block;
+  padding: 0.75rem 0;
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.4; }
   @media (min-width: 75em) {
-    .c-header-main__menu li a:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 8px;
-      content: ''; } }
-  @media (min-width: 75em) {
-    .c-header-main__menu li a:hover:after {
-      background-color: #ed1a3b; }
-      .theme-color--orange .c-header-main__menu li a:hover:after {
-        background-color: #df8639; }
-      .theme-color--blue .c-header-main__menu li a:hover:after {
-        background-color: #02A5E2; }
-      .theme-color--green .c-header-main__menu li a:hover:after {
-        background-color: #218f8b; } }
-  .theme-color--orange .c-header-main__menu li.current_page_item a:after {
-    background-color: #df8639; }
-  .theme-color--blue .c-header-main__menu li.current_page_item a:after {
-    background-color: #02A5E2; }
-  .theme-color--green .c-header-main__menu li.current_page_item a:after {
-    background-color: #218f8b; }
+    .c-header-main__menu li a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 82px;
+      padding: 0 48px;
+      text-align: center; } }
+
+@media (min-width: 75em) {
+  .c-header-main__menu li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 8px;
+    content: ''; } }
+
+@media (min-width: 75em) {
+  .c-header-main__menu li a:hover:after {
+    background-color: #ed1a3b; }
+    .theme-color--orange .c-header-main__menu li a:hover:after {
+      background-color: #df8639; }
+    .theme-color--blue .c-header-main__menu li a:hover:after {
+      background-color: #02A5E2; }
+    .theme-color--green .c-header-main__menu li a:hover:after {
+      background-color: #218f8b; } }
+
+.theme-color--orange .c-header-main__menu li.current_page_item a:after {
+  background-color: #df8639; }
+
+.theme-color--blue .c-header-main__menu li.current_page_item a:after {
+  background-color: #02A5E2; }
+
+.theme-color--green .c-header-main__menu li.current_page_item a:after {
+  background-color: #218f8b; }
 
 .c-header-main__basket {
   display: flex;
   align-items: center;
   align-self: stretch;
-  padding: 1.5rem 3rem;
+  padding: 0 3rem;
   color: #fff; }
   @media (min-width: 75em) {
     .c-header-main__basket {
@@ -1750,8 +1759,7 @@ address p {
     background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/basket.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 20px 20px;
-    transform: translateY(5px); }
+    background-size: 20px 20px; }
     @media (min-width: 75em) {
       .c-header-main__basket__icon {
         background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/basket-white.svg"); } }
