@@ -1,6 +1,11 @@
 {% extends "base.twig" %}
-eeee
 {% block content %}
+
+{% include 'partials/hero.twig' with {
+    account: true,
+    header: '404 Not found',
+    type: 'shallow'
+} %}
 
 <div class="c-404 padding">
 
@@ -11,7 +16,7 @@ eeee
             <h1 class="c-404__header">It seems like the page you are looking for doesn’t exist</h1>
 
             <div class="c-404__main">
-                <p>Looks like the page you are looking for doesn’t exist, has been moved or deleted. Try searching for something else or see if our most popular resources are useful.</p>
+                <p>Try searching for something else or see if our most popular resources are useful.</p>
             </div>
 
             <div class="c-404__button">

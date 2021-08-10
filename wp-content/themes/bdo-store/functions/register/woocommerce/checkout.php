@@ -53,6 +53,15 @@ function custom_checkout_fields( $checkout ) {
         'required' => true
     ),
     $checkout->get_value('custom_vat_number'));
+
+    woocommerce_form_field( 'disclaimer', array(
+        'type' => 'text',
+        'class' => array('row-wide', 'update_totals_on_change', 'woocommerce-checkout__existing-client'),
+        'label'  => __('Please check'),
+        'placeholder' => __('Disclaimer'),
+        'required' => true
+    ),
+    $checkout->get_value('disclaimer'));
 }
 add_action( 'woocommerce_after_checkout_billing_form', 'custom_checkout_fields' );
 
