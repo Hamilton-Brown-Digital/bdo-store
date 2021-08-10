@@ -1,6 +1,5 @@
 <div class="c-download padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
     <div class="o-row">
-
 		<div class="o-grid-container c-download__container">
             <div class="c-download__main">
                 <div class="c-download__main__intro">
@@ -20,13 +19,22 @@
                             {{ download.description }}
                         </div>
                         <div class="c-download__item__cta">
-                        {% include "./elements/button.twig"
-                            with  {
-                                title : download.link['title'],
-                                url: download.link['url'],
-                                target: download.link['target']
-                            }
-                        %}
+                        {% if download.internal_or_external == 'internal' %}
+                            {% include "./elements/button.twig"
+                                with  {
+                                    title : download.internal_link.title,
+                                    url: download.internal_link.link
+                                }
+                            %}
+                        {% elseif download.internal_or_external == 'external' %}
+                            {% include "./elements/button.twig"
+                                with  {
+                                    title : download.external_link.title,
+                                    url: download.external_link.url,
+                                    target: download.external_link.target
+                                }
+                            %}
+                        {% endif %}
                         </div>
                         <div class="c-download__item__additional-content">
                             {{ download.additional_content }}
