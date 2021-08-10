@@ -1,6 +1,6 @@
 .c-content-row {
   &__heading{
-    @include header-section(true);
+    @include header-regular(true);
     margin-bottom: $padding-deep;
   }
   &__container{

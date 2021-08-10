@@ -2505,17 +2505,16 @@ address p {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   font-size: 2rem;
   line-height: 1.2;
-  margin-top: 0;
   margin-bottom: clamp(3rem, 5vw, 6rem); }
   @media (min-width: 22.438em) {
     .c-content-row__heading {
-      font-size: 3rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 40.063em) {
     .c-content-row__heading {
-      font-size: 4rem; } }
+      font-size: 3rem; } }
   @media (min-width: 50em) {
     .c-content-row__heading {
-      font-size: 6rem; } }
+      font-size: 4rem; } }
   .c-content-row__heading:after {
     content: '';
     display: block;
@@ -2887,17 +2886,16 @@ address p {
   .c-account__page-title {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     font-size: 2rem;
-    line-height: 1.2;
-    margin-top: 0; }
+    line-height: 1.2; }
     @media (min-width: 22.438em) {
       .c-account__page-title {
-        font-size: 3rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 40.063em) {
       .c-account__page-title {
-        font-size: 4rem; } }
+        font-size: 3rem; } }
     @media (min-width: 50em) {
       .c-account__page-title {
-        font-size: 6rem; } }
+        font-size: 4rem; } }
     .c-account__page-title:after {
       content: '';
       display: block;

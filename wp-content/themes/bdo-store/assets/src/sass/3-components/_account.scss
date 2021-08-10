@@ -9,7 +9,7 @@
     }
   }
   &__page-title{
-    @include header-section(true);
+    @include header-regular(true);
   }
 
   h2, h3, h4{

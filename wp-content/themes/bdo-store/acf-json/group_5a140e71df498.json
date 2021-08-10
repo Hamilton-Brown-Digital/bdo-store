@@ -292,6 +292,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6112aa07d2498": {
+                    "key": "layout_6112aa07d2498",
+                    "name": "download",
+                    "label": "Download",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6112aa24d2499",
+                            "label": "Download",
+                            "name": "download",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60ed7e796ee49"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Module",
@@ -340,5 +371,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1626352356
+    "modified": 1628613265
 }
