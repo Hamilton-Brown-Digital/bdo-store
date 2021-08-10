@@ -449,14 +449,15 @@
     transition: background-color 0.3s;
     content: '';
   }
-  &:hover{
-    &:after{
-      background-color: rgba($black, 0.1);
-    }
-  }
   span {
+    position: relative;
     @include font-bold;
     z-index: 1;
+  }
+  &:hover{
+    &:after{
+      background-color: rgba($black, 0.2);
+    }
   }
   svg {
     path {
@@ -470,24 +471,47 @@
     }
   }
 }
-
+// light on dark
 @mixin button-outline{
-  background-color:transparent;
-  border:solid 2px $color-line-solid;
-  color:$color-text;
-  &:hover{
-    background-color: $color-line-solid;
-    color:$white;
+  /* stylelint-disable */
+  background-color:transparent !important;
+  border:solid 2px $white !important;
+  color:$white !important;
+  &:after{
+    display: none !important;
   }
+  &:hover{
+    background-color: $white !important;
+    color:$color-text !important;
+  }
+  /* stylelint-enable */
 }
+// dark on light
 @mixin button-outline-inverse{
-  background-color:transparent;
-  border:solid 3px $white;
-  color:$white;
-  &:hover{
-    background-color: $white;
-    color:$color-text;
+  /* stylelint-disable */
+  background-color:transparent !important;
+  border:solid 2px $color-text !important;
+  color:$color-text !important;
+  &:after{
+    display: none !important;
   }
+  &:hover{
+    background-color: $color-text !important;
+    color:$white !important;
+  }
+  /* stylelint-enable */
+}
+// dark on light
+@mixin button-outline-inverse--soft{
+  /* stylelint-disable */
+  background-color:transparent !important;
+  border:solid 2px $color-line-dark !important;
+  color:$color-text !important;
+  &:hover{
+    background-color: $color-line-dark !important;
+    color:$color-text !important;
+  }
+  /* stylelint-enable */
 }
 
 @mixin box-borders{
@@ -658,6 +682,10 @@
     margin-left: 1.5rem;
     /* stylelint-disable-next-line */
     background-color: $color-bg-solid !important;
+    &:after{
+      /* stylelint-disable-next-line */
+      display: none !important;
+    }
   }
   strong{
     margin-right: 0.5em;

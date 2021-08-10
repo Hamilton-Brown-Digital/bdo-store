@@ -17,11 +17,13 @@ $query = new WP_Query( array(
 
 $foundPosts = $query->found_posts;
 $not_singular = $foundPosts > 1 ? 'results' : 'result';
+$message = $foundPosts > 0 ? $foundPosts . ' ' . $not_singular : 'Your query didnt match any results';
 
 $context = Timber::get_context();
 $context['posts'] = new Timber\PostQuery($query);
 $context['title'] = get_search_query();
 $context['count'] = $foundPosts . ' ' . $not_singular;
+$context['message'] = $message;
 
 $templates = array('search.twig');
 Timber::render($templates, $context);

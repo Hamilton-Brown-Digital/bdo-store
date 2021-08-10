@@ -1,7 +1,7 @@
 .c-content-row {
-  &__title{
-    @include header-small;
-    margin-bottom: 1.5rem;
+  &__heading{
+    @include header-section(true);
+    margin-bottom: $padding-deep;
   }
   &__container{
     @mixin griddefaults{

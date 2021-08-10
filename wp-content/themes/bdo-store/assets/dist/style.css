@@ -947,6 +947,21 @@ summary,
 textarea {
   touch-action: manipulation; }
 
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  transition: all 100ms ease-out; }
+  main a {
+    color: #ed1a3b;
+    text-decoration: underline; }
+  h1 a, h2 a, h3 a, h4 a {
+    color: inherit;
+    text-decoration: none; }
+
+button {
+  transition: all 100ms ease-out; }
+
 .sr {
   display: none; }
 
@@ -1015,18 +1030,6 @@ h4 {
   @media (min-width: 50em) {
     h4 {
       font-size: 2.2rem; } }
-
-a {
-  outline: none;
-  color: inherit;
-  text-decoration: none;
-  transition: all 100ms ease-out; }
-  main a {
-    color: #ed1a3b;
-    text-decoration: underline; }
-  h1 a, h2 a, h3 a, h4 a {
-    color: inherit;
-    text-decoration: none; }
 
 p {
   margin-bottom: 0;
@@ -1271,11 +1274,12 @@ ul, ol {
       background-color: rgba(0, 0, 0, 0);
       transition: background-color 0.3s;
       content: ''; }
-    .woocommerce form.woocommerce-form .button:hover:after, .woocommerce form.checkout .button:hover:after, .woocommerce .woocommerce-MyAccount-content form .button:hover:after, .woocommerce .woocommerce-ResetPassword .button:hover:after {
-      background-color: rgba(0, 0, 0, 0.1); }
     .woocommerce form.woocommerce-form .button span, .woocommerce form.checkout .button span, .woocommerce .woocommerce-MyAccount-content form .button span, .woocommerce .woocommerce-ResetPassword .button span {
+      position: relative;
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       z-index: 1; }
+    .woocommerce form.woocommerce-form .button:hover:after, .woocommerce form.checkout .button:hover:after, .woocommerce .woocommerce-MyAccount-content form .button:hover:after, .woocommerce .woocommerce-ResetPassword .button:hover:after {
+      background-color: rgba(0, 0, 0, 0.2); }
     .woocommerce form.woocommerce-form .button svg path, .woocommerce form.checkout .button svg path, .woocommerce .woocommerce-MyAccount-content form .button svg path, .woocommerce .woocommerce-ResetPassword .button svg path {
       transition: all 300ms;
       fill: #fff; }
@@ -2485,18 +2489,30 @@ address p {
         background-image: url(/wp-content/themes/bdo-store/assets/src/img/icons/cross2.svg);
         opacity: 0.5; }
 
-.c-content-row__title {
+.c-content-row__heading {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
   font-size: 2rem;
   line-height: 1.2;
-  margin-bottom: 1.5rem; }
+  margin-top: 0;
+  margin-bottom: clamp(3rem, 5vw, 6rem); }
+  @media (min-width: 22.438em) {
+    .c-content-row__heading {
+      font-size: 3rem; } }
   @media (min-width: 40.063em) {
-    .c-content-row__title {
-      font-size: 2rem;
-      line-height: 1.2; } }
-  @media (min-width: 75em) {
-    .c-content-row__title {
-      font-size: 2.4rem; } }
+    .c-content-row__heading {
+      font-size: 4rem; } }
+  @media (min-width: 50em) {
+    .c-content-row__heading {
+      font-size: 6rem; } }
+  .c-content-row__heading:after {
+    content: '';
+    display: block;
+    width: 86px;
+    height: 6px;
+    margin: clamp(1rem, 1.5em, 3rem) 0;
+    padding: 0;
+    background-color: #ed1a3b;
+    border: none; }
 
 .c-content-row__container--1-1 {
   display: grid;
@@ -2945,11 +2961,12 @@ address p {
       background-color: rgba(0, 0, 0, 0);
       transition: background-color 0.3s;
       content: ''; }
-    .c-account .woocommerce-Button:hover:after, .c-account .woocommerce-button:hover:after, .c-account button:hover:after, .c-account .edit:hover:after {
-      background-color: rgba(0, 0, 0, 0.1); }
     .c-account .woocommerce-Button span, .c-account .woocommerce-button span, .c-account button span, .c-account .edit span {
+      position: relative;
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       z-index: 1; }
+    .c-account .woocommerce-Button:hover:after, .c-account .woocommerce-button:hover:after, .c-account button:hover:after, .c-account .edit:hover:after {
+      background-color: rgba(0, 0, 0, 0.2); }
     .c-account .woocommerce-Button svg path, .c-account .woocommerce-button svg path, .c-account button svg path, .c-account .edit svg path {
       transition: all 300ms;
       fill: #fff; }
@@ -3241,11 +3258,12 @@ mark {
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s;
     content: ''; }
-  .c-basket .woocommerce-Button:hover:after, .c-basket .woocommerce-button:hover:after, .c-basket .button:hover:after, .c-basket button:hover:after, .c-basket .edit:hover:after {
-    background-color: rgba(0, 0, 0, 0.1); }
   .c-basket .woocommerce-Button span, .c-basket .woocommerce-button span, .c-basket .button span, .c-basket button span, .c-basket .edit span {
+    position: relative;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     z-index: 1; }
+  .c-basket .woocommerce-Button:hover:after, .c-basket .woocommerce-button:hover:after, .c-basket .button:hover:after, .c-basket button:hover:after, .c-basket .edit:hover:after {
+    background-color: rgba(0, 0, 0, 0.2); }
   .c-basket .woocommerce-Button svg path, .c-basket .woocommerce-button svg path, .c-basket .button svg path, .c-basket button svg path, .c-basket .edit svg path {
     transition: all 300ms;
     fill: #fff; }
@@ -3301,11 +3319,12 @@ mark {
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s;
     content: ''; }
-  .c-basket button:hover:after {
-    background-color: rgba(0, 0, 0, 0.1); }
   .c-basket button span {
+    position: relative;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     z-index: 1; }
+  .c-basket button:hover:after {
+    background-color: rgba(0, 0, 0, 0.2); }
   .c-basket button svg path {
     transition: all 300ms;
     fill: #fff; }
@@ -3376,6 +3395,13 @@ mark {
       .c-basket .shop_table .product-remove {
         justify-content: flex-end;
         grid-column-end: span 2; } }
+    .c-basket .shop_table .product-remove a {
+      display: inline-block;
+      padding-right: 1.5rem;
+      background-image: url(/wp-content/themes/bdo-store/assets/src/img/icons/cross.svg);
+      background-position: center right;
+      background-size: 10px 10px;
+      text-decoration: none; }
   .c-basket .shop_table .product-price {
     text-align: right; }
 
@@ -3417,9 +3443,12 @@ mark {
     font-size: 1.6rem;
     line-height: 1.4;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-    background-color: transparent;
-    border: solid 2px #707070;
-    color: #333333; }
+    /* stylelint-disable */
+    background-color: transparent !important;
+    border: solid 2px #d8d8d8 !important;
+    color: #333333 !important;
+    /* stylelint-enable */
+    border-radius: 0; }
     .theme-color--orange .c-basket .coupon button {
       background: #df8639; }
     .theme-color--blue .c-basket .coupon button {
@@ -3436,11 +3465,12 @@ mark {
       background-color: rgba(0, 0, 0, 0);
       transition: background-color 0.3s;
       content: ''; }
-    .c-basket .coupon button:hover:after {
-      background-color: rgba(0, 0, 0, 0.1); }
     .c-basket .coupon button span {
+      position: relative;
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       z-index: 1; }
+    .c-basket .coupon button:hover:after {
+      background-color: rgba(0, 0, 0, 0.2); }
     .c-basket .coupon button svg path {
       transition: all 300ms;
       fill: #fff; }
@@ -3449,8 +3479,8 @@ mark {
         width: 16px;
         height: 18px; } }
     .c-basket .coupon button:hover {
-      background-color: #707070;
-      color: #fff; }
+      background-color: #d8d8d8 !important;
+      color: #333333 !important; }
     .c-basket .coupon button:after {
       display: none; }
 
@@ -3573,11 +3603,12 @@ mark {
       background-color: rgba(0, 0, 0, 0);
       transition: background-color 0.3s;
       content: ''; }
-    .c-basket .wc-proceed-to-checkout a:hover:after {
-      background-color: rgba(0, 0, 0, 0.1); }
     .c-basket .wc-proceed-to-checkout a span {
+      position: relative;
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       z-index: 1; }
+    .c-basket .wc-proceed-to-checkout a:hover:after {
+      background-color: rgba(0, 0, 0, 0.2); }
     .c-basket .wc-proceed-to-checkout a svg path {
       transition: all 300ms;
       fill: #fff; }
@@ -3676,11 +3707,12 @@ mark {
       background-color: rgba(0, 0, 0, 0);
       transition: background-color 0.3s;
       content: ''; }
-    .c-checkout .checkout_coupon .button:hover:after {
-      background-color: rgba(0, 0, 0, 0.1); }
     .c-checkout .checkout_coupon .button span {
+      position: relative;
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       z-index: 1; }
+    .c-checkout .checkout_coupon .button:hover:after {
+      background-color: rgba(0, 0, 0, 0.2); }
     .c-checkout .checkout_coupon .button svg path {
       transition: all 300ms;
       fill: #fff; }
@@ -3954,17 +3986,7 @@ mark {
     .theme-color--green .c-product-box .single_add_to_cart_button {
       background-color: #218f8b; }
     .c-product-box .single_add_to_cart_button:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0);
-      transition: background-color 0.3s;
-      content: ''; }
-    .c-product-box .single_add_to_cart_button:hover:after {
-      background-color: rgba(0, 0, 0, 0.1); }
+      display: none; }
   .c-product-box__help {
     margin-top: 30px; }
     .c-product-box__help p {
@@ -4101,6 +4123,15 @@ mark {
   @media (min-width: 50em) {
     .c-signpost__heading {
       font-size: 4rem; } }
+  .c-signpost__heading:after {
+    content: '';
+    display: block;
+    width: 86px;
+    height: 6px;
+    margin: clamp(1rem, 1.5em, 3rem) 0;
+    padding: 0;
+    background-color: #ed1a3b;
+    border: none; }
 
 .c-signpost__intro {
   font-size: 2.4rem;
@@ -4186,15 +4217,16 @@ mark {
 .c-signpost__cta {
   margin-bottom: 1.5rem; }
 
-.c-search__count {
-  margin: 20px 0 -35px;
+.c-search__message {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-  line-height: 30px;
   font-size: 2rem;
   line-height: 1.2; }
+  @media (min-width: 40.063em) {
+    .c-search__message {
+      font-size: 2rem;
+      line-height: 1.2; } }
   @media (min-width: 75em) {
-    .c-search__count {
-      margin: 80px 0 -65px;
+    .c-search__message {
       font-size: 2.4rem; } }
 
 .c-iframe__window {
@@ -4663,11 +4695,12 @@ mark {
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s;
     content: ''; }
-  .c-form .gform_button:hover:after {
-    background-color: rgba(0, 0, 0, 0.1); }
   .c-form .gform_button span {
+    position: relative;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     z-index: 1; }
+  .c-form .gform_button:hover:after {
+    background-color: rgba(0, 0, 0, 0.2); }
   .c-form .gform_button svg path {
     transition: all 300ms;
     fill: #fff; }
@@ -4849,11 +4882,12 @@ mark {
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s;
     content: ''; }
-  .e-cta-button:hover:after, .woocommerce-NoticeGroup .button:hover:after, .woocommerce-account .woocommerce-notices-wrapper .button:hover:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button:hover:after, .single-product .woocommerce-notices-wrapper a:hover:after, .single-product .woocommerce-notices-wrapper .button:hover:after, .c-basket .woocommerce-notices-wrapper .button:hover:after {
-    background-color: rgba(0, 0, 0, 0.1); }
   .e-cta-button span, .woocommerce-NoticeGroup .button span, .woocommerce-account .woocommerce-notices-wrapper .button span, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button span, .single-product .woocommerce-notices-wrapper a span, .single-product .woocommerce-notices-wrapper .button span, .c-basket .woocommerce-notices-wrapper .button span {
+    position: relative;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     z-index: 1; }
+  .e-cta-button:hover:after, .woocommerce-NoticeGroup .button:hover:after, .woocommerce-account .woocommerce-notices-wrapper .button:hover:after, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button:hover:after, .single-product .woocommerce-notices-wrapper a:hover:after, .single-product .woocommerce-notices-wrapper .button:hover:after, .c-basket .woocommerce-notices-wrapper .button:hover:after {
+    background-color: rgba(0, 0, 0, 0.2); }
   .e-cta-button svg path, .woocommerce-NoticeGroup .button svg path, .woocommerce-account .woocommerce-notices-wrapper .button svg path, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button svg path, .single-product .woocommerce-notices-wrapper a svg path, .single-product .woocommerce-notices-wrapper .button svg path, .c-basket .woocommerce-notices-wrapper .button svg path {
     transition: all 300ms;
     fill: #fff; }
@@ -4880,22 +4914,27 @@ mark {
     background-color: #98002e;
     color: #333333; }
   .e-cta-button--outline {
-    background-color: transparent;
-    border: solid 2px #707070;
-    color: #333333; }
+    /* stylelint-disable */
+    background-color: transparent !important;
+    border: solid 2px #fff !important;
+    color: #fff !important;
+    /* stylelint-enable */ }
+    .e-cta-button--outline:after {
+      display: none !important; }
     .e-cta-button--outline:hover {
-      background-color: #707070;
-      color: #fff; }
+      background-color: #fff !important;
+      color: #333333 !important; }
   .e-cta-button--outline--inverse {
-    background-color: transparent;
-    border: solid 3px #fff;
-    color: #fff; }
+    /* stylelint-disable */
+    background-color: transparent !important;
+    border: solid 2px #333333 !important;
+    color: #333333 !important;
+    /* stylelint-enable */ }
+    .e-cta-button--outline--inverse:after {
+      display: none !important; }
     .e-cta-button--outline--inverse:hover {
-      background-color: #fff;
-      color: #333333; }
-  .c-hero--product .e-cta-button, .c-hero--product .woocommerce-NoticeGroup .button, .woocommerce-NoticeGroup .c-hero--product .button, .c-hero--product .woocommerce-account .woocommerce-notices-wrapper .button, .woocommerce-account .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .woocommerce-MyAccount-content .woocommerce-notices-wrapper .button, .woocommerce-MyAccount-content .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .single-product .woocommerce-notices-wrapper a, .single-product .woocommerce-notices-wrapper .c-hero--product a, .c-hero--product .single-product .woocommerce-notices-wrapper .button, .single-product .woocommerce-notices-wrapper .c-hero--product .button, .c-hero--product .c-basket .woocommerce-notices-wrapper .button, .c-basket .woocommerce-notices-wrapper .c-hero--product .button {
-    background-color: transparent;
-    border: solid 3px #fff; }
+      background-color: #333333 !important;
+      color: #fff !important; }
   .e-cta-button--disabled {
     opacity: 0.5; }
   .e-cta-button--small {
@@ -5095,11 +5134,12 @@ hr.e-seperator {
       background-color: rgba(0, 0, 0, 0);
       transition: background-color 0.3s;
       content: ''; }
-    .customer-login__content .woocommerce-button:hover:after, .customer-login__content .woocommerce-Button:hover:after {
-      background-color: rgba(0, 0, 0, 0.1); }
     .customer-login__content .woocommerce-button span, .customer-login__content .woocommerce-Button span {
+      position: relative;
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       z-index: 1; }
+    .customer-login__content .woocommerce-button:hover:after, .customer-login__content .woocommerce-Button:hover:after {
+      background-color: rgba(0, 0, 0, 0.2); }
     .customer-login__content .woocommerce-button svg path, .customer-login__content .woocommerce-Button svg path {
       transition: all 300ms;
       fill: #fff; }
@@ -5331,6 +5371,9 @@ hr.e-seperator {
     margin-left: 1.5rem;
     /* stylelint-disable-next-line */
     background-color: #333333 !important; }
+    .single-product .woocommerce-notices-wrapper a:after {
+      /* stylelint-disable-next-line */
+      display: none !important; }
   .single-product .woocommerce-notices-wrapper strong {
     margin-right: 0.5em; }
   .single-product .woocommerce-notices-wrapper .button {
@@ -5428,11 +5471,18 @@ hr.e-seperator {
   font-size: 1.4rem;
   line-height: 1.2; }
 
-.payment_method_stripe .wc-credit-card-form {
-  border: none; }
-  .payment_method_stripe .wc-credit-card-form .form-row {
+.payment_method_stripe fieldset.wc-credit-card-form {
+  /* stylelint-disable */
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  gap: 2rem;
+  /* stylelint-enable */ }
+  .payment_method_stripe fieldset.wc-credit-card-form .form-row {
     margin-bottom: 1.5rem; }
-  .payment_method_stripe .wc-credit-card-form .form-row-last {
+  .payment_method_stripe fieldset.wc-credit-card-form .form-row-last {
     margin-bottom: 0; }
 
 .payment_method_stripe .invalid {
@@ -5446,6 +5496,15 @@ hr.e-seperator {
   color: #ed1a3b; }
   .payment_method_stripe .stripe-source-errors .wc-stripe-error li:last-of-type {
     margin-bottom: 0; }
+
+.wc-stripe-elements-field {
+  /* stylelint-disable */
+  padding: 0.6em !important;
+  background-color: #fff !important;
+  border: 2px solid #d8d8d8 !important;
+  font-size: 1.6rem !important;
+  line-height: 1.4 !important;
+  /* stylelint-enable */ }
 
 
 /*# sourceMappingURL=style.css.map*/

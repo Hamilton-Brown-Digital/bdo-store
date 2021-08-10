@@ -84,6 +84,15 @@
         justify-content: flex-end;
         grid-column-end: span 2;
       }
+      a{
+        display: inline-block;
+        padding-right: 1.5rem;
+        background-image:url(#{$image-path}/icons/cross.svg);
+        background-position: center right;
+        background-size: 10px 10px;
+        text-decoration: none;
+        //@include font-bold;
+      }
     }
     .product-price{
       text-align: right;
@@ -106,7 +115,8 @@
     }
     button{
       @include buttondefaults;
-      @include button-outline;
+      @include button-outline-inverse--soft;
+      border-radius: 0;
       &:after{
         display: none;
       }

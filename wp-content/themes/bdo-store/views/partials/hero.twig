@@ -43,27 +43,37 @@
                         {% if type == 'full' and intro %}
                             <p class="c-hero__intro">{{ intro }}</p>
                         {% endif %}
-                        
-                        {% if type == 'full' and linktype != 'none' %}
-                            <div class="c-hero__cta">
-                                {% if linktype == 'customlink' %}
-                                    {% include "./elements/button.twig"
-                                        with  {
-                                            title : link['title'],
-                                            url: link['url'],
-                                            target: link['target']
-                                        }
-                                    %}
-                                {% elseif linktype == 'skiplink' %}
-                                    {% include "./elements/button.twig"
-                                        with  {
-                                            title : skiplinktext,
-                                            url: post.link ~ "#details",
-                                            altClass: 'e-cta-button--skip'
-                                        }
-                                    %}
-                                {% endif %}
-                            </div>
+                        {% if fn('is_front_page') and item.type == 'page' %}
+                            {% set thelink = fn('get_the_permalink') %}
+                            {% include "./elements/button.twig"
+                                with  {
+                                    title : 'Browse products',
+                                    url: thelink,
+                                    altClass: 'e-cta-button--skip'
+                                }
+                            %}
+                        {% else %}
+                            {% if type == 'full' and linktype != 'none' %}
+                                <div class="c-hero__cta">
+                                    {% if linktype == 'customlink' %}
+                                        {% include "./elements/button.twig"
+                                            with  {
+                                                title : link['title'],
+                                                url: link['url'],
+                                                target: link['target']
+                                            }
+                                        %}
+                                    {% elseif linktype == 'skiplink' %}
+                                        {% include "./elements/button.twig"
+                                            with  {
+                                                title : skiplinktext,
+                                                url: post.link ~ "#details",
+                                                altClass: 'e-cta-button--skip'
+                                            }
+                                        %}
+                                    {% endif %}
+                                </div>
+                            {% endif %}
                         {% endif %}
                         {% if product and link %}
                             <div class="c-hero__product-cta">
