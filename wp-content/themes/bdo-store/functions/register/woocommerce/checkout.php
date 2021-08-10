@@ -91,7 +91,14 @@ function custom_field_display_on_order_screen($order){
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'custom_field_display_on_order_screen', 10, 1 );
 
 
+// change checkbox message
 
+function new_terms_and_conditions_checkbox_text( $text ){
+        $text = 'I have read and agree to website terms and conditions';
+    return $text;
+}
+
+add_filter( 'woocommerce_get_terms_and_conditions_checkbox_text', 'new_terms_and_conditions_checkbox_text' );
 
 
 

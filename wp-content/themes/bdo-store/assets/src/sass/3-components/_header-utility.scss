@@ -30,7 +30,7 @@
 
   &__search {
     padding: 0;
-    padding-bottom: 2.5rem;
+    padding-bottom: 3.75rem;
     @include breakpoint($break-desktop-wide) {
       padding: 0;
     }
@@ -73,14 +73,17 @@
       height: 100%;
     }
     ul {
-      padding: 1.5rem 0;
+      margin: 0;
+      padding: 3rem 0;
+      text-transform: uppercase;
       @include breakpoint($break-desktop-wide) {
         display: flex;
         align-items: stretch;
         justify-content: flex-start;
-        gap: 2em;
         margin-right:2em;
         padding: 0;
+        text-transform: unset;
+        gap: 2em;
       }
       li {
         @include breakpoint($break-desktop-wide) {
@@ -89,9 +92,9 @@
         /* stylelint-disable */
         a {
           display: block;
-          @include text-regular;
+          padding: 0.75rem 0;
           @include font-bold;
-          padding: 0 1em;
+          @include text-regular;
           @include breakpoint($break-desktop-wide) {
             display: flex;
             align-items: center;
