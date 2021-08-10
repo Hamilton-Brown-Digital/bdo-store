@@ -2,13 +2,17 @@
     {% set posts = posts %}
     {% set itemnum = items %}
     {% set columns = items ~ 'cols' %}
+    {% set heading = message %}
+    {% set bgcolor = 'gray' %}
 {% else %}
     {% set posts = Post(acf.listing_cards) %}
     {% set itemnum = posts|length %}
     {% set columns = acf.listing_columns %}
+    {% set heading = acf.listing_heading %}
+    {% set bgcolor = acf.module_background %}
 {% endif %}
 
-<div class="c-listing padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{acf.module_background}}">
+<div class="c-listing padding{% if acf.module_padding != 'padding' %} {{acf.module_padding}}{% endif %} background--{{bgcolor}}">
     <div class="o-row o-row--no-margin">
         <div class="o-grid-container c-listing__container">
             
@@ -18,9 +22,9 @@
             </div>
             {% endif %}
 
-            {% if acf.listing_heading %}
+            {% if heading %}
             <div class="c-listing__heading">
-                {{ acf.listing_heading }}
+                {{ heading }}
             </div>
             {% endif %}
 

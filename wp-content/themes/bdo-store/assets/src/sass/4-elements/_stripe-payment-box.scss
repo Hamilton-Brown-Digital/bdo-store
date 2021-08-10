@@ -3,14 +3,21 @@
     margin-bottom: 1.5rem;
     @include text-tiny;
   }
-  .wc-credit-card-form{
-    border: none;
+  fieldset.wc-credit-card-form{
+    /* stylelint-disable */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    gap: 2rem;
     .form-row{
       margin-bottom: 1.5rem;
     }
     .form-row-last{
       margin-bottom: 0;
     }
+    /* stylelint-enable */
   }
   .invalid{
     border: 1px solid $brand-red;
@@ -29,4 +36,15 @@
       }
     }
   }
+}
+
+
+.wc-stripe-elements-field {
+  /* stylelint-disable */
+  padding: 0.6em !important;
+  background-color: $white !important;
+  border: 2px solid $color-line-dark !important;
+  font-size:1.6rem !important;
+  line-height: 1.4 !important;
+  /* stylelint-enable */
 }

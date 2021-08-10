@@ -2,49 +2,60 @@
     
     <div class="o-row o-row--no-margin o-row--mobile-loose">
 
-        <div class="o-grid-container c-content-row__container--{{acf.contentrow_layout}}">
+        <div class="o-grid-container">
 
-        
-        <div class="c-content-row__column">
-            {% set link = acf.contentrow_content.first_column.content_link %}
-            {% set content = acf.contentrow_content.first_column.contentrow_main %}
-            <div class="c-content-row__content">
-                {{ content }}
-            </div>
+            {% if acf.contentrow_heading %}
+            <h2 class="c-content-row__heading">
+                {{acf.contentrow_heading}}
+            </h2>
+            {% endif %}
+
+            <div class="o-grid-container c-content-row__container--{{acf.contentrow_layout}}">
+
             
-            {% if link %}
-            <div class="c-content-row__link">
-            {% include "./elements/button.twig"
-            with  {
-                title : link['title'],
-                url: link['url'],
-                target: link['target']
-            }
-            %}
-            </div>
-            {% endif %}
-        </div>
+                <div class="c-content-row__column">
+                    {% set link = acf.contentrow_content.first_column.content_link %}
+                    {% set content = acf.contentrow_content.first_column.contentrow_main %}
+                    <div class="c-content-row__content">
+                        {{ content }}
+                    </div>
 
-        {% if acf.contentrow_layout != 'single' %}
-        <div class="c-content-row__column">
-            {% set link = acf.contentrow_content.second_column.content_link %}
-            {% set content = acf.contentrow_content.second_column.contentrow_main %}
-            <div class="c-content-row__content">
-                {{ content }}
+                    
+                    {% if link %}
+                    <div class="c-content-row__link">
+                    {% include "./elements/button.twig"
+                    with  {
+                        title : link['title'],
+                        url: link['url'],
+                        target: link['target']
+                    }
+                    %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                {% if acf.contentrow_layout != 'single' %}
+                <div class="c-content-row__column">
+                    {% set link = acf.contentrow_content.second_column.content_link %}
+                    {% set content = acf.contentrow_content.second_column.contentrow_main %}
+                    <div class="c-content-row__content">
+                        {{ content }}
+                    </div>
+                    {% if link %}
+                        <div class="c-content-row__link">
+                            {% include "./elements/button.twig"
+                            with  {
+                                title : link['title'],
+                                url: link['url'],
+                                target: link['target']
+                            }
+                            %}
+                        </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+
             </div>
-            {% if link %}
-            <div class="c-content-row__link">
-            {% include "./elements/button.twig"
-            with  {
-                title : link['title'],
-                url: link['url'],
-                target: link['target']
-            }
-            %}
-            </div>
-            {% endif %}
-        </div>
-        {% endif %}
 
         </div>
 

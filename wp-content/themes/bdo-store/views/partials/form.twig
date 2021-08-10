@@ -20,10 +20,6 @@
 				{{ function('do_shortcode', '[gravityform id="' ~ (acf.form.id) ~ '" title="false" description="false" tabindex="49" output="raw" ajax="true"]') }}
 			</div>
 
-			<div class="c-form__note">
-				<span>*</span> Required field
-			</div>
-
 			{% if acf.form_after_text %}
 				<div class="c-form__after-text">
 					{{ acf.form_after_text }}

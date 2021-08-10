@@ -4,27 +4,11 @@
 
     {% include 'partials/hero.twig' with {
         account: true,
-        header: 'Results for `'~title~'`',
+        header: 'Results for: '~title~' ',
         type: 'shallow'
     } %}
 
     <div class="c-search">
-
-	    <div class="o-row o-row--no-margin">
-
-		    <div class="o-grid-container c-search__container">
-
-                <div class="c-search__results-meta">
-
-                    <div class="c-search__count">{{ count }}</div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        {% if posts %}
 
         <div class="c-search__results">
 
@@ -34,8 +18,6 @@
             } %}
 
         </div>
-
-        {% endif %}
 
     </div>
 

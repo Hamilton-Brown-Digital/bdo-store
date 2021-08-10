@@ -16,7 +16,7 @@
     @include header-tagline;
   }
   &__heading{
-    @include header-regular;
+    @include header-regular(true);
     margin-bottom: 1.5rem;
   }
   &__intro{

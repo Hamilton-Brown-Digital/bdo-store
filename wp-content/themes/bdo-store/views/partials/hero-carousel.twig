@@ -46,7 +46,8 @@
                     {% set heroItems = heroItems|merge({
                         linktype: hero.hero_button_hero_link_config,
                         link: hero.hero_button_hero_link,
-                        skiplinktext: hero.hero_button_link_text
+                        skiplinktext: hero.hero_button_link_text,
+                        thistype: 'page'
                     })%}
                 {% endif %}
 

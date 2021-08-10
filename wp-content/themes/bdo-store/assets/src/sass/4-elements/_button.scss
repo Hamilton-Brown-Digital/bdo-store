@@ -32,10 +32,6 @@
   &--outline--inverse{
     @include button-outline-inverse;
   }
-  .c-hero--product &{
-    background-color:transparent;
-    border:solid 3px $white;
-  }
   &--disabled {
     opacity: 0.5;
   }

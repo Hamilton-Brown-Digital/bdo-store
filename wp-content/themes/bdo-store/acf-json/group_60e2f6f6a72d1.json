@@ -24,6 +24,25 @@
             "prefix_name": 0
         },
         {
+            "key": "field_61119dbea6f4d",
+            "label": "Heading",
+            "name": "contentrow_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 80
+        },
+        {
             "key": "field_60e2f8336c004",
             "label": "Layout",
             "name": "contentrow_layout",
@@ -204,5 +223,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1626133155
+    "modified": 1628544919
 }
