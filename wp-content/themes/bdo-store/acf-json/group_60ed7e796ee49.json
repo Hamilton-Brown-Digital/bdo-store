@@ -136,13 +136,70 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_60edcc927d173",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "link",
-                    "instructions": "If adding an external link, please remember to add text to Link Text",
+                    "key": "field_6112af15a9e1d",
+                    "label": "Internal or external",
+                    "name": "internal_or_external",
+                    "type": "button_group",
+                    "instructions": "If you want to host the file on the site, choose internal. If the file is hosted externally, choose external.",
                     "required": 0,
                     "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "internal": "Internal",
+                        "external": "External"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_60edcc927d173",
+                    "label": "Internal link",
+                    "name": "internal_link",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6112af15a9e1d",
+                                "operator": "==",
+                                "value": "internal"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_6112af7aa9e1e",
+                    "label": "External link",
+                    "name": "external_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6112af15a9e1d",
+                                "operator": "==",
+                                "value": "external"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -189,5 +246,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1626862408
+    "modified": 1628614922
 }
