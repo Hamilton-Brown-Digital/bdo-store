@@ -3926,6 +3926,8 @@ mark {
   .woocommerce-terms-and-conditions-wrapper p {
     font-size: 1.4rem;
     line-height: 1.2; }
+  .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text {
+    margin-bottom: 1.5rem; }
 
 @media (min-width: 64.063em) {
   .c-product-details__container {
