@@ -11,3 +11,4 @@ if (class_exists( 'Timber' )) {
     $templates = array( 'page-plugin.twig' );
     Timber::render( $templates, $timberContext );
 }
+?>
