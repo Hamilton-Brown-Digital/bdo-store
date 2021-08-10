@@ -73,14 +73,17 @@
       height: 100%;
     }
     ul {
+      margin: 0;
       padding: 1.5rem 0;
+      text-transform: uppercase;
       @include breakpoint($break-desktop-wide) {
         display: flex;
         align-items: stretch;
         justify-content: flex-start;
-        gap: 2em;
         margin-right:2em;
         padding: 0;
+        text-transform: unset;
+        gap: 2em;
       }
       li {
         @include breakpoint($break-desktop-wide) {
@@ -89,9 +92,9 @@
         /* stylelint-disable */
         a {
           display: block;
-          @include text-regular;
+          padding: 1rem $edgepadding-mobile-loose;
           @include font-bold;
-          padding: 0 1em;
+          @include text-regular;
           @include breakpoint($break-desktop-wide) {
             display: flex;
             align-items: center;
