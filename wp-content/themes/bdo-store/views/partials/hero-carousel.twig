@@ -10,14 +10,7 @@
 
             {% for item in items %}
 
-                {% set type = item.type %}
-
-                {% if type == 'standard' %}
-                <!-- get CF hero -->
-                    {% set hero = item.hero %}
-                {% else %}
-                    {% set hero = TimberPost( get_prod_cat_pages( item.hero_carousel_page ) ) %}
-                {% endif %}
+                {% set hero = item.hero %}
 
                 <!-- get hero type = full -->
                 {% set heroType = hero.hero_type %}
@@ -38,16 +31,6 @@
                         linktype: hero.hero_button.hero_link_config,
                         link: hero.hero_button.hero_link,
                         skiplinktext: hero.hero_button.link_text
-                    })%}
-                {% endif %}
-
-
-                {% if type == 'page' %}
-                    {% set heroItems = heroItems|merge({
-                        linktype: hero.hero_button_hero_link_config,
-                        link: hero.hero_button_hero_link,
-                        skiplinktext: hero.hero_button_link_text,
-                        thistype: 'page'
                     })%}
                 {% endif %}
 

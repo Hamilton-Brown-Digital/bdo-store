@@ -1761,7 +1761,8 @@ address p {
     background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/basket.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 20px 20px; }
+    background-size: 20px 20px;
+    transform: translateY(20%); }
     @media (min-width: 75em) {
       .c-header-main__basket__icon {
         background-image: url("/wp-content/themes/bdo-store/assets/src/img/icons/basket-white.svg"); } }
@@ -1776,7 +1777,11 @@ address p {
   .c-header-main__basket .basket_count {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     font-size: 1.6rem;
-    line-height: 1.4; }
+    line-height: 1.4;
+    color: #ed1a3b; }
+    @media (min-width: 75em) {
+      .c-header-main__basket .basket_count {
+        color: #fff; } }
 
 @media (min-width: 75em) {
   .c-header-main__hamburger {
@@ -2159,9 +2164,6 @@ address p {
   @media (min-width: 50em) {
     .c-listing__count {
       margin-bottom: 30px; } }
-
-.c-listing__card {
-  background: #f2d00e; }
 
 .c-listing__grid {
   display: grid;
@@ -3977,8 +3979,6 @@ mark {
 
 .c-product-box {
   padding: 6rem; }
-  .c-product-box .gform_body {
-    margin-bottom: 2.5rem; }
   .c-product-box .single_add_to_cart_button {
     position: relative;
     display: inline-flex;
@@ -4103,6 +4103,10 @@ mark {
     padding: 1.5rem 0;
     font-size: 3rem;
     text-transform: uppercase;
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
+  .c-product-box .product-unavailable__message {
+    font-size: 2.4rem;
+    line-height: 1.2;
     font-family: "Proxima Nova Bold", sans-serif, sans-serif; }
 
 @media (min-width: 50em) {
@@ -4847,6 +4851,13 @@ mark {
       color: #ed1a3b;
       font-size: 1.8rem;
       line-height: 1.4; }
+  .e-card__unavailable {
+    flex-grow: 1;
+    color: #ed1a3b;
+    text-transform: uppercase;
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .e-card__count {
     flex-grow: 1;
     text-transform: uppercase;

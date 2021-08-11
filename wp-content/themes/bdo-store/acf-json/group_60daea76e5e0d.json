@@ -19,30 +19,8 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "Add Item",
+            "button_label": "Add Slide",
             "sub_fields": [
-                {
-                    "key": "field_60daeef37b962",
-                    "label": "Type",
-                    "name": "type",
-                    "type": "button_group",
-                    "instructions": "Custom means you type out your own. From Page means the information gets pulled in.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "standard": "Custom",
-                        "page": "From Page"
-                    },
-                    "allow_null": 0,
-                    "default_value": "",
-                    "layout": "horizontal",
-                    "return_format": "value"
-                },
                 {
                     "key": "field_60daea9a06c7f",
                     "label": "Hero",
@@ -71,42 +49,6 @@
                     "layout": "block",
                     "prefix_label": 0,
                     "prefix_name": 0
-                },
-                {
-                    "key": "field_60daef817b963",
-                    "label": "Page",
-                    "name": "hero_carousel_page",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60daeef37b962",
-                                "operator": "==",
-                                "value": "page"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "none": "None",
-                        "16": "Uncategorized",
-                        "19": "Compliance, Risk and Governance",
-                        "20": "Online Learning",
-                        "21": "Software and Diagnostics"
-                    },
-                    "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
                 }
             ]
         }
@@ -128,5 +70,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625656357
+    "modified": 1628695959
 }

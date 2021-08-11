@@ -1,8 +1,5 @@
 .c-product-box{
   padding:6rem;
-  .gform_body{
-    margin-bottom: 2.5rem;
-  }
   .single_add_to_cart_button{
     position: relative;
     display: inline-flex;
@@ -116,5 +113,11 @@
     font-size:3rem;
     text-transform:uppercase;
     @include font-bold;
+  }
+
+  .product-unavailable{
+    &__message{
+      @include intro-text;
+    }
   }
 }

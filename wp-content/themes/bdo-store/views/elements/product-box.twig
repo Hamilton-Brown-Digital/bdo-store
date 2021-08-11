@@ -1,12 +1,21 @@
 {% set variationsnum = count_variable_fields() %}
 
+{% if unavailable == 'yes' %}
+
+<div class="c-product-box product-unavailable">
+    <p class="product-unavailable__message">{{unavailable_text}}</p>
+    <div class="c-product-box__help">
+    {{ options.store_need_help }}
+    </div>
+</div>
+
+{% else %}
 
 <div class="c-product-box variationsnum--{{variationsnum}}">
 
     {% do action('woocommerce_before_single_product') %}
     
     {% do action('woocommerce_before_single_product_summary') %}
-
 
     {% do action('woocommerce_single_product_summary') %}
 
@@ -17,3 +26,5 @@
     </div>
 
 </div>
+
+{% endif %}

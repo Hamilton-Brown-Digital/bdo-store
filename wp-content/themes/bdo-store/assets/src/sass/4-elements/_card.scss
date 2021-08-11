@@ -78,6 +78,13 @@
       @include text-regular;
     }
   }
+  &__unavailable{
+    flex-grow: 1;
+    color: $brand-red;
+    text-transform: uppercase;
+    @include font-bold;
+    @include text-small;
+  }
   &__count{
     flex-grow: 1;
     text-transform: uppercase;
