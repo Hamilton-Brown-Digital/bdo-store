@@ -896,8 +896,10 @@ html {
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  overflow-y: unset;
-  overflow-x: hidden; }
+  overflow-y: unset; }
+  @media (min-width: 0) and (max-width: 40.063em) {
+    html {
+      overflow-x: hidden; } }
 
 body {
   display: flex;
@@ -3943,6 +3945,10 @@ mark {
   .c-product-details__container {
     display: grid;
     grid-gap: clamp(3rem, 5vw, 6rem);
+    grid-template-columns: 1fr 500px; } }
+
+@media (min-width: 75em) {
+  .c-product-details__container {
     grid-template-columns: 1fr 630px; } }
 
 .c-product-details__product-order {

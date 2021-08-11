@@ -3,6 +3,9 @@
     @include breakpoint($break-desktop-med) {
       display:grid;
       grid-gap: $padding-deep;
+      grid-template-columns: 1fr 500px;
+    }
+    @include breakpoint($break-desktop-wide) {
       grid-template-columns: 1fr 630px;
     }
   }
