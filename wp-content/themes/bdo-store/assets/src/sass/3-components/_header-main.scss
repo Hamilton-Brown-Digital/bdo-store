@@ -136,6 +136,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 20px 20px;
+      transform: translateY(20%);
       @include breakpoint($break-desktop-wide) {
         background-image: url('#{$asset-path}/img/icons/basket-white.svg');
       }
@@ -151,6 +152,10 @@
     .basket_count{
       @include font-bold;
       @include text-small;
+      color: $brand-red;
+      @include breakpoint($break-desktop-wide) {
+        color: $white;
+      }
     }
   }
   &__hamburger{

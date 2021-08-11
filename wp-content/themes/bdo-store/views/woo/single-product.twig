@@ -3,6 +3,9 @@
 {% block content %}
 
     
+    {% set unavailable = post.custom.product_unavailable_toggle %}
+    {% set unavailable_text = post.custom.product_unavailable_unavailable_text %}
+    
 
     {% set linkArr = [{
         'title': 'Product details',

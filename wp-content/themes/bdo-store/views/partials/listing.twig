@@ -46,7 +46,7 @@
                             type: type,
                             title: card.title,
                             url: card.link,
-                            excerpt: card.preview.read_more(''),
+                            excerpt: card.preview.read_more('')
                         } %}
 
                         {% if type == 'page' %}
@@ -74,6 +74,11 @@
                                 {% set price = card._price[0] %}
                             {% else %}
                                 {% set price = card._price %}
+                            {% endif %}
+                            {% if card.custom.product_unavailable_toggle == 'yes' %}
+                                {% set cardItems = cardItems|merge({
+                                    unavailablenote: card.custom.product_unavailable_unavailable_card_text
+                                })%}
                             {% endif %}
                             {% set cardItems = cardItems|merge({
                                 price: price,
