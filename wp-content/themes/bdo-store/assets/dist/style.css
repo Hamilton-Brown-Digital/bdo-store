@@ -2911,10 +2911,6 @@ address p {
       border: none; }
   .c-account h2, .c-account h3, .c-account h4 {
     margin-bottom: 1.5rem; }
-  .c-account h2 {
-    font-size: 3.2rem; }
-  .c-account h3 {
-    font-size: 2.6rem; }
   .c-account p {
     max-width: 800px; }
   .c-account__message {
@@ -2994,9 +2990,13 @@ address p {
       background-color: #dc1131; }
   .c-account .woocommerce-MyAccount-navigation {
     position: relative;
-    padding-top: 6rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: #fff; }
+    @media (min-width: 64.063em) {
+      .c-account .woocommerce-MyAccount-navigation {
+        padding-top: 6rem;
+        padding-bottom: 6rem; } }
     .c-account .woocommerce-MyAccount-navigation h2 {
       font-family: "Proxima Nova Bold", sans-serif, sans-serif;
       font-size: 2rem;
@@ -3017,6 +3017,9 @@ address p {
         padding: 0;
         background-color: #ed1a3b;
         border: none; }
+      @media (min-width: 0) and (max-width: 64.063em) {
+        .c-account .woocommerce-MyAccount-navigation h2 {
+          font-size: 2.5rem; } }
     .c-account .woocommerce-MyAccount-navigation a {
       display: block;
       padding: 0.5rem;
@@ -3024,15 +3027,15 @@ address p {
       color: #333333;
       font-size: 2rem;
       line-height: 1.4;
-      text-decoration: none; }
+      text-decoration: none;
+      display: inline-block; }
       .c-account .woocommerce-MyAccount-navigation a:hover {
         color: #ed1a3b; }
     .c-account .woocommerce-MyAccount-navigation li.is-active a {
       color: #ed1a3b; }
     @media (min-width: 64.063em) {
       .c-account .woocommerce-MyAccount-navigation {
-        width: 20%;
-        padding-left: 50px; } }
+        width: 20%; } }
     .c-account .woocommerce-MyAccount-navigation:before {
       position: absolute;
       top: 0;
@@ -3047,7 +3050,7 @@ address p {
       right: -100vw;
       width: 100vw;
       height: 100%;
-      background-color: #F2F2F2;
+      background-color: #fff;
       content: ''; }
       @media (min-width: 64.063em) {
         .c-account .woocommerce-MyAccount-navigation:after {
@@ -3060,7 +3063,6 @@ address p {
     @media (min-width: 64.063em) {
       .c-account .woocommerce-MyAccount-content {
         width: 80%;
-        max-width: 1000px;
         min-height: 70vh;
         padding: clamp(20px, 8vw, 140px);
         padding-top: 6rem;
@@ -3177,7 +3179,10 @@ mark {
       .woocommerce-orders-table tr td:first-of-type, .woocommerce-orders-table tr th:first-of-type {
         justify-content: flex-start; }
       .woocommerce-orders-table tr td:last-of-type, .woocommerce-orders-table tr th:last-of-type {
-        justify-content: flex-end; }
+        justify-content: flex-start; }
+        @media (min-width: 64.063em) {
+          .woocommerce-orders-table tr td:last-of-type, .woocommerce-orders-table tr th:last-of-type {
+            justify-content: flex-end; } }
       @media (min-width: 64.063em) {
         .woocommerce-orders-table tr td, .woocommerce-orders-table tr th {
           width: 20%; } }
@@ -3199,7 +3204,8 @@ mark {
     line-height: 1.4; }
   @media (min-width: 0) and (max-width: 64.063em) {
     .woocommerce-orders-table__header-order-actions {
-      display: none; } }
+      /* stylelint-disable-next-line */
+      display: none !important; } }
   .woocommerce-orders-table__cell-order-number a {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     text-decoration: none; }
@@ -3207,22 +3213,16 @@ mark {
     display: flex;
     flex-direction: row;
     align-items: center; }
-    .woocommerce-orders-table__cell-order-actions .woocommerce-button {
-      height: auto;
-      margin-bottom: 0;
-      padding: 1em 1em; }
-    .woocommerce-orders-table__cell-order-actions:after {
-      display: block;
-      flex-grow: 1;
-      content: 'Actions';
-      font-family: "Proxima Nova Bold", sans-serif, sans-serif;
-      font-size: 1.6rem;
-      line-height: 1.4; }
-      @media (min-width: 64.063em) {
-        .woocommerce-orders-table__cell-order-actions:after {
-          display: none; } }
   .woocommerce-orders-table__cell-order-total {
     flex-direction: column; }
+  .woocommerce-orders-table__order-actions-buttons__buttongroup {
+    display: flex;
+    gap: 3px; }
+    .woocommerce-orders-table__order-actions-buttons__buttongroup .woocommerce-button {
+      padding: 0 1em;
+      background: #ed1a3b;
+      border-radius: 2px;
+      border-radius: 0; }
 
 .c-basket .cart-empty.woocommerce-info {
   font-family: "Proxima Nova Bold", sans-serif, sans-serif;
@@ -4742,6 +4742,7 @@ mark {
   margin-bottom: 3rem; }
 
 .c-dashboard__list {
+  max-width: 900px;
   margin-bottom: 3rem; }
 
 .c-dashboard__empty {
