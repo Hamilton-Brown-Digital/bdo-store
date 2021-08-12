@@ -172,6 +172,21 @@
             "delay": 0
         },
         {
+            "key": "field_61151277b6070",
+            "label": "Terms and conditions page link",
+            "name": "terms_and_conditions_page_link",
+            "type": "link",
+            "instructions": "Please just add link, no need for link text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        },
+        {
             "key": "field_61095345842da",
             "label": "Account page",
             "name": "",
@@ -243,5 +258,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628012276
+    "modified": 1628771048
 }

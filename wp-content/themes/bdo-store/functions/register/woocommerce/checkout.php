@@ -94,14 +94,12 @@ add_action( 'woocommerce_admin_order_data_after_billing_address', 'custom_field_
 // change checkbox message
 
 function new_terms_and_conditions_checkbox_text( $text ){
-        $text = 'I have read and agree to website terms and conditions';
+    $termslink = get_field('terms_and_conditions_page_link', 'option');
+    $text = 'I have read and agree to website <a href=" ' . $termslink . ' ">terms and conditions</a>';
     return $text;
 }
 
 add_filter( 'woocommerce_get_terms_and_conditions_checkbox_text', 'new_terms_and_conditions_checkbox_text' );
-
-
-
 
 
 ?>

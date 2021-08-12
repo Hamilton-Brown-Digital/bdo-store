@@ -25,7 +25,7 @@ $gated = array();
 
 foreach( $orders as $order ) {
     foreach ( $order->get_items() as $item ) {
-        $prodID = $item->get_product_id();        
+        $prodID = $item->get_product_id();
         array_push($gated, array(
             'gate' => get_field('gated_page', $prodID),
             'status' => $order->get_status()
