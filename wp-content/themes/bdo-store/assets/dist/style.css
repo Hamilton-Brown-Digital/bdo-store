@@ -4744,6 +4744,12 @@ mark {
 .c-dashboard__list {
   margin-bottom: 3rem; }
 
+.c-dashboard__empty {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+  margin-bottom: 3rem; }
+
 .c-dashboard__gated-box {
   display: flex;
   align-items: center;

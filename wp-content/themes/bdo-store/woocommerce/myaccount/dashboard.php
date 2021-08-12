@@ -24,12 +24,15 @@ $orders = wc_get_orders( array(
 $gated = array();
 
 foreach( $orders as $order ) {
-    foreach ( $order->get_items() as $item ) {
-        $prodID = $item->get_product_id();
-        array_push($gated, array(
-            'gate' => get_field('gated_page', $prodID),
-            'status' => $order->get_status()
-        ) );
+    $orderstatus = $order->get_status();
+    if ($orderstatus == 'completed' or $orderstatus == 'passed-stripe' or $orderstatus == 'inv-payment-made'){
+        foreach ( $order->get_items() as $item ) {
+            $prodID = $item->get_product_id();
+            array_push($gated, array(
+                'gate' => get_field('gated_page', $prodID),
+                'status' => $orderstatus
+            ) );
+        }
     }
 }
 

@@ -8,6 +8,10 @@
   &__list{
     margin-bottom: 3rem;
   }
+  &__empty{
+    @include intro-text;
+    margin-bottom: 3rem;
+  }
   &__gated-box {
     display: flex;
     align-items: center;
