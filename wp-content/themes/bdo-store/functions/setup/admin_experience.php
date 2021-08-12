@@ -1,6 +1,59 @@
 <?php
 
 /**
+ * @desc Custom login screen
+ */
+function wpb_login_logo() { ?>
+    <style type="text/css">
+		@font-face {
+			font-family: 'Proxima Nova Regular';
+			font-style: normal;
+			font-weight: normal;
+			src: url('<?php echo get_template_directory_uri() ?>/assets/src/fonts/proximanovareg.woff2') format('woff2'),
+				url('<?php echo get_template_directory_uri() ?>/assets/src/fonts/proximanovareg.woff') format('woff');
+		}
+		@font-face {
+			font-family: 'Proxima Nova Bold';
+			font-style: normal;
+			font-weight: normal;
+			src: url('<?php echo get_template_directory_uri() ?>/assets/src/fonts/proximanovabold.woff2') format('woff2'),
+				url('<?php echo get_template_directory_uri() ?>/assets/src/fonts/proximanovabold.woff') format('woff');
+		}
+		#login p, #login input, #login label, #login a{
+			font-family:'Proxima Nova Regular';
+		}
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_template_directory_uri() ?>/assets/src/img/logo.svg);
+        height:100px;
+        width:300px;
+        background-size: 300px 100px;
+        background-repeat: no-repeat;
+        padding-bottom: 10px;
+        }
+		#login #wp-submit{
+			border-radius:0;
+			background-color:#ed1a3b;
+			border:none;
+		}
+		#login input{
+			border:2px solid #707070;
+			border-radius:0;
+			font-size:16px;
+		}
+		#login input[type="submit"]{
+			font-size:16px;
+			font-family:'Proxima Nova Bold';
+			padding:.5em 1.5em;
+			min-height:unset;
+			line-height:unset;
+		}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'wpb_login_logo' );
+
+
+
+/**
  * @desc Remove the default post/page editor
  */
 function remove_editor() {

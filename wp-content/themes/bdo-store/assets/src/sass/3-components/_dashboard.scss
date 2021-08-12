@@ -6,6 +6,11 @@
     margin-bottom: 3rem;
   }
   &__list{
+    max-width: 900px;
+    margin-bottom: 3rem;
+  }
+  &__empty{
+    @include intro-text;
     margin-bottom: 3rem;
   }
   &__gated-box {

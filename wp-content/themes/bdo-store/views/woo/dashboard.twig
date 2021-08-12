@@ -2,65 +2,60 @@
 
 <div class="c-dashboard">
 
-<h2 class="c-account__page-title">
-    My products
-</h2>
+    <h2 class="c-account__page-title">
+        My products
+    </h2>
 
-<div class="c-dashboard__before-table">
-{{ options.before_table }}
-</div>
+    <div class="c-dashboard__before-table">
+    {{ options.before_table }}
+    </div>
 
-{% if gated %}
+    {% if gated %}
 
-<div class="c-dashboard__list">
+    <div class="c-dashboard__list">
 
-{% for gate in gated %}
-    {% set status = gate['status'] %}
-    {% set gate = TimberPost(gate['gate']) %}
+        {% for gate in gated %}
 
-    {% set btnText = 'Access' %}
-    {% if gate.gated_button_overwrite %}
-        {% set btnText = gate.gated_button_overwrite %}
-    {% endif %}
+            {% set gate = TimberPost(gate['gate']) %}
 
-    <div class="c-dashboard__gated-box c-dashboard__gated-box--{{ status }}">
-    
-    <h3 class="c-dashboard__gated-box__title">{{ gate.title }}</h3>
+            {% set btnText = 'Access' %}
+            {% if gate.gated_button_overwrite %}
+                {% set btnText = gate.gated_button_overwrite %}
+            {% endif %}
 
-    {% if status == 'completed' or status == 'passed-stripe' or status == 'inv-payment-made'  %}
+            <div class="c-dashboard__gated-box c-dashboard__gated-box--{{ status }}">
+            
+            <h3 class="c-dashboard__gated-box__title">{{ gate.title }}</h3>
 
-    {% set buttonArgs = {
-        title: btnText,
-        url: gate.link,
-        color: 'red',
-        size: 'small'
-    } %}
+            {% set buttonArgs = {
+                title: btnText,
+                url: gate.link,
+                color: 'red',
+                size: 'small'
+            } %}
+            
+            {% include "./elements/button.twig" with buttonArgs %}
 
-    {% include "./elements/button.twig" with buttonArgs %}
+            </div>
+
+        {% endfor %}
+
+    </div>
 
     {% else %}
-        <span class="c-dashboard__gated-box__status">
-            {{ 'Processing' }}
-        </span>
+
+    <p class="c-dashboard__empty">No products here yet</p>
+
     {% endif %}
 
-    
-</div>
 
-{% endfor %}
+    <div class="c-dashboard__after-table">
+    {{ options.after_table }}
+    </div>
 
-</div>
-
-{% endif %}
-
-
-<div class="c-dashboard__after-table">
-{{ options.after_table }}
-</div>
-
-<div class="c-account__message">
-    <p>{{ options.store_need_help }}</p>
-</div>
+    <div class="c-account__message">
+        <p>{{ options.store_need_help }}</p>
+    </div>
 
 
 </div>
