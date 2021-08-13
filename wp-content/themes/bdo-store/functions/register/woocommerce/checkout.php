@@ -34,51 +34,75 @@ add_filter( 'woocommerce_default_address_fields', 'custom_default_address_fields
 
 
 
-// Add in required fields
-function custom_checkout_fields( $checkout ) {
-    woocommerce_form_field( 'custom_existing_audit_client', array(
-        'type' => 'radio',
-        'class' => array( 'row-wide', 'update_totals_on_change', 'woocommerce-checkout__existing-client' ),
-        'options' => array('Yes' => 'Yes', 'No' => 'No', 'Don&rsquo;t know' => 'Don&rsquo;t know', ),
-        'label'  => __('Are you an existing BDO Audit client? (If you are unsure please select don&rsquo;t know and we will check for you)'),
-        'required' => true
-    ),
-    $checkout->get_value('custom_existing_audit_client'));
-    
-    woocommerce_form_field( 'custom_vat_number', array(
-        'type' => 'text',
-        'class' => array('row-wide', 'update_totals_on_change', 'woocommerce-checkout__existing-client'),
-        'label'  => __('VAT number'),
-        'placeholder' => __('VAT number'),
-        'required' => true
-    ),
-    $checkout->get_value('custom_vat_number'));
-}
-add_action( 'woocommerce_after_checkout_billing_form', 'custom_checkout_fields' );
 
 
-// Validate field messages
-function custom_field_validate() {
-    if (!$_POST['custom_existing_audit_client']) { 
-        wc_add_notice(__('Please let us know if you are an existing BDO Audit client') , 'error');
+// ----- Add new fields into the checkout page
+// ------------------------------------------------
+
+    // 1. Add in required fields
+    function custom_checkout_fields( $checkout ) {
+        woocommerce_form_field( 'custom_existing_audit_client', array(
+            'type' => 'radio',
+            'class' => array( 'row-wide', 'update_totals_on_change', 'woocommerce-checkout__existing-client' ),
+            'options' => array('Yes' => 'Yes', 'No' => 'No', 'Don&rsquo;t know' => 'Don&rsquo;t know', ),
+            'label'  => __('Are you an existing BDO Audit client? (If you are unsure please select don&rsquo;t know and we will check for you)'),
+            'required' => true
+        ),
+        $checkout->get_value('custom_existing_audit_client'));  
+        woocommerce_form_field( 'custom_vat_number', array(
+            'type' => 'text',
+            'class' => array('row-wide', 'update_totals_on_change', 'woocommerce-checkout__existing-client'),
+            'label'  => __('VAT number'),
+            'placeholder' => __('VAT number'),
+            'required' => true
+        ),
+        $checkout->get_value('custom_vat_number'));
     }
-    if (!$_POST['custom_vat_number']) { 
-        wc_add_notice(__('Please enter your VAT number') , 'error'); 
+    add_action( 'woocommerce_after_checkout_billing_form', 'custom_checkout_fields' );
+
+    // 2a. Validate field messages
+    function custom_field_validate() {
+        if (!$_POST['custom_existing_audit_client']) { 
+            wc_add_notice(__('Please let us know if you are an existing BDO Audit client') , 'error');
+        }
+        if (!$_POST['custom_vat_number']) { 
+            wc_add_notice(__('Please enter your VAT number') , 'error'); 
+        }
     }
-}
-add_action('woocommerce_after_checkout_validation', 'custom_field_validate');
+    add_action('woocommerce_after_checkout_validation', 'custom_field_validate');
+
+    // 2b. Radio button validation styling
+    function custom_radio_validate(){
+        // Only used on checkout page
+        if( !is_checkout() ) return;
+        ?>
+        <script>
+        jQuery(function($){
+            $(document).ready(function () {
+                // Add class on page load
+                $('#custom_existing_audit_client_field').addClass('woocommerce-invalid');
+                // Remove class on radio button change state
+                $('#custom_existing_audit_client_field').find('input[type=radio]').change(function(){
+                    $('#custom_existing_audit_client_field').removeClass('woocommerce-invalid');
+                });
+            });
+        });
+        </script>
+        <?php
+    }
+    add_action( 'wp_footer', 'custom_radio_validate' );
 
 
-// Save fields
-function custom_field_save( $order_id ) {
-    if ( !empty( $_POST['custom_existing_audit_client'] ) ) {
-        update_post_meta( $order_id, 'existing_customer', $_POST['custom_existing_audit_client']);
+    // 3. Save fields
+    function custom_field_save( $order_id ) {
+        if ( !empty( $_POST['custom_existing_audit_client'] ) ) {
+            update_post_meta( $order_id, 'existing_customer', $_POST['custom_existing_audit_client']);
+        }
+        if ( !empty( $_POST['custom_vat_number'] ) ) {
+            update_post_meta( $order_id, 'vat_number', $_POST['custom_vat_number']);
+        }
     }
-    if ( !empty( $_POST['custom_vat_number'] ) ) {
-        update_post_meta( $order_id, 'vat_number', $_POST['custom_vat_number']);
-    }
-}
-add_action( 'woocommerce_checkout_update_order_meta', 'custom_field_save' );
+    add_action( 'woocommerce_checkout_update_order_meta', 'custom_field_save' );
 
 
 // Display on order screen in admin
@@ -92,7 +116,6 @@ add_action( 'woocommerce_admin_order_data_after_billing_address', 'custom_field_
 
 
 // change checkbox message
-
 function new_terms_and_conditions_checkbox_text( $text ){
     $termslink = get_field('terms_and_conditions_page_link', 'option');
     $text = 'I have read and agree to website <a href=" ' . $termslink . ' ">terms and conditions</a>';
