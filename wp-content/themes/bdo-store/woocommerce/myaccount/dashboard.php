@@ -26,12 +26,16 @@ $gated = array();
 foreach( $orders as $order ) {
     $orderstatus = $order->get_status();
     if ($orderstatus == 'completed' or $orderstatus == 'passed-stripe' or $orderstatus == 'inv-payment-made'){
+        // loops through each product in order
         foreach ( $order->get_items() as $item ) {
             $prodID = $item->get_product_id();
-            array_push($gated, array(
-                'gate' => get_field('gated_page', $prodID),
-                'status' => $orderstatus
-            ) );
+            $gatedpage = get_field('gated_page', $prodID);
+            if($gatedpage != false){
+                array_push($gated, array(
+                    'gate' => $gatedpage,
+                    'status' => $orderstatus
+                ));
+            }
         }
     }
 }

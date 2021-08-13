@@ -70,7 +70,9 @@
                                         image: TimberImage( card.get_thumbnail.id )
                                     })%}
                                 {% endif %}
-                            {% if card._price is iterable %}
+                            {% if card.custom.override_card_price %}
+                                {% set price = card.custom.override_card_price %}
+                            {% elseif card._price is iterable %}
                                 {% set price = card._price[0] %}
                             {% else %}
                                 {% set price = card._price %}
