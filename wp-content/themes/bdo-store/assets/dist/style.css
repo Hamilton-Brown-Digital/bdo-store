@@ -4094,6 +4094,10 @@ mark {
     grid-column-end: span 2; }
   .c-product-box.variationsnum--1 tbody tr {
     grid-column-end: span 2; }
+  .c-product-box p.wc-no-matching-variations {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin-right: 6rem; }
   .c-product-box .single_variation_wrap {
     display: flex;
     gap: 1.5rem;
