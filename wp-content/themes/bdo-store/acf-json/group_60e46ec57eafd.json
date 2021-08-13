@@ -7,7 +7,7 @@
             "label": "Gated Page",
             "name": "gated_page",
             "type": "post_object",
-            "instructions": "Select the gated page this purchase will take the customer after purchase.",
+            "instructions": "Select the gated page this purchase will take the customer after purchase. If this product is distributed outside the store leave empty.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -19,7 +19,7 @@
                 "gated"
             ],
             "taxonomy": "",
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "return_format": "id",
             "ui": 1
@@ -42,5 +42,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625586290
+    "modified": 1628853977
 }

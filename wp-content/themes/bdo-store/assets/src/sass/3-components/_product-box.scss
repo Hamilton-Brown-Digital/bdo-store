@@ -102,6 +102,10 @@
       }
     }
   }
+  p.wc-no-matching-variations{
+    @include text-small;
+    margin-right: 6rem;
+  }
   .single_variation_wrap{
     display: flex;
     gap:1.5rem;

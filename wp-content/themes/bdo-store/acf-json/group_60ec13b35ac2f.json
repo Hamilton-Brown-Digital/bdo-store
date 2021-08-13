@@ -113,6 +113,27 @@
                     "maxlength": 30
                 }
             ]
+        },
+        {
+            "key": "field_61167759ea76a",
+            "label": "Override card price",
+            "name": "override_card_price",
+            "type": "number",
+            "instructions": "Override the \"from\" price shown on cards. Please input a number here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -132,5 +153,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628721019
+    "modified": 1628862471
 }

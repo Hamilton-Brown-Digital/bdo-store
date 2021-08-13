@@ -41,6 +41,6 @@ add_action( 'after_switch_theme', 'update_permalinks' );
 */
 
 function no_wordpress_errors(){
-  return 'Login incorrect';
+  return 'You have entered an invalid username or password';
 }
 add_filter( 'login_errors', 'no_wordpress_errors' );
