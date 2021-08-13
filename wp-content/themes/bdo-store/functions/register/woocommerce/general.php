@@ -131,3 +131,10 @@ function woo_cart_count_fragments( $fragments ) {
     }
     return $fragments;
 }
+
+
+// -- Change AJAX threshold limit to allow more variations to dynamically change (limit set to 40 products below)
+add_filter( 'woocommerce_ajax_variation_threshold', 'custom_wc_ajax_variation_threshold', 10, 2 );
+function custom_wc_ajax_variation_threshold( $qty, $product ) {
+	return 40;
+}
