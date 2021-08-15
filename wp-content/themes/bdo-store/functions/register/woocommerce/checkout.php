@@ -51,7 +51,6 @@ add_filter( 'woocommerce_default_address_fields', 'custom_default_address_fields
         $checkout->get_value('custom_existing_audit_client'));  
         woocommerce_form_field( 'custom_vat_number', array(
             'type' => 'text',
-            'class' => array('row-wide', 'update_totals_on_change', 'woocommerce-checkout__existing-client'),
             'label'  => __('VAT number'),
             'placeholder' => __('VAT number'),
             'required' => true
