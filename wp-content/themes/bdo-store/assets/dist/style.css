@@ -3815,6 +3815,10 @@ mark {
         .c-checkout .woocommerce-checkout .wc_payment_method.payment_method_stripe label img:first-of-type {
           margin-left: 1rem !important; }
 
+.c-checkout .woocommerce-NoticeGroup + #customer_details .woocommerce-checkout__existing-client.woocommerce-invalid {
+  padding: 0.75rem;
+  border: 2px solid #ed1a3b; }
+
 .c-checkout .shop_table {
   width: 100%;
   margin-bottom: 3rem; }
