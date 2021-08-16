@@ -10,10 +10,12 @@
 	
 	<body class="{{body_class}}{% if prodCat %} theme-color theme-color--{{ prodCat.colour }}{% endif %}" data-template="base.twig" itemscope itemtype="http://schema.org/WebPage">
 
-		{% if fn('current_user_can','administrator') %}
+		{% if options.maintenance_page_toggle and not fn('current_user_can','administrator') %}
+			{% include 'partials/maintenance.twig' %}
+		{% else %}
 		
 			{% block header %}
-				{% include 'header.twig' %}
+			{% include 'header.twig' %}
 			{% endblock %}
 
 			<main class="main">
@@ -27,8 +29,6 @@
 				{{ function('wp_footer') }}
 			{% endblock %}
 
-		{% else %}
-			{% include 'partials/maintenance.twig' %}
 		{% endif %}
 
 	</body>
