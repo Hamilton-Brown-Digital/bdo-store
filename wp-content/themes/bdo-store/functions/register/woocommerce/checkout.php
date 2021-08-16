@@ -49,14 +49,16 @@ add_filter( 'woocommerce_default_address_fields', 'custom_default_address_fields
             'required' => true
         ),
         $checkout->get_value('custom_existing_audit_client'));  
+
         woocommerce_form_field( 'custom_vat_number', array(
             'type' => 'text',
-            'class' => array('row-wide', 'update_totals_on_change', 'woocommerce-checkout__existing-client'),
+            'class' => array('row-wide', 'update_totals_on_change', 'woocommerce-checkout__custom-vat-number'),
             'label'  => __('VAT number'),
             'placeholder' => __('VAT number'),
             'required' => true
         ),
         $checkout->get_value('custom_vat_number'));
+
     }
     add_action( 'woocommerce_after_checkout_billing_form', 'custom_checkout_fields' );
 
