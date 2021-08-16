@@ -239,6 +239,83 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_611ad9d27437a",
+            "label": "Maintenance page",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_611ada827437d",
+            "label": "",
+            "name": "maintenance_page_toggle",
+            "type": "checkbox",
+            "instructions": "If the site is currently under maintenance, check this box to show visitors a maintenance page. This won't show if you're logged in as admin.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "on": "Turn on maintenance page"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_611ad9eb7437b",
+            "label": "Title",
+            "name": "maintenance_page_title",
+            "type": "text",
+            "instructions": "Maintenance page title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_611ada3a7437c",
+            "label": "Text",
+            "name": "maintenance_page_text",
+            "type": "wysiwyg",
+            "instructions": "Text snippet for page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -258,5 +335,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628771048
+    "modified": 1629151601
 }
