@@ -4809,7 +4809,7 @@ body .c-maintenance {
   bottom: 6rem;
   left: 6rem;
   display: block;
-  width: calc(100vw - 100px);
+  width: calc(100vw - 12rem);
   min-width: 220px;
   max-width: 650px;
   margin: 0 auto;
@@ -4818,11 +4818,6 @@ body .c-maintenance {
   text-align: left;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px); }
-  @media (min-width: 0) and (max-width: 40.063em) {
-    .c-maintenance__inner {
-      position: relative;
-      bottom: auto;
-      left: auto; } }
 
 .c-maintenance__snippet {
   color: #333333; }
