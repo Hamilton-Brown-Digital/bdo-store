@@ -62,11 +62,15 @@
                                 })%}
                             {% endif %}
                             
-                            {% if card.custom.page_card_price_check %}
-                                {% if card.custom.page_card_price_type == 'price' %}
-                                    {% set price = 384 %}
-                                {% elseif card.custom.page_card_price_type == 'text' %}
-                                    {{ card.custom.page_card_price_text }}
+                            {% if card.custom.page_card_price_page_card_price_check[0] == 'yes' %}
+                                {% if card.custom.page_card_price_page_card_price_type == 'price' %}
+                                    {% set cardItems = cardItems|merge({
+                                        price: card.custom.page_card_price_page_card_price_price
+                                    })%}
+                                {% elseif card.custom.page_card_price_page_card_price_type == 'text' %}
+                                    {% set cardItems = cardItems|merge({
+                                        customprice: card.custom.page_card_price_page_card_price_text
+                                    })%}
                                 {% endif %}
                                 {% set price = card.custom.page_override_card_price %}
                             {% endif %}
