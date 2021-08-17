@@ -10,20 +10,26 @@
 	
 	<body class="{{body_class}}{% if prodCat %} theme-color theme-color--{{ prodCat.colour }}{% endif %}" data-template="base.twig" itemscope itemtype="http://schema.org/WebPage">
 
-		{% block header %}
-      		{% include 'header.twig' %}
-		{% endblock %}
-
-		<main class="main">
-			{% block content %}
-				Sorry, no content
+		{% if options.maintenance_page_toggle and not fn('current_user_can','administrator') %}
+			{% include 'partials/maintenance.twig' %}
+		{% else %}
+		
+			{% block header %}
+			{% include 'header.twig' %}
 			{% endblock %}
-   		 </main>
 
-		{% block footer %}
-			{% include 'footer.twig' %}
-			{{ function('wp_footer') }}
-		{% endblock %}
+			<main class="main">
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+			</main>
+
+			{% block footer %}
+				{% include 'footer.twig' %}
+				{{ function('wp_footer') }}
+			{% endblock %}
+
+		{% endif %}
 
 	</body>
 	
