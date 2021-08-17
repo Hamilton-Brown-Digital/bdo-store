@@ -4987,6 +4987,13 @@ body .c-maintenance {
     font-family: "Proxima Nova Bold", sans-serif, sans-serif;
     font-size: 1.6rem;
     line-height: 1.4; }
+  .e-card__customnote {
+    flex-grow: 1;
+    color: #ed1a3b;
+    text-transform: uppercase;
+    font-family: "Proxima Nova Bold", sans-serif, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.4; }
   .e-card__count {
     flex-grow: 1;
     text-transform: uppercase;

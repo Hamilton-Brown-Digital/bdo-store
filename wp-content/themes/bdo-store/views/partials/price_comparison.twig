@@ -18,8 +18,7 @@
                     {% set linkurl = link.url %}
                     {% set listtitle = package.package_list_title %}
                     {% set featurelist = package.package_feature_list %}
-                    {% set initialnote1 = 'No license fee' %}
-                    {% set initialnote2 = 'No maximum users' %}
+                    {% set featurelisttop = package.package_feature_list_top %}
 
                     <div class="c-price-comparison__col">
                         <h2 class="c-price-comparison__col__title">
@@ -50,14 +49,13 @@
                             {% endif %}
                         </div>
 
-                        <div class="c-price-comparison__col__beforelist c-featurelist">
+                        <div class="c-price-comparison__col__featurelist c-featurelist">
                             <ul class="c-featurelist__list">
-                                <li class="c-featurelist__list__item c-featurelist__list__item--yes">
-                                    <span>{{initialnote1}}</span>
+                                {% for featurelistitem in featurelisttop %}
+                                <li class="c-featurelist__list__item c-featurelist__list__item--{{ featurelistitem.feature_inclusion is same as('yes') ? 'yes' : 'no' }}">
+                                    <span>{{featurelistitem.feature_title}}</span>
                                 </li>
-                                <li class="c-featurelist__list__item c-featurelist__list__item--yes">
-                                    <span>{{initialnote2}}</span>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
 
