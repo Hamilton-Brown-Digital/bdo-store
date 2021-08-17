@@ -71,7 +71,7 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "visual",
+                    "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 1,
                     "delay": 0
@@ -130,7 +130,7 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "visual",
+                    "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 0,
                     "delay": 0
@@ -221,7 +221,7 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "visual",
+                    "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 0,
                     "delay": 0
@@ -246,5 +246,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1628628985
+    "modified": 1629233689
 }
