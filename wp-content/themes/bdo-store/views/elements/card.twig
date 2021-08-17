@@ -15,6 +15,9 @@
 
     <div class="e-card__main">
 
+        
+        
+
         {% if terms and fn('is_front_page') %}
         <div class="e-card__tagline">
             {{ terms }}
@@ -41,6 +44,8 @@
 
     </div>
 
+
+
     <div class="e-card__footer">
 
         {% if unavailablenote %}
@@ -48,7 +53,6 @@
             {{ unavailablenote }}
         </div>
         {% else %}
-            
             {% if productCount and fn('is_front_page') %}
             <div class="e-card__count">
                 {{ productCount }} product{% if productCount > 1 %}s{% endif %}
@@ -58,6 +62,10 @@
                 <span class="e-card__price__prefix">From</span>
                 <span class="e-card__price__price">£{{ price|number_format(2, '.', ',') }}</span>
                 <span class="e-card__price__suffix">+ VAT</span>
+            </div>
+            {% elseif customprice %}
+            <div class="e-card__customnote">
+                {{customprice}}
             </div>
             {% endif %}
 
