@@ -3,11 +3,11 @@
     "title": "Page meta",
     "fields": [
         {
-            "key": "field_611ac44d30e18",
-            "label": "Set card price",
-            "name": "page_override_card_price",
-            "type": "number",
-            "instructions": "Add a \"from\" price to be shown on cards. Please input a number here.",
+            "key": "field_611b887ee63bb",
+            "label": "Card price",
+            "name": "page_card_price",
+            "type": "group",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,13 +15,118 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_611b8b8217f33",
+                    "label": "",
+                    "name": "page_card_price_check",
+                    "type": "checkbox",
+                    "instructions": "Would you like to show text on cards which are pointing to this page? A price? or a word or short phrase? for example \"Coming soon\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "yes": "Yes please"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0
+                },
+                {
+                    "key": "field_611b8914e63bc",
+                    "label": "",
+                    "name": "page_card_price_type",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_611b8b8217f33",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "price": "Show price",
+                        "text": "Show text"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_611ac44d30e18",
+                    "label": "Set card price",
+                    "name": "page_card_price_price",
+                    "type": "number",
+                    "instructions": "Add a \"from\" price to be shown on cards.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_611b8914e63bc",
+                                "operator": "==",
+                                "value": "price"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_611b8a03e63bd",
+                    "label": "Set card text",
+                    "name": "page_card_price_text",
+                    "type": "text",
+                    "instructions": "very short single line text.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_611b8914e63bc",
+                                "operator": "==",
+                                "value": "text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 30
+                }
+            ]
         }
     ],
     "location": [
@@ -46,5 +151,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629145443
+    "modified": 1629208331
 }

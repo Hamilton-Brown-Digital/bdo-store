@@ -56,13 +56,19 @@
                                         image: TimberImage( card.hero_image )
                                     })%}
                                 {% endif %}
-                                {% if card.page_override_card_price %}
-                                    {% set price = card.page_override_card_price %}
-                                {% endif %}
                                 {% set cardItems = cardItems|merge({
                                     productCount: TimberTerm(card.product_category).posts()|length,
                                     color: TimberTerm(card.product_category).colour
                                 })%}
+                            {% endif %}
+                            
+                            {% if card.custom.page_card_price_check %}
+                                {% if card.custom.page_card_price_type == 'price' %}
+                                    {% set price = 384 %}
+                                {% elseif card.custom.page_card_price_type == 'text' %}
+                                    {{ card.custom.page_card_price_text }}
+                                {% endif %}
+                                {% set price = card.custom.page_override_card_price %}
                             {% endif %}
                         {% endif %}
 
