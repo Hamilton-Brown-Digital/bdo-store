@@ -2491,11 +2491,12 @@ address p {
     font-size: 2rem;
     line-height: 1.2; }
   .c-featurelist__list {
-    display: grid; }
+    display: grid;
+    padding-bottom: 1.5rem; }
     .c-featurelist__list__item {
       display: block;
       padding-top: 0.5em;
-      padding-bottom: 1.5em;
+      padding-bottom: 0.5em;
       padding-left: calc(1em + 12px);
       background-position: left center;
       background-size: 12px 9px; }
