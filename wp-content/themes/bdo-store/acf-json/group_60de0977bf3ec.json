@@ -66,7 +66,7 @@
                     "label": "Link to product",
                     "name": "package_link",
                     "type": "link",
-                    "instructions": "",
+                    "instructions": "Click the button to select a link and change the link text.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -213,6 +213,68 @@
                             "return_format": "value"
                         }
                     ]
+                },
+                {
+                    "key": "field_611be3ab5d43e",
+                    "label": "Feature list top",
+                    "name": "package_feature_list_top",
+                    "type": "repeater",
+                    "instructions": "If you want you can add items just before the column title. Maximum two rows.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "66.66",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 2,
+                    "layout": "block",
+                    "button_label": "Add feature",
+                    "sub_fields": [
+                        {
+                            "key": "field_611be3ab5d43f",
+                            "label": "Feature title",
+                            "name": "feature_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_611be3ab5d440",
+                            "label": "Is this feature included in this package?",
+                            "name": "feature_inclusion",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "allow_null": 0,
+                            "default_value": "yes : Yes",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        }
+                    ]
                 }
             ]
         }
@@ -234,5 +296,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1625526557
+    "modified": 1629218323
 }
