@@ -2491,7 +2491,8 @@ address p {
     font-size: 2rem;
     line-height: 1.2; }
   .c-featurelist__list {
-    display: grid; }
+    display: grid;
+    padding-bottom: 1.5rem; }
     .c-featurelist__list__item {
       display: block;
       padding-top: 0.5em;
