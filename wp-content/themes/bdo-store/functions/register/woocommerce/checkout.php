@@ -110,9 +110,19 @@ add_filter( 'woocommerce_default_address_fields', 'custom_default_address_fields
 // Display on order screen in admin
 function custom_field_display_on_order_screen($order){
     
+    $thecustomer = $order->get_user();
+    $user_meta = get_user_meta($thecustomer->ID);
+    if ( isset($user_meta['afreg_additional_4148'][0] ) ){
+        $company = $user_meta['afreg_additional_4148'][0];
+    } else {
+        $company =  $user_meta['billing_company'][0];
+    }
+    echo "<p><strong>Company name:</strong><br />" . $company . "<p>";
     echo'<p><strong>BDO Audit client:</strong><br />' . get_post_meta( $order->ID, 'existing_customer', true );
     echo '</p>';
     echo'<p><strong>Vat number:</strong><br />' . get_post_meta( $order->ID, 'vat_number', true ) . '</p>';
+
+    
 }
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'custom_field_display_on_order_screen', 10, 1 );
 
