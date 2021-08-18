@@ -12,6 +12,18 @@
         'url': '#details',
         'target': ''
     }] %}
+    
+    {% if post.custom.link_text %}
+        {% set linkArr = [{
+            'title': post.custom.link_text,
+            'url': '#details',
+            'target': ''
+        }] %}
+    {% endif %}
+
+
+    
+    
 
 	{% include './partials/hero.twig' with {
         product: true,
