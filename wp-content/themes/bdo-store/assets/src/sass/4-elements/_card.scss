@@ -87,7 +87,6 @@
   }
   &__customnote{
     flex-grow: 1;
-    color: $brand-red;
     text-transform: uppercase;
     @include font-bold;
     @include text-small;
