@@ -22,21 +22,13 @@ function woo_change_account_page( $items ) {
     unset( $items['downloads'] );
     unset( $items['edit-address'] );
     unset( $items['payment-methods'] );
-<<<<<<< HEAD
-    unset( $items['edit-address'] );
-    $items['dashboard'] = 'My products';
-    $items['orders'] = 'Order history';
-    $items['edit-address'] = 'Address';
-=======
     unset( $items['edit-account'] );
     unset( $items['customer-logout'] );
-
     $items['dashboard'] = 'My products';
     $items['orders'] = 'Order history';
     $items['edit-address'] = 'Address';
     $items['edit-account'] = 'Account details';
     $items['customer-logout'] = 'Logout';
->>>>>>> master
     return $items;
 }
 add_filter( 'woocommerce_account_menu_items', 'woo_change_account_page', 9999 );
