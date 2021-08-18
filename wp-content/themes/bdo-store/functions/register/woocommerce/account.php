@@ -1,6 +1,15 @@
 <?php
 
+  function my_account_new_endpoints() {
+      add_rewrite_endpoint( 'welcome', EP_ROOT | EP_PAGES );
+  }
+  add_action( 'init', 'my_account_new_endpoints' );
 
+// welcome
+ function welcome_endpoint_content() {
+    get_template_part( 'woocommerce/myaccount/welcome' );
+ }
+ add_action( 'woocommerce_account_welcome_endpoint', 'welcome_endpoint_content' );
 
 
 // remove order again button
