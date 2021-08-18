@@ -6,14 +6,15 @@
     {% set unavailable = post.custom.product_unavailable_toggle %}
     {% set unavailable_text = post.custom.product_unavailable_unavailable_text %}
     {% set cta_text = post.custom.product_hero_more_content_button %}
-    {{ cta_text }}
     
 
     {% set linkArr = [{
-        'title': cta_text,
+        'title': 'Product Details',
         'url': '#details',
         'target': ''
     }] %}
+
+
     
     {% if post.custom.link_text %}
         {% set linkArr = [{
