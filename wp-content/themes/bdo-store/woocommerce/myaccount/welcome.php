@@ -6,5 +6,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 Timber::render('views/woo/welcome.twig');
 
 wp_reset_postdata();
-
-?>

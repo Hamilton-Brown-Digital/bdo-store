@@ -207,12 +207,6 @@ echo "Company name:" . " " . $company . "\n";
 echo "VAT number:" . " " . $vat_number . "\n";
 echo "Non audit client declaration:" . " " . $declaration;
 
-
-
 echo "\n\n";
 
 echo "The above payment has been processed.";
-
-
-
-?>

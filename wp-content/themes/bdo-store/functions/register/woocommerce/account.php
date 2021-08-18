@@ -64,4 +64,4 @@ add_action('woocommerce_before_edit_account_address_form', 'before_address_form'
 function before_edit_account_form (){
     echo "<h2 class='c-account__page-title'>Account details</h2>";
 }
-add_action('woocommerce_before_edit_account_form', 'before_edit_account_form', 10, 1 ); 
+add_action('woocommerce_before_edit_account_form', 'before_edit_account_form', 10, 1 );

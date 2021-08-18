@@ -234,5 +234,3 @@ img {
 	border-radius:2px;
 	font-family:'proximanovabold', sans-serif;
 }
-
-<?php

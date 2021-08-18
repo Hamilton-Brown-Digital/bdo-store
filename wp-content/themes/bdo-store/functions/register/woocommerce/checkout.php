@@ -135,8 +135,3 @@ function new_terms_and_conditions_checkbox_text( $text ){
 }
 
 add_filter( 'woocommerce_get_terms_and_conditions_checkbox_text', 'new_terms_and_conditions_checkbox_text' );
-
-
-?>
-
-
