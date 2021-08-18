@@ -159,15 +159,15 @@ if ( 'bacs' !== ( version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->payment_
  * @hooked WC_Emails::email_address() Shows email address
  */
 
+
+$thecustomer = $order->get_user();
+$user_meta = get_user_meta($thecustomer->ID);
+
 if ( isset($user_meta['afreg_additional_4148'][0] ) ){
 	$company = $user_meta['afreg_additional_4148'][0];
 } else {
 	$company =  $user_meta['billing_company'][0];
 }
-
-
-$thecustomer = $order->get_user();
-$user_meta = get_user_meta($thecustomer->ID);
 $email_address = get_post_meta($order->get_order_number(), '_billing_email', true);
 $vat_number = get_post_meta($order->get_order_number(), 'vat_number', true);
 $declaration = get_post_meta($order->get_order_number(), 'existing_customer', true);
