@@ -39,26 +39,6 @@ defined( 'ABSPATH' ) || exit;
 
         <?php else : ?>
 
-            <?php
-            $thecustomer = $order->get_user();
-            $user_meta = get_user_meta($thecustomer->ID);
-
-            var_dump($thecustomer);
-            echo '------------------------------------------------------------------------------------------------';
-            var_dump($user_meta);
-            ?>
-            
-            <?php
-            echo '------------------------------------------------------------------------------------------------';
-            echo '------------------------------------------------------------------------------------------------';
-            if ( isset($user_meta['afreg_additional_4148'][0] ) ){
-                echo $user_meta['afreg_additional_4148'][0];
-            } else {
-                echo $user_meta['billing_company'][0];
-            }
-
-            ?>
-
             <h2>Thank you for your order</h2>
 
             <p>You’re almost there. We just need to check that we don’t have a conflict of interest. It’s something we have to do to comply with the rules on independence, quality and risk. These checks will take up to <em>three working days</em>. Once complete, you will receive an email confirming your purchase and we will also send you an invoice.</p>
