@@ -23,8 +23,8 @@ function woo_change_account_page( $items ) {
     $items['dashboard'] = 'My products';
     $items['orders'] = 'Order history';
     $items['edit-address'] = 'Address';
-
-    return $itemsx}
+    return $items;
+}
 add_filter( 'woocommerce_account_menu_items', 'woo_change_account_page', 9999 );
 
 // Validate - my account
