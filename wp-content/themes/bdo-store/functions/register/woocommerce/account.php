@@ -19,11 +19,12 @@ remove_action( 'woocommerce_order_details_after_order_table', 'woocommerce_order
 function woo_change_account_page( $items ) {
     unset( $items['downloads'] );
     unset( $items['payment-methods'] );
+    unset( $items['edit-address'] );
     $items['dashboard'] = 'My products';
     $items['orders'] = 'Order history';
+    $items['edit-address'] = 'Address';
 
-    return $items;
-}
+    return $itemsx}
 add_filter( 'woocommerce_account_menu_items', 'woo_change_account_page', 9999 );
 
 // Validate - my account
