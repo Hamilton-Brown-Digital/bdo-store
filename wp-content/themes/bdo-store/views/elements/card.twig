@@ -53,11 +53,7 @@
             {{ unavailablenote }}
         </div>
         {% else %}
-            {% if productCount and fn('is_front_page') %}
-            <div class="e-card__count">
-                {{ productCount }} product{% if productCount > 1 %}s{% endif %}
-            </div>
-            {% elseif price %}
+            {% if price %}
             <div class="e-card__price">
                 <span class="e-card__price__prefix">From</span>
                 <span class="e-card__price__price">£{{ price|number_format(2, '.', ',') }}</span>
@@ -67,7 +63,12 @@
             <div class="e-card__customnote">
                 {{customprice}}
             </div>
+            {% elseif productCount and fn('is_front_page') %}
+            <div class="e-card__count">
+                {{ productCount }} product{% if productCount > 1 %}s{% endif %}
+            </div>
             {% endif %}
+            
 
         {% endif %}
 
