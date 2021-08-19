@@ -12,7 +12,7 @@ function woo_separate_registration_form() {
     }
     ob_start();
 
-    do_action( 'woocommerce_before_customer_login_form' );  
+    
     ?>
 
     <div class="login-register">
@@ -26,6 +26,7 @@ function woo_separate_registration_form() {
 
             <form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
+                <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
                 <?php do_action( 'woocommerce_register_form_start' ); ?>
 
                 <?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>

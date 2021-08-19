@@ -5,6 +5,10 @@
   .woocommerce-MyAccount-content &{
     @include notice-inline;
   }
+  .c-account &{
+    background: $gold;
+    @include notice-inline;
+  }
   .single-product &{
     @include notice-strip;
     position: absolute;

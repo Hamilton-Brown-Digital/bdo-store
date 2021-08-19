@@ -55,8 +55,9 @@ figure {
   cursor: pointer;
 }
 
-abbr.required{
+.required{
   border-bottom: none;
+  color: $brand-red;
 }
 
 ::selection {
