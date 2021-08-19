@@ -55,7 +55,7 @@ figure {
   cursor: pointer;
 }
 
-.required{
+.required, .gfield_required{
   border-bottom: none;
   color: $brand-red;
 }

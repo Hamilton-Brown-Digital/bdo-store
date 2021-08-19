@@ -930,7 +930,7 @@ figure {
 .touch {
   cursor: pointer; }
 
-.required {
+.required, .gfield_required {
   border-bottom: none;
   color: #ed1a3b; }
 
