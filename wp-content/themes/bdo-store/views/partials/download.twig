@@ -23,7 +23,7 @@
                             {% include "./elements/button.twig"
                                 with  {
                                     title : download.internal_link.title,
-                                    url: download.internal_link.link
+                                    url: download.internal_link.url
                                 }
                             %}
                         {% elseif download.internal_or_external == 'external' %}
