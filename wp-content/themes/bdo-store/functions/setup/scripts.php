@@ -6,13 +6,13 @@ function head() {
 	// wp_enqueue_script( 'cookiebot', 'https://consent.cookiebot.com/uc.js' );
 	wp_enqueue_style( 'main' );
 
-	// function addatts( $tag, $handle, $src ) {
-	// 	if ('cookiebot' == $handle){
-	// 		$tag = '<script type="text/javascript" src="' . esc_url( $src ) . '" data-cbid="87a51d12-ebd0-4d3d-bf5d-ead8383f9764" data-blockingmode="auto"></script>';
-	// 	}
-	// 	return $tag;
-	// }
-	// add_filter( 'script_loader_tag', 'addatts', 10, 3 );
+	function addatts( $tag, $handle, $src ) {
+		if ('cookiebot' == $handle){
+			$tag = '<script type="text/javascript" src="' . esc_url( $src ) . '" data-cbid="87a51d12-ebd0-4d3d-bf5d-ead8383f9764" data-blockingmode="auto"></script>';
+		}
+		return $tag;
+	}
+	add_filter( 'script_loader_tag', 'addatts', 10, 3 );
 
 }
 
