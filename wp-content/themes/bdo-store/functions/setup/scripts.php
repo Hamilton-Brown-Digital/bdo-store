@@ -3,7 +3,7 @@
 function head() {
 
 	wp_register_style( 'main', get_stylesheet_directory_uri() . '/assets/dist/style.css', false );
-	// wp_enqueue_script( 'cookiebot', 'https://consent.cookiebot.com/uc.js' );
+	wp_enqueue_script( 'cookiebot', 'https://consent.cookiebot.com/uc.js' );
 	wp_enqueue_style( 'main' );
 
 	function addatts( $tag, $handle, $src ) {
