@@ -20,7 +20,7 @@
       height: auto;
       margin-bottom:$padding-deep;
       background: $color-bg-3;
-      @include breakpoint($break-tablet){
+      @include breakpoint($break-desktop){
         height: calc(530px - 25px);
       }
       @include breakpoint($break-desktop-med) {
