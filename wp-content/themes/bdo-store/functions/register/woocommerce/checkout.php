@@ -31,9 +31,13 @@ function custom_default_address_fields( $address_fields ) {
 }
 add_filter( 'woocommerce_default_address_fields', 'custom_default_address_fields' );
 
-
-
-
+ 
+// change position of company name field
+function move_checkout_email_field( $address_fields ) {
+    $address_fields['billing_company']['priority'] = 100;
+    return $address_fields;
+}
+add_filter( 'woocommerce_billing_fields', 'move_checkout_email_field' );
 
 
 // ----- Add new fields into the checkout page
